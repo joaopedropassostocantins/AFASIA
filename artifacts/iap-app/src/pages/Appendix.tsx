@@ -453,12 +453,20 @@ export default function Appendix() {
               Teoria IAP e Algoritmo JP são contribuições originais do autor.
             </p>
 
-            <Link href="/">
-              <Button variant="ghost" size="sm" className="gap-2 text-muted-foreground">
-                <ArrowLeft className="h-4 w-4" />
-                Voltar ao início
-              </Button>
-            </Link>
+            <div className="flex gap-3 justify-center flex-wrap">
+              <Link href="/atlas">
+                <Button variant="ghost" size="sm" className="gap-2 text-muted-foreground">
+                  <ArrowLeft className="h-4 w-4" />
+                  Voltar ao Atlas
+                </Button>
+              </Link>
+              <Link href="/">
+                <Button variant="ghost" size="sm" className="gap-2 text-muted-foreground">
+                  <ArrowLeft className="h-4 w-4" />
+                  Voltar ao início
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </motion.section>
 
