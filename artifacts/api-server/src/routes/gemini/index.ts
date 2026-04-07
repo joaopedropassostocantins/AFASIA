@@ -1,7 +1,8 @@
-import { Router, type IRouter } from "express";
+import { Router, type IRouter, type Response } from "express";
 import { eq } from "drizzle-orm";
 import { db } from "@workspace/db";
 import { conversations, messages } from "@workspace/db";
+
 import {
   CreateGeminiConversationBody,
   GetGeminiConversationParams,
@@ -13,6 +14,19 @@ import {
 } from "@workspace/api-zod";
 import { ai } from "@workspace/integrations-gemini-ai";
 
+function isZodError(err: unknown): err is { issues: unknown[] } {
+  return typeof err === "object" && err !== null && "issues" in err && Array.isArray((err as { issues: unknown }).issues);
+}
+
+function handleRouteError(err: unknown, res: Response, log: (msg: string) => void, context: string) {
+  if (isZodError(err)) {
+    res.status(400).json({ error: "Invalid request body", details: err.issues });
+    return;
+  }
+  log(`Failed to ${context}: ${String(err)}`);
+  res.status(500).json({ error: "Internal server error" });
+}
+
 const router: IRouter = Router();
 
 router.get("/conversations", async (req, res) => {
@@ -23,8 +37,7 @@ router.get("/conversations", async (req, res) => {
       .orderBy(conversations.createdAt);
     res.json(convList);
   } catch (err) {
-    req.log.error({ err }, "Failed to list conversations");
-    res.status(500).json({ error: "Internal server error" });
+    handleRouteError(err, res, (msg) => req.log.error(msg), "list conversations");
   }
 });
 
@@ -37,8 +50,7 @@ router.post("/conversations", async (req, res) => {
       .returning();
     res.status(201).json(conversation);
   } catch (err) {
-    req.log.error({ err }, "Failed to create conversation");
-    res.status(500).json({ error: "Internal server error" });
+    handleRouteError(err, res, (msg) => req.log.error(msg), "create conversation");
   }
 });
 
@@ -63,8 +75,7 @@ router.get("/conversations/:id", async (req, res) => {
 
     res.json({ ...conversation, messages: msgs });
   } catch (err) {
-    req.log.error({ err }, "Failed to get conversation");
-    res.status(500).json({ error: "Internal server error" });
+    handleRouteError(err, res, (msg) => req.log.error(msg), "get conversation");
   }
 });
 
@@ -81,8 +92,7 @@ router.delete("/conversations/:id", async (req, res) => {
     }
     res.status(204).send();
   } catch (err) {
-    req.log.error({ err }, "Failed to delete conversation");
-    res.status(500).json({ error: "Internal server error" });
+    handleRouteError(err, res, (msg) => req.log.error(msg), "delete conversation");
   }
 });
 
@@ -96,8 +106,7 @@ router.get("/conversations/:id/messages", async (req, res) => {
       .orderBy(messages.createdAt);
     res.json(msgs);
   } catch (err) {
-    req.log.error({ err }, "Failed to list messages");
-    res.status(500).json({ error: "Internal server error" });
+    handleRouteError(err, res, (msg) => req.log.error(msg), "list messages");
   }
 });
 
@@ -160,8 +169,7 @@ router.post("/conversations/:id/messages", async (req, res) => {
     res.write(`data: ${JSON.stringify({ done: true })}\n\n`);
     res.end();
   } catch (err) {
-    req.log.error({ err }, "Failed to send message");
-    res.status(500).json({ error: "Internal server error" });
+    handleRouteError(err, res, (msg) => req.log.error(msg), "send message");
   }
 });
 
@@ -183,8 +191,7 @@ router.post("/generate-image", async (req, res) => {
     }
     res.json({ b64_json: imagePart.inlineData.data, mimeType: imagePart.inlineData.mimeType ?? "image/png" });
   } catch (err) {
-    req.log.error({ err }, "Failed to generate image");
-    res.status(500).json({ error: "Internal server error" });
+    handleRouteError(err, res, (msg) => req.log.error(msg), "generate image");
   }
 });
 

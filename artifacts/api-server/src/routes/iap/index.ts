@@ -1,10 +1,23 @@
-import { Router, type IRouter } from "express";
+import { Router, type IRouter, type Response } from "express";
 import { ai } from "@workspace/integrations-gemini-ai";
 import {
   RunJpAlgorithmBody,
   PictorialChatBody,
   ComputeTopologyBody,
 } from "@workspace/api-zod";
+
+function isZodError(err: unknown): err is { issues: unknown[] } {
+  return typeof err === "object" && err !== null && "issues" in err && Array.isArray((err as { issues: unknown }).issues);
+}
+
+function handleRouteError(err: unknown, res: Response, log: (msg: string) => void, context: string) {
+  if (isZodError(err)) {
+    res.status(400).json({ error: "Invalid request body", details: err.issues });
+    return;
+  }
+  log(`Failed to ${context}: ${String(err)}`);
+  res.status(500).json({ error: "Internal server error" });
+}
 
 const router: IRouter = Router();
 
@@ -171,8 +184,7 @@ router.post("/plan", async (req, res) => {
     );
     res.json(result);
   } catch (err) {
-    req.log.error({ err }, "Failed to run JP Algorithm");
-    res.status(500).json({ error: "Internal server error" });
+    handleRouteError(err, res, (msg) => req.log.error(msg), "run JP Algorithm");
   }
 });
 
@@ -249,8 +261,7 @@ router.post("/pictoric-chat", async (req, res) => {
       confidence: parsed.confidence ?? 0.8,
     });
   } catch (err) {
-    req.log.error({ err }, "Failed to process pictorial chat");
-    res.status(500).json({ error: "Internal server error" });
+    handleRouteError(err, res, (msg) => req.log.error(msg), "process pictorial chat");
   }
 });
 
@@ -349,8 +360,7 @@ router.post("/topology", async (req, res) => {
       interpretation,
     });
   } catch (err) {
-    req.log.error({ err }, "Failed to compute topology");
-    res.status(500).json({ error: "Internal server error" });
+    handleRouteError(err, res, (msg) => req.log.error(msg), "compute topology");
   }
 });
 
