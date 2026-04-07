@@ -6,4 +6,22 @@
  * OpenAPI spec version: 0.1.0
  */
 
+export * from "./createGeminiConversationBody";
+export * from "./geminiConversation";
+export * from "./geminiConversationWithMessages";
+export * from "./geminiError";
+export * from "./geminiMessage";
+export * from "./generateGeminiImageBody";
+export * from "./generateGeminiImageResponse";
 export * from "./healthStatus";
+export * from "./jpAlgorithmRequest";
+export * from "./jpAlgorithmResult";
+export * from "./jpEdge";
+export * from "./jpEvent";
+export * from "./jpPlanStep";
+export * from "./persistenceBar";
+export * from "./pictorialChatRequest";
+export * from "./pictorialChatResponse";
+export * from "./sendGeminiMessageBody";
+export * from "./topologyRequest";
+export * from "./topologyResult";

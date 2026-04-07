@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "IAP — Inteligência Artificial Pictórica"
+version = "1.0.0"
+id = "artifacts/iap-app"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21015
+
+[services.development]
+run = "pnpm --filter @workspace/iap-app run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/iap-app", "run", "build" ]
+publicDir = "artifacts/iap-app/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21015"
+BASE_PATH = "/"

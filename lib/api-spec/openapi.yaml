@@ -10,6 +10,10 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: gemini
+    description: Gemini AI chat and image operations
+  - name: iap
+    description: IAP — Inteligência Artificial Pictórica
 paths:
   /healthz:
     get:
@@ -24,6 +28,193 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /gemini/conversations:
+    get:
+      operationId: listGeminiConversations
+      tags: [gemini]
+      summary: List all conversations
+      responses:
+        "200":
+          description: List of conversations
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeminiConversation"
+    post:
+      operationId: createGeminiConversation
+      tags: [gemini]
+      summary: Create a new conversation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateGeminiConversationBody"
+      responses:
+        "201":
+          description: Created conversation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GeminiConversation"
+  /gemini/conversations/{id}:
+    get:
+      operationId: getGeminiConversation
+      tags: [gemini]
+      summary: Get conversation with messages
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Conversation with messages
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GeminiConversationWithMessages"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GeminiError"
+    delete:
+      operationId: deleteGeminiConversation
+      tags: [gemini]
+      summary: Delete a conversation
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GeminiError"
+  /gemini/conversations/{id}/messages:
+    get:
+      operationId: listGeminiMessages
+      tags: [gemini]
+      summary: List messages in a conversation
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: List of messages
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GeminiMessage"
+    post:
+      operationId: sendGeminiMessage
+      tags: [gemini]
+      summary: Send a message and receive an AI response (SSE stream)
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SendGeminiMessageBody"
+      responses:
+        "200":
+          description: SSE stream of assistant response chunks
+          content:
+            text/event-stream: {}
+  /gemini/generate-image:
+    post:
+      operationId: generateGeminiImage
+      tags: [gemini]
+      summary: Generate an image from a text prompt
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GenerateGeminiImageBody"
+      responses:
+        "200":
+          description: Generated image data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerateGeminiImageResponse"
+  /iap/plan:
+    post:
+      operationId: runJpAlgorithm
+      tags: [iap]
+      summary: Run JP Algorithm — regressive planning
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/JpAlgorithmRequest"
+      responses:
+        "200":
+          description: JP Algorithm result with plan steps
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/JpAlgorithmResult"
+  /iap/pictoric-chat:
+    post:
+      operationId: pictorialChat
+      tags: [iap]
+      summary: IAP pictorial communication for aphasia support (Gemma 4)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PictorialChatRequest"
+      responses:
+        "200":
+          description: Gemma AI response to pictorial symbols
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PictorialChatResponse"
+  /iap/topology:
+    post:
+      operationId: computeTopology
+      tags: [iap]
+      summary: Compute topological distance between states
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TopologyRequest"
+      responses:
+        "200":
+          description: Topological analysis result with persistence diagram
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TopologyResult"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +224,291 @@ components:
           type: string
       required:
         - status
-
+    GeminiConversation:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - title
+        - createdAt
+    GeminiMessage:
+      type: object
+      properties:
+        id:
+          type: integer
+        conversationId:
+          type: integer
+        role:
+          type: string
+        content:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - conversationId
+        - role
+        - content
+        - createdAt
+    CreateGeminiConversationBody:
+      type: object
+      properties:
+        title:
+          type: string
+      required:
+        - title
+    SendGeminiMessageBody:
+      type: object
+      properties:
+        content:
+          type: string
+      required:
+        - content
+    GeminiConversationWithMessages:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        messages:
+          type: array
+          items:
+            $ref: "#/components/schemas/GeminiMessage"
+      required:
+        - id
+        - title
+        - createdAt
+        - messages
+    GenerateGeminiImageBody:
+      type: object
+      properties:
+        prompt:
+          type: string
+      required:
+        - prompt
+    GenerateGeminiImageResponse:
+      type: object
+      properties:
+        b64_json:
+          type: string
+        mimeType:
+          type: string
+      required:
+        - b64_json
+        - mimeType
+    GeminiError:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
+    JpAlgorithmRequest:
+      type: object
+      properties:
+        goal:
+          type: string
+          description: The final objective/goal to achieve
+        events:
+          type: array
+          items:
+            $ref: "#/components/schemas/JpEvent"
+          description: List of events (states) in the knowledge graph
+        edges:
+          type: array
+          items:
+            $ref: "#/components/schemas/JpEdge"
+          description: List of transitions (manus) between events
+        startEvent:
+          type: string
+          description: The initial state
+      required:
+        - goal
+        - events
+        - edges
+        - startEvent
+    JpEvent:
+      type: object
+      properties:
+        id:
+          type: string
+        label:
+          type: string
+        description:
+          type: string
+      required:
+        - id
+        - label
+    JpEdge:
+      type: object
+      properties:
+        from:
+          type: string
+        to:
+          type: string
+        label:
+          type: string
+        cost:
+          type: number
+      required:
+        - from
+        - to
+        - label
+        - cost
+    JpAlgorithmResult:
+      type: object
+      properties:
+        success:
+          type: boolean
+        path:
+          type: array
+          items:
+            $ref: "#/components/schemas/JpPlanStep"
+        totalCost:
+          type: number
+        iterations:
+          type: integer
+        message:
+          type: string
+      required:
+        - success
+        - path
+        - totalCost
+        - iterations
+        - message
+    JpPlanStep:
+      type: object
+      properties:
+        stepNumber:
+          type: integer
+        fromEvent:
+          type: string
+        toEvent:
+          type: string
+        manu:
+          type: string
+        cost:
+          type: number
+        topologicalDistance:
+          type: number
+      required:
+        - stepNumber
+        - fromEvent
+        - toEvent
+        - manu
+        - cost
+        - topologicalDistance
+    PictorialChatRequest:
+      type: object
+      properties:
+        symbols:
+          type: array
+          items:
+            type: string
+          description: List of pictorial symbol IDs selected by the user
+        context:
+          type: string
+          description: Optional context about the user's needs
+        language:
+          type: string
+          description: "Response language: 'pt' or 'en'"
+      required:
+        - symbols
+    PictorialChatResponse:
+      type: object
+      properties:
+        interpretation:
+          type: string
+          description: What the AI understood from the pictorial input
+        naturalLanguage:
+          type: string
+          description: The complete natural language sentence
+        suggestions:
+          type: array
+          items:
+            type: string
+          description: Suggested follow-up symbol sequences
+        confidence:
+          type: number
+          description: Confidence score 0-1
+      required:
+        - interpretation
+        - naturalLanguage
+        - suggestions
+        - confidence
+    TopologyRequest:
+      type: object
+      properties:
+        currentState:
+          type: array
+          items:
+            type: number
+          description: Current state as a point in knowledge space
+        goalState:
+          type: array
+          items:
+            type: number
+          description: Goal state as a point in knowledge space
+        numPoints:
+          type: integer
+          description: Number of sample points for the Rips filtration
+      required:
+        - currentState
+        - goalState
+    TopologyResult:
+      type: object
+      properties:
+        wassersteinDistance:
+          type: number
+          description: Wasserstein distance between persistence diagrams
+        persistenceDiagramCurrent:
+          type: array
+          items:
+            $ref: "#/components/schemas/PersistenceBar"
+          description: Persistence diagram for current state
+        persistenceDiagramGoal:
+          type: array
+          items:
+            $ref: "#/components/schemas/PersistenceBar"
+          description: Persistence diagram for goal state
+        topologicalComplexityCurrent:
+          type: integer
+        topologicalComplexityGoal:
+          type: integer
+        interpretation:
+          type: string
+      required:
+        - wassersteinDistance
+        - persistenceDiagramCurrent
+        - persistenceDiagramGoal
+        - topologicalComplexityCurrent
+        - topologicalComplexityGoal
+        - interpretation
+    PersistenceBar:
+      type: object
+      properties:
+        birth:
+          type: number
+        death:
+          type: number
+        dimension:
+          type: integer
+        lifetime:
+          type: number
+      required:
+        - birth
+        - death
+        - dimension
+        - lifetime

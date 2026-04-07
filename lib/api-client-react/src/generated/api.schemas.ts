@@ -8,3 +8,134 @@
 export interface HealthStatus {
   status: string;
 }
+
+export interface GeminiConversation {
+  id: number;
+  title: string;
+  createdAt: string;
+}
+
+export interface GeminiMessage {
+  id: number;
+  conversationId: number;
+  role: string;
+  content: string;
+  createdAt: string;
+}
+
+export interface CreateGeminiConversationBody {
+  title: string;
+}
+
+export interface SendGeminiMessageBody {
+  content: string;
+}
+
+export interface GeminiConversationWithMessages {
+  id: number;
+  title: string;
+  createdAt: string;
+  messages: GeminiMessage[];
+}
+
+export interface GenerateGeminiImageBody {
+  prompt: string;
+}
+
+export interface GenerateGeminiImageResponse {
+  b64_json: string;
+  mimeType: string;
+}
+
+export interface GeminiError {
+  error: string;
+}
+
+export interface JpEvent {
+  id: string;
+  label: string;
+  description?: string;
+}
+
+export interface JpEdge {
+  from: string;
+  to: string;
+  label: string;
+  cost: number;
+}
+
+export interface JpAlgorithmRequest {
+  /** The final objective/goal to achieve */
+  goal: string;
+  /** List of events (states) in the knowledge graph */
+  events: JpEvent[];
+  /** List of transitions (manus) between events */
+  edges: JpEdge[];
+  /** The initial state */
+  startEvent: string;
+}
+
+export interface JpPlanStep {
+  stepNumber: number;
+  fromEvent: string;
+  toEvent: string;
+  manu: string;
+  cost: number;
+  topologicalDistance: number;
+}
+
+export interface JpAlgorithmResult {
+  success: boolean;
+  path: JpPlanStep[];
+  totalCost: number;
+  iterations: number;
+  message: string;
+}
+
+export interface PictorialChatRequest {
+  /** List of pictorial symbol IDs selected by the user */
+  symbols: string[];
+  /** Optional context about the user's needs */
+  context?: string;
+  /** Response language: 'pt' or 'en' */
+  language?: string;
+}
+
+export interface PictorialChatResponse {
+  /** What the AI understood from the pictorial input */
+  interpretation: string;
+  /** The complete natural language sentence */
+  naturalLanguage: string;
+  /** Suggested follow-up symbol sequences */
+  suggestions: string[];
+  /** Confidence score 0-1 */
+  confidence: number;
+}
+
+export interface TopologyRequest {
+  /** Current state as a point in knowledge space */
+  currentState: number[];
+  /** Goal state as a point in knowledge space */
+  goalState: number[];
+  /** Number of sample points for the Rips filtration */
+  numPoints?: number;
+}
+
+export interface PersistenceBar {
+  birth: number;
+  death: number;
+  dimension: number;
+  lifetime: number;
+}
+
+export interface TopologyResult {
+  /** Wasserstein distance between persistence diagrams */
+  wassersteinDistance: number;
+  /** Persistence diagram for current state */
+  persistenceDiagramCurrent: PersistenceBar[];
+  /** Persistence diagram for goal state */
+  persistenceDiagramGoal: PersistenceBar[];
+  topologicalComplexityCurrent: number;
+  topologicalComplexityGoal: number;
+  interpretation: string;
+}

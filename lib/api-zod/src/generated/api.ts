@@ -14,3 +14,208 @@ import * as zod from "zod";
 export const HealthCheckResponse = zod.object({
   status: zod.string(),
 });
+
+/**
+ * @summary List all conversations
+ */
+export const ListGeminiConversationsResponseItem = zod.object({
+  id: zod.number(),
+  title: zod.string(),
+  createdAt: zod.coerce.date(),
+});
+export const ListGeminiConversationsResponse = zod.array(
+  ListGeminiConversationsResponseItem,
+);
+
+/**
+ * @summary Create a new conversation
+ */
+export const CreateGeminiConversationBody = zod.object({
+  title: zod.string(),
+});
+
+/**
+ * @summary Get conversation with messages
+ */
+export const GetGeminiConversationParams = zod.object({
+  id: zod.coerce.number(),
+});
+
+export const GetGeminiConversationResponse = zod.object({
+  id: zod.number(),
+  title: zod.string(),
+  createdAt: zod.coerce.date(),
+  messages: zod.array(
+    zod.object({
+      id: zod.number(),
+      conversationId: zod.number(),
+      role: zod.string(),
+      content: zod.string(),
+      createdAt: zod.coerce.date(),
+    }),
+  ),
+});
+
+/**
+ * @summary Delete a conversation
+ */
+export const DeleteGeminiConversationParams = zod.object({
+  id: zod.coerce.number(),
+});
+
+/**
+ * @summary List messages in a conversation
+ */
+export const ListGeminiMessagesParams = zod.object({
+  id: zod.coerce.number(),
+});
+
+export const ListGeminiMessagesResponseItem = zod.object({
+  id: zod.number(),
+  conversationId: zod.number(),
+  role: zod.string(),
+  content: zod.string(),
+  createdAt: zod.coerce.date(),
+});
+export const ListGeminiMessagesResponse = zod.array(
+  ListGeminiMessagesResponseItem,
+);
+
+/**
+ * @summary Send a message and receive an AI response (SSE stream)
+ */
+export const SendGeminiMessageParams = zod.object({
+  id: zod.coerce.number(),
+});
+
+export const SendGeminiMessageBody = zod.object({
+  content: zod.string(),
+});
+
+/**
+ * @summary Generate an image from a text prompt
+ */
+export const GenerateGeminiImageBody = zod.object({
+  prompt: zod.string(),
+});
+
+export const GenerateGeminiImageResponse = zod.object({
+  b64_json: zod.string(),
+  mimeType: zod.string(),
+});
+
+/**
+ * @summary Run JP Algorithm — regressive planning
+ */
+export const RunJpAlgorithmBody = zod.object({
+  goal: zod.string().describe("The final objective\/goal to achieve"),
+  events: zod
+    .array(
+      zod.object({
+        id: zod.string(),
+        label: zod.string(),
+        description: zod.string().optional(),
+      }),
+    )
+    .describe("List of events (states) in the knowledge graph"),
+  edges: zod
+    .array(
+      zod.object({
+        from: zod.string(),
+        to: zod.string(),
+        label: zod.string(),
+        cost: zod.number(),
+      }),
+    )
+    .describe("List of transitions (manus) between events"),
+  startEvent: zod.string().describe("The initial state"),
+});
+
+export const RunJpAlgorithmResponse = zod.object({
+  success: zod.boolean(),
+  path: zod.array(
+    zod.object({
+      stepNumber: zod.number(),
+      fromEvent: zod.string(),
+      toEvent: zod.string(),
+      manu: zod.string(),
+      cost: zod.number(),
+      topologicalDistance: zod.number(),
+    }),
+  ),
+  totalCost: zod.number(),
+  iterations: zod.number(),
+  message: zod.string(),
+});
+
+/**
+ * @summary IAP pictorial communication for aphasia support (Gemma 4)
+ */
+export const PictorialChatBody = zod.object({
+  symbols: zod
+    .array(zod.string())
+    .describe("List of pictorial symbol IDs selected by the user"),
+  context: zod
+    .string()
+    .optional()
+    .describe("Optional context about the user's needs"),
+  language: zod.string().optional().describe("Response language: 'pt' or 'en'"),
+});
+
+export const PictorialChatResponse = zod.object({
+  interpretation: zod
+    .string()
+    .describe("What the AI understood from the pictorial input"),
+  naturalLanguage: zod
+    .string()
+    .describe("The complete natural language sentence"),
+  suggestions: zod
+    .array(zod.string())
+    .describe("Suggested follow-up symbol sequences"),
+  confidence: zod.number().describe("Confidence score 0-1"),
+});
+
+/**
+ * @summary Compute topological distance between states
+ */
+export const ComputeTopologyBody = zod.object({
+  currentState: zod
+    .array(zod.number())
+    .describe("Current state as a point in knowledge space"),
+  goalState: zod
+    .array(zod.number())
+    .describe("Goal state as a point in knowledge space"),
+  numPoints: zod
+    .number()
+    .optional()
+    .describe("Number of sample points for the Rips filtration"),
+});
+
+export const ComputeTopologyResponse = zod.object({
+  wassersteinDistance: zod
+    .number()
+    .describe("Wasserstein distance between persistence diagrams"),
+  persistenceDiagramCurrent: zod
+    .array(
+      zod.object({
+        birth: zod.number(),
+        death: zod.number(),
+        dimension: zod.number(),
+        lifetime: zod.number(),
+      }),
+    )
+    .describe("Persistence diagram for current state"),
+  persistenceDiagramGoal: zod
+    .array(
+      zod.object({
+        birth: zod.number(),
+        death: zod.number(),
+        dimension: zod.number(),
+        lifetime: zod.number(),
+      }),
+    )
+    .describe("Persistence diagram for goal state"),
+  topologicalComplexityCurrent: zod.number(),
+  topologicalComplexityGoal: zod.number(),
+  interpretation: zod.string(),
+});
