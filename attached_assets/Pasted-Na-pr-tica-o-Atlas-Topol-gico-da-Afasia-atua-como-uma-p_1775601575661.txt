@@ -1,0 +1,17 @@
+Na prática, o **Atlas Topológico da Afasia** atua como uma ponte vital entre o pensamento não-verbal e a expressão, ajudando pessoas com afasia de maneiras muito concretas no seu dia a dia:
+
+**1. Tradução de Imagens para Linguagem Natural (Comunicador AAC)**
+O Atlas não é apenas um mapa passivo; ele integra o módulo "Comunicador AAC" (Comunicação Aumentativa e Alternativa). Na prática, o paciente utiliza uma interface acessível para construir mensagens conectando símbolos pictóricos (da biblioteca ARASAAC) [1, 2]. O sistema, com o suporte do modelo Gemini, traduz essa sequência de imagens diretamente para a linguagem natural em português [1]. Isso elimina a frustração de tentar formular ou lembrar palavras exatas e estruturas gramaticais.
+
+**2. Navegação Intuitiva por "Vizinhança" de Ideias**
+Diferente de um dicionário convencional, o Atlas organiza visualmente os 65 pictogramas mapeados em categorias como Necessidades, Sentimentos, Lugares, Pessoas e Ações, distribuindo-os geometricamente no espaço [3]. 
+Graças ao cálculo da Distância de Wasserstein, a ferramenta prevê e sugere ideias que estão relacionadas na mente do usuário. Por exemplo:
+* Ao selecionar o pictograma de **"Água"** (categoria Necessidades), o sistema imediatamente sugere seus "vizinhos topológicos", como **"Dor"** e **"Comida"**, por estarem matematicamente próximos [4].
+* Ao selecionar **"Dor De Dentes"**, ele sugere opções lógicas para a situação, como **"Comida"** e **"Ajuda"** [5].
+Isso facilita enormemente a formulação do pensamento, pois o aplicativo guia o paciente através de "espaços topológicos pré-linguísticos", permitindo que ele apenas clique na próxima ideia lógica [6, 7].
+
+**3. Comunicação Imediata (Modo Emergência)**
+Para situações onde não há tempo para navegar pelo Atlas, o aplicativo possui um **"Modo Emergência (SOS)"** desenhado para ser acionado com um toque rápido. Ele oferece botões grandes de acesso direto a necessidades críticas ("Ajuda", "Dor Forte", "Sim", "Não") e possui atalhos para ligar diretamente para serviços vitais, como o SAMU (192) e os Bombeiros (193) [8].
+
+**4. Raciocínio Sem Dependência de Texto**
+A grande inovação prática para o usuário é que a Inteligência Artificial Pictórica (IAP) por trás do Atlas pensa por meio de "espaços geométricos" e não por pedaços de texto (tokens) [9, 10]. Uma vez que a afasia afeta justamente o processamento da linguagem textual ou verbal, o aplicativo contorna essa limitação cerebral, lidando apenas com a "forma" e a intenção estrutural da mensagem para garantir uma comunicação fluida e acessível [9, 10].

@@ -1,0 +1,10 @@
+Os **Diagramas de Persistência** são representações gráficas bidimensionais fundamentais na Análise Topológica do sistema IAP (Inteligência Artificial Pictórica) [1, 2]. Eles servem para **visualizar a distância e a estrutura de diferentes "estados de conhecimento"** [1-3].
+
+No funcionamento do algoritmo, esses diagramas possuem as seguintes características e finalidades:
+
+*   **Modelagem de Estados:** O sistema gera um diagrama para o **Estado Atual** (Current State) e outro para o **Estado Objetivo** (Goal State) [4-7]. Os pontos plotados nestes gráficos (geralmente acompanhando uma linha diagonal) representam a "forma" do conhecimento, a qual é diretamente moldada pelos valores numéricos de três parâmetros cognitivos/estruturais: **Sintaxe, Lógica e Arquitetura** [4-8].
+*   **Cálculo da Distância de Wasserstein:** A função principal dos diagramas de persistência é permitir que o sistema calcule a Distância de Wasserstein [1, 2]. A IA consegue fazer isso ao visualizar e comparar as distâncias e características do conhecimento utilizando **homologia** [2, 3].
+*   **Guia para o Algoritmo JP (Heurística):** O algoritmo usa a diferença observada entre os diagramas como um mapa. Se a diferença visual entre o diagrama do Estado Atual e o do Estado Objetivo for muito grande, o sistema identifica uma "distância topológica ampla" com **diferenças estruturais significativas** (por exemplo, um valor calculado de 2.179) [9]. Isso sinaliza ao Algoritmo JP que a lacuna de conhecimento é grande e que **múltiplos passos de planejamento serão necessários** para criar uma ponte estrutural entre as ideias [9].
+*   **Fundamento Pré-linguístico:** É por meio da aproximação matemática sobre esses diagramas que a IA consegue atuar em **espaços topológicos pré-linguísticos**, calculando a relação entre as ideias antes mesmo de virarem palavras, o que serve como a base matemática de todo o Atlas Topológico [10-12]. 
+
+Em resumo, os diagramas de persistência dão forma visual aos conceitos na IA, transformando diferenças semânticas em distâncias geométricas mensuráveis para que o algoritmo consiga planejar a comunicação.
