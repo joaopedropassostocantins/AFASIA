@@ -1,0 +1,561 @@
+import { useState, useEffect, useCallback, useRef } from “react”;
+
+// ── DADOS ────────────────────────────────────────────────────────
+const CATEGORIAS = [
+{ id: “necessidades”, label: “Necessidades”, cor: “#c0703b” },
+{ id: “sentimentos”,  label: “Sentimentos”,  cor: “#7b4fa0” },
+{ id: “lugares”,      label: “Lugares”,      cor: “#2e8b57” },
+{ id: “pessoas”,      label: “Pessoas”,      cor: “#2471a3” },
+{ id: “acoes”,        label: “Acoes”,        cor: “#922b21” },
+];
+
+const PICTOGRAMAS = {
+necessidades: [
+{ id: “agua”,     label: “Agua”,     emoji: “💧”, frase: “Quero agua”,          cat: “necessidades” },
+{ id: “comida”,   label: “Comida”,   emoji: “🍽️”, frase: “Quero comer”,         cat: “necessidades” },
+{ id: “banheiro”, label: “Banheiro”, emoji: “🚿”, frase: “Preciso do banheiro”, cat: “necessidades” },
+{ id: “remedio”,  label: “Remedio”,  emoji: “💊”, frase: “Preciso do remedio”,  cat: “necessidades” },
+{ id: “descanso”, label: “Descanso”, emoji: “🛏️”, frase: “Quero descansar”,     cat: “necessidades” },
+{ id: “frio”,     label: “Frio”,     emoji: “🥶”, frase: “Estou com frio”,      cat: “necessidades” },
+{ id: “calor”,    label: “Calor”,    emoji: “🥵”, frase: “Estou com calor”,     cat: “necessidades” },
+{ id: “dor”,      label: “Dor”,      emoji: “😣”, frase: “Estou com dor”,       cat: “necessidades” },
+],
+sentimentos: [
+{ id: “bem”,      label: “Bem”,      emoji: “😊”, frase: “Estou me sentindo bem”,     cat: “sentimentos” },
+{ id: “mal”,      label: “Mal”,      emoji: “😔”, frase: “Nao estou bem”,             cat: “sentimentos” },
+{ id: “ansioso”,  label: “Ansioso”,  emoji: “😰”, frase: “Estou ansioso”,             cat: “sentimentos” },
+{ id: “feliz”,    label: “Feliz”,    emoji: “😄”, frase: “Estou feliz”,               cat: “sentimentos” },
+{ id: “triste”,   label: “Triste”,   emoji: “😢”, frase: “Estou triste”,              cat: “sentimentos” },
+{ id: “com_medo”, label: “Medo”,     emoji: “😨”, frase: “Estou com medo”,            cat: “sentimentos” },
+],
+lugares: [
+{ id: “casa”,     label: “Casa”,     emoji: “🏠”, frase: “Quero ir para casa”,     cat: “lugares” },
+{ id: “hospital”, label: “Hospital”, emoji: “🏥”, frase: “Preciso ir ao hospital”, cat: “lugares” },
+{ id: “quarto”,   label: “Quarto”,   emoji: “🛏️”, frase: “Quero ir ao quarto”,    cat: “lugares” },
+{ id: “jardim”,   label: “Jardim”,   emoji: “🌳”, frase: “Quero ir ao jardim”,    cat: “lugares” },
+{ id: “sala”,     label: “Sala”,     emoji: “🛋️”, frase: “Quero ir a sala”,       cat: “lugares” },
+],
+pessoas: [
+{ id: “filho”,      label: “Filho”,      emoji: “👶”,     frase: “Quero ver meu filho”,      cat: “pessoas” },
+{ id: “medico”,     label: “Medico”,     emoji: “👨‍⚕️”, frase: “Preciso do medico”,        cat: “pessoas” },
+{ id: “enfermeiro”, label: “Enfermeiro”, emoji: “👩‍⚕️”, frase: “Preciso do enfermeiro”,    cat: “pessoas” },
+{ id: “familia”,    label: “Familia”,    emoji: “👨‍👩‍👧”, frase: “Quero ver minha familia”, cat: “pessoas” },
+],
+acoes: [
+{ id: “tv”,       label: “TV”,        emoji: “📺”, frase: “Quero ligar a TV”,       cat: “acoes” },
+{ id: “telefone”, label: “Telefonar”, emoji: “📞”, frase: “Quero fazer uma ligacao”, cat: “acoes” },
+{ id: “musica”,   label: “Musica”,    emoji: “🎵”, frase: “Quero ouvir musica”,      cat: “acoes” },
+{ id: “ler”,      label: “Ler”,       emoji: “📖”, frase: “Quero ler”,               cat: “acoes” },
+{ id: “sair”,     label: “Sair”,      emoji: “🚶”, frase: “Quero sair”,              cat: “acoes” },
+],
+};
+
+const URGENCIA = [
+{ id: “ajuda”,     label: “AJUDA”,     emoji: “🆘”, frase: “PRECISO DE AJUDA IMEDIATAMENTE” },
+{ id: “dor_forte”, label: “DOR FORTE”, emoji: “🔴”, frase: “ESTOU COM DOR MUITO FORTE”       },
+{ id: “nao”,       label: “NAO”,       emoji: “🚫”, frase: “NAO”                              },
+{ id: “sim”,       label: “SIM”,       emoji: “✅”, frase: “SIM”                              },
+];
+
+const TODOS = Object.values(PICTOGRAMAS).flat();
+
+function getPeriodo() {
+const h = new Date().getHours();
+return h < 12 ? “manha” : h < 18 ? “tarde” : “noite”;
+}
+
+// ── API ANTHROPIC (simula Gemma 4) ────────────────────────────────
+async function inferirComIA(pictogramas, historico) {
+const pics = pictogramas.map(p => `${p.label} (${p.cat})`).join(”, “);
+const hist = historico.slice(-3).join(” | “) || “nenhum”;
+
+const prompt = `Voce e um sistema de CAA (Comunicacao Aumentativa e Alternativa) para pessoas com afasia.
+
+Pictogramas selecionados: [${pics}]
+Periodo do dia: ${getPeriodo()}
+Historico recente: ${hist}
+
+Responda SOMENTE com JSON valido, sem texto fora do JSON:
+{
+“intencao”: “frase natural em portugues brasileiro simples e direta”,
+“urgencia”: 0,
+“emocao”: “neutro|alegre|ansioso|com_dor|com_medo”,
+“confianca”: 0.0,
+“sugestoes”: [“id1”, “id2”, “id3”],
+“nota_cuidador”: “orientacao breve para quem assiste”
+}
+
+Ids validos para sugestoes: agua, comida, banheiro, remedio, descanso, frio, calor, dor, bem, mal, ansioso, feliz, triste, com_medo, casa, hospital, quarto, jardim, sala, filho, medico, enfermeiro, familia, tv, telefone, musica, ler, sair`;
+
+try {
+const res = await fetch(“https://api.anthropic.com/v1/messages”, {
+method: “POST”,
+headers: { “Content-Type”: “application/json” },
+body: JSON.stringify({
+model: “claude-sonnet-4-20250514”,
+max_tokens: 300,
+messages: [{ role: “user”, content: prompt }],
+}),
+});
+const data = await res.json();
+const texto = data.content?.[0]?.text || “”;
+const ini = texto.indexOf(”{”);
+const fim = texto.lastIndexOf(”}”) + 1;
+return JSON.parse(texto.slice(ini, fim));
+} catch {
+return null;
+}
+}
+
+// ── COMPONENTES ───────────────────────────────────────────────────
+
+function Pic({ p, sel, onTap, grande }) {
+const [press, setPress] = useState(false);
+return (
+<div
+onPointerDown={() => setPress(true)}
+onPointerUp={() => { setPress(false); onTap(p); }}
+onPointerLeave={() => setPress(false)}
+style={{
+background: sel ? “linear-gradient(135deg,#c0703b,#a05030)” : “linear-gradient(135deg,#1a2540,#111d35)”,
+border: `2px solid ${sel ? "#e89060" : "rgba(255,255,255,0.09)"}`,
+borderRadius: 16,
+padding: grande ? “20px 10px” : “13px 8px”,
+display: “flex”, flexDirection: “column”, alignItems: “center”, gap: 7,
+cursor: “pointer”,
+transform: press ? “scale(0.91)” : “scale(1)”,
+transition: “transform 0.1s, background 0.2s”,
+userSelect: “none”,
+minHeight: grande ? 100 : 76,
+justifyContent: “center”,
+boxShadow: sel ? “0 4px 18px rgba(192,112,59,0.35)” : “none”,
+}}
+>
+<span style={{ fontSize: grande ? 38 : 30, lineHeight: 1 }}>{p.emoji}</span>
+<span style={{
+fontSize: 10, color: sel ? “#fff” : “#7a8ea8”,
+textAlign: “center”, fontWeight: sel ? 700 : 400, letterSpacing: “0.4px”,
+}}>
+{p.label.toUpperCase()}
+</span>
+</div>
+);
+}
+
+function PainelIA({ res, loading }) {
+if (!res && !loading) return null;
+const cor = res?.urgencia >= 8 ? “#e74c3c” : res?.urgencia >= 5 ? “#f5a623” : “#4285f4”;
+return (
+<div style={{
+margin: “0 14px 10px”,
+background: “linear-gradient(135deg,rgba(66,133,244,0.09),rgba(66,133,244,0.03))”,
+border: “1px solid rgba(66,133,244,0.25)”,
+borderRadius: 14, padding: “11px 13px”,
+position: “relative”, overflow: “hidden”,
+}}>
+<div style={{
+position: “absolute”, top: 0, left: 0, right: 0, height: 2,
+background: loading
+? “linear-gradient(90deg,transparent,#4285f4,transparent)”
+: `linear-gradient(90deg,#4285f4,${cor})`,
+animation: loading ? “slide 1.2s ease infinite” : “none”,
+}} />
+<div style={{ fontSize: 9, color: “#4285f4”, letterSpacing: “2px”, marginBottom: 6 }}>
+IA — INFERENCIA DE INTENCAO
+</div>
+{loading ? (
+<div style={{ color: “#556”, fontSize: 12, fontStyle: “italic” }}>Analisando…</div>
+) : (
+<>
+<div style={{ fontSize: 14, color: “#e8f0fe”, fontWeight: 600, lineHeight: 1.5, marginBottom: 7 }}>
+“{res.intencao}”
+</div>
+<div style={{ display: “flex”, gap: 7, flexWrap: “wrap”, alignItems: “center” }}>
+{res.emocao && res.emocao !== “neutro” && (
+<span style={{
+background: “rgba(255,255,255,0.07)”, borderRadius: 10,
+padding: “2px 8px”, fontSize: 10, color: “#aaa”,
+}}>{res.emocao}</span>
+)}
+{res.urgencia > 0 && (
+<span style={{
+background: `rgba(${res.urgencia >= 8 ? "231,76,60" : "245,166,35"},0.15)`,
+border: `1px solid ${cor}40`, borderRadius: 10,
+padding: “2px 8px”, fontSize: 10, color: cor, fontWeight: 700,
+}}>urgencia {res.urgencia}/10</span>
+)}
+{res.confianca > 0 && (
+<span style={{ fontSize: 10, color: “#445” }}>
+confianca {Math.round(res.confianca * 100)}%
+</span>
+)}
+</div>
+{res.nota_cuidador && (
+<div style={{
+marginTop: 8, padding: “5px 8px”,
+background: “rgba(255,255,255,0.04)”, borderRadius: 8,
+fontSize: 10, color: “#667”,
+borderLeft: “2px solid #4285f4”,
+}}>
+Cuidador: {res.nota_cuidador}
+</div>
+)}
+</>
+)}
+<style>{`@keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}`}</style>
+</div>
+);
+}
+
+function Sugestoes({ ids, onTap }) {
+if (!ids?.length) return null;
+const pics = ids.map(id => TODOS.find(p => p.id === id)).filter(Boolean);
+if (!pics.length) return null;
+return (
+<div style={{ padding: “0 14px 8px” }}>
+<div style={{ fontSize: 9, color: “#4285f4”, letterSpacing: “2px”, marginBottom: 5, display: “flex”, alignItems: “center”, gap: 5 }}>
+<span style={{ width: 5, height: 5, borderRadius: “50%”, background: “#4285f4”, display: “inline-block” }} />
+IA SUGERE
+</div>
+<div style={{ display: “flex”, gap: 7, overflowX: “auto”, paddingBottom: 3 }}>
+{pics.map(p => (
+<div key={p.id} onClick={() => onTap(p)} style={{
+background: “rgba(66,133,244,0.1)”, border: “1px solid rgba(66,133,244,0.3)”,
+borderRadius: 11, padding: “6px 11px”,
+display: “flex”, alignItems: “center”, gap: 5,
+cursor: “pointer”, whiteSpace: “nowrap”, flexShrink: 0,
+}}>
+<span style={{ fontSize: 17 }}>{p.emoji}</span>
+<span style={{ fontSize: 11, color: “#7ab4f5” }}>{p.label}</span>
+</div>
+))}
+</div>
+</div>
+);
+}
+
+function BarraEstado({ sel, onRemover, onFalar, onLimpar, frase, falando }) {
+if (!sel.length) return null;
+return (
+<div style={{
+position: “fixed”, bottom: 0, left: 0, right: 0,
+background: “linear-gradient(135deg,#12192e,#0d1117)”,
+borderTop: “2px solid #c0703b”,
+padding: “11px 15px”, zIndex: 100,
+}}>
+<div style={{ display: “flex”, gap: 7, marginBottom: 8, flexWrap: “wrap” }}>
+{sel.map((p, i) => (
+<div key={i} onClick={() => onRemover(i)} style={{
+background: “#1e2d4a”, borderRadius: 11, padding: “5px 9px”,
+display: “flex”, alignItems: “center”, gap: 5,
+fontSize: 13, color: “#fff”, border: “1px solid rgba(255,255,255,0.11)”, cursor: “pointer”,
+}}>
+<span style={{ fontSize: 16 }}>{p.emoji}</span>
+<span>{p.label}</span>
+<span style={{ color: “#e74c3c”, fontSize: 10, fontWeight: 700 }}>×</span>
+</div>
+))}
+</div>
+<div style={{
+background: “rgba(192,112,59,0.12)”, border: “1px solid rgba(192,112,59,0.3)”,
+borderRadius: 10, padding: “7px 11px”, fontSize: 13, color: “#e89060”,
+marginBottom: 8, fontStyle: “italic”, minHeight: 30,
+}}>
+“{frase || sel.map(p => p.label).join(” + “)}”
+</div>
+<div style={{ display: “flex”, gap: 7 }}>
+<button onClick={onFalar} style={{
+flex: 1,
+background: falando ? “linear-gradient(135deg,#4285f4,#2c6fda)” : “linear-gradient(135deg,#c0703b,#a05030)”,
+border: “none”, borderRadius: 12, padding: 12,
+color: “#fff”, fontSize: 14, fontWeight: 700, cursor: “pointer”,
+display: “flex”, alignItems: “center”, justifyContent: “center”, gap: 7,
+}}>
+<span style={{ fontSize: 19 }}>🔊</span>
+{falando ? “FALANDO…” : “FALAR”}
+</button>
+<button onClick={onLimpar} style={{
+background: “rgba(231,76,60,0.13)”, border: “1px solid rgba(231,76,60,0.3)”,
+borderRadius: 12, padding: “12px 15px”, color: “#e74c3c”, fontSize: 19, cursor: “pointer”,
+}}>✕</button>
+</div>
+</div>
+);
+}
+
+function Cartao({ sel, onFechar }) {
+const frase = sel.length
+? sel.map(p => p.frase).join(”. “)
+: “Sou uma pessoa com afasia. Tenho dificuldade para falar, mas entendo tudo. Por favor, seja paciente.”;
+return (
+<div style={{
+position: “fixed”, inset: 0, background: “rgba(0,0,0,0.93)”,
+zIndex: 200, display: “flex”, alignItems: “center”, justifyContent: “center”, padding: 22,
+}}>
+<div style={{
+background: “#fff”, borderRadius: 20, padding: 26, maxWidth: 360, width: “100%”,
+textAlign: “center”, border: “4px solid #e74c3c”,
+boxShadow: “0 0 60px rgba(231,76,60,0.35)”,
+}}>
+<div style={{ fontSize: 44, marginBottom: 9 }}>🆘</div>
+<div style={{ fontSize: 11, fontWeight: 700, color: “#e74c3c”, letterSpacing: “2px”, marginBottom: 13 }}>
+CARTAO DE COMUNICACAO — AFASIA
+</div>
+<div style={{
+fontSize: 16, color: “#12192e”, lineHeight: 1.6, fontWeight: 600,
+marginBottom: 16, padding: 13, background: “#fef9f0”,
+borderRadius: 10, border: “1px solid #e89060”,
+}}>{frase}</div>
+<div style={{ fontSize: 11, color: “#888”, marginBottom: 16 }}>
+Esta pessoa usa comunicacao alternativa.<br />Fale devagar e use frases curtas.
+</div>
+<button onClick={onFechar} style={{
+width: “100%”, padding: 12, background: “#12192e”, color: “#fff”,
+border: “none”, borderRadius: 12, fontSize: 13, cursor: “pointer”, fontWeight: 700,
+}}>FECHAR</button>
+</div>
+</div>
+);
+}
+
+// ── APP PRINCIPAL ─────────────────────────────────────────────────
+export default function App() {
+const [cat, setCat]         = useState(“necessidades”);
+const [sel, setSel]         = useState([]);
+const [urgMode, setUrgMode] = useState(false);
+const [cartao, setCartao]   = useState(false);
+const [falando, setFalando] = useState(false);
+const [hist, setHist]       = useState([]);
+const [histOpen, setHistOpen] = useState(false);
+const [grande, setGrande]   = useState(false);
+
+const [iaRes, setIaRes]         = useState(null);
+const [iaLoad, setIaLoad]       = useState(false);
+const [sugestoes, setSugestoes] = useState([]);
+const [frase, setFrase]         = useState(””);
+const debounce                  = useRef(null);
+
+// Chama IA quando selecionados mudam
+useEffect(() => {
+if (!sel.length) { setIaRes(null); setFrase(””); return; }
+
+```
+clearTimeout(debounce.current);
+debounce.current = setTimeout(async () => {
+  setIaLoad(true);
+  const res = await inferirComIA(sel, hist.map(h => h.frase));
+  setIaLoad(false);
+  if (res) {
+    setIaRes(res);
+    setFrase(res.intencao);
+    if (res.sugestoes?.length) setSugestoes(res.sugestoes);
+  } else {
+    setFrase(sel.length === 1 ? sel[0].frase : sel.map(p => p.label).join(" + "));
+  }
+}, 600);
+```
+
+}, [sel]);
+
+const ids = new Set(sel.map(p => p.id));
+
+const toggleSel = useCallback((p) => {
+setSel(prev => {
+const i = prev.findIndex(x => x.id === p.id);
+if (i >= 0) return prev.filter((_, j) => j !== i);
+if (prev.length >= 4) return prev;
+return […prev, p];
+});
+}, []);
+
+const falar = useCallback(() => {
+const f = frase || sel.map(p => p.frase).join(”. “);
+if (!f) return;
+setHist(prev => [{ frase: f, hora: new Date().toLocaleTimeString(“pt-BR”, { hour: “2-digit”, minute: “2-digit” }) }, …prev.slice(0, 9)]);
+setFalando(true);
+if (“speechSynthesis” in window) {
+const u = new SpeechSynthesisUtterance(f);
+u.lang = “pt-BR”; u.rate = 0.85;
+u.onend = () => setFalando(false);
+window.speechSynthesis.speak(u);
+} else { setTimeout(() => setFalando(false), 2000); }
+}, [frase, sel]);
+
+const limpar = useCallback(() => { setSel([]); setIaRes(null); setFrase(””); }, []);
+
+const pics = PICTOGRAMAS[cat] || [];
+
+return (
+<div style={{
+background: “#0d1117”, minHeight: “100vh”, maxWidth: 420, margin: “0 auto”,
+fontFamily: “‘Segoe UI’, system-ui, sans-serif”, position: “relative”,
+paddingBottom: sel.length > 0 ? 215 : 65,
+}}>
+
+```
+  {/* MODO URGENCIA */}
+  {urgMode && (
+    <div style={{
+      position: "fixed", inset: 0, background: "rgba(0,0,0,0.97)", zIndex: 150,
+      display: "grid", gridTemplateColumns: "1fr 1fr",
+      gap: 14, padding: 24, alignContent: "center",
+    }}>
+      <div style={{ gridColumn: "1/-1", textAlign: "center", color: "#e74c3c", fontSize: 11, letterSpacing: "3px", marginBottom: 6, fontWeight: 700 }}>
+        URGENCIA — TOQUE RAPIDO
+      </div>
+      {URGENCIA.map(p => (
+        <div key={p.id} onClick={() => {
+          const u = new SpeechSynthesisUtterance(p.frase);
+          u.lang = "pt-BR"; u.rate = 0.85;
+          window.speechSynthesis?.speak(u);
+        }} style={{
+          background: p.id === "sim" ? "#0e3520" : "#3a0f0f",
+          border: `3px solid ${p.id === "sim" ? "#4ada8e" : "#e74c3c"}`,
+          borderRadius: 18, padding: "24px 12px",
+          display: "flex", flexDirection: "column", alignItems: "center", gap: 9, cursor: "pointer",
+        }}>
+          <span style={{ fontSize: 46 }}>{p.emoji}</span>
+          <span style={{ color: "#fff", fontSize: 14, fontWeight: 700 }}>{p.label}</span>
+        </div>
+      ))}
+      <button onClick={() => setUrgMode(false)} style={{
+        gridColumn: "1/-1", marginTop: 9, padding: 12,
+        background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.13)",
+        borderRadius: 12, color: "#fff", fontSize: 13, cursor: "pointer",
+      }}>VOLTAR</button>
+    </div>
+  )}
+
+  {cartao && <Cartao sel={sel} onFechar={() => setCartao(false)} />}
+
+  {/* HEADER */}
+  <div style={{
+    background: "linear-gradient(180deg,#12192e,#0d1117)",
+    padding: "13px 15px", borderBottom: "1px solid rgba(255,255,255,0.05)",
+    position: "sticky", top: 0, zIndex: 50,
+  }}>
+    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div>
+        <div style={{ fontSize: 17, fontWeight: 700, color: "#fff", letterSpacing: 1 }}>VOZ</div>
+        <div style={{ fontSize: 9, color: "#445", letterSpacing: "2px" }}>COMUNICACAO AUMENTATIVA</div>
+      </div>
+      <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+        {/* Badge IA */}
+        <div style={{
+          display: "flex", alignItems: "center", gap: 5,
+          background: "rgba(66,133,244,0.13)", border: "1px solid rgba(66,133,244,0.4)",
+          borderRadius: 20, padding: "3px 9px", fontSize: 9, color: "#7ab4f5",
+        }}>
+          <span style={{
+            width: 5, height: 5, borderRadius: "50%",
+            background: iaLoad ? "#f5a623" : "#4285f4",
+            display: "inline-block",
+            animation: iaLoad ? "pulse 0.8s ease infinite" : "none",
+          }} />
+          {iaLoad ? "PENSANDO..." : "IA ATIVA"}
+        </div>
+        <button onClick={() => setGrande(v => !v)} style={{
+          background: grande ? "#2d3561" : "rgba(255,255,255,0.07)",
+          border: "none", borderRadius: 8, padding: "6px 9px",
+          color: "#fff", fontSize: 13, cursor: "pointer",
+        }}>Aa</button>
+        <button onClick={() => setUrgMode(true)} style={{
+          background: "linear-gradient(135deg,#b22,#821)",
+          border: "none", borderRadius: 8, padding: "6px 10px",
+          fontSize: 16, cursor: "pointer",
+        }}>🆘</button>
+      </div>
+    </div>
+    <style>{`@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}`}</style>
+  </div>
+
+  {/* PAINEL IA */}
+  <PainelIA res={iaRes} loading={iaLoad} />
+
+  {/* SUGESTOES */}
+  {!sel.length && sugestoes.length > 0 && (
+    <Sugestoes ids={sugestoes} onTap={toggleSel} />
+  )}
+
+  {/* HISTORICO */}
+  {histOpen && hist.length > 0 && (
+    <div style={{ padding: "9px 14px" }}>
+      <div style={{ fontSize: 9, color: "#445", letterSpacing: "2px", marginBottom: 6 }}>HISTORICO</div>
+      {hist.map((h, i) => (
+        <div key={i} style={{
+          background: "#141e30", border: "1px solid rgba(255,255,255,0.05)",
+          borderRadius: 10, padding: "8px 11px", marginBottom: 5,
+          display: "flex", justifyContent: "space-between", alignItems: "center", gap: 7,
+        }}>
+          <span style={{ fontSize: 12, color: "#7a8ea8", flex: 1 }}>{h.frase}</span>
+          <div style={{ display: "flex", gap: 5, alignItems: "center" }}>
+            <span style={{ fontSize: 10, color: "#333" }}>{h.hora}</span>
+            <button onClick={() => {
+              const u = new SpeechSynthesisUtterance(h.frase);
+              u.lang = "pt-BR"; window.speechSynthesis?.speak(u);
+            }} style={{ background: "none", border: "none", cursor: "pointer", fontSize: 14 }}>🔊</button>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+  {/* CATEGORIAS */}
+  <div style={{ display: "flex", gap: 6, padding: "9px 14px", overflowX: "auto" }}>
+    {CATEGORIAS.map(c => (
+      <button key={c.id} onClick={() => setCat(c.id)} style={{
+        background: cat === c.id ? c.cor : "rgba(255,255,255,0.05)",
+        border: `1px solid ${cat === c.id ? c.cor : "rgba(255,255,255,0.08)"}`,
+        borderRadius: 20, padding: "6px 12px", color: "#fff",
+        fontSize: 10, cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0,
+        fontWeight: cat === c.id ? 700 : 400, transition: "background 0.2s",
+      }}>
+        {c.label}
+      </button>
+    ))}
+  </div>
+
+  {/* GRADE */}
+  <div style={{
+    display: "grid",
+    gridTemplateColumns: grande ? "1fr 1fr" : "1fr 1fr 1fr",
+    gap: 10, padding: "0 14px",
+  }}>
+    {pics.map(p => (
+      <Pic key={p.id} p={p} sel={ids.has(p.id)} onTap={toggleSel} grande={grande} />
+    ))}
+  </div>
+
+  {/* BARRA NAVEGACAO */}
+  <div style={{
+    position: "fixed",
+    bottom: sel.length > 0 ? 218 : 0,
+    left: "50%", transform: "translateX(-50%)",
+    width: "100%", maxWidth: 420,
+    background: "linear-gradient(0deg,#0d1117,transparent)",
+    borderTop: sel.length === 0 ? "1px solid rgba(255,255,255,0.05)" : "none",
+    padding: "8px 14px", display: "flex", gap: 7,
+    zIndex: 40, transition: "bottom 0.3s ease",
+  }}>
+    <button onClick={() => setHistOpen(v => !v)} style={{
+      flex: 1, background: histOpen ? "#1e2d4a" : "rgba(255,255,255,0.05)",
+      border: "1px solid rgba(255,255,255,0.07)",
+      borderRadius: 10, padding: 9, color: "#7a8ea8", fontSize: 11, cursor: "pointer",
+    }}>📋 Historico</button>
+    <button onClick={() => setCartao(true)} style={{
+      flex: 1, background: "rgba(231,76,60,0.11)",
+      border: "1px solid rgba(231,76,60,0.23)",
+      borderRadius: 10, padding: 9, color: "#e74c3c", fontSize: 11, cursor: "pointer",
+    }}>🪪 Cartao</button>
+  </div>
+
+  <BarraEstado
+    sel={sel} onRemover={i => setSel(p => p.filter((_, j) => j !== i))}
+    onFalar={falar} onLimpar={limpar}
+    frase={frase} falando={falando}
+  />
+</div>
+```
+
+);
+}
