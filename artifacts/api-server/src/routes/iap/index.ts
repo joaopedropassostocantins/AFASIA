@@ -431,25 +431,35 @@ function inferCategoria(palavra: string): string {
   return "outros";
 }
 
-const CAT_DIST: Record<string, Record<string, number>> = {
-  necessidades: { necessidades: 0.00, sentimentos: 0.55, lugares: 0.75, pessoas: 0.45, acoes: 0.65, outros: 0.80 },
-  sentimentos:  { necessidades: 0.55, sentimentos: 0.00, lugares: 0.70, pessoas: 0.50, acoes: 0.60, outros: 0.75 },
-  lugares:      { necessidades: 0.75, sentimentos: 0.70, lugares: 0.00, pessoas: 0.85, acoes: 0.80, outros: 0.60 },
-  pessoas:      { necessidades: 0.45, sentimentos: 0.50, lugares: 0.85, pessoas: 0.00, acoes: 0.40, outros: 0.70 },
-  acoes:        { necessidades: 0.65, sentimentos: 0.60, lugares: 0.80, pessoas: 0.40, acoes: 0.00, outros: 0.65 },
-  outros:       { necessidades: 0.80, sentimentos: 0.75, lugares: 0.60, pessoas: 0.70, acoes: 0.65, outros: 0.00 },
+const CAT_STATE_VECTORS: Record<string, number[]> = {
+  necessidades: [9, 2, 1, 2, 1],
+  sentimentos:  [2, 9, 2, 1, 2],
+  lugares:      [1, 2, 9, 2, 1],
+  pessoas:      [2, 1, 2, 9, 2],
+  acoes:        [1, 2, 1, 2, 9],
+  outros:       [5, 5, 5, 5, 5],
 };
 
-function pairwiseWasserstein(pictos: { id: number; categoria: string }[]): number[][] {
+function pairwiseTopo(pictos: { id: number; categoria: string }[]): number[][] {
+  const stateVectors = pictos.map((p) => {
+    const base = CAT_STATE_VECTORS[p.categoria] ?? CAT_STATE_VECTORS.outros;
+    const noise = (p.id % 7) / 10;
+    return base.map((v, idx) => Math.max(1, v + noise * Math.sin(idx * (p.id % 13))));
+  });
+
+  const diagrams = stateVectors.map((sv, i) =>
+    generateSimulatedPersistenceDiagram(sv, pictos[i].id % 100)
+  );
+
   const n = pictos.length;
+  const WASS_SCALE = 3.0;
   const dist: number[][] = Array.from({ length: n }, () => Array(n).fill(0));
   for (let i = 0; i < n; i++) {
     for (let j = i + 1; j < n; j++) {
-      const catDist = (CAT_DIST[pictos[i].categoria]?.[pictos[j].categoria]) ?? 0.7;
-      const idNoise = ((pictos[i].id + pictos[j].id) % 17) / 100;
-      const d = Math.min(1.0, catDist + idNoise);
-      dist[i][j] = d;
-      dist[j][i] = d;
+      const w = computeWasserstein(diagrams[i], diagrams[j]);
+      const normalized = Math.min(1.0, w / WASS_SCALE);
+      dist[i][j] = normalized;
+      dist[j][i] = normalized;
     }
   }
   return dist;
@@ -533,7 +543,7 @@ function buildAtlasResult(rawPictos: { id: number; palavra: string }[]): AtlasPi
   const n = withCat.length;
   if (n === 0) return [];
 
-  const dist = pairwiseWasserstein(withCat);
+  const dist = pairwiseTopo(withCat);
   const coords = classicalMDS(dist, n);
 
   return withCat.map((p, i) => {
@@ -563,13 +573,21 @@ function buildAtlasResult(rawPictos: { id: number; palavra: string }[]): AtlasPi
 router.get("/atlas", async (req, res) => {
   try {
     const query = String(req.query.query ?? "").trim();
+    const categoriaFilter = req.query.categoria ? String(req.query.categoria).trim() : null;
+
     if (!query) {
       res.status(400).json({ error: "Parâmetro 'query' obrigatório" });
       return;
     }
 
     const raw = await fetchArasaacSearch(query);
-    const pictos = buildAtlasResult(raw.map((r) => ({ id: r.id, palavra: r.keyword })));
+    let rawPictos = raw.map((r) => ({ id: r.id, palavra: r.keyword }));
+
+    if (categoriaFilter) {
+      rawPictos = rawPictos.filter((p) => inferCategoria(p.palavra) === categoriaFilter);
+    }
+
+    const pictos = buildAtlasResult(rawPictos);
     res.json({ pictos });
   } catch (err) {
     handleRouteError(err, res, (msg) => req.log.error(msg), "fetch atlas");
