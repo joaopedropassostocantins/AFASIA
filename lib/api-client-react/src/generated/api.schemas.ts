@@ -104,8 +104,8 @@ export interface PictorialChatRequest {
 export interface PictorialChatResponse {
   /** O que a IA compreendeu da entrada pictórica (em português) */
   intencao: string;
-  /** Nível de urgência detectado: baixa | média | alta | emergência */
-  urgencia: string;
+  /** Nível de urgência detectado: valor numérico de 0 (sem urgência) a 10 (emergência máxima) */
+  urgencia: number;
   /** Estado emocional detectado nos símbolos */
   emocao: string;
   /** Grau de confiança da interpretação (0-1) */

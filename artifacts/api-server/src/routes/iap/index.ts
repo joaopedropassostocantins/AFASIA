@@ -188,32 +188,45 @@ router.post("/plan", async (req, res) => {
   }
 });
 
+const KNOWN_SYMBOL_IDS = [
+  "agua", "comida", "banheiro", "remedio", "ajuda", "dormir", "frio", "calor",
+  "feliz", "triste", "com_dor", "cansado", "com_medo", "ansioso", "irritado", "confuso",
+  "casa", "hospital", "escola", "trabalho", "parque", "quarto", "fora", "dentro",
+  "eu", "familia", "medico", "enfermeiro", "amigo", "cuidador", "filhos", "mae",
+  "quero", "nao_quero", "parar", "ir", "sim", "nao", "dar", "chamar",
+];
+
 router.post("/pictoric-chat", async (req, res) => {
   try {
     const body = PictorialChatBody.parse(req.body);
     const symbolsText = body.symbols.join(", ");
-    const contextText = body.context ? `\nContexto adicional do usuário: ${body.context}` : "";
+    const contextText = body.context ? `\nContexto adicional: ${body.context}` : "";
     const historicoText = body.historico && body.historico.length > 0
-      ? `\nHistórico recente: ${body.historico.slice(-5).join(" | ")}`
+      ? `\nMensagens anteriores do usuário: ${body.historico.slice(-5).join(" | ")}`
       : "";
 
-    const systemPrompt = `Você é um sistema especializado em Comunicação Aumentativa e Alternativa (CAA) para pessoas com afasia, baseado na teoria IAP — Inteligência Artificial Pictórica de João Pedro Pereira Passos.
-Seu papel é interpretar sequências de símbolos pictóricos e transformá-las em comunicação clara, empática e em português do Brasil.
-Na teoria IAP, o pensamento humano ocorre em espaços topológicos pré-linguísticos antes de ser codificado em linguagem.
-Você SEMPRE responde em português. Nunca use inglês.
-Detecte o nível de urgência, o estado emocional, crie uma sugestão para o cuidador e ofereça próximos símbolos relevantes.`;
+    const hora = new Date().getHours();
+    let periodoDia = "manhã";
+    if (hora >= 12 && hora < 18) periodoDia = "tarde";
+    else if (hora >= 18 || hora < 6) periodoDia = "noite";
 
-    const userPrompt = `Símbolos pictóricos selecionados pelo usuário com afasia: ${symbolsText}${contextText}${historicoText}
+    const symbolsList = KNOWN_SYMBOL_IDS.join(", ");
 
-Responda APENAS em JSON válido com exatamente estes campos:
-{
-  "intencao": "frase completa em português que expressa o que o usuário quer comunicar (máx. 80 caracteres, simples e direta)",
-  "urgencia": "baixa | média | alta | emergência",
-  "emocao": "estado emocional predominante em uma palavra (ex: ansioso, calmo, com dor, com medo, confortável)",
-  "confianca": número entre 0 e 1 representando sua confiança na interpretação,
-  "sugestoes": ["símbolo1", "símbolo2", "símbolo3"],
-  "nota_cuidador": "orientação curta para o cuidador sobre como responder (máx. 60 caracteres)"
-}`;
+    const systemPrompt = `Você é um sistema de CAA (Comunicação Aumentativa e Alternativa) para pessoas com afasia, baseado na teoria IAP — Inteligência Artificial Pictórica de João Pedro Pereira Passos (UFT).
+Na teoria IAP, o pensamento humano ocorre em espaços topológicos pré-linguísticos antes de ser expresso em linguagem verbal.
+Você interpreta sequências de símbolos pictóricos e produz comunicação clara, empática e exclusivamente em português do Brasil.
+Período do dia atual: ${periodoDia}.
+Símbolos válidos para sugestões: ${symbolsList}.`;
+
+    const userPrompt = `Símbolos selecionados pelo usuário com afasia: ${symbolsText}${contextText}${historicoText}
+
+Retorne APENAS um objeto JSON com os campos abaixo (sem markdown, sem texto extra):
+- intencao: string (frase em português, máx. 80 caracteres)
+- urgencia: integer de 0 a 10 (0=nenhuma, 5=moderada, 8=alta, 10=emergência)
+- emocao: string (1-2 palavras em português)
+- confianca: float de 0.0 a 1.0
+- sugestoes: array com exatamente 3 IDs de símbolos válidos (da lista fornecida)
+- nota_cuidador: string (instrução em português, máx. 60 caracteres)`;
 
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash",
@@ -221,7 +234,7 @@ Responda APENAS em JSON válido com exatamente estes campos:
         { role: "user", parts: [{ text: systemPrompt + "\n\n" + userPrompt }] },
       ],
       config: {
-        maxOutputTokens: 2048,
+        maxOutputTokens: 1024,
         responseMimeType: "application/json",
       },
     });
@@ -230,7 +243,7 @@ Responda APENAS em JSON válido com exatamente estes campos:
 
     let parsed: {
       intencao?: string;
-      urgencia?: string;
+      urgencia?: number;
       emocao?: string;
       confianca?: number;
       sugestoes?: string[];
@@ -242,7 +255,7 @@ Responda APENAS em JSON válido com exatamente estes campos:
     } catch {
       parsed = {
         intencao: symbolsText,
-        urgencia: "baixa",
+        urgencia: 2,
         emocao: "neutro",
         confianca: 0.5,
         sugestoes: [],
@@ -250,12 +263,23 @@ Responda APENAS em JSON válido com exatamente estes campos:
       };
     }
 
+    const rawUrgencia = parsed.urgencia;
+    const urgenciaNum = typeof rawUrgencia === "number"
+      ? Math.max(0, Math.min(10, Math.round(rawUrgencia)))
+      : typeof rawUrgencia === "string"
+        ? Math.max(0, Math.min(10, Math.round(parseFloat(rawUrgencia) || 2)))
+        : 2;
+
+    const validSugestoes = (parsed.sugestoes ?? [])
+      .filter((s) => KNOWN_SYMBOL_IDS.includes(s))
+      .slice(0, 3);
+
     res.json({
       intencao: parsed.intencao ?? symbolsText,
-      urgencia: parsed.urgencia ?? "baixa",
+      urgencia: urgenciaNum,
       emocao: parsed.emocao ?? "neutro",
       confianca: parsed.confianca ?? 0.7,
-      sugestoes: parsed.sugestoes ?? [],
+      sugestoes: validSugestoes,
       nota_cuidador: parsed.nota_cuidador ?? "Verifique o que o usuário precisa.",
     });
   } catch (err) {

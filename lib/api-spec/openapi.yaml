@@ -435,8 +435,8 @@ components:
           type: string
           description: O que a IA compreendeu da entrada pictórica (em português)
         urgencia:
-          type: string
-          description: "Nível de urgência detectado: baixa | média | alta | emergência"
+          type: number
+          description: "Nível de urgência detectado: valor numérico de 0 (sem urgência) a 10 (emergência máxima)"
         emocao:
           type: string
           description: Estado emocional detectado nos símbolos

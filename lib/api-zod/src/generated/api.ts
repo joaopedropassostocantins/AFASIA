@@ -172,8 +172,10 @@ export const PictorialChatResponse = zod.object({
     .string()
     .describe("O que a IA compreendeu da entrada pictórica (em português)"),
   urgencia: zod
-    .string()
-    .describe("Nível de urgência detectado: baixa | média | alta | emergência"),
+    .number()
+    .describe(
+      "Nível de urgência detectado: valor numérico de 0 (sem urgência) a 10 (emergência máxima)",
+    ),
   emocao: zod.string().describe("Estado emocional detectado nos símbolos"),
   confianca: zod.number().describe("Grau de confiança da interpretação (0-1)"),
   sugestoes: zod
