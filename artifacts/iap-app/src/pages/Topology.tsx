@@ -5,7 +5,7 @@ import { Slider } from "@/components/ui/slider";
 import { Network, ActivitySquare } from "lucide-react";
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, ZAxis } from "recharts";
 import { motion } from "framer-motion";
-import type { TopologyRequest } from "@workspace/api-client-react/src/generated/api.schemas";
+import type { TopologyRequest } from "@workspace/api-client-react";
 
 // Custom debounce hook for slider
 function useDebounce<T>(value: T, delay: number): T {
@@ -71,7 +71,7 @@ export default function Topology() {
             <ZAxis type="number" dataKey="z" range={[20, 200]} name="Lifetime" />
             <RechartsTooltip cursor={{ strokeDasharray: '3 3' }} contentStyle={{ backgroundColor: 'hsl(var(--card))', borderColor: 'hsl(var(--border))', color: 'hsl(var(--foreground))' }} />
             {/* Diagonal line y=x */}
-            <Scatter name="Diagonal" data={[{x:0, y:0}, {x:10, y:10}]} line={{stroke: 'hsl(var(--muted-foreground))', strokeWidth: 1}} shape={() => null} />
+            <Scatter name="Diagonal" data={[{x:0, y:0}, {x:10, y:10}]} line={{stroke: 'hsl(var(--muted-foreground))', strokeWidth: 1}} />
             <Scatter name="Features" data={plotData} fill={color} opacity={0.7} />
           </ScatterChart>
         </ResponsiveContainer>
