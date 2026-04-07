@@ -38,7 +38,7 @@ const CATEGORIES: Category[] = [
   {
     name: "Necessidades",
     emoji: "💧",
-    borderColor: "border-blue-300",
+    borderColor: "border-orange-400",
     symbols: [
       { id: "agua", emoji: "💧", label: "Água", color: "bg-blue-100 hover:bg-blue-200" },
       { id: "comida", emoji: "🍽️", label: "Comida", color: "bg-green-100 hover:bg-green-200" },
@@ -53,7 +53,7 @@ const CATEGORIES: Category[] = [
   {
     name: "Sentimentos",
     emoji: "😊",
-    borderColor: "border-yellow-300",
+    borderColor: "border-purple-400",
     symbols: [
       { id: "feliz", emoji: "😊", label: "Feliz", color: "bg-yellow-100 hover:bg-yellow-200" },
       { id: "triste", emoji: "😢", label: "Triste", color: "bg-blue-100 hover:bg-blue-200" },
@@ -68,7 +68,7 @@ const CATEGORIES: Category[] = [
   {
     name: "Lugares",
     emoji: "🏠",
-    borderColor: "border-purple-300",
+    borderColor: "border-green-400",
     symbols: [
       { id: "casa", emoji: "🏠", label: "Casa", color: "bg-yellow-100 hover:bg-yellow-200" },
       { id: "hospital", emoji: "🏥", label: "Hospital", color: "bg-red-100 hover:bg-red-200" },
@@ -83,7 +83,7 @@ const CATEGORIES: Category[] = [
   {
     name: "Pessoas",
     emoji: "👥",
-    borderColor: "border-pink-300",
+    borderColor: "border-blue-400",
     symbols: [
       { id: "eu", emoji: "👤", label: "Eu", color: "bg-purple-100 hover:bg-purple-200" },
       { id: "familia", emoji: "👨‍👩‍👧", label: "Família", color: "bg-pink-100 hover:bg-pink-200" },
@@ -98,7 +98,7 @@ const CATEGORIES: Category[] = [
   {
     name: "Ações",
     emoji: "✅",
-    borderColor: "border-green-300",
+    borderColor: "border-red-400",
     symbols: [
       { id: "quero", emoji: "🙋", label: "Quero", color: "bg-blue-100 hover:bg-blue-200" },
       { id: "nao_quero", emoji: "🙅", label: "Não quero", color: "bg-rose-100 hover:bg-rose-200" },
@@ -272,7 +272,7 @@ export default function Aphasia() {
           <div>
             <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
               <Brain className="h-6 w-6 text-primary" />
-              Comunicador AAC
+              VOZ — COMUNICAÇÃO AUMENTATIVA
             </h1>
             <p className="text-xs text-muted-foreground mt-0.5">
               Inteligência Artificial Pictórica · Afasia em Português
@@ -325,7 +325,7 @@ export default function Aphasia() {
 
         <Card className={`border-2 ${currentCat.borderColor} shadow-sm`}>
           <CardContent className="p-3">
-            <div className={`grid gap-2 ${gridLarge ? "grid-cols-4" : "grid-cols-4 sm:grid-cols-8"}`}>
+            <div className={`grid gap-2 ${gridLarge ? "grid-cols-3" : "grid-cols-4"}`}>
               {currentCat.symbols.map((sym) => {
                 const isSelected = selectedSymbols.includes(sym.id);
                 const isDisabled = !isSelected && selectedSymbols.length >= 4;
@@ -549,6 +549,18 @@ export default function Aphasia() {
                     </Badge>
                   )}
                 </div>
+                <div className="flex flex-wrap gap-2 mt-1">
+                  {mutation.data.emocao && (
+                    <span className="text-xs text-purple-700 font-medium">
+                      😌 {mutation.data.emocao}
+                    </span>
+                  )}
+                  {typeof mutation.data.confianca === "number" && (
+                    <span className="text-xs text-blue-700 font-medium">
+                      🎯 {Math.round(mutation.data.confianca * 100)}% confiança
+                    </span>
+                  )}
+                </div>
                 {mutation.data.nota_cuidador && (
                   <p className="text-xs text-amber-700 mt-1 font-medium">
                     Cuidador: {mutation.data.nota_cuidador}
@@ -576,7 +588,7 @@ export default function Aphasia() {
               className={`flex-1 font-bold ${isSpeaking ? "animate-pulse" : ""}`}
             >
               <Volume2 className="h-4 w-4 mr-2" />
-              FALAR
+              {isSpeaking ? "FALANDO…" : "FALAR"}
             </Button>
             <Button
               variant="outline"
@@ -660,57 +672,61 @@ export default function Aphasia() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4"
-            onClick={() => setCartaoOpen(false)}
+            className="fixed inset-0 z-50 bg-white border-8 border-red-500 flex flex-col items-center justify-center p-8 text-center space-y-6"
           >
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
-              className="bg-white border-4 border-red-500 rounded-2xl p-8 max-w-sm w-full shadow-2xl text-center space-y-4"
-            >
-              <p className="text-xs font-bold text-red-600 uppercase tracking-widest">
-                Cartão de Comunicação — IAP
-              </p>
-              <div className="flex justify-center gap-3 text-3xl">
-                {selectedSymbols.map((id) => {
-                  const sym = ALL_SYMBOLS.find((s) => s.id === id);
-                  return sym ? <span key={id}>{sym.emoji}</span> : null;
-                })}
-              </div>
-              <p className="text-3xl font-bold text-foreground leading-tight">
-                {mutation.data.intencao}
-              </p>
-              <div className="flex justify-center gap-2 flex-wrap">
-                <Badge variant="outline" className="text-sm">
-                  Emoção: {mutation.data.emocao}
+            <p className="text-xs font-bold text-red-600 uppercase tracking-widest">
+              Cartão de Comunicação — IAP
+            </p>
+            <div className="flex justify-center gap-4 text-5xl">
+              {selectedSymbols.map((id) => {
+                const sym = ALL_SYMBOLS.find((s) => s.id === id);
+                return sym ? (
+                  <div key={id} className="flex flex-col items-center gap-1">
+                    <span>{sym.emoji}</span>
+                    <span className="text-xs font-medium text-gray-600">{sym.label}</span>
+                  </div>
+                ) : null;
+              })}
+            </div>
+            <p className="text-4xl font-bold text-foreground leading-tight max-w-md">
+              {mutation.data.intencao}
+            </p>
+            <div className="flex justify-center gap-3 flex-wrap">
+              {mutation.data.emocao && (
+                <Badge variant="outline" className="text-base px-3 py-1">
+                  😌 Emoção: {mutation.data.emocao}
                 </Badge>
-                {urgencyLevel && (
-                  <Badge variant="outline" className={`${urgencyLevel.color} text-sm`}>
-                    Urgência: {urgencyLevel.label}
-                  </Badge>
-                )}
-              </div>
-              {mutation.data.nota_cuidador && (
-                <div className="rounded-lg bg-amber-50 border border-amber-200 p-3 text-left">
-                  <p className="text-xs font-bold text-amber-700 uppercase mb-1">Nota ao cuidador</p>
-                  <p className="text-sm text-amber-800">{mutation.data.nota_cuidador}</p>
-                </div>
               )}
-              <div className="flex gap-2">
-                <Button
-                  className="flex-1"
-                  onClick={() => mutation.data && handleSpeak(mutation.data.intencao)}
-                >
-                  <Volume2 className="h-4 w-4 mr-2" />
-                  Falar
-                </Button>
-                <Button variant="outline" onClick={() => setCartaoOpen(false)}>
-                  Fechar
-                </Button>
+              {urgencyLevel && (
+                <Badge variant="outline" className={`${urgencyLevel.color} text-base px-3 py-1`}>
+                  Urgência: {urgencyLevel.label}
+                </Badge>
+              )}
+              {typeof mutation.data.confianca === "number" && (
+                <Badge variant="outline" className="text-base px-3 py-1">
+                  🎯 {Math.round(mutation.data.confianca * 100)}% confiança
+                </Badge>
+              )}
+            </div>
+            {mutation.data.nota_cuidador && (
+              <div className="rounded-lg bg-amber-50 border border-amber-200 p-4 text-left max-w-sm w-full">
+                <p className="text-xs font-bold text-amber-700 uppercase mb-1">Nota ao cuidador</p>
+                <p className="text-base text-amber-800">{mutation.data.nota_cuidador}</p>
               </div>
-            </motion.div>
+            )}
+            <div className="flex gap-3 w-full max-w-xs">
+              <Button
+                size="lg"
+                className="flex-1 font-bold"
+                onClick={() => mutation.data && handleSpeak(mutation.data.intencao)}
+              >
+                <Volume2 className="h-5 w-5 mr-2" />
+                Falar
+              </Button>
+              <Button size="lg" variant="outline" onClick={() => setCartaoOpen(false)}>
+                Fechar
+              </Button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

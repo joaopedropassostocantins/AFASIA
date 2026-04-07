@@ -270,9 +270,20 @@ Retorne APENAS um objeto JSON com os campos abaixo (sem markdown, sem texto extr
         ? Math.max(0, Math.min(10, Math.round(parseFloat(rawUrgencia) || 2)))
         : 2;
 
+    const FALLBACK_SUGGESTIONS = ["agua", "ajuda", "sim"];
     const validSugestoes = (parsed.sugestoes ?? [])
       .filter((s) => KNOWN_SYMBOL_IDS.includes(s))
       .slice(0, 3);
+    while (validSugestoes.length < 3) {
+      const fallback = FALLBACK_SUGGESTIONS[validSugestoes.length] ?? KNOWN_SYMBOL_IDS[validSugestoes.length];
+      if (!validSugestoes.includes(fallback)) {
+        validSugestoes.push(fallback);
+      } else {
+        const alt = KNOWN_SYMBOL_IDS.find((id) => !validSugestoes.includes(id));
+        if (alt) validSugestoes.push(alt);
+        else break;
+      }
+    }
 
     res.json({
       intencao: parsed.intencao ?? symbolsText,
