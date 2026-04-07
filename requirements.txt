@@ -1,0 +1,26 @@
+# Motor Pictórico — ARC-AGI-3
+arc-agi>=0.3.0
+POT>=0.9.4
+
+# TDA — GUDHI (INRIA) — NÃO usar giotto-tda
+gudhi>=3.12.0
+numpy>=1.21.6
+scipy>=1.10.0
+scikit-learn>=1.3.0
+
+# Gemma 4 — Hackathon Afasia
+google-generativeai>=0.8.0
+Pillow>=10.0.0
+requests>=2.31.0
+
+# Demo Gradio
+gradio>=4.30.0
+
+# Visualização TDA
+matplotlib>=3.8.0
+plotly>=5.20.0
+kaleido>=0.2.1
+
+# Utilitários
+python-dotenv>=1.0.0
+tqdm>=4.66.0

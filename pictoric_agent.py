@@ -55,6 +55,7 @@ def calc_geodesic_matrix(grid, src, tgt):
     R, C = len(grid), len(grid[0])
     dist_maps = []
     tgt_set = set(tgt)
+    src_set = set(src)
     for t_node in tgt:
         dist = {t_node: 0}
         q = deque([t_node])
@@ -64,7 +65,7 @@ def calc_geodesic_matrix(grid, src, tgt):
             for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
                 nr, nc = curr[0] + dr, curr[1] + dc
                 if 0 <= nr < R and 0 <= nc < C and (nr, nc) not in dist:
-                    if grid[nr][nc] == 0 or (nr, nc) in tgt_set:
+                    if grid[nr][nc] == 0 or (nr, nc) in tgt_set or (nr, nc) in src_set:
                         dist[(nr, nc)] = d + 1
                         q.append((nr, nc))
         dist_maps.append(dist)
@@ -171,7 +172,10 @@ class PictoricAgent(Agent):
         seed = int(time.time() * 1000000) + hash(self.game_id) % 1000000
         random.seed(seed)
         self._stale_count = 0
-        self._stale_threshold = 3
+        self._stale_threshold = 5
+        self._last_actions = deque(maxlen=10)
+        self._direction_history = deque(maxlen=6)
+        self._visited_positions = set()
 
     @property
     def name(self) -> str:
@@ -212,6 +216,14 @@ class PictoricAgent(Agent):
             else:
                 self._stale_count = 0
 
+        # --- Detectar oscilação ABAB nas últimas 4 ações ---
+        if len(self._last_actions) >= 4:
+            last_4 = list(self._last_actions)[-4:]
+            is_oscillating = (last_4[0] == last_4[2] and last_4[1] == last_4[3]
+                              and last_4[0] != last_4[1])
+            if is_oscillating:
+                self._stale_count += 2
+
         # --- Obter ações disponíveis (excluindo RESET) ---
         available = [a for a in GameAction if a is not GameAction.RESET]
         if not available:
@@ -242,7 +254,10 @@ class PictoricAgent(Agent):
         # --- Separar ações por tipo ---
         complex_actions = [a for a in available if a.is_complex()]
         simple_actions = [a for a in available if a.is_simple()]
-        action_map = {a.value: a for a in simple_actions}
+        action_map = {}
+        for a in simple_actions:
+            action_map[a.value] = a
+            action_map[a.name] = a  # fallback por nome
 
         # ============ PRIORIDADE 1: WASD (Sinkhorn) ============
         n_src, n_tgt = len(src), len(tgt)
