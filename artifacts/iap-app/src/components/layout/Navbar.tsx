@@ -8,7 +8,7 @@ export function Navbar() {
 
   const links = [
     { href: "/algorithm", label: "JP Algorithm", icon: BrainCircuit },
-    { href: "/aphasia", label: "Pictorial Chat", icon: Accessibility },
+    { href: "/afasia", label: "Comunicador AAC", icon: Accessibility },
     { href: "/topology", label: "Topology", icon: Network },
   ];
 

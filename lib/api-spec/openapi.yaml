@@ -417,37 +417,47 @@ components:
           type: array
           items:
             type: string
-          description: List of pictorial symbol IDs selected by the user
+          description: Lista de IDs de símbolos pictóricos selecionados pelo usuário
         context:
           type: string
-          description: Optional context about the user's needs
-        language:
-          type: string
-          description: "Response language: 'pt' or 'en'"
+          description: Contexto opcional sobre as necessidades do usuário
+        historico:
+          type: array
+          items:
+            type: string
+          description: Histórico recente de mensagens (para continuidade conversacional)
       required:
         - symbols
     PictorialChatResponse:
       type: object
       properties:
-        interpretation:
+        intencao:
           type: string
-          description: What the AI understood from the pictorial input
-        naturalLanguage:
+          description: O que a IA compreendeu da entrada pictórica (em português)
+        urgencia:
           type: string
-          description: The complete natural language sentence
-        suggestions:
+          description: "Nível de urgência detectado: baixa | média | alta | emergência"
+        emocao:
+          type: string
+          description: Estado emocional detectado nos símbolos
+        confianca:
+          type: number
+          description: Grau de confiança da interpretação (0-1)
+        sugestoes:
           type: array
           items:
             type: string
-          description: Suggested follow-up symbol sequences
-        confidence:
-          type: number
-          description: Confidence score 0-1
+          description: Sugestões de símbolos seguintes para continuar a comunicação
+        nota_cuidador:
+          type: string
+          description: Nota opcional para o cuidador ou profissional de saúde
       required:
-        - interpretation
-        - naturalLanguage
-        - suggestions
-        - confidence
+        - intencao
+        - urgencia
+        - emocao
+        - confianca
+        - sugestoes
+        - nota_cuidador
     TopologyRequest:
       type: object
       properties:

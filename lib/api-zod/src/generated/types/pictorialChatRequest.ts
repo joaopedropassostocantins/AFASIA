@@ -7,10 +7,10 @@
  */
 
 export interface PictorialChatRequest {
-  /** List of pictorial symbol IDs selected by the user */
+  /** Lista de IDs de símbolos pictóricos selecionados pelo usuário */
   symbols: string[];
-  /** Optional context about the user's needs */
+  /** Contexto opcional sobre as necessidades do usuário */
   context?: string;
-  /** Response language: 'pt' or 'en' */
-  language?: string;
+  /** Histórico recente de mensagens (para continuidade conversacional) */
+  historico?: string[];
 }

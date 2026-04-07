@@ -191,37 +191,29 @@ router.post("/plan", async (req, res) => {
 router.post("/pictoric-chat", async (req, res) => {
   try {
     const body = PictorialChatBody.parse(req.body);
-    const lang = body.language ?? "pt";
     const symbolsText = body.symbols.join(", ");
-    const contextText = body.context ? `\nContexto adicional: ${body.context}` : "";
+    const contextText = body.context ? `\nContexto adicional do usuário: ${body.context}` : "";
+    const historicoText = body.historico && body.historico.length > 0
+      ? `\nHistórico recente: ${body.historico.slice(-5).join(" | ")}`
+      : "";
 
-    const systemPrompt = lang === "pt"
-      ? `Você é um assistente especializado em Comunicação Aumentativa e Alternativa (CAA) para pessoas com afasia.
-         Sua função é interpretar sequências de símbolos pictóricos e traduzi-las para linguagem natural clara e empática.
-         A teoria IAP (Inteligência Artificial Pictórica) sugere que o pensamento ocorre em espaços topológicos antes da linguagem.
-         Responda sempre de forma acolhedora e em português.`
-      : `You are a specialized assistant in Augmentative and Alternative Communication (AAC) for people with aphasia.
-         Your role is to interpret sequences of pictorial symbols and translate them into clear, empathetic natural language.
-         PAI (Pictorial Artificial Intelligence) theory suggests thought occurs in topological spaces before language.
-         Always respond in an empathetic and supportive way in English.`;
+    const systemPrompt = `Você é um sistema especializado em Comunicação Aumentativa e Alternativa (CAA) para pessoas com afasia, baseado na teoria IAP — Inteligência Artificial Pictórica de João Pedro Pereira Passos.
+Seu papel é interpretar sequências de símbolos pictóricos e transformá-las em comunicação clara, empática e em português do Brasil.
+Na teoria IAP, o pensamento humano ocorre em espaços topológicos pré-linguísticos antes de ser codificado em linguagem.
+Você SEMPRE responde em português. Nunca use inglês.
+Detecte o nível de urgência, o estado emocional, crie uma sugestão para o cuidador e ofereça próximos símbolos relevantes.`;
 
-    const userPrompt = lang === "pt"
-      ? `Símbolos pictóricos selecionados: ${symbolsText}${contextText}
-         
-         Por favor:
-         1. Interprete o que o usuário quer comunicar
-         2. Crie uma frase completa em linguagem natural
-         3. Sugira 3 combinações de símbolos seguintes que fariam sentido
-         
-         Responda em formato JSON com os campos: interpretation, naturalLanguage, suggestions (array de 3 strings), confidence (0-1)`
-      : `Pictorial symbols selected: ${symbolsText}${contextText}
-         
-         Please:
-         1. Interpret what the user wants to communicate
-         2. Create a complete natural language sentence
-         3. Suggest 3 next symbol combinations that would make sense
-         
-         Respond in JSON format with fields: interpretation, naturalLanguage, suggestions (array of 3 strings), confidence (0-1)`;
+    const userPrompt = `Símbolos pictóricos selecionados pelo usuário com afasia: ${symbolsText}${contextText}${historicoText}
+
+Responda APENAS em JSON válido com exatamente estes campos:
+{
+  "intencao": "frase completa em português que expressa o que o usuário quer comunicar (máx. 80 caracteres, simples e direta)",
+  "urgencia": "baixa | média | alta | emergência",
+  "emocao": "estado emocional predominante em uma palavra (ex: ansioso, calmo, com dor, com medo, confortável)",
+  "confianca": número entre 0 e 1 representando sua confiança na interpretação,
+  "sugestoes": ["símbolo1", "símbolo2", "símbolo3"],
+  "nota_cuidador": "orientação curta para o cuidador sobre como responder (máx. 60 caracteres)"
+}`;
 
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash",
@@ -229,7 +221,7 @@ router.post("/pictoric-chat", async (req, res) => {
         { role: "user", parts: [{ text: systemPrompt + "\n\n" + userPrompt }] },
       ],
       config: {
-        maxOutputTokens: 8192,
+        maxOutputTokens: 2048,
         responseMimeType: "application/json",
       },
     });
@@ -237,28 +229,34 @@ router.post("/pictoric-chat", async (req, res) => {
     const rawText = response.text ?? "{}";
 
     let parsed: {
-      interpretation?: string;
-      naturalLanguage?: string;
-      suggestions?: string[];
-      confidence?: number;
+      intencao?: string;
+      urgencia?: string;
+      emocao?: string;
+      confianca?: number;
+      sugestoes?: string[];
+      nota_cuidador?: string;
     } = {};
 
     try {
       parsed = JSON.parse(rawText);
     } catch {
       parsed = {
-        interpretation: rawText.slice(0, 200),
-        naturalLanguage: rawText.slice(0, 200),
-        suggestions: [],
-        confidence: 0.5,
+        intencao: symbolsText,
+        urgencia: "baixa",
+        emocao: "neutro",
+        confianca: 0.5,
+        sugestoes: [],
+        nota_cuidador: "Confirme com o usuário se a interpretação está correta.",
       };
     }
 
     res.json({
-      interpretation: parsed.interpretation ?? "Could not interpret symbols",
-      naturalLanguage: parsed.naturalLanguage ?? symbolsText,
-      suggestions: parsed.suggestions ?? [],
-      confidence: parsed.confidence ?? 0.8,
+      intencao: parsed.intencao ?? symbolsText,
+      urgencia: parsed.urgencia ?? "baixa",
+      emocao: parsed.emocao ?? "neutro",
+      confianca: parsed.confianca ?? 0.7,
+      sugestoes: parsed.sugestoes ?? [],
+      nota_cuidador: parsed.nota_cuidador ?? "Verifique o que o usuário precisa.",
     });
   } catch (err) {
     handleRouteError(err, res, (msg) => req.log.error(msg), "process pictorial chat");

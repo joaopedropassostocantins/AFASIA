@@ -70,16 +70,16 @@ export default function Home() {
               <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
                 <Accessibility size={24} />
               </div>
-              <CardTitle className="font-mono">Pictorial Comm.</CardTitle>
-              <CardDescription>Aphasia accessible interface via Gemma 4</CardDescription>
+              <CardTitle className="font-mono">Comunicador AAC</CardTitle>
+              <CardDescription>Interface acessível para afasia em português via Gemini</CardDescription>
             </CardHeader>
             <CardContent className="flex-1 flex flex-col justify-end">
               <p className="text-sm text-muted-foreground mb-6">
-                Construct sentences using universal symbols, translated into natural language by AI.
+                Construa mensagens com símbolos pictóricos traduzidos para linguagem natural em português.
               </p>
-              <Link href="/aphasia" className="w-full">
+              <Link href="/afasia" className="w-full">
                 <Button variant="outline" className="w-full group">
-                  Explore Module 2
+                  Explorar Módulo 2
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>

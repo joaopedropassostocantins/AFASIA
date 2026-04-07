@@ -154,25 +154,34 @@ export const RunJpAlgorithmResponse = zod.object({
 export const PictorialChatBody = zod.object({
   symbols: zod
     .array(zod.string())
-    .describe("List of pictorial symbol IDs selected by the user"),
+    .describe("Lista de IDs de símbolos pictóricos selecionados pelo usuário"),
   context: zod
     .string()
     .optional()
-    .describe("Optional context about the user's needs"),
-  language: zod.string().optional().describe("Response language: 'pt' or 'en'"),
+    .describe("Contexto opcional sobre as necessidades do usuário"),
+  historico: zod
+    .array(zod.string())
+    .optional()
+    .describe(
+      "Histórico recente de mensagens (para continuidade conversacional)",
+    ),
 });
 
 export const PictorialChatResponse = zod.object({
-  interpretation: zod
+  intencao: zod
     .string()
-    .describe("What the AI understood from the pictorial input"),
-  naturalLanguage: zod
+    .describe("O que a IA compreendeu da entrada pictórica (em português)"),
+  urgencia: zod
     .string()
-    .describe("The complete natural language sentence"),
-  suggestions: zod
+    .describe("Nível de urgência detectado: baixa | média | alta | emergência"),
+  emocao: zod.string().describe("Estado emocional detectado nos símbolos"),
+  confianca: zod.number().describe("Grau de confiança da interpretação (0-1)"),
+  sugestoes: zod
     .array(zod.string())
-    .describe("Suggested follow-up symbol sequences"),
-  confidence: zod.number().describe("Confidence score 0-1"),
+    .describe("Sugestões de símbolos seguintes para continuar a comunicação"),
+  nota_cuidador: zod
+    .string()
+    .describe("Nota opcional para o cuidador ou profissional de saúde"),
 });
 
 /**

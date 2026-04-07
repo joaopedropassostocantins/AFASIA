@@ -93,23 +93,27 @@ export interface JpAlgorithmResult {
 }
 
 export interface PictorialChatRequest {
-  /** List of pictorial symbol IDs selected by the user */
+  /** Lista de IDs de símbolos pictóricos selecionados pelo usuário */
   symbols: string[];
-  /** Optional context about the user's needs */
+  /** Contexto opcional sobre as necessidades do usuário */
   context?: string;
-  /** Response language: 'pt' or 'en' */
-  language?: string;
+  /** Histórico recente de mensagens (para continuidade conversacional) */
+  historico?: string[];
 }
 
 export interface PictorialChatResponse {
-  /** What the AI understood from the pictorial input */
-  interpretation: string;
-  /** The complete natural language sentence */
-  naturalLanguage: string;
-  /** Suggested follow-up symbol sequences */
-  suggestions: string[];
-  /** Confidence score 0-1 */
-  confidence: number;
+  /** O que a IA compreendeu da entrada pictórica (em português) */
+  intencao: string;
+  /** Nível de urgência detectado: baixa | média | alta | emergência */
+  urgencia: string;
+  /** Estado emocional detectado nos símbolos */
+  emocao: string;
+  /** Grau de confiança da interpretação (0-1) */
+  confianca: number;
+  /** Sugestões de símbolos seguintes para continuar a comunicação */
+  sugestoes: string[];
+  /** Nota opcional para o cuidador ou profissional de saúde */
+  nota_cuidador: string;
 }
 
 export interface TopologyRequest {

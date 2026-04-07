@@ -17,7 +17,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/algorithm" component={Algorithm} />
-      <Route path="/aphasia" component={Aphasia} />
+      <Route path="/afasia" component={Aphasia} />
       <Route path="/topology" component={Topology} />
       <Route component={NotFound} />
     </Switch>
