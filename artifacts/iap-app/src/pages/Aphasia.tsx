@@ -123,8 +123,8 @@ const EMERGENCY_SYMBOLS: Symbol[] = [
 
 function getUrgencyLevel(n: number): { label: string; color: string; bg: string; ring: string } {
   if (n >= 10) return { label: "EMERGÊNCIA", color: "text-red-700", bg: "bg-red-100 border-red-400", ring: "ring-red-400" };
-  if (n >= 8) return { label: "Alta", color: "text-orange-700", bg: "bg-orange-100 border-orange-300", ring: "ring-orange-300" };
-  if (n >= 5) return { label: "Média", color: "text-yellow-700", bg: "bg-yellow-100 border-yellow-300", ring: "ring-yellow-300" };
+  if (n >= 8) return { label: "Alta", color: "text-red-700", bg: "bg-red-100 border-red-400", ring: "ring-red-400" };
+  if (n >= 5) return { label: "Média", color: "text-orange-700", bg: "bg-orange-100 border-orange-300", ring: "ring-orange-300" };
   return { label: "Baixa", color: "text-green-700", bg: "bg-green-100 border-green-300", ring: "ring-green-300" };
 }
 
@@ -325,7 +325,7 @@ export default function Aphasia() {
 
         <Card className={`border-2 ${currentCat.borderColor} shadow-sm`}>
           <CardContent className="p-3">
-            <div className={`grid gap-2 ${gridLarge ? "grid-cols-3" : "grid-cols-4"}`}>
+            <div className={`grid gap-2 ${gridLarge ? "grid-cols-3" : "grid-cols-2"}`}>
               {currentCat.symbols.map((sym) => {
                 const isSelected = selectedSymbols.includes(sym.id);
                 const isDisabled = !isSelected && selectedSymbols.length >= 4;
