@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "wouter";
-import { BrainCircuit, Activity, Accessibility, Network } from "lucide-react";
+import { BrainCircuit, Activity, Accessibility, Network, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Navbar() {
@@ -10,6 +10,7 @@ export function Navbar() {
     { href: "/algorithm", label: "JP Algorithm", icon: BrainCircuit },
     { href: "/afasia", label: "Comunicador AAC", icon: Accessibility },
     { href: "/topology", label: "Topology", icon: Network },
+    { href: "/atlas", label: "Atlas", icon: MapPin },
   ];
 
   return (

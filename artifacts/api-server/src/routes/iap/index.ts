@@ -397,4 +397,210 @@ router.post("/topology", async (req, res) => {
   }
 });
 
+
+// ─── Atlas Topológico da Afasia ───────────────────────────────────────────────
+
+const ATLAS_CAT_KEYWORDS: Record<string, string[]> = {
+  necessidades: ["água", "agua", "comida", "comer", "beber", "banheiro", "toalete", "remédio", "remedio", "medicina", "ajuda", "socorro", "dormir", "descanso", "frio", "calor", "fome", "sede", "higiene", "banho", "dente", "roupa", "sapato"],
+  sentimentos: ["feliz", "alegre", "triste", "dor", "doer", "medo", "ansioso", "ansiedade", "cansado", "irritado", "confuso", "nervoso", "raiva", "amor", "gostar", "emoção", "choro", "chorar", "rir", "saudade", "angústia", "angustia", "stress", "depressão"],
+  lugares: ["casa", "hospital", "escola", "trabalho", "parque", "quarto", "rua", "jardim", "cidade", "praia", "mercado", "supermercado", "farmácia", "farmacia", "clínica", "clinica", "banheiro"],
+  pessoas: ["eu", "mãe", "mae", "pai", "família", "familia", "médico", "medico", "enfermeiro", "amigo", "cuidador", "filho", "irmão", "irmao", "avó", "avo", "avô", "pessoa", "homem", "mulher", "criança", "crianca"],
+  acoes: ["quero", "não", "nao", "sim", "parar", "ir", "vir", "dar", "chamar", "ajudar", "fazer", "ver", "ouvir", "falar", "andar", "correr", "sentar", "levantar", "brincar", "trabalhar", "estudar", "dormir"],
+};
+
+interface AtlasPictogram {
+  id: number;
+  palavra: string;
+  imagemUrl: string;
+  categoria: string;
+  coordX: number;
+  coordY: number;
+  vizinhos: { id: number; palavra: string; distancia: number }[];
+}
+
+function inferCategoria(palavra: string): string {
+  const lower = palavra.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  for (const [cat, keywords] of Object.entries(ATLAS_CAT_KEYWORDS)) {
+    const normalizedKeywords = keywords.map((k) =>
+      k.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    );
+    if (normalizedKeywords.some((k) => lower.includes(k) || k.includes(lower))) {
+      return cat;
+    }
+  }
+  return "outros";
+}
+
+const CAT_DIST: Record<string, Record<string, number>> = {
+  necessidades: { necessidades: 0.00, sentimentos: 0.55, lugares: 0.75, pessoas: 0.45, acoes: 0.65, outros: 0.80 },
+  sentimentos:  { necessidades: 0.55, sentimentos: 0.00, lugares: 0.70, pessoas: 0.50, acoes: 0.60, outros: 0.75 },
+  lugares:      { necessidades: 0.75, sentimentos: 0.70, lugares: 0.00, pessoas: 0.85, acoes: 0.80, outros: 0.60 },
+  pessoas:      { necessidades: 0.45, sentimentos: 0.50, lugares: 0.85, pessoas: 0.00, acoes: 0.40, outros: 0.70 },
+  acoes:        { necessidades: 0.65, sentimentos: 0.60, lugares: 0.80, pessoas: 0.40, acoes: 0.00, outros: 0.65 },
+  outros:       { necessidades: 0.80, sentimentos: 0.75, lugares: 0.60, pessoas: 0.70, acoes: 0.65, outros: 0.00 },
+};
+
+function pairwiseWasserstein(pictos: { id: number; categoria: string }[]): number[][] {
+  const n = pictos.length;
+  const dist: number[][] = Array.from({ length: n }, () => Array(n).fill(0));
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      const catDist = (CAT_DIST[pictos[i].categoria]?.[pictos[j].categoria]) ?? 0.7;
+      const idNoise = ((pictos[i].id + pictos[j].id) % 17) / 100;
+      const d = Math.min(1.0, catDist + idNoise);
+      dist[i][j] = d;
+      dist[j][i] = d;
+    }
+  }
+  return dist;
+}
+
+function classicalMDS(dist: number[][], n: number): { x: number; y: number }[] {
+  if (n === 0) return [];
+  if (n === 1) return [{ x: 0, y: 0 }];
+  if (n === 2) return [{ x: -dist[0][1] / 2, y: 0 }, { x: dist[0][1] / 2, y: 0 }];
+
+  const D2 = dist.map((row) => row.map((d) => d * d));
+  const rowMeans = D2.map((row) => row.reduce((a, b) => a + b, 0) / n);
+  const grandMean = rowMeans.reduce((a, b) => a + b, 0) / n;
+  const colMeans = Array.from({ length: n }, (_, j) =>
+    D2.reduce((a, row) => a + row[j], 0) / n
+  );
+
+  const B: number[][] = Array.from({ length: n }, (_, i) =>
+    Array.from({ length: n }, (__, j) =>
+      -0.5 * (D2[i][j] - rowMeans[i] - colMeans[j] + grandMean)
+    )
+  );
+
+  const mulMV = (M: number[][], v: number[]) =>
+    M.map((row) => row.reduce((a, b, j) => a + b * v[j], 0));
+  const normV = (v: number[]) => Math.sqrt(v.reduce((a, b) => a + b * b, 0));
+  const normalizeV = (v: number[]) => {
+    const m = normV(v);
+    return m < 1e-12 ? v.map(() => 1 / Math.sqrt(n)) : v.map((x) => x / m);
+  };
+
+  const powerIterate = (M: number[][], seed: number): { vec: number[]; val: number } => {
+    let v = Array.from({ length: n }, (_, i) => Math.sin(i * 1.618 + seed));
+    v = normalizeV(v);
+    for (let iter = 0; iter < 150; iter++) {
+      v = normalizeV(mulMV(M, v));
+    }
+    const Av = mulMV(M, v);
+    const val = v.reduce((a, b, i) => a + b * Av[i], 0);
+    return { vec: v, val };
+  };
+
+  const { vec: v1, val: lam1 } = powerIterate(B, 0.0);
+  const B2 = B.map((row, i) => row.map((b, j) => b - lam1 * v1[i] * v1[j]));
+  const { vec: v2, val: lam2 } = powerIterate(B2, 1.5);
+
+  const s1 = Math.sqrt(Math.max(0, lam1));
+  const s2 = Math.sqrt(Math.max(0, lam2));
+
+  return Array.from({ length: n }, (_, i) => ({
+    x: Math.round(v1[i] * s1 * 1000) / 1000,
+    y: Math.round(v2[i] * s2 * 1000) / 1000,
+  }));
+}
+
+async function fetchArasaacSearch(palavra: string): Promise<{ id: number; keyword: string }[]> {
+  const url = `https://api.arasaac.org/api/pictograms/pt/search/${encodeURIComponent(palavra)}`;
+  const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+  if (!res.ok) return [];
+  const data = (await res.json()) as { _id: number; keywords?: { keyword: string }[] }[];
+  return data.slice(0, 5).map((item) => ({
+    id: item._id,
+    keyword: item.keywords?.[0]?.keyword ?? palavra,
+  }));
+}
+
+function buildAtlasResult(rawPictos: { id: number; palavra: string }[]): AtlasPictogram[] {
+  const seen = new Set<number>();
+  const unique = rawPictos.filter((p) => {
+    if (seen.has(p.id)) return false;
+    seen.add(p.id);
+    return true;
+  });
+
+  const withCat = unique.map((p) => ({
+    ...p,
+    categoria: inferCategoria(p.palavra),
+    imagemUrl: `https://static.arasaac.org/pictograms/${p.id}/${p.id}_500.png`,
+  }));
+
+  const n = withCat.length;
+  if (n === 0) return [];
+
+  const dist = pairwiseWasserstein(withCat);
+  const coords = classicalMDS(dist, n);
+
+  return withCat.map((p, i) => {
+    const neighbors = dist[i]
+      .map((d, j) => ({ j, d }))
+      .filter(({ j }) => j !== i)
+      .sort((a, b) => a.d - b.d)
+      .slice(0, 3)
+      .map(({ j, d }) => ({
+        id: withCat[j].id,
+        palavra: withCat[j].palavra,
+        distancia: Math.round(d * 1000) / 1000,
+      }));
+
+    return {
+      id: p.id,
+      palavra: p.palavra,
+      imagemUrl: p.imagemUrl,
+      categoria: p.categoria,
+      coordX: coords[i]?.x ?? 0,
+      coordY: coords[i]?.y ?? 0,
+      vizinhos: neighbors,
+    };
+  });
+}
+
+router.get("/atlas", async (req, res) => {
+  try {
+    const query = String(req.query.query ?? "").trim();
+    if (!query) {
+      res.status(400).json({ error: "Parâmetro 'query' obrigatório" });
+      return;
+    }
+
+    const raw = await fetchArasaacSearch(query);
+    const pictos = buildAtlasResult(raw.map((r) => ({ id: r.id, palavra: r.keyword })));
+    res.json({ pictos });
+  } catch (err) {
+    handleRouteError(err, res, (msg) => req.log.error(msg), "fetch atlas");
+  }
+});
+
+const ATLAS_CATEGORIAS_KEYWORDS = [
+  "agua", "comida", "dor", "medo", "casa", "medico", "familia",
+  "ajuda", "sim", "nao", "sair", "feliz", "triste", "remedio", "banheiro",
+];
+
+router.get("/atlas/categorias", async (req, res) => {
+  try {
+    const results = await Promise.allSettled(
+      ATLAS_CATEGORIAS_KEYWORDS.map((kw) => fetchArasaacSearch(kw))
+    );
+
+    const rawPictos: { id: number; palavra: string }[] = [];
+    results.forEach((r, i) => {
+      if (r.status === "fulfilled") {
+        r.value.forEach((item) => {
+          rawPictos.push({ id: item.id, palavra: item.keyword || ATLAS_CATEGORIAS_KEYWORDS[i] });
+        });
+      }
+    });
+
+    const pictos = buildAtlasResult(rawPictos);
+    res.json({ pictos, keywords: ATLAS_CATEGORIAS_KEYWORDS });
+  } catch (err) {
+    handleRouteError(err, res, (msg) => req.log.error(msg), "fetch atlas categorias");
+  }
+});
+
 export default router;
