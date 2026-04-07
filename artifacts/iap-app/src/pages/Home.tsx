@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { BrainCircuit, Accessibility, Network, ArrowRight, MapPin } from "lucide-react";
+import { BrainCircuit, Accessibility, Network, ArrowRight, MapPin, BookOpen } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -42,7 +42,7 @@ export default function Home() {
           </p>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="pt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+        <motion.div variants={itemVariants} className="pt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6 text-left">
           
           <Card className="bg-card/50 backdrop-blur border-primary/20 hover:border-primary/50 transition-all flex flex-col">
             <CardHeader>
@@ -122,6 +122,27 @@ export default function Home() {
               <Link href="/atlas" className="w-full">
                 <Button variant="outline" className="w-full group">
                   Explorar Módulo 4
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card/50 backdrop-blur border-primary/20 hover:border-primary/50 transition-all flex flex-col">
+            <CardHeader>
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                <BookOpen size={24} />
+              </div>
+              <CardTitle className="font-mono">Apêndice Científico</CardTitle>
+              <CardDescription>IAP como IA sem tokens e não-probabilística</CardDescription>
+            </CardHeader>
+            <CardContent className="flex-1 flex flex-col justify-end">
+              <p className="text-sm text-muted-foreground mb-6">
+                Fundamento teórico: por que topologia supera tokens e por que afasia valida a hipótese.
+              </p>
+              <Link href="/appendice" className="w-full">
+                <Button variant="outline" className="w-full group">
+                  Ler Apêndice
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
