@@ -38,7 +38,7 @@ export default function Home() {
             Inteligência Artificial <span className="text-primary">Pictórica</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
-            AI reasoning in geometric spaces, bridging the gap between topological structure and accessible communication.
+            Raciocínio por espaços geométricos, unindo estrutura topológica e comunicação acessível.
           </p>
         </motion.div>
 
@@ -49,16 +49,16 @@ export default function Home() {
               <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
                 <BrainCircuit size={24} />
               </div>
-              <CardTitle className="font-mono">JP Algorithm</CardTitle>
-              <CardDescription>Regressive planning through topological states</CardDescription>
+              <CardTitle className="font-mono">Algoritmo JP</CardTitle>
+              <CardDescription>Planejamento regressivo por estados topológicos</CardDescription>
             </CardHeader>
             <CardContent className="flex-1 flex flex-col justify-end">
               <p className="text-sm text-muted-foreground mb-6">
-                Interactive demo of the JP algorithm establishing dependencies and finding optimal paths.
+                Demo interativo do Algoritmo JP: estabelece dependências e encontra caminhos ótimos.
               </p>
               <Link href="/algorithm" className="w-full">
                 <Button variant="outline" className="w-full group">
-                  Explore Module 1
+                  Explorar Módulo 1
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
@@ -91,16 +91,16 @@ export default function Home() {
               <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
                 <Network size={24} />
               </div>
-              <CardTitle className="font-mono">Topological Analysis</CardTitle>
-              <CardDescription>Wasserstein distance computation</CardDescription>
+              <CardTitle className="font-mono">Análise Topológica</CardTitle>
+              <CardDescription>Cálculo da distância de Wasserstein</CardDescription>
             </CardHeader>
             <CardContent className="flex-1 flex flex-col justify-end">
               <p className="text-sm text-muted-foreground mb-6">
-                Visualize knowledge distance using persistence diagrams and homology.
+                Visualize a distância entre estados de conhecimento via diagramas de persistência.
               </p>
               <Link href="/topology" className="w-full">
                 <Button variant="outline" className="w-full group">
-                  Explore Module 3
+                  Explorar Módulo 3
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>

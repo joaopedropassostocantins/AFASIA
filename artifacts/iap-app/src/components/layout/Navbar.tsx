@@ -7,9 +7,9 @@ export function Navbar() {
   const [location] = useLocation();
 
   const links = [
-    { href: "/algorithm", label: "JP Algorithm", icon: BrainCircuit },
+    { href: "/algorithm", label: "Algoritmo JP", icon: BrainCircuit },
     { href: "/afasia", label: "Comunicador AAC", icon: Accessibility },
-    { href: "/topology", label: "Topology", icon: Network },
+    { href: "/topology", label: "Topologia", icon: Network },
     { href: "/atlas", label: "Atlas", icon: MapPin },
     { href: "/appendice", label: "Apêndice", icon: BookOpen },
     { href: "/faq", label: "FAQ", icon: HelpCircle },

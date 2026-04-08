@@ -7,7 +7,6 @@ import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip as Recharts
 import { motion } from "framer-motion";
 import type { TopologyRequest } from "@workspace/api-client-react";
 
-// Custom debounce hook for slider
 function useDebounce<T>(value: T, delay: number): T {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
   useEffect(() => {
@@ -51,12 +50,11 @@ export default function Topology() {
 
   const renderPersistenceDiagram = (data: any[], title: string, color: string) => {
     if (!data || data.length === 0) return null;
-    
-    // Format data for Recharts scatter plot (Birth vs Death)
+
     const plotData = data.map(d => ({
       x: d.birth,
       y: d.death,
-      z: d.lifetime, // Used for bubble size
+      z: d.lifetime,
       dim: d.dimension
     }));
 
@@ -66,13 +64,12 @@ export default function Topology() {
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-            <XAxis type="number" dataKey="x" name="Birth" domain={[0, 'auto']} stroke="hsl(var(--muted-foreground))" />
-            <YAxis type="number" dataKey="y" name="Death" domain={[0, 'auto']} stroke="hsl(var(--muted-foreground))" />
-            <ZAxis type="number" dataKey="z" range={[20, 200]} name="Lifetime" />
+            <XAxis type="number" dataKey="x" name="Nascimento" domain={[0, 'auto']} stroke="hsl(var(--muted-foreground))" />
+            <YAxis type="number" dataKey="y" name="Morte" domain={[0, 'auto']} stroke="hsl(var(--muted-foreground))" />
+            <ZAxis type="number" dataKey="z" range={[20, 200]} name="Persistência" />
             <RechartsTooltip cursor={{ strokeDasharray: '3 3' }} contentStyle={{ backgroundColor: 'hsl(var(--card))', borderColor: 'hsl(var(--border))', color: 'hsl(var(--foreground))' }} />
-            {/* Diagonal line y=x */}
             <Scatter name="Diagonal" data={[{x:0, y:0}, {x:10, y:10}]} line={{stroke: 'hsl(var(--muted-foreground))', strokeWidth: 1}} />
-            <Scatter name="Features" data={plotData} fill={color} opacity={0.7} />
+            <Scatter name="Características" data={plotData} fill={color} opacity={0.7} />
           </ScatterChart>
         </ResponsiveContainer>
       </div>
@@ -84,20 +81,20 @@ export default function Topology() {
       <div>
         <h1 className="text-3xl font-bold font-mono text-primary flex items-center gap-3">
           <Network className="h-8 w-8" />
-          Topological Analysis
+          Análise Topológica
         </h1>
         <p className="text-muted-foreground mt-2 max-w-2xl">
-          Visual representation of the Wasserstein distance between two knowledge states in the IAP framework.
+          Representação visual da distância de Wasserstein entre dois estados de conhecimento no framework IAP.
         </p>
       </div>
 
       {topologyMutation.isSuccess && topologyMutation.data && (
-        <motion.div 
+        <motion.div
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           className="bg-primary/10 border border-primary/30 rounded-2xl p-8 text-center"
         >
-          <h2 className="text-sm uppercase tracking-widest text-primary font-semibold mb-2">Wasserstein Distance</h2>
+          <h2 className="text-sm uppercase tracking-widest text-primary font-semibold mb-2">Distância de Wasserstein</h2>
           <div className="text-6xl md:text-8xl font-bold font-mono text-foreground">
             {topologyMutation.data.wassersteinDistance.toFixed(3)}
           </div>
@@ -112,11 +109,11 @@ export default function Topology() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <ActivitySquare className="h-5 w-5 text-chart-1" />
-              Current State
+              Estado Atual
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
-            {['Syntax', 'Logic', 'Architecture'].map((dim, i) => (
+            {['Sintaxe', 'Lógica', 'Arquitetura'].map((dim, i) => (
               <div key={`curr-${i}`} className="space-y-3">
                 <div className="flex justify-between text-sm">
                   <label className="font-medium text-muted-foreground">{dim}</label>
@@ -131,10 +128,10 @@ export default function Topology() {
                 />
               </div>
             ))}
-            
+
             {topologyMutation.data && renderPersistenceDiagram(
-              topologyMutation.data.persistenceDiagramCurrent, 
-              "Persistence Diagram (Current)", 
+              topologyMutation.data.persistenceDiagramCurrent,
+              "Diagrama de Persistência (Estado Atual)",
               "hsl(var(--chart-1))"
             )}
           </CardContent>
@@ -144,11 +141,11 @@ export default function Topology() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <ActivitySquare className="h-5 w-5 text-chart-2" />
-              Goal State
+              Estado Objetivo
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
-            {['Syntax', 'Logic', 'Architecture'].map((dim, i) => (
+            {['Sintaxe', 'Lógica', 'Arquitetura'].map((dim, i) => (
               <div key={`goal-${i}`} className="space-y-3">
                 <div className="flex justify-between text-sm">
                   <label className="font-medium text-muted-foreground">{dim}</label>
@@ -165,8 +162,8 @@ export default function Topology() {
             ))}
 
             {topologyMutation.data && renderPersistenceDiagram(
-              topologyMutation.data.persistenceDiagramGoal, 
-              "Persistence Diagram (Goal)", 
+              topologyMutation.data.persistenceDiagramGoal,
+              "Diagrama de Persistência (Estado Objetivo)",
               "hsl(var(--chart-2))"
             )}
           </CardContent>

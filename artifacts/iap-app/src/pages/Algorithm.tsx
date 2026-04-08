@@ -10,54 +10,54 @@ import type { JpAlgorithmRequest, JpPlanStep } from "@workspace/api-client-react
 
 const PRESETS: Record<string, JpAlgorithmRequest> = {
   lawyer: {
-    goal: "Become a Lawyer",
-    startEvent: "High School Grad",
+    goal: "Tornar-se Advogado",
+    startEvent: "Ensino Médio",
     events: [
-      { id: "High School Grad", label: "High School Graduate" },
-      { id: "College Student", label: "Pre-Law College Student" },
-      { id: "Law Student", label: "Law School Student" },
-      { id: "Bar Exam Passed", label: "Passed Bar Exam" },
-      { id: "Become a Lawyer", label: "Practicing Lawyer" },
+      { id: "Ensino Médio", label: "Concluiu o Ensino Médio" },
+      { id: "Universitário", label: "Universitário de Direito" },
+      { id: "Pós-Graduação", label: "Faculdade de Direito" },
+      { id: "OAB Aprovado", label: "Aprovado na OAB" },
+      { id: "Tornar-se Advogado", label: "Advogado Atuante" },
     ],
     edges: [
-      { from: "High School Grad", to: "College Student", label: "Enroll in Pre-Law", cost: 4 },
-      { from: "College Student", to: "Law Student", label: "Pass LSAT & Enroll", cost: 3 },
-      { from: "Law Student", to: "Bar Exam Passed", label: "Take Bar Exam", cost: 2 },
-      { from: "Bar Exam Passed", to: "Become a Lawyer", label: "Get Hired", cost: 1 },
+      { from: "Ensino Médio", to: "Universitário", label: "Ingressar no curso", cost: 4 },
+      { from: "Universitário", to: "Pós-Graduação", label: "Concluir bacharelado", cost: 3 },
+      { from: "Pós-Graduação", to: "OAB Aprovado", label: "Prestar o Exame da OAB", cost: 2 },
+      { from: "OAB Aprovado", to: "Tornar-se Advogado", label: "Ser contratado", cost: 1 },
     ],
   },
   programmer: {
-    goal: "Learn Programming",
-    startEvent: "Beginner",
+    goal: "Aprender Programação",
+    startEvent: "Iniciante",
     events: [
-      { id: "Beginner", label: "Beginner" },
-      { id: "Basics", label: "Syntax & Basics" },
-      { id: "DSA", label: "Data Structures" },
-      { id: "Projects", label: "Build Projects" },
-      { id: "Learn Programming", label: "Job Ready" },
+      { id: "Iniciante", label: "Iniciante" },
+      { id: "Fundamentos", label: "Sintaxe e Fundamentos" },
+      { id: "Estruturas", label: "Estruturas de Dados" },
+      { id: "Projetos", label: "Construir Projetos" },
+      { id: "Aprender Programação", label: "Pronto para o Mercado" },
     ],
     edges: [
-      { from: "Beginner", to: "Basics", label: "Take Course", cost: 2 },
-      { from: "Basics", to: "DSA", label: "Practice LeetCode", cost: 5 },
-      { from: "DSA", to: "Projects", label: "Build Portfolio", cost: 4 },
-      { from: "Projects", to: "Learn Programming", label: "Apply for Jobs", cost: 2 },
+      { from: "Iniciante", to: "Fundamentos", label: "Fazer um curso", cost: 2 },
+      { from: "Fundamentos", to: "Estruturas", label: "Praticar algoritmos", cost: 5 },
+      { from: "Estruturas", to: "Projetos", label: "Montar portfólio", cost: 4 },
+      { from: "Projetos", to: "Aprender Programação", label: "Candidatar a vagas", cost: 2 },
     ],
   },
   business: {
-    goal: "Start a Business",
-    startEvent: "Idea",
+    goal: "Abrir um Negócio",
+    startEvent: "Ideia",
     events: [
-      { id: "Idea", label: "Business Idea" },
-      { id: "Plan", label: "Business Plan" },
-      { id: "Funding", label: "Secure Funding" },
-      { id: "MVP", label: "Build MVP" },
-      { id: "Start a Business", label: "Launch" },
+      { id: "Ideia", label: "Ideia de Negócio" },
+      { id: "Plano", label: "Plano de Negócios" },
+      { id: "Investimento", label: "Captar Investimento" },
+      { id: "MVP", label: "Construir MVP" },
+      { id: "Abrir um Negócio", label: "Lançamento" },
     ],
     edges: [
-      { from: "Idea", to: "Plan", label: "Market Research", cost: 2 },
-      { from: "Plan", to: "Funding", label: "Pitch to Investors", cost: 6 },
-      { from: "Funding", to: "MVP", label: "Development", cost: 5 },
-      { from: "MVP", to: "Start a Business", label: "Marketing", cost: 3 },
+      { from: "Ideia", to: "Plano", label: "Pesquisa de mercado", cost: 2 },
+      { from: "Plano", to: "Investimento", label: "Pitch para investidores", cost: 6 },
+      { from: "Investimento", to: "MVP", label: "Desenvolvimento", cost: 5 },
+      { from: "MVP", to: "Abrir um Negócio", label: "Marketing e lançamento", cost: 3 },
     ],
   },
 };
@@ -100,13 +100,13 @@ function CustomScenarioForm({ onSubmit }: { onSubmit: (req: JpAlgorithmRequest) 
     e.preventDefault();
     setError(null);
 
-    if (!goal.trim()) { setError("Goal is required."); return; }
-    if (!startEvent.trim()) { setError("Start event is required."); return; }
+    if (!goal.trim()) { setError("O objetivo é obrigatório."); return; }
+    if (!startEvent.trim()) { setError("O evento inicial é obrigatório."); return; }
     if (events.some((ev) => !ev.id.trim() || !ev.label.trim())) {
-      setError("All events must have an ID and label."); return;
+      setError("Todos os eventos precisam de ID e rótulo."); return;
     }
     if (edges.some((ed) => !ed.from.trim() || !ed.to.trim() || !ed.label.trim())) {
-      setError("All edges must have from, to, and label."); return;
+      setError("Todas as arestas precisam de origem, destino e rótulo."); return;
     }
 
     onSubmit({
@@ -126,24 +126,24 @@ function CustomScenarioForm({ onSubmit }: { onSubmit: (req: JpAlgorithmRequest) 
     <form onSubmit={handleSubmit} className="space-y-6" data-testid="custom-scenario-form">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label htmlFor="goal-input" className="text-sm font-medium">Goal (event ID)</Label>
+          <Label htmlFor="goal-input" className="text-sm font-medium">Objetivo (ID do evento)</Label>
           <Input
             id="goal-input"
             data-testid="input-goal"
             value={goal}
             onChange={(e) => setGoal(e.target.value)}
-            placeholder="e.g. Become a Doctor"
+            placeholder="ex: Tornar-se Médico"
             className="font-mono text-sm"
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="start-input" className="text-sm font-medium">Start Event (event ID)</Label>
+          <Label htmlFor="start-input" className="text-sm font-medium">Evento Inicial (ID do evento)</Label>
           <Input
             id="start-input"
             data-testid="input-start"
             value={startEvent}
             onChange={(e) => setStartEvent(e.target.value)}
-            placeholder="e.g. High School"
+            placeholder="ex: Ensino Médio"
             className="font-mono text-sm"
           />
         </div>
@@ -151,9 +151,9 @@ function CustomScenarioForm({ onSubmit }: { onSubmit: (req: JpAlgorithmRequest) 
 
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <Label className="text-sm font-medium">Events (States)</Label>
+          <Label className="text-sm font-medium">Eventos (Estados)</Label>
           <Button type="button" variant="outline" size="sm" onClick={addEvent} data-testid="button-add-event">
-            <Plus className="h-3 w-3 mr-1" /> Add Event
+            <Plus className="h-3 w-3 mr-1" /> Adicionar Evento
           </Button>
         </div>
         {events.map((ev, i) => (
@@ -162,14 +162,14 @@ function CustomScenarioForm({ onSubmit }: { onSubmit: (req: JpAlgorithmRequest) 
               data-testid={`input-event-id-${i}`}
               value={ev.id}
               onChange={(e) => updateEvent(i, "id", e.target.value)}
-              placeholder="ID (unique)"
+              placeholder="ID (único)"
               className="font-mono text-sm flex-1"
             />
             <Input
               data-testid={`input-event-label-${i}`}
               value={ev.label}
               onChange={(e) => updateEvent(i, "label", e.target.value)}
-              placeholder="Display label"
+              placeholder="Rótulo de exibição"
               className="text-sm flex-1"
             />
             {events.length > 2 && (
@@ -183,9 +183,9 @@ function CustomScenarioForm({ onSubmit }: { onSubmit: (req: JpAlgorithmRequest) 
 
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <Label className="text-sm font-medium">Edges (Transitions)</Label>
+          <Label className="text-sm font-medium">Arestas (Transições)</Label>
           <Button type="button" variant="outline" size="sm" onClick={addEdge} data-testid="button-add-edge">
-            <Plus className="h-3 w-3 mr-1" /> Add Edge
+            <Plus className="h-3 w-3 mr-1" /> Adicionar Aresta
           </Button>
         </div>
         {edges.map((ed, i) => (
@@ -194,21 +194,21 @@ function CustomScenarioForm({ onSubmit }: { onSubmit: (req: JpAlgorithmRequest) 
               data-testid={`input-edge-from-${i}`}
               value={ed.from}
               onChange={(e) => updateEdge(i, "from", e.target.value)}
-              placeholder="From (event ID)"
+              placeholder="Origem (ID)"
               className="font-mono text-xs flex-1 min-w-24"
             />
             <Input
               data-testid={`input-edge-to-${i}`}
               value={ed.to}
               onChange={(e) => updateEdge(i, "to", e.target.value)}
-              placeholder="To (event ID)"
+              placeholder="Destino (ID)"
               className="font-mono text-xs flex-1 min-w-24"
             />
             <Input
               data-testid={`input-edge-label-${i}`}
               value={ed.label}
               onChange={(e) => updateEdge(i, "label", e.target.value)}
-              placeholder="Action label"
+              placeholder="Rótulo da ação"
               className="text-xs flex-1 min-w-24"
             />
             <Input
@@ -218,7 +218,7 @@ function CustomScenarioForm({ onSubmit }: { onSubmit: (req: JpAlgorithmRequest) 
               step={0.1}
               value={ed.cost}
               onChange={(e) => updateEdge(i, "cost", parseFloat(e.target.value) || 0)}
-              placeholder="Cost"
+              placeholder="Custo"
               className="font-mono text-xs w-20"
             />
             {edges.length > 1 && (
@@ -235,7 +235,7 @@ function CustomScenarioForm({ onSubmit }: { onSubmit: (req: JpAlgorithmRequest) 
       )}
 
       <Button type="submit" className="bg-primary text-primary-foreground w-full" data-testid="button-run-custom">
-        <Play className="mr-2 h-4 w-4" /> Run JP Algorithm
+        <Play className="mr-2 h-4 w-4" /> Executar Algoritmo JP
       </Button>
     </form>
   );
@@ -273,11 +273,11 @@ export default function Algorithm() {
       <div>
         <h1 className="text-3xl font-bold font-mono text-primary flex items-center gap-3" data-testid="text-page-title">
           <Activity className="h-8 w-8" />
-          JP Algorithm
+          Algoritmo JP
         </h1>
         <p className="text-muted-foreground mt-2 max-w-2xl">
-          Regressive planning demonstration. The algorithm works backwards from the goal state
-          to the current state to find the optimal path in the topological space.
+          Demonstração do planejamento regressivo. O algoritmo parte do estado objetivo e
+          percorre o caminho de volta ao estado atual, encontrando a rota ótima no espaço topológico.
         </p>
       </div>
 
@@ -288,7 +288,7 @@ export default function Algorithm() {
           onClick={() => handleModeSwitch("presets")}
           data-testid="button-mode-presets"
         >
-          Presets
+          Exemplos
         </Button>
         <Button
           variant={mode === "custom" ? "default" : "outline"}
@@ -296,7 +296,7 @@ export default function Algorithm() {
           onClick={() => handleModeSwitch("custom")}
           data-testid="button-mode-custom"
         >
-          <Pencil className="h-3 w-3 mr-1" /> Custom Scenario
+          <Pencil className="h-3 w-3 mr-1" /> Cenário Personalizado
         </Button>
       </div>
 
@@ -312,7 +312,7 @@ export default function Algorithm() {
               >
                 <CardHeader>
                   <CardTitle className="text-lg">{data.goal}</CardTitle>
-                  <CardDescription>From: {data.startEvent}</CardDescription>
+                  <CardDescription>De: {data.startEvent}</CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -325,7 +325,7 @@ export default function Algorithm() {
               className="space-y-6"
             >
               <div className="flex justify-between items-center">
-                <h2 className="text-xl font-semibold">Dependency Graph</h2>
+                <h2 className="text-xl font-semibold">Grafo de Dependências</h2>
                 <Button
                   onClick={handleRunPreset}
                   disabled={runMutation.isPending}
@@ -333,7 +333,7 @@ export default function Algorithm() {
                   data-testid="button-run-algorithm"
                 >
                   <Play className="mr-2 h-4 w-4" />
-                  {runMutation.isPending ? "Computing..." : "Run Algorithm"}
+                  {runMutation.isPending ? "Calculando..." : "Executar Algoritmo"}
                 </Button>
               </div>
 
@@ -361,11 +361,11 @@ export default function Algorithm() {
         <Card className="border-primary/30">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
-              <Pencil className="h-5 w-5" /> Define Your Own Scenario
+              <Pencil className="h-5 w-5" /> Defina Seu Próprio Cenário
             </CardTitle>
             <CardDescription>
-              Create a custom knowledge graph by defining events (states) and edges (transitions).
-              The JP Algorithm will find the optimal path from your start event to your goal.
+              Crie um grafo de conhecimento personalizado definindo eventos (estados) e arestas (transições).
+              O Algoritmo JP encontrará o caminho ótimo do seu evento inicial até o objetivo.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -385,9 +385,9 @@ export default function Algorithm() {
             <div className="p-4 bg-accent/10 border border-accent/20 rounded-lg flex items-start gap-4">
               <CheckCircle2 className="h-6 w-6 text-accent mt-0.5" />
               <div>
-                <h3 className="font-semibold text-accent">Plan Computed Successfully</h3>
+                <h3 className="font-semibold text-accent">Plano calculado com sucesso</h3>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Total Cost: {runMutation.data.totalCost} | Iterations: {runMutation.data.iterations}
+                  Custo total: {runMutation.data.totalCost} | Iterações: {runMutation.data.iterations}
                 </p>
                 <p className="text-sm mt-2" data-testid="text-plan-message">{runMutation.data.message}</p>
               </div>
@@ -409,7 +409,7 @@ export default function Algorithm() {
                   <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-border bg-card shadow">
                     <div className="flex items-center justify-between mb-1">
                       <span className="text-sm font-semibold text-primary">{step.manu}</span>
-                      <span className="text-xs text-muted-foreground font-mono">Cost: {step.cost}</span>
+                      <span className="text-xs text-muted-foreground font-mono">Custo: {step.cost}</span>
                     </div>
                     <div className="text-sm text-muted-foreground flex items-center gap-2">
                       <span>{step.fromEvent}</span>
@@ -430,7 +430,7 @@ export default function Algorithm() {
             className="p-4 bg-destructive/10 border border-destructive/20 rounded-lg"
             data-testid="plan-error"
           >
-            <p className="text-sm text-destructive">Failed to compute plan. Please check your inputs.</p>
+            <p className="text-sm text-destructive">Falha ao calcular o plano. Verifique os dados inseridos.</p>
           </motion.div>
         )}
       </AnimatePresence>
