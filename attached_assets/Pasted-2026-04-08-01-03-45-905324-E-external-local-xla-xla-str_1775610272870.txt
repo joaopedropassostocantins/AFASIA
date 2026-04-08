@@ -1,0 +1,315 @@
+2026-04-08 01:03:45.905324: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1775610226.086234      55 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1775610226.140333      55 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1775610226.609426      55 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1775610226.609466      55 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1775610226.609468      55 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1775610226.609471      55 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+/tmp/ipykernel_55/3521420207.py in <cell line: 0>()
+      3 # =============================================================================
+      4 
+----> 5 import keras_nlp
+      6 import keras
+      7 
+
+/usr/local/lib/python3.12/dist-packages/keras_nlp/__init__.py in <module>
+      2 
+      3 # Add everything in /api/ to the module search path.
+----> 4 import keras_hub
+      5 
+      6 # Add everything in /api/ to the module search path.
+
+/usr/local/lib/python3.12/dist-packages/keras_hub/__init__.py in <module>
+      5 """
+      6 
+----> 7 from keras_hub import layers as layers
+      8 from keras_hub import metrics as metrics
+      9 from keras_hub import models as models
+
+/usr/local/lib/python3.12/dist-packages/keras_hub/layers/__init__.py in <module>
+      5 """
+      6 
+----> 7 from keras_hub.src.layers.modeling.alibi_bias import AlibiBias as AlibiBias
+      8 from keras_hub.src.layers.modeling.anchor_generator import (
+      9     AnchorGenerator as AnchorGenerator,
+
+/usr/local/lib/python3.12/dist-packages/keras_hub/src/layers/modeling/alibi_bias.py in <module>
+      1 import math
+      2 
+----> 3 import keras
+      4 from keras import ops
+      5 
+
+/usr/local/lib/python3.12/dist-packages/keras/__init__.py in <module>
+      5 """
+      6 
+----> 7 from keras import _tf_keras as _tf_keras
+      8 from keras import activations as activations
+      9 from keras import applications as applications
+
+/usr/local/lib/python3.12/dist-packages/keras/_tf_keras/__init__.py in <module>
+----> 1 from keras._tf_keras import keras
+
+/usr/local/lib/python3.12/dist-packages/keras/_tf_keras/keras/__init__.py in <module>
+      5 """
+      6 
+----> 7 from keras import activations as activations
+      8 from keras import applications as applications
+      9 from keras import callbacks as callbacks
+
+/usr/local/lib/python3.12/dist-packages/keras/activations/__init__.py in <module>
+      5 """
+      6 
+----> 7 from keras.src.activations import deserialize as deserialize
+      8 from keras.src.activations import get as get
+      9 from keras.src.activations import serialize as serialize
+
+/usr/local/lib/python3.12/dist-packages/keras/src/__init__.py in <module>
+----> 1 from keras.src import activations
+      2 from keras.src import applications
+      3 from keras.src import backend
+      4 from keras.src import constraints
+      5 from keras.src import datasets
+
+/usr/local/lib/python3.12/dist-packages/keras/src/activations/__init__.py in <module>
+      1 import types
+      2 
+----> 3 from keras.src.activations.activations import celu
+      4 from keras.src.activations.activations import elu
+      5 from keras.src.activations.activations import exponential
+
+/usr/local/lib/python3.12/dist-packages/keras/src/activations/activations.py in <module>
+----> 1 from keras.src import backend
+      2 from keras.src import ops
+      3 from keras.src.api_export import keras_export
+      4 
+      5 
+
+/usr/local/lib/python3.12/dist-packages/keras/src/backend/__init__.py in <module>
+      8 
+      9 from keras.src.api_export import keras_export
+---> 10 from keras.src.backend.common.dtypes import result_type
+     11 from keras.src.backend.common.keras_tensor import KerasTensor
+     12 from keras.src.backend.common.keras_tensor import any_symbolic_tensors
+
+/usr/local/lib/python3.12/dist-packages/keras/src/backend/common/__init__.py in <module>
+      1 from keras.src.backend.common import backend_utils
+----> 2 from keras.src.backend.common.dtypes import result_type
+      3 from keras.src.backend.common.variables import AutocastScope
+      4 from keras.src.backend.common.variables import Variable as KerasVariable
+      5 from keras.src.backend.common.variables import get_autocast_scope
+
+/usr/local/lib/python3.12/dist-packages/keras/src/backend/common/dtypes.py in <module>
+      3 from keras.src.api_export import keras_export
+      4 from keras.src.backend import config
+----> 5 from keras.src.backend.common.variables import standardize_dtype
+      6 
+      7 BOOL_TYPES = ("bool",)
+
+/usr/local/lib/python3.12/dist-packages/keras/src/backend/common/variables.py in <module>
+      9 from keras.src.backend.common.stateless_scope import get_stateless_scope
+     10 from keras.src.backend.common.stateless_scope import in_stateless_scope
+---> 11 from keras.src.utils.module_utils import tensorflow as tf
+     12 from keras.src.utils.naming import auto_name
+     13 
+
+/usr/local/lib/python3.12/dist-packages/keras/src/utils/__init__.py in <module>
+----> 1 from keras.src.utils.audio_dataset_utils import audio_dataset_from_directory
+      2 from keras.src.utils.dataset_utils import split_dataset
+      3 from keras.src.utils.file_utils import get_file
+      4 from keras.src.utils.image_dataset_utils import image_dataset_from_directory
+      5 from keras.src.utils.image_utils import array_to_img
+
+/usr/local/lib/python3.12/dist-packages/keras/src/utils/audio_dataset_utils.py in <module>
+      2 
+      3 from keras.src.api_export import keras_export
+----> 4 from keras.src.utils import dataset_utils
+      5 from keras.src.utils.module_utils import tensorflow as tf
+      6 from keras.src.utils.module_utils import tensorflow_io as tfio
+
+/usr/local/lib/python3.12/dist-packages/keras/src/utils/dataset_utils.py in <module>
+      7 import numpy as np
+      8 
+----> 9 from keras.src import tree
+     10 from keras.src.api_export import keras_export
+     11 from keras.src.utils import io_utils
+
+/usr/local/lib/python3.12/dist-packages/keras/src/tree/__init__.py in <module>
+----> 1 from keras.src.tree.tree_api import assert_same_paths
+      2 from keras.src.tree.tree_api import assert_same_structure
+      3 from keras.src.tree.tree_api import flatten
+      4 from keras.src.tree.tree_api import flatten_with_path
+      5 from keras.src.tree.tree_api import is_nested
+
+/usr/local/lib/python3.12/dist-packages/keras/src/tree/tree_api.py in <module>
+      6 
+      7 if optree.available:
+----> 8     from keras.src.tree import optree_impl as tree_impl
+      9 elif dmtree.available:
+     10     from keras.src.tree import dmtree_impl as tree_impl
+
+/usr/local/lib/python3.12/dist-packages/keras/src/tree/optree_impl.py in <module>
+     11 # Register backend-specific node classes
+     12 if backend() == "tensorflow":
+---> 13     from tensorflow.python.trackable.data_structures import ListWrapper
+     14     from tensorflow.python.trackable.data_structures import _DictWrapper
+     15 
+
+/usr/local/lib/python3.12/dist-packages/tensorflow/__init__.py in <module>
+     53 from tensorflow._api.v2 import autograph
+     54 from tensorflow._api.v2 import bitwise
+---> 55 from tensorflow._api.v2 import compat
+     56 from tensorflow._api.v2 import config
+     57 from tensorflow._api.v2 import data
+
+/usr/local/lib/python3.12/dist-packages/tensorflow/_api/v2/compat/__init__.py in <module>
+      6 import sys as _sys
+      7 
+----> 8 from tensorflow._api.v2.compat import v1
+      9 from tensorflow._api.v2.compat import v2
+     10 from tensorflow.python.compat.compat import forward_compatibility_horizon # line: 125
+
+/usr/local/lib/python3.12/dist-packages/tensorflow/_api/v2/compat/v1/__init__.py in <module>
+     28 from tensorflow._api.v2.compat.v1 import autograph
+     29 from tensorflow._api.v2.compat.v1 import bitwise
+---> 30 from tensorflow._api.v2.compat.v1 import compat
+     31 from tensorflow._api.v2.compat.v1 import config
+     32 from tensorflow._api.v2.compat.v1 import data
+
+/usr/local/lib/python3.12/dist-packages/tensorflow/_api/v2/compat/v1/compat/__init__.py in <module>
+      6 import sys as _sys
+      7 
+----> 8 from tensorflow._api.v2.compat.v1.compat import v1
+      9 from tensorflow._api.v2.compat.v1.compat import v2
+     10 from tensorflow.python.compat.compat import forward_compatibility_horizon # line: 125
+
+/usr/local/lib/python3.12/dist-packages/tensorflow/_api/v2/compat/v1/compat/v1/__init__.py in <module>
+     45 from tensorflow._api.v2.compat.v1 import layers
+     46 from tensorflow._api.v2.compat.v1 import linalg
+---> 47 from tensorflow._api.v2.compat.v1 import lite
+     48 from tensorflow._api.v2.compat.v1 import logging
+     49 from tensorflow._api.v2.compat.v1 import lookup
+
+/usr/local/lib/python3.12/dist-packages/tensorflow/_api/v2/compat/v1/lite/__init__.py in <module>
+      7 
+      8 from tensorflow._api.v2.compat.v1.lite import constants
+----> 9 from tensorflow._api.v2.compat.v1.lite import experimental
+     10 from tensorflow.lite.python.convert import OpsSet # line: 153
+     11 from tensorflow.lite.python.convert import toco_convert # line: 937
+
+/usr/local/lib/python3.12/dist-packages/tensorflow/_api/v2/compat/v1/lite/experimental/__init__.py in <module>
+      6 import sys as _sys
+      7 
+----> 8 from tensorflow._api.v2.compat.v1.lite.experimental import authoring
+      9 from tensorflow.lite.python.analyzer import ModelAnalyzer as Analyzer # line: 35
+     10 from tensorflow.lite.python.interpreter import OpResolverType # line: 315
+
+/usr/local/lib/python3.12/dist-packages/tensorflow/_api/v2/compat/v1/lite/experimental/authoring/__init__.py in <module>
+      6 import sys as _sys
+      7 
+----> 8 from tensorflow.lite.python.authoring.authoring import compatible # line: 263
+      9 
+     10 from tensorflow.python.util import module_wrapper as _module_wrapper
+
+/usr/local/lib/python3.12/dist-packages/tensorflow/lite/python/authoring/authoring.py in <module>
+     40 from tensorflow.compiler.mlir.lite.metrics import converter_error_data_pb2
+     41 # pylint: disable=g-import-not-at-top
+---> 42 from tensorflow.lite.python import convert
+     43 from tensorflow.lite.python import lite
+     44 from tensorflow.python.util.tf_export import tf_export as _tf_export
+
+/usr/local/lib/python3.12/dist-packages/tensorflow/lite/python/convert.py in <module>
+     29 from tensorflow.compiler.mlir.quantization.stablehlo import quantization_options_pb2 as quant_opts_pb2
+     30 from tensorflow.lite.python import lite_constants
+---> 31 from tensorflow.lite.python import util
+     32 from tensorflow.lite.python.convert_phase import Component
+     33 from tensorflow.lite.python.convert_phase import convert_phase
+
+/usr/local/lib/python3.12/dist-packages/tensorflow/lite/python/util.py in <module>
+     51 # pylint: disable=unused-import
+     52 try:
+---> 53   from jax import jit as _jit
+     54 except ImportError:
+     55   _jit = None
+
+/usr/local/lib/python3.12/dist-packages/jax/__init__.py in <module>
+     35 
+     36 # Force early import, allowing use of `jax.core` after importing `jax`.
+---> 37 import jax.core as _core
+     38 del _core
+     39 
+
+/usr/local/lib/python3.12/dist-packages/jax/core.py in <module>
+     16 # See PEP 484 & https://github.com/jax-ml/jax/issues/7570
+     17 
+---> 18 from jax._src.core import (
+     19   AbstractToken as AbstractToken,
+     20   AbstractValue as AbstractValue,
+
+/usr/local/lib/python3.12/dist-packages/jax/_src/core.py in <module>
+     40 from jax._src import effects
+     41 from jax._src import compute_on
+---> 42 from jax._src import mesh as mesh_lib
+     43 from jax._src.mesh import AxisType, get_concrete_mesh
+     44 from jax._src.partition_spec import PartitionSpec as P
+
+/usr/local/lib/python3.12/dist-packages/jax/_src/mesh.py in <module>
+     29 
+     30 from jax._src import config as jax_config
+---> 31 from jax._src import xla_bridge as xb
+     32 from jax._src.util import safe_zip, cache, tuple_delete
+     33 from jax._src.lib import xla_client as xc
+
+/usr/local/lib/python3.12/dist-packages/jax/_src/xla_bridge.py in <module>
+     37 
+     38 from jax._src import config
+---> 39 from jax._src import distributed
+     40 from jax._src import hardware_utils
+     41 from jax._src import traceback_util
+
+/usr/local/lib/python3.12/dist-packages/jax/_src/distributed.py in <module>
+     21 import warnings
+     22 
+---> 23 from jax._src import clusters
+     24 from jax._src import config
+     25 from jax._src import xla_bridge
+
+/usr/local/lib/python3.12/dist-packages/jax/_src/clusters/__init__.py in <module>
+     26 from .cloud_tpu_cluster import GkeTpuCluster as GkeTpuCluster
+     27 from .cloud_tpu_cluster import GceTpuCluster as GceTpuCluster
+---> 28 from .k8s_cluster import K8sCluster as K8sCluster
+
+/usr/local/lib/python3.12/dist-packages/jax/_src/clusters/k8s_cluster.py in <module>
+     34     func=None,
+     35     initial_delay=0,
+---> 36     wait=np.logspace(-1, 1, 5) * np.random.rand(5),
+     37     exceptions=Exception,
+     38 ):
+
+/usr/local/lib/python3.12/dist-packages/numpy/__init__.py in __getattr__(attr)
+    335 
+    336     def __dir__():
+--> 337         public_symbols = globals().keys() | {'testing'}
+    338         public_symbols -= {
+    339             "core", "matrixlib",
+
+/usr/local/lib/python3.12/dist-packages/numpy/random/__init__.py in <module>
+    178 
+    179 # add these for module-freeze analysis (like PyInstaller)
+--> 180 from . import _pickle
+    181 from . import _common
+    182 from . import _bounded_integers
+
+/usr/local/lib/python3.12/dist-packages/numpy/random/_pickle.py in <module>
+----> 1 from .mtrand import RandomState
+      2 from ._philox import Philox
+      3 from ._pcg64 import PCG64, PCG64DXSM
+      4 from ._sfc64 import SFC64
+      5 
+
+numpy/random/mtrand.pyx in init numpy.random.mtrand()
+
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
