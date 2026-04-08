@@ -643,4 +643,109 @@ router.get("/atlas/categorias", async (req, res) => {
   }
 });
 
+const DISFASIA_ATLAS_PATH = join(process.cwd(), "data", "disfasia_atlas_data.json");
+
+router.get("/disfasia-atlas", (req, res) => {
+  try {
+    if (existsSync(DISFASIA_ATLAS_PATH)) {
+      const raw = readFileSync(DISFASIA_ATLAS_PATH, "utf-8");
+      const data = JSON.parse(raw) as { pictos: AtlasPictogram[]; keywords?: string[] };
+      if (Array.isArray(data?.pictos) && data.pictos.length > 0) {
+        res.json({ pictos: data.pictos, keywords: data.keywords ?? [], source: "precomputed" });
+        return;
+      }
+    }
+    res.status(503).json({ error: "Dados do Atlas Disfasia não disponíveis.", pictos: [] });
+  } catch (err) {
+    handleRouteError(err, res, (msg) => req.log.error(msg), "fetch disfasia atlas");
+  }
+});
+
+const DISFASIA_KNOWN_SYMBOL_IDS = [
+  "parar", "continuar", "devagar", "rapido", "esperar", "repetir", "vez",
+  "primeiro", "depois", "agora", "antes", "amanha", "ontem", "logo", "inicio", "fim",
+  "frustrado", "tranquilo", "ansioso", "feliz", "triste", "nervoso", "calmo",
+  "aqui", "ali", "longe", "perto", "dentro", "fora", "cima", "baixo",
+  "falar", "ouvir", "entender", "explicar", "perguntar", "responder", "ajuda", "nao_entendi",
+];
+
+router.post("/disfasia-chat", async (req, res) => {
+  try {
+    const body = PictorialChatBody.parse(req.body);
+    const symbolsText = body.symbols.join(", ");
+    const contextText = body.context ? `\nContexto adicional: ${body.context}` : "";
+    const historicoText = body.historico && body.historico.length > 0
+      ? `\nMensagens anteriores: ${body.historico.slice(-5).join(" | ")}`
+      : "";
+
+    const hora = new Date().getHours();
+    let periodoDia = "manhã";
+    if (hora >= 12 && hora < 18) periodoDia = "tarde";
+    else if (hora >= 18 || hora < 6) periodoDia = "noite";
+
+    const symbolsList = DISFASIA_KNOWN_SYMBOL_IDS.join(", ");
+
+    const systemPrompt = `Você é um sistema de CAA (Comunicação Aumentativa e Alternativa) especializado em disfasia, baseado na teoria IAP — Inteligência Artificial Pictórica de João Pedro Pereira Passos (UFT).
+
+A disfasia é um distúrbio que afeta a fluência e a organização da fala, NÃO a compreensão. A pessoa com disfasia COMPREENDE tudo, mas tem dificuldade em organizar, sequenciar e articular as palavras espontaneamente. Por isso, ela usa símbolos pictóricos para montar intenções comunicativas.
+
+Ao interpretar os símbolos, construa frases curtas, bem estruturadas e sequenciais em português do Brasil. Dê preferência a frases com ordem clara: Sujeito + Verbo + Complemento. Evite subordinadas complexas. Seja empático e natural.
+Período do dia: ${periodoDia}.
+Símbolos válidos para sugestões: ${symbolsList}.`;
+
+    const userPrompt = `Símbolos selecionados pelo utilizador com disfasia: ${symbolsText}${contextText}${historicoText}
+
+Retorne APENAS um objeto JSON com os campos abaixo (sem markdown, sem texto extra):
+- intencao: string (frase estruturada em português, máx. 80 caracteres)
+- urgencia: integer de 0 a 10 (0=nenhuma, 5=moderada, 8=alta, 10=emergência)
+- emocao: string (1-2 palavras em português)
+- confianca: float de 0.0 a 1.0
+- sugestoes: array com exatamente 3 IDs de símbolos válidos (da lista fornecida)
+- nota_cuidador: string (instrução em português, máx. 60 caracteres)`;
+
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: [{ role: "user", parts: [{ text: systemPrompt + "\n\n" + userPrompt }] }],
+      config: { maxOutputTokens: 1024, responseMimeType: "application/json" },
+    });
+
+    const rawText = response.text ?? "{}";
+    let parsed: {
+      intencao?: string; urgencia?: number; emocao?: string;
+      confianca?: number; sugestoes?: string[]; nota_cuidador?: string;
+    } = {};
+    try { parsed = JSON.parse(rawText); } catch {
+      parsed = { intencao: symbolsText, urgencia: 2, emocao: "neutro", confianca: 0.5, sugestoes: [], nota_cuidador: "Confirme com o utilizador." };
+    }
+
+    const rawUrgencia = parsed.urgencia;
+    const urgenciaNum = typeof rawUrgencia === "number"
+      ? Math.max(0, Math.min(10, Math.round(rawUrgencia)))
+      : typeof rawUrgencia === "string"
+        ? Math.max(0, Math.min(10, Math.round(parseFloat(rawUrgencia) || 2)))
+        : 2;
+
+    const FALLBACK_SUGGESTIONS = ["ajuda", "falar", "esperar"];
+    const validSugestoes = (parsed.sugestoes ?? [])
+      .filter((s) => DISFASIA_KNOWN_SYMBOL_IDS.includes(s))
+      .slice(0, 3);
+    while (validSugestoes.length < 3) {
+      const fallback = FALLBACK_SUGGESTIONS[validSugestoes.length] ?? DISFASIA_KNOWN_SYMBOL_IDS[validSugestoes.length];
+      if (!validSugestoes.includes(fallback)) validSugestoes.push(fallback);
+      else { const alt = DISFASIA_KNOWN_SYMBOL_IDS.find((id) => !validSugestoes.includes(id)); if (alt) validSugestoes.push(alt); else break; }
+    }
+
+    res.json({
+      intencao: parsed.intencao ?? symbolsText,
+      urgencia: urgenciaNum,
+      emocao: parsed.emocao ?? "neutro",
+      confianca: parsed.confianca ?? 0.7,
+      sugestoes: validSugestoes,
+      nota_cuidador: parsed.nota_cuidador ?? "Verifique o que o utilizador quer comunicar.",
+    });
+  } catch (err) {
+    handleRouteError(err, res, (msg) => req.log.error(msg), "process disfasia chat");
+  }
+});
+
 export default router;

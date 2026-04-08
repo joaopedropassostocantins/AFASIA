@@ -12,6 +12,8 @@ import Topology from "@/pages/Topology";
 import Atlas from "@/pages/Atlas";
 import Appendix from "@/pages/Appendix";
 import FAQ from "@/pages/FAQ";
+import Disfasia from "@/pages/Disfasia";
+import DisfasiaAtlas from "@/pages/DisfasiaAtlas";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +27,8 @@ function Router() {
       <Route path="/atlas" component={Atlas} />
       <Route path="/appendice" component={Appendix} />
       <Route path="/faq" component={FAQ} />
+      <Route path="/disfasia" component={Disfasia} />
+      <Route path="/disfasia-atlas" component={DisfasiaAtlas} />
       <Route component={NotFound} />
     </Switch>
   );

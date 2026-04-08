@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "wouter";
-import { BrainCircuit, Activity, Accessibility, Network, MapPin, BookOpen, HelpCircle } from "lucide-react";
+import { BrainCircuit, Activity, Accessibility, Network, MapPin, BookOpen, HelpCircle, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Navbar() {
@@ -9,6 +9,7 @@ export function Navbar() {
   const links = [
     { href: "/algorithm", label: "Algoritmo JP", icon: BrainCircuit },
     { href: "/afasia", label: "Comunicador AAC", icon: Accessibility },
+    { href: "/disfasia", label: "Disfasia", icon: MessageSquare },
     { href: "/topology", label: "Topologia", icon: Network },
     { href: "/atlas", label: "Atlas", icon: MapPin },
     { href: "/appendice", label: "Apêndice", icon: BookOpen },
@@ -22,14 +23,14 @@ export function Navbar() {
           <Activity className="h-6 w-6 text-primary" />
           <span className="font-bold font-mono tracking-tight text-lg">IAP</span>
         </Link>
-        <nav className="flex flex-1 items-center gap-6 text-sm font-medium">
+        <nav className="flex flex-1 items-center gap-6 text-sm font-medium overflow-x-auto">
           {links.map((link) => {
             const isActive = location === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`flex items-center gap-2 transition-colors hover:text-primary relative py-2 ${
+                className={`flex items-center gap-2 transition-colors hover:text-primary relative py-2 whitespace-nowrap ${
                   isActive ? "text-primary" : "text-muted-foreground"
                 }`}
               >
