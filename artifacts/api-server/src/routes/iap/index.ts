@@ -5,6 +5,8 @@ import {
   PictorialChatBody,
   ComputeTopologyBody,
 } from "@workspace/api-zod";
+import { readFileSync, existsSync } from "node:fs";
+import { join } from "node:path";
 
 function isZodError(err: unknown): err is { issues: unknown[] } {
   return typeof err === "object" && err !== null && "issues" in err && Array.isArray((err as { issues: unknown }).issues);
@@ -599,8 +601,21 @@ const ATLAS_CATEGORIAS_KEYWORDS = [
   "ajuda", "sim", "nao", "sair", "feliz", "triste", "remedio", "banheiro",
 ];
 
+const ATLAS_DATA_PATH = join(process.cwd(), "data", "atlas_data.json");
+
 router.get("/atlas/categorias", async (req, res) => {
   try {
+    if (existsSync(ATLAS_DATA_PATH)) {
+      const raw = readFileSync(ATLAS_DATA_PATH, "utf-8");
+      const data = JSON.parse(raw) as { pictos: AtlasPictogram[]; keywords?: string[] };
+      res.json({
+        pictos: data.pictos,
+        keywords: data.keywords ?? ATLAS_CATEGORIAS_KEYWORDS,
+        source: "precomputed",
+      });
+      return;
+    }
+
     const results = await Promise.allSettled(
       ATLAS_CATEGORIAS_KEYWORDS.map((kw) => fetchArasaacSearch(kw))
     );
@@ -615,7 +630,7 @@ router.get("/atlas/categorias", async (req, res) => {
     });
 
     const pictos = buildAtlasResult(rawPictos);
-    res.json({ pictos, keywords: ATLAS_CATEGORIAS_KEYWORDS });
+    res.json({ pictos, keywords: ATLAS_CATEGORIAS_KEYWORDS, source: "live" });
   } catch (err) {
     handleRouteError(err, res, (msg) => req.log.error(msg), "fetch atlas categorias");
   }
