@@ -606,14 +606,21 @@ const ATLAS_DATA_PATH = join(process.cwd(), "data", "atlas_data.json");
 router.get("/atlas/categorias", async (req, res) => {
   try {
     if (existsSync(ATLAS_DATA_PATH)) {
-      const raw = readFileSync(ATLAS_DATA_PATH, "utf-8");
-      const data = JSON.parse(raw) as { pictos: AtlasPictogram[]; keywords?: string[] };
-      res.json({
-        pictos: data.pictos,
-        keywords: data.keywords ?? ATLAS_CATEGORIAS_KEYWORDS,
-        source: "precomputed",
-      });
-      return;
+      try {
+        const raw = readFileSync(ATLAS_DATA_PATH, "utf-8");
+        const data = JSON.parse(raw) as { pictos: AtlasPictogram[]; keywords?: string[] };
+        if (Array.isArray(data?.pictos) && data.pictos.length > 0) {
+          res.json({
+            pictos: data.pictos,
+            keywords: data.keywords ?? ATLAS_CATEGORIAS_KEYWORDS,
+            source: "precomputed",
+          });
+          return;
+        }
+        req.log.warn("atlas_data.json existe mas está vazio ou malformado — usando modo live");
+      } catch (parseErr) {
+        req.log.warn(`Falha ao ler atlas_data.json (${String(parseErr)}) — usando modo live`);
+      }
     }
 
     const results = await Promise.allSettled(
