@@ -1,0 +1,202 @@
+ValueError                                Traceback (most recent call last)
+/tmp/ipykernel_55/3285831111.py in <cell line: 0>()
+----> 1 import keras_nlp
+      2 import keras
+      3 
+      4 GEMMA_LOADED     = False
+      5 _gemma_backbone  = None
+
+/usr/local/lib/python3.12/dist-packages/keras_nlp/__init__.py in <module>
+      2 
+      3 # Add everything in /api/ to the module search path.
+----> 4 import keras_hub
+      5 
+      6 # Add everything in /api/ to the module search path.
+
+/usr/local/lib/python3.12/dist-packages/keras_hub/__init__.py in <module>
+      5 """
+      6 
+----> 7 from keras_hub import layers as layers
+      8 from keras_hub import metrics as metrics
+      9 from keras_hub import models as models
+
+/usr/local/lib/python3.12/dist-packages/keras_hub/layers/__init__.py in <module>
+      5 """
+      6 
+----> 7 from keras_hub.src.layers.modeling.alibi_bias import AlibiBias as AlibiBias
+      8 from keras_hub.src.layers.modeling.anchor_generator import (
+      9     AnchorGenerator as AnchorGenerator,
+
+/usr/local/lib/python3.12/dist-packages/keras_hub/src/layers/modeling/alibi_bias.py in <module>
+      1 import math
+      2 
+----> 3 import keras
+      4 from keras import ops
+      5 
+
+/usr/local/lib/python3.12/dist-packages/keras/__init__.py in <module>
+      5 """
+      6 
+----> 7 from keras import _tf_keras as _tf_keras
+      8 from keras import activations as activations
+      9 from keras import applications as applications
+
+/usr/local/lib/python3.12/dist-packages/keras/_tf_keras/__init__.py in <module>
+----> 1 from keras._tf_keras import keras
+
+/usr/local/lib/python3.12/dist-packages/keras/_tf_keras/keras/__init__.py in <module>
+      5 """
+      6 
+----> 7 from keras import activations as activations
+      8 from keras import applications as applications
+      9 from keras import callbacks as callbacks
+
+/usr/local/lib/python3.12/dist-packages/keras/activations/__init__.py in <module>
+      5 """
+      6 
+----> 7 from keras.src.activations import deserialize as deserialize
+      8 from keras.src.activations import get as get
+      9 from keras.src.activations import serialize as serialize
+
+/usr/local/lib/python3.12/dist-packages/keras/src/__init__.py in <module>
+----> 1 from keras.src import activations
+      2 from keras.src import applications
+      3 from keras.src import backend
+      4 from keras.src import constraints
+      5 from keras.src import datasets
+
+/usr/local/lib/python3.12/dist-packages/keras/src/activations/__init__.py in <module>
+     32 from keras.src.activations.activations import threshold
+     33 from keras.src.api_export import keras_export
+---> 34 from keras.src.saving import object_registration
+     35 from keras.src.saving import serialization_lib
+     36 
+
+/usr/local/lib/python3.12/dist-packages/keras/src/saving/__init__.py in <module>
+      5 from keras.src.saving.object_registration import get_registered_object
+      6 from keras.src.saving.object_registration import register_keras_serializable
+----> 7 from keras.src.saving.saving_api import load_model
+      8 from keras.src.saving.serialization_lib import deserialize_keras_object
+      9 from keras.src.saving.serialization_lib import serialize_keras_object
+
+/usr/local/lib/python3.12/dist-packages/keras/src/saving/saving_api.py in <module>
+      5 
+      6 from keras.src.api_export import keras_export
+----> 7 from keras.src.legacy.saving import legacy_h5_format
+      8 from keras.src.saving import saving_lib
+      9 from keras.src.utils import file_utils
+
+/usr/local/lib/python3.12/dist-packages/keras/src/legacy/saving/legacy_h5_format.py in <module>
+     11 from keras.src.legacy.saving import json_utils
+     12 from keras.src.legacy.saving import saving_options
+---> 13 from keras.src.legacy.saving import saving_utils
+     14 from keras.src.saving import object_registration
+     15 from keras.src.utils import io_utils
+
+/usr/local/lib/python3.12/dist-packages/keras/src/legacy/saving/saving_utils.py in <module>
+      8 from keras.src import losses
+      9 from keras.src import metrics as metrics_module
+---> 10 from keras.src import models
+     11 from keras.src import optimizers
+     12 from keras.src import tree
+
+/usr/local/lib/python3.12/dist-packages/keras/src/models/__init__.py in <module>
+----> 1 from keras.src.models.functional import Functional
+      2 from keras.src.models.model import Model
+      3 from keras.src.models.sequential import Sequential
+
+/usr/local/lib/python3.12/dist-packages/keras/src/models/functional.py in <module>
+     14 from keras.src.legacy.saving import saving_utils
+     15 from keras.src.legacy.saving import serialization as legacy_serialization
+---> 16 from keras.src.models.model import Model
+     17 from keras.src.ops.function import Function
+     18 from keras.src.ops.function import _build_map
+
+/usr/local/lib/python3.12/dist-packages/keras/src/models/model.py in <module>
+     10 from keras.src.models.variable_mapping import map_saveable_variables
+     11 from keras.src.saving import saving_api
+---> 12 from keras.src.trainers import trainer as base_trainer
+     13 from keras.src.utils import summary_utils
+     14 from keras.src.utils import traceback_utils
+
+/usr/local/lib/python3.12/dist-packages/keras/src/trainers/trainer.py in <module>
+     12 from keras.src.trainers.compile_utils import CompileLoss
+     13 from keras.src.trainers.compile_utils import CompileMetrics
+---> 14 from keras.src.trainers.data_adapters import data_adapter_utils
+     15 from keras.src.utils import python_utils
+     16 from keras.src.utils import traceback_utils
+
+/usr/local/lib/python3.12/dist-packages/keras/src/trainers/data_adapters/__init__.py in <module>
+      2 
+      3 from keras.src.distribution import distribution_lib
+----> 4 from keras.src.trainers.data_adapters import array_data_adapter
+      5 from keras.src.trainers.data_adapters import data_adapter
+      6 from keras.src.trainers.data_adapters import py_dataset_adapter
+
+/usr/local/lib/python3.12/dist-packages/keras/src/trainers/data_adapters/array_data_adapter.py in <module>
+      5 
+      6 from keras.src import tree
+----> 7 from keras.src.trainers.data_adapters import array_slicing
+      8 from keras.src.trainers.data_adapters import data_adapter_utils
+      9 from keras.src.trainers.data_adapters.data_adapter import DataAdapter
+
+/usr/local/lib/python3.12/dist-packages/keras/src/trainers/data_adapters/array_slicing.py in <module>
+     10 
+     11 try:
+---> 12     import pandas
+     13 except ImportError:
+     14     pandas = None
+
+/usr/local/lib/python3.12/dist-packages/pandas/__init__.py in <module>
+     35     ) from _err
+     36 
+---> 37 from pandas._config import (
+     38     get_option,
+     39     set_option,
+
+/usr/local/lib/python3.12/dist-packages/pandas/_config/__init__.py in <module>
+     18     "warn_copy_on_write",
+     19 ]
+---> 20 from pandas._config import config
+     21 from pandas._config import dates  # pyright: ignore[reportUnusedImport]  # noqa: F401
+     22 from pandas._config.config import (
+
+/usr/local/lib/python3.12/dist-packages/pandas/_config/config.py in <module>
+     66 import warnings
+     67 
+---> 68 from pandas._typing import (
+     69     F,
+     70     T,
+
+/usr/local/lib/python3.12/dist-packages/pandas/_typing.py in <module>
+    196     int,
+    197     np.ndarray,
+--> 198     np.random.Generator,
+    199     np.random.BitGenerator,
+    200     np.random.RandomState,
+
+/usr/local/lib/python3.12/dist-packages/numpy/__init__.py in __getattr__(attr)
+    335 
+    336     def __dir__():
+--> 337         public_symbols = globals().keys() | {'testing'}
+    338         public_symbols -= {
+    339             "core", "matrixlib",
+
+/usr/local/lib/python3.12/dist-packages/numpy/random/__init__.py in <module>
+    178 
+    179 # add these for module-freeze analysis (like PyInstaller)
+--> 180 from . import _pickle
+    181 from . import _common
+    182 from . import _bounded_integers
+
+/usr/local/lib/python3.12/dist-packages/numpy/random/_pickle.py in <module>
+----> 1 from .mtrand import RandomState
+      2 from ._philox import Philox
+      3 from ._pcg64 import PCG64, PCG64DXSM
+      4 from ._sfc64 import SFC64
+      5 
+
+numpy/random/mtrand.pyx in init numpy.random.mtrand()
+
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+add
