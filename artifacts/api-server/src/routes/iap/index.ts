@@ -84,7 +84,7 @@ function runJpAlgorithmLogic(
       path: [],
       totalCost: 0,
       iterations: 0,
-      message: `Goal event "${goal}" or start event "${startEvent}" not found in events list.`,
+      message: `Evento objetivo "${goal}" ou evento inicial "${startEvent}" não encontrado na lista de eventos.`,
     };
   }
 
@@ -133,7 +133,7 @@ function runJpAlgorithmLogic(
       path: [],
       totalCost: 0,
       iterations,
-      message: `No path found from "${startEv.label}" to "${goalEvent.label}".`,
+      message: `Nenhum caminho encontrado de "${startEv.label}" até "${goalEvent.label}".`,
     };
   }
 
@@ -169,7 +169,7 @@ function runJpAlgorithmLogic(
     path: forwardPath,
     totalCost: dist.get(goalEvent.id) ?? 0,
     iterations,
-    message: `Plan found: ${forwardPath.length} steps from "${startEv.label}" to "${goalEvent.label}" with total cost ${dist.get(goalEvent.id)?.toFixed(1)}.`,
+    message: `Plano encontrado: ${forwardPath.length} etapas de "${startEv.label}" até "${goalEvent.label}" com custo total ${dist.get(goalEvent.id)?.toFixed(1)}.`,
   };
 }
 
@@ -377,11 +377,11 @@ router.post("/topology", async (req, res) => {
 
     let interpretation: string;
     if (wassersteinDistance < 0.5) {
-      interpretation = "States are topologically close. The knowledge structures are similar — the agent is near the goal.";
+      interpretation = "Estados topologicamente próximos. As estruturas de conhecimento são similares — o agente está perto do objetivo.";
     } else if (wassersteinDistance < 1.5) {
-      interpretation = "Moderate topological distance. The JP Algorithm heuristic guides search through intermediate knowledge structures.";
+      interpretation = "Distância topológica moderada. A heurística do Algoritmo JP orienta a busca por estruturas de conhecimento intermediárias.";
     } else {
-      interpretation = "Large topological distance. Significant structural differences between states. Multiple planning steps required to bridge the knowledge gap.";
+      interpretation = "Grande distância topológica. Diferenças estruturais significativas entre os estados. Múltiplas etapas de planejamento são necessárias para cobrir a lacuna de conhecimento.";
     }
 
     res.json({
