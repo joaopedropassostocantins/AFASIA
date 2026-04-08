@@ -1,0 +1,89 @@
+SETUP] Instalando dependencias...
+[OK] Dependencias instaladas!
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+/tmp/ipykernel_55/1145813337.py in <cell line: 0>()
+     20 
+     21 try:
+---> 22     import jax
+     23     os.environ["KERAS_BACKEND"] = "jax"
+     24     print("[SETUP] Backend Keras: jax")
+
+/usr/local/lib/python3.12/dist-packages/jax/__init__.py in <module>
+     35 
+     36 # Force early import, allowing use of `jax.core` after importing `jax`.
+---> 37 import jax.core as _core
+     38 del _core
+     39 
+
+/usr/local/lib/python3.12/dist-packages/jax/core.py in <module>
+     16 # See PEP 484 & https://github.com/jax-ml/jax/issues/7570
+     17 
+---> 18 from jax._src.core import (
+     19   AbstractToken as AbstractToken,
+     20   AbstractValue as AbstractValue,
+
+/usr/local/lib/python3.12/dist-packages/jax/_src/core.py in <module>
+     40 from jax._src import effects
+     41 from jax._src import compute_on
+---> 42 from jax._src import mesh as mesh_lib
+     43 from jax._src.mesh import AxisType, get_concrete_mesh
+     44 from jax._src.partition_spec import PartitionSpec as P
+
+/usr/local/lib/python3.12/dist-packages/jax/_src/mesh.py in <module>
+     29 
+     30 from jax._src import config as jax_config
+---> 31 from jax._src import xla_bridge as xb
+     32 from jax._src.util import safe_zip, cache, tuple_delete
+     33 from jax._src.lib import xla_client as xc
+
+/usr/local/lib/python3.12/dist-packages/jax/_src/xla_bridge.py in <module>
+     37 
+     38 from jax._src import config
+---> 39 from jax._src import distributed
+     40 from jax._src import hardware_utils
+     41 from jax._src import traceback_util
+
+/usr/local/lib/python3.12/dist-packages/jax/_src/distributed.py in <module>
+     21 import warnings
+     22 
+---> 23 from jax._src import clusters
+     24 from jax._src import config
+     25 from jax._src import xla_bridge
+
+/usr/local/lib/python3.12/dist-packages/jax/_src/clusters/__init__.py in <module>
+     26 from .cloud_tpu_cluster import GkeTpuCluster as GkeTpuCluster
+     27 from .cloud_tpu_cluster import GceTpuCluster as GceTpuCluster
+---> 28 from .k8s_cluster import K8sCluster as K8sCluster
+
+/usr/local/lib/python3.12/dist-packages/jax/_src/clusters/k8s_cluster.py in <module>
+     34     func=None,
+     35     initial_delay=0,
+---> 36     wait=np.logspace(-1, 1, 5) * np.random.rand(5),
+     37     exceptions=Exception,
+     38 ):
+
+/usr/local/lib/python3.12/dist-packages/numpy/__init__.py in __getattr__(attr)
+    335 
+    336     def __dir__():
+--> 337         public_symbols = globals().keys() | {'testing'}
+    338         public_symbols -= {
+    339             "core", "matrixlib",
+
+/usr/local/lib/python3.12/dist-packages/numpy/random/__init__.py in <module>
+    178 
+    179 # add these for module-freeze analysis (like PyInstaller)
+--> 180 from . import _pickle
+    181 from . import _common
+    182 from . import _bounded_integers
+
+/usr/local/lib/python3.12/dist-packages/numpy/random/_pickle.py in <module>
+----> 1 from .mtrand import RandomState
+      2 from ._philox import Philox
+      3 from ._pcg64 import PCG64, PCG64DXSM
+      4 from ._sfc64 import SFC64
+      5 
+
+numpy/random/mtrand.pyx in init numpy.random.mtrand()
+
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
