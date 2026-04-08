@@ -1,0 +1,39 @@
+Atue como um Arquiteto de Sistemas Sênior e Especialista em Competições do Kaggle. Sua tarefa é converter o repositório web do projeto "AFASIA" (uma Prova de Conceito de Comunicação Alternativa e Aumentativa) em um Kaggle Notebook (.ipynb) submetível e executável para o "Gemma 4 Good Hackathon".
+
+CONTEXTO DO PROJETO E DA TESE (A BASE LÓGICA):
+O projeto baseia-se na tese da Inteligência Artificial Pictórica (IAP). A premissa central é "construir aviões em vez de imitar pássaros". Em vez de usar LLMs para processar Linguagem Natural (NLP) padrão, usamos a matemática e a topologia para superar a barreira da linguagem. 
+A equação central é $G \sim = I + F$ (Dinâmica do Conhecimento = Incerteza + Flexibilidade). 
+O sistema utiliza o "Algoritmo JP", que faz o Planejamento Regressivo: a partir de um objetivo final ($X_{objetivo}$), ele calcula regressivamente os meios necessários no espaço latente até a ação imediata do usuário.
+
+REGRAS DA COMPETIÇÃO (GEMMA 4 GOOD):
+1. O notebook deve obrigatoriamente importar e utilizar o modelo "Gemma 2" (Google) como motor central.
+2. O código deve ser executável em um ambiente de GPU (T4 x2) no Kaggle.
+3. O foco deve ser impacto social (acessibilidade para pessoas com afasia).
+
+INSTRUÇÕES DE CONVERSÃO (DE WEB PARA NOTEBOOK):
+Você deve ignorar a maior parte da interface gráfica (HTML/CSS/React) do repositório web original e focar em extrair a LÓGICA do motor da Afasia, reconstruindo-o em Python da seguinte forma:
+
+Crie o código estruturado nas seguintes células lógicas para o Notebook:
+
+CÉLULA 1: SETUP E INSTALAÇÕES
+- Pip install de bibliotecas de Análise de Dados Topológicos (TDA), como `giotto-tda` ou `gudhi`, além das dependências do Gemma (`keras-nlp`, `keras>=3`).
+
+CÉLULA 2: MARKDOWN DE APRESENTAÇÃO
+- Escreva o Abstract do projeto explicando a IAP, a equação $G \sim = I + F$ e inclua um placeholder para um iframe do YouTube (onde o vídeo da interface web original rodando será inserido).
+
+CÉLULA 3: INICIALIZAÇÃO DO GEMMA 2
+- Código limpo para carregar o modelo Gemma 2 usando KerasNLP. 
+- Defina uma função onde o Gemma não gera texto, mas atua como um "Extrator de Embeddings" para os metadados dos pictogramas do ARASAAC, gerando o espaço vetorial.
+
+CÉLULA 4: MOTOR TOPOLÓGICO (O NÚCLEO IAP)
+- Crie a função que recebe os embeddings do Gemma e constrói um manifold topológico (grafo de similaridade/geodésicas). Ignorar processamento de linguagem natural aqui; usar apenas a distância matemática entre os vetores gerados.
+
+CÉLULA 5: ALGORITMO JP (PLANEJAMENTO REGRESSIVO)
+- Escreva a função em Python que recebe uma lista de IDs de pictogramas (simulando a incerteza do usuário) e um ID de objetivo.
+- A função deve navegar pelo grafo topológico de trás para frente, retornando os 3 pictogramas mais prováveis de "próximo passo" (Flexibilidade).
+
+CÉLULA 6: SIMULAÇÃO DA PROVA DE CONCEITO (OUTPUT VISUAL)
+- Como não teremos o front-end web rodando no Kaggle, crie uma simulação. Defina um cenário de uso (Ex: Paciente quer comunicar "Fome" -> "Comer" -> "Maçã").
+- Passe esse cenário pelas funções construídas e imprima no terminal do Jupyter o resultado estruturado ou plote um pequeno grafo usando `networkx` e `matplotlib` para os juízes verem a "sustentação aerodinâmica" acontecendo visualmente.
+
+Por favor, gere todo o código Python e os blocos de Markdown correspondentes, garantindo que o código seja robusto, comentado cientificamente e sem erros de dependência.
