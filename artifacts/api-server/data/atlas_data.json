@@ -1,0 +1,709 @@
+{
+  "pictos": [
+    {
+      "id": 32464,
+      "palavra": "agua",
+      "imagemUrl": "https://static.arasaac.org/pictograms/32464/32464_500.png",
+      "categoria": "necessidades",
+      "coordX": -0.087,
+      "coordY": 0.044,
+      "vizinhos": [
+        {
+          "id": 6323,
+          "palavra": "dormir",
+          "distancia": 0.105
+        },
+        {
+          "id": 10741,
+          "palavra": "remedio",
+          "distancia": 0.283
+        },
+        {
+          "id": 2700,
+          "palavra": "maca",
+          "distancia": 0.372
+        }
+      ]
+    },
+    {
+      "id": 4611,
+      "palavra": "comida",
+      "imagemUrl": "https://static.arasaac.org/pictograms/4611/4611_500.png",
+      "categoria": "necessidades",
+      "coordX": 0.072,
+      "coordY": -0.501,
+      "vizinhos": [
+        {
+          "id": 38351,
+          "palavra": "familia",
+          "distancia": 0.39
+        },
+        {
+          "id": 25790,
+          "palavra": "amigo",
+          "distancia": 0.484
+        },
+        {
+          "id": 36210,
+          "palavra": "hospital",
+          "distancia": 0.515
+        }
+      ]
+    },
+    {
+      "id": 35559,
+      "palavra": "fome",
+      "imagemUrl": "https://static.arasaac.org/pictograms/35559/35559_500.png",
+      "categoria": "necessidades",
+      "coordX": 0.536,
+      "coordY": -0.036,
+      "vizinhos": [
+        {
+          "id": 2458,
+          "palavra": "mae",
+          "distancia": 0.451
+        },
+        {
+          "id": 2497,
+          "palavra": "pai",
+          "distancia": 0.521
+        },
+        {
+          "id": 6456,
+          "palavra": "comer",
+          "distancia": 0.63
+        }
+      ]
+    },
+    {
+      "id": 2700,
+      "palavra": "maca",
+      "imagemUrl": "https://static.arasaac.org/pictograms/2700/2700_500.png",
+      "categoria": "necessidades",
+      "coordX": -0.058,
+      "coordY": 0.373,
+      "vizinhos": [
+        {
+          "id": 10840,
+          "palavra": "banheiro",
+          "distancia": 0.03
+        },
+        {
+          "id": 10741,
+          "palavra": "remedio",
+          "distancia": 0.09
+        },
+        {
+          "id": 6323,
+          "palavra": "dormir",
+          "distancia": 0.27
+        }
+      ]
+    },
+    {
+      "id": 10741,
+      "palavra": "remedio",
+      "imagemUrl": "https://static.arasaac.org/pictograms/10741/10741_500.png",
+      "categoria": "necessidades",
+      "coordX": -0.072,
+      "coordY": 0.307,
+      "vizinhos": [
+        {
+          "id": 2700,
+          "palavra": "maca",
+          "distancia": 0.09
+        },
+        {
+          "id": 10840,
+          "palavra": "banheiro",
+          "distancia": 0.113
+        },
+        {
+          "id": 6323,
+          "palavra": "dormir",
+          "distancia": 0.18
+        }
+      ]
+    },
+    {
+      "id": 10840,
+      "palavra": "banheiro",
+      "imagemUrl": "https://static.arasaac.org/pictograms/10840/10840_500.png",
+      "categoria": "necessidades",
+      "coordX": -0.025,
+      "coordY": 0.392,
+      "vizinhos": [
+        {
+          "id": 2700,
+          "palavra": "maca",
+          "distancia": 0.03
+        },
+        {
+          "id": 10741,
+          "palavra": "remedio",
+          "distancia": 0.113
+        },
+        {
+          "id": 6323,
+          "palavra": "dormir",
+          "distancia": 0.29
+        }
+      ]
+    },
+    {
+      "id": 12252,
+      "palavra": "ajuda",
+      "imagemUrl": "https://static.arasaac.org/pictograms/12252/12252_500.png",
+      "categoria": "necessidades",
+      "coordX": 0.558,
+      "coordY": -0.018,
+      "vizinhos": [
+        {
+          "id": 2497,
+          "palavra": "pai",
+          "distancia": 0.465
+        },
+        {
+          "id": 7196,
+          "palavra": "parar",
+          "distancia": 0.489
+        },
+        {
+          "id": 6456,
+          "palavra": "comer",
+          "distancia": 0.496
+        }
+      ]
+    },
+    {
+      "id": 6323,
+      "palavra": "dormir",
+      "imagemUrl": "https://static.arasaac.org/pictograms/6323/6323_500.png",
+      "categoria": "necessidades",
+      "coordX": -0.076,
+      "coordY": 0.147,
+      "vizinhos": [
+        {
+          "id": 32464,
+          "palavra": "agua",
+          "distancia": 0.105
+        },
+        {
+          "id": 10741,
+          "palavra": "remedio",
+          "distancia": 0.18
+        },
+        {
+          "id": 2700,
+          "palavra": "maca",
+          "distancia": 0.27
+        }
+      ]
+    },
+    {
+      "id": 9907,
+      "palavra": "feliz",
+      "imagemUrl": "https://static.arasaac.org/pictograms/9907/9907_500.png",
+      "categoria": "sentimentos",
+      "coordX": -0.233,
+      "coordY": -0.418,
+      "vizinhos": [
+        {
+          "id": 2367,
+          "palavra": "dor",
+          "distancia": 0.007
+        },
+        {
+          "id": 35545,
+          "palavra": "triste",
+          "distancia": 0.193
+        },
+        {
+          "id": 36210,
+          "palavra": "hospital",
+          "distancia": 0.419
+        }
+      ]
+    },
+    {
+      "id": 35545,
+      "palavra": "triste",
+      "imagemUrl": "https://static.arasaac.org/pictograms/35545/35545_500.png",
+      "categoria": "sentimentos",
+      "coordX": -0.305,
+      "coordY": -0.239,
+      "vizinhos": [
+        {
+          "id": 2367,
+          "palavra": "dor",
+          "distancia": 0.189
+        },
+        {
+          "id": 9907,
+          "palavra": "feliz",
+          "distancia": 0.193
+        },
+        {
+          "id": 5526,
+          "palavra": "nao",
+          "distancia": 0.346
+        }
+      ]
+    },
+    {
+      "id": 2367,
+      "palavra": "dor",
+      "imagemUrl": "https://static.arasaac.org/pictograms/2367/2367_500.png",
+      "categoria": "sentimentos",
+      "coordX": -0.237,
+      "coordY": -0.414,
+      "vizinhos": [
+        {
+          "id": 9907,
+          "palavra": "feliz",
+          "distancia": 0.007
+        },
+        {
+          "id": 35545,
+          "palavra": "triste",
+          "distancia": 0.189
+        },
+        {
+          "id": 36210,
+          "palavra": "hospital",
+          "distancia": 0.412
+        }
+      ]
+    },
+    {
+      "id": 10261,
+      "palavra": "medo",
+      "imagemUrl": "https://static.arasaac.org/pictograms/10261/10261_500.png",
+      "categoria": "sentimentos",
+      "coordX": -0.312,
+      "coordY": 0.103,
+      "vizinhos": [
+        {
+          "id": 8142,
+          "palavra": "ir",
+          "distancia": 0.336
+        },
+        {
+          "id": 5584,
+          "palavra": "sim",
+          "distancia": 0.344
+        },
+        {
+          "id": 6964,
+          "palavra": "casa",
+          "distancia": 0.347
+        }
+      ]
+    },
+    {
+      "id": 35537,
+      "palavra": "cansado",
+      "imagemUrl": "https://static.arasaac.org/pictograms/35537/35537_500.png",
+      "categoria": "sentimentos",
+      "coordX": 0.442,
+      "coordY": -0.181,
+      "vizinhos": [
+        {
+          "id": 2497,
+          "palavra": "pai",
+          "distancia": 0.403
+        },
+        {
+          "id": 2458,
+          "palavra": "mae",
+          "distancia": 0.435
+        },
+        {
+          "id": 6456,
+          "palavra": "comer",
+          "distancia": 0.488
+        }
+      ]
+    },
+    {
+      "id": 6964,
+      "palavra": "casa",
+      "imagemUrl": "https://static.arasaac.org/pictograms/6964/6964_500.png",
+      "categoria": "lugares",
+      "coordX": -0.345,
+      "coordY": 0.153,
+      "vizinhos": [
+        {
+          "id": 5584,
+          "palavra": "sim",
+          "distancia": 0.003
+        },
+        {
+          "id": 32446,
+          "palavra": "escola",
+          "distancia": 0.178
+        },
+        {
+          "id": 5526,
+          "palavra": "nao",
+          "distancia": 0.189
+        }
+      ]
+    },
+    {
+      "id": 36210,
+      "palavra": "hospital",
+      "imagemUrl": "https://static.arasaac.org/pictograms/36210/36210_500.png",
+      "categoria": "lugares",
+      "coordX": -0.221,
+      "coordY": -0.365,
+      "vizinhos": [
+        {
+          "id": 25790,
+          "palavra": "amigo",
+          "distancia": 0.07
+        },
+        {
+          "id": 38351,
+          "palavra": "familia",
+          "distancia": 0.137
+        },
+        {
+          "id": 5526,
+          "palavra": "nao",
+          "distancia": 0.349
+        }
+      ]
+    },
+    {
+      "id": 32446,
+      "palavra": "escola",
+      "imagemUrl": "https://static.arasaac.org/pictograms/32446/32446_500.png",
+      "categoria": "lugares",
+      "coordX": -0.342,
+      "coordY": -0.031,
+      "vizinhos": [
+        {
+          "id": 5526,
+          "palavra": "nao",
+          "distancia": 0.017
+        },
+        {
+          "id": 5584,
+          "palavra": "sim",
+          "distancia": 0.176
+        },
+        {
+          "id": 6964,
+          "palavra": "casa",
+          "distancia": 0.178
+        }
+      ]
+    },
+    {
+      "id": 6561,
+      "palavra": "medico",
+      "imagemUrl": "https://static.arasaac.org/pictograms/6561/6561_500.png",
+      "categoria": "pessoas",
+      "coordX": -0.208,
+      "coordY": 0.427,
+      "vizinhos": [
+        {
+          "id": 5441,
+          "palavra": "quero",
+          "distancia": 0.103
+        },
+        {
+          "id": 8142,
+          "palavra": "ir",
+          "distancia": 0.121
+        },
+        {
+          "id": 6964,
+          "palavra": "casa",
+          "distancia": 0.3
+        }
+      ]
+    },
+    {
+      "id": 38351,
+      "palavra": "familia",
+      "imagemUrl": "https://static.arasaac.org/pictograms/38351/38351_500.png",
+      "categoria": "pessoas",
+      "coordX": -0.12,
+      "coordY": -0.47,
+      "vizinhos": [
+        {
+          "id": 25790,
+          "palavra": "amigo",
+          "distancia": 0.11
+        },
+        {
+          "id": 36210,
+          "palavra": "hospital",
+          "distancia": 0.137
+        },
+        {
+          "id": 4611,
+          "palavra": "comida",
+          "distancia": 0.39
+        }
+      ]
+    },
+    {
+      "id": 25790,
+      "palavra": "amigo",
+      "imagemUrl": "https://static.arasaac.org/pictograms/25790/25790_500.png",
+      "categoria": "pessoas",
+      "coordX": -0.169,
+      "coordY": -0.359,
+      "vizinhos": [
+        {
+          "id": 36210,
+          "palavra": "hospital",
+          "distancia": 0.07
+        },
+        {
+          "id": 38351,
+          "palavra": "familia",
+          "distancia": 0.11
+        },
+        {
+          "id": 5526,
+          "palavra": "nao",
+          "distancia": 0.377
+        }
+      ]
+    },
+    {
+      "id": 2458,
+      "palavra": "mae",
+      "imagemUrl": "https://static.arasaac.org/pictograms/2458/2458_500.png",
+      "categoria": "pessoas",
+      "coordX": 0.643,
+      "coordY": 0.038,
+      "vizinhos": [
+        {
+          "id": 2497,
+          "palavra": "pai",
+          "distancia": 0.084
+        },
+        {
+          "id": 6456,
+          "palavra": "comer",
+          "distancia": 0.202
+        },
+        {
+          "id": 7196,
+          "palavra": "parar",
+          "distancia": 0.204
+        }
+      ]
+    },
+    {
+      "id": 2497,
+      "palavra": "pai",
+      "imagemUrl": "https://static.arasaac.org/pictograms/2497/2497_500.png",
+      "categoria": "pessoas",
+      "coordX": 0.643,
+      "coordY": 0.044,
+      "vizinhos": [
+        {
+          "id": 2458,
+          "palavra": "mae",
+          "distancia": 0.084
+        },
+        {
+          "id": 7196,
+          "palavra": "parar",
+          "distancia": 0.123
+        },
+        {
+          "id": 6456,
+          "palavra": "comer",
+          "distancia": 0.124
+        }
+      ]
+    },
+    {
+      "id": 5441,
+      "palavra": "quero",
+      "imagemUrl": "https://static.arasaac.org/pictograms/5441/5441_500.png",
+      "categoria": "acoes",
+      "coordX": -0.256,
+      "coordY": 0.404,
+      "vizinhos": [
+        {
+          "id": 8142,
+          "palavra": "ir",
+          "distancia": 0.088
+        },
+        {
+          "id": 6561,
+          "palavra": "medico",
+          "distancia": 0.103
+        },
+        {
+          "id": 6964,
+          "palavra": "casa",
+          "distancia": 0.288
+        }
+      ]
+    },
+    {
+      "id": 5584,
+      "palavra": "sim",
+      "imagemUrl": "https://static.arasaac.org/pictograms/5584/5584_500.png",
+      "categoria": "acoes",
+      "coordX": -0.346,
+      "coordY": 0.15,
+      "vizinhos": [
+        {
+          "id": 6964,
+          "palavra": "casa",
+          "distancia": 0.003
+        },
+        {
+          "id": 32446,
+          "palavra": "escola",
+          "distancia": 0.176
+        },
+        {
+          "id": 5526,
+          "palavra": "nao",
+          "distancia": 0.186
+        }
+      ]
+    },
+    {
+      "id": 5526,
+      "palavra": "nao",
+      "imagemUrl": "https://static.arasaac.org/pictograms/5526/5526_500.png",
+      "categoria": "acoes",
+      "coordX": -0.346,
+      "coordY": -0.047,
+      "vizinhos": [
+        {
+          "id": 32446,
+          "palavra": "escola",
+          "distancia": 0.017
+        },
+        {
+          "id": 5584,
+          "palavra": "sim",
+          "distancia": 0.186
+        },
+        {
+          "id": 6964,
+          "palavra": "casa",
+          "distancia": 0.189
+        }
+      ]
+    },
+    {
+      "id": 7196,
+      "palavra": "parar",
+      "imagemUrl": "https://static.arasaac.org/pictograms/7196/7196_500.png",
+      "categoria": "acoes",
+      "coordX": 0.581,
+      "coordY": 0.081,
+      "vizinhos": [
+        {
+          "id": 6456,
+          "palavra": "comer",
+          "distancia": 0.01
+        },
+        {
+          "id": 2497,
+          "palavra": "pai",
+          "distancia": 0.123
+        },
+        {
+          "id": 2458,
+          "palavra": "mae",
+          "distancia": 0.204
+        }
+      ]
+    },
+    {
+      "id": 8142,
+      "palavra": "ir",
+      "imagemUrl": "https://static.arasaac.org/pictograms/8142/8142_500.png",
+      "categoria": "acoes",
+      "coordX": -0.294,
+      "coordY": 0.333,
+      "vizinhos": [
+        {
+          "id": 5441,
+          "palavra": "quero",
+          "distancia": 0.088
+        },
+        {
+          "id": 6561,
+          "palavra": "medico",
+          "distancia": 0.121
+        },
+        {
+          "id": 6964,
+          "palavra": "casa",
+          "distancia": 0.201
+        }
+      ]
+    },
+    {
+      "id": 6456,
+      "palavra": "comer",
+      "imagemUrl": "https://static.arasaac.org/pictograms/6456/6456_500.png",
+      "categoria": "acoes",
+      "coordX": 0.576,
+      "coordY": 0.083,
+      "vizinhos": [
+        {
+          "id": 7196,
+          "palavra": "parar",
+          "distancia": 0.01
+        },
+        {
+          "id": 2497,
+          "palavra": "pai",
+          "distancia": 0.124
+        },
+        {
+          "id": 2458,
+          "palavra": "mae",
+          "distancia": 0.202
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "agua",
+    "comida",
+    "fome",
+    "maca",
+    "remedio",
+    "banheiro",
+    "ajuda",
+    "dormir",
+    "feliz",
+    "triste",
+    "dor",
+    "medo",
+    "cansado",
+    "casa",
+    "hospital",
+    "escola",
+    "medico",
+    "familia",
+    "amigo",
+    "mae",
+    "pai",
+    "quero",
+    "sim",
+    "nao",
+    "parar",
+    "ir",
+    "comer"
+  ],
+  "geradoPor": "simulado (modo fallback, sem Gemma GPU) — substitua pelo atlas_data.json exportado pelo notebook Kaggle"
+}

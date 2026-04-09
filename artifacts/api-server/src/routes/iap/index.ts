@@ -1,10 +1,22 @@
 import { Router, type IRouter, type Response } from "express";
-import { ai } from "@workspace/integrations-gemini-ai";
+import { generateWithGemma } from "../../gemma-client";
 import {
   RunJpAlgorithmBody,
   PictorialChatBody,
   ComputeTopologyBody,
 } from "@workspace/api-zod";
+import { readFileSync, existsSync } from "node:fs";
+import { join, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
+function resolveDataPath(filename: string): string {
+  const candidates = [
+    join(dirname(fileURLToPath(import.meta.url)), "..", "data", filename),
+    join(process.cwd(), "artifacts", "api-server", "data", filename),
+    join(process.cwd(), "data", filename),
+  ];
+  return candidates.find(existsSync) ?? candidates[0];
+}
 
 function isZodError(err: unknown): err is { issues: unknown[] } {
   return typeof err === "object" && err !== null && "issues" in err && Array.isArray((err as { issues: unknown }).issues);
@@ -228,18 +240,10 @@ Retorne APENAS um objeto JSON com os campos abaixo (sem markdown, sem texto extr
 - sugestoes: array com exatamente 3 IDs de símbolos válidos (da lista fornecida)
 - nota_cuidador: string (instrução em português, máx. 60 caracteres)`;
 
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: [
-        { role: "user", parts: [{ text: systemPrompt + "\n\n" + userPrompt }] },
-      ],
-      config: {
-        maxOutputTokens: 1024,
-        responseMimeType: "application/json",
-      },
-    });
-
-    const rawText = response.text ?? "{}";
+    const { text: rawText } = await generateWithGemma(
+      systemPrompt + "\n\n" + userPrompt,
+      { maxOutputTokens: 1024, responseMimeType: "application/json" }
+    );
 
     let parsed: {
       intencao?: string;
@@ -599,8 +603,28 @@ const ATLAS_CATEGORIAS_KEYWORDS = [
   "ajuda", "sim", "nao", "sair", "feliz", "triste", "remedio", "banheiro",
 ];
 
+const ATLAS_DATA_PATH = resolveDataPath("atlas_data.json");
+
 router.get("/atlas/categorias", async (req, res) => {
   try {
+    if (existsSync(ATLAS_DATA_PATH)) {
+      try {
+        const raw = readFileSync(ATLAS_DATA_PATH, "utf-8");
+        const data = JSON.parse(raw) as { pictos: AtlasPictogram[]; keywords?: string[] };
+        if (Array.isArray(data?.pictos) && data.pictos.length > 0) {
+          res.json({
+            pictos: data.pictos,
+            keywords: data.keywords ?? ATLAS_CATEGORIAS_KEYWORDS,
+            source: "precomputed",
+          });
+          return;
+        }
+        req.log.warn("atlas_data.json existe mas está vazio ou malformado — usando modo live");
+      } catch (parseErr) {
+        req.log.warn(`Falha ao ler atlas_data.json (${String(parseErr)}) — usando modo live`);
+      }
+    }
+
     const results = await Promise.allSettled(
       ATLAS_CATEGORIAS_KEYWORDS.map((kw) => fetchArasaacSearch(kw))
     );
@@ -615,9 +639,359 @@ router.get("/atlas/categorias", async (req, res) => {
     });
 
     const pictos = buildAtlasResult(rawPictos);
-    res.json({ pictos, keywords: ATLAS_CATEGORIAS_KEYWORDS });
+    res.json({ pictos, keywords: ATLAS_CATEGORIAS_KEYWORDS, source: "live" });
   } catch (err) {
     handleRouteError(err, res, (msg) => req.log.error(msg), "fetch atlas categorias");
+  }
+});
+
+const NOUN_ATLAS_PATH = resolveDataPath("noun_atlas_data.json");
+
+router.get("/noun-atlas", (req, res) => {
+  try {
+    if (existsSync(NOUN_ATLAS_PATH)) {
+      const raw = readFileSync(NOUN_ATLAS_PATH, "utf-8");
+      const data = JSON.parse(raw) as { pictos: AtlasPictogram[]; keywords?: string[]; total?: number; categorias?: Record<string, number>; vizinhosMethod?: string; mdsInfo?: unknown; geradoEm?: string };
+      if (Array.isArray(data?.pictos) && data.pictos.length > 0) {
+        res.json({
+          pictos: data.pictos,
+          keywords: data.keywords ?? [],
+          source: "precomputed",
+          total: data.total ?? data.pictos.length,
+          categorias: data.categorias ?? {},
+          geradoEm: data.geradoEm ?? null,
+          vizinhosMethod: data.vizinhosMethod ?? "precomputed",
+          mdsInfo: data.mdsInfo ?? null,
+        });
+        return;
+      }
+    }
+    res.status(503).json({ error: "Atlas Noun Project não disponível. Pipeline: 1) node scripts/noun_fetch.mjs  2) node scripts/noun_recompute_wasserstein.mjs", pictos: [] });
+  } catch (err) {
+    handleRouteError(err, res, (msg) => req.log.error(msg), "fetch noun atlas");
+  }
+});
+
+const CAA_ATLAS_PATH = resolveDataPath("caa_atlas_data.json");
+
+router.get("/caa-atlas", (req, res) => {
+  try {
+    if (existsSync(CAA_ATLAS_PATH)) {
+      const raw = readFileSync(CAA_ATLAS_PATH, "utf-8");
+      const data = JSON.parse(raw) as {
+        pictos: AtlasPictogram[];
+        keywords?: string[];
+        total?: number;
+        categorias?: Record<string, number>;
+        vizinhosMethod?: string;
+        mdsInfo?: unknown;
+        geradoEm?: string;
+      };
+      if (Array.isArray(data?.pictos) && data.pictos.length > 0) {
+        res.json({
+          pictos: data.pictos,
+          keywords: data.keywords ?? [],
+          source: "precomputed",
+          total: data.total ?? data.pictos.length,
+          categorias: data.categorias ?? {},
+          geradoEm: data.geradoEm ?? null,
+          vizinhosMethod: data.vizinhosMethod ?? "wasserstein-gemini-12d",
+          mdsInfo: data.mdsInfo ?? null,
+        });
+        return;
+      }
+    }
+    res.status(503).json({
+      error: "Atlas CAA não disponível. Pipeline: 1) caa_fetch.mjs 2) caa_sample.mjs 3) caa_compute_vectors.mjs 4) caa_wasserstein.mjs 5) caa_download_icons.mjs",
+      pictos: [],
+    });
+  } catch (err) {
+    handleRouteError(err, res, (msg) => req.log.error(msg), "fetch caa atlas");
+  }
+});
+
+const DISFASIA_ATLAS_PATH = resolveDataPath("disfasia_atlas_data.json");
+
+router.get("/disfasia-atlas", (req, res) => {
+  try {
+    if (existsSync(DISFASIA_ATLAS_PATH)) {
+      const raw = readFileSync(DISFASIA_ATLAS_PATH, "utf-8");
+      const data = JSON.parse(raw) as { pictos: AtlasPictogram[]; keywords?: string[]; geminiModel?: string; vizinhosMethod?: string; geradoEm?: string };
+      if (Array.isArray(data?.pictos) && data.pictos.length > 0) {
+        res.json({
+          pictos: data.pictos,
+          keywords: data.keywords ?? [],
+          source: "precomputed",
+          geminiModel: data.geminiModel ?? null,
+          vizinhosMethod: data.vizinhosMethod ?? null,
+          geradoEm: data.geradoEm ?? null,
+        });
+        return;
+      }
+    }
+    res.status(503).json({ error: "Dados do Atlas Disfasia não disponíveis.", pictos: [] });
+  } catch (err) {
+    handleRouteError(err, res, (msg) => req.log.error(msg), "fetch disfasia atlas");
+  }
+});
+
+const DISFASIA_KNOWN_SYMBOL_IDS = [
+  "parar", "continuar", "devagar", "rapido", "esperar", "repetir", "vez",
+  "primeiro", "depois", "agora", "antes", "amanha", "ontem", "logo", "inicio", "fim",
+  "frustrado", "tranquilo", "ansioso", "feliz", "triste", "nervoso", "calmo",
+  "aqui", "ali", "longe", "perto", "dentro", "fora", "cima", "baixo",
+  "falar", "ouvir", "entender", "explicar", "perguntar", "responder", "ajuda", "nao_entendi",
+];
+
+router.post("/disfasia-chat", async (req, res) => {
+  try {
+    const body = PictorialChatBody.parse(req.body);
+    const symbolsText = body.symbols.join(", ");
+    const contextText = body.context ? `\nContexto adicional: ${body.context}` : "";
+    const historicoText = body.historico && body.historico.length > 0
+      ? `\nMensagens anteriores: ${body.historico.slice(-5).join(" | ")}`
+      : "";
+
+    const hora = new Date().getHours();
+    let periodoDia = "manhã";
+    if (hora >= 12 && hora < 18) periodoDia = "tarde";
+    else if (hora >= 18 || hora < 6) periodoDia = "noite";
+
+    const symbolsList = DISFASIA_KNOWN_SYMBOL_IDS.join(", ");
+
+    const systemPrompt = `Você é um sistema de CAA (Comunicação Aumentativa e Alternativa) especializado em disfasia, baseado na teoria IAP — Inteligência Artificial Pictórica de João Pedro Pereira Passos (UFT).
+
+A disfasia é um distúrbio que afeta a fluência e a organização da fala, NÃO a compreensão. A pessoa com disfasia COMPREENDE tudo, mas tem dificuldade em organizar, sequenciar e articular as palavras espontaneamente. Por isso, ela usa símbolos pictóricos para montar intenções comunicativas.
+
+Ao interpretar os símbolos, construa frases curtas, bem estruturadas e sequenciais em português do Brasil. Dê preferência a frases com ordem clara: Sujeito + Verbo + Complemento. Evite subordinadas complexas. Seja empático e natural.
+Período do dia: ${periodoDia}.
+Símbolos válidos para sugestões: ${symbolsList}.`;
+
+    const userPrompt = `Símbolos selecionados pelo utilizador com disfasia: ${symbolsText}${contextText}${historicoText}
+
+Retorne APENAS um objeto JSON com os campos abaixo (sem markdown, sem texto extra):
+- intencao: string (frase estruturada em português, máx. 80 caracteres)
+- urgencia: integer de 0 a 10 (0=nenhuma, 5=moderada, 8=alta, 10=emergência)
+- emocao: string (1-2 palavras em português)
+- confianca: float de 0.0 a 1.0
+- sugestoes: array com exatamente 3 IDs de símbolos válidos (da lista fornecida)
+- nota_cuidador: string (instrução em português, máx. 60 caracteres)`;
+
+    const { text: rawText } = await generateWithGemma(
+      systemPrompt + "\n\n" + userPrompt,
+      { maxOutputTokens: 1024, responseMimeType: "application/json" }
+    );
+    let parsed: {
+      intencao?: string; urgencia?: number; emocao?: string;
+      confianca?: number; sugestoes?: string[]; nota_cuidador?: string;
+    } = {};
+    try { parsed = JSON.parse(rawText); } catch {
+      parsed = { intencao: symbolsText, urgencia: 2, emocao: "neutro", confianca: 0.5, sugestoes: [], nota_cuidador: "Confirme com o utilizador." };
+    }
+
+    const rawUrgencia = parsed.urgencia;
+    const urgenciaNum = typeof rawUrgencia === "number"
+      ? Math.max(0, Math.min(10, Math.round(rawUrgencia)))
+      : typeof rawUrgencia === "string"
+        ? Math.max(0, Math.min(10, Math.round(parseFloat(rawUrgencia) || 2)))
+        : 2;
+
+    const FALLBACK_SUGGESTIONS = ["ajuda", "falar", "esperar"];
+    const validSugestoes = (parsed.sugestoes ?? [])
+      .filter((s) => DISFASIA_KNOWN_SYMBOL_IDS.includes(s))
+      .slice(0, 3);
+    while (validSugestoes.length < 3) {
+      const fallback = FALLBACK_SUGGESTIONS[validSugestoes.length] ?? DISFASIA_KNOWN_SYMBOL_IDS[validSugestoes.length];
+      if (!validSugestoes.includes(fallback)) validSugestoes.push(fallback);
+      else { const alt = DISFASIA_KNOWN_SYMBOL_IDS.find((id) => !validSugestoes.includes(id)); if (alt) validSugestoes.push(alt); else break; }
+    }
+
+    res.json({
+      intencao: parsed.intencao ?? symbolsText,
+      urgencia: urgenciaNum,
+      emocao: parsed.emocao ?? "neutro",
+      confianca: parsed.confianca ?? 0.7,
+      sugestoes: validSugestoes,
+      nota_cuidador: parsed.nota_cuidador ?? "Verifique o que o utilizador quer comunicar.",
+    });
+  } catch (err) {
+    handleRouteError(err, res, (msg) => req.log.error(msg), "process disfasia chat");
+  }
+});
+
+// ── Atlas Metrics ─────────────────────────────────────────────────────────────
+
+interface AtlasMetricsResult {
+  total: number;
+  categorias: number;
+  categoryCounts: Record<string, number>;
+  wasserstein: { min: number; avg: number; max: number };
+  mdsVariance: { x: number; y: number };
+  histogram: number[];
+  closeNeighbors: number;
+  samplePoints: { x: number; y: number; cat: string }[];
+}
+
+function computeAtlasMetrics(pictos: AtlasPictogram[]): AtlasMetricsResult {
+  if (pictos.length === 0) {
+    return {
+      total: 0,
+      categorias: 0,
+      categoryCounts: {},
+      wasserstein: { min: 0, avg: 0, max: 0 },
+      mdsVariance: { x: 0, y: 0 },
+      histogram: Array(11).fill(0) as number[],
+      closeNeighbors: 0,
+      samplePoints: [],
+    };
+  }
+
+  // Per-category counts
+  const categoryCounts: Record<string, number> = {};
+  for (const p of pictos) {
+    categoryCounts[p.categoria] = (categoryCounts[p.categoria] ?? 0) + 1;
+  }
+
+  // Collect first-neighbor Wasserstein distances
+  const dists: number[] = [];
+  for (const p of pictos) {
+    if (Array.isArray(p.vizinhos) && p.vizinhos.length > 0) {
+      const d = (p.vizinhos[0] as { distancia?: number }).distancia;
+      if (typeof d === "number" && isFinite(d)) dists.push(d);
+    }
+  }
+
+  const avgDist = dists.length > 0 ? dists.reduce((s, d) => s + d, 0) / dists.length : 0;
+  const minDist = dists.length > 0 ? Math.min(...dists) : 0;
+  const maxDist = dists.length > 0 ? Math.max(...dists) : 0;
+
+  // MDS variance
+  const xs = pictos.map((p) => p.coordX ?? 0);
+  const ys = pictos.map((p) => p.coordY ?? 0);
+  const meanX = xs.reduce((s, v) => s + v, 0) / xs.length;
+  const meanY = ys.reduce((s, v) => s + v, 0) / ys.length;
+  const varX = xs.reduce((s, v) => s + (v - meanX) ** 2, 0) / xs.length;
+  const varY = ys.reduce((s, v) => s + (v - meanY) ** 2, 0) / ys.length;
+
+  // Histogram bins [0-0.1, 0.1-0.2, ..., 0.9-1.0, >1.0]
+  const BINS = 11;
+  const histogram = Array(BINS).fill(0) as number[];
+  for (const d of dists) {
+    const bin = Math.min(Math.floor(d / 0.1), BINS - 1);
+    histogram[bin]++;
+  }
+
+  // Vizinhos with distance < 0.3
+  const closeNeighbors = dists.filter((d) => d < 0.3).length;
+
+  // Sample up to 150 points for mini-canvas rendering (evenly spaced)
+  const SAMPLE = 150;
+  const step = Math.max(1, Math.floor(pictos.length / SAMPLE));
+  const samplePoints = pictos
+    .filter((_, i) => i % step === 0)
+    .slice(0, SAMPLE)
+    .map((p) => ({ x: p.coordX ?? 0, y: p.coordY ?? 0, cat: p.categoria }));
+
+  return {
+    total: pictos.length,
+    categorias: Object.keys(categoryCounts).length,
+    categoryCounts,
+    wasserstein: {
+      min: +minDist.toFixed(4),
+      avg: +avgDist.toFixed(4),
+      max: +maxDist.toFixed(4),
+    },
+    mdsVariance: { x: +varX.toFixed(4), y: +varY.toFixed(4) },
+    histogram,
+    closeNeighbors,
+    samplePoints,
+  };
+}
+
+function computeAACCoverage(pictos: AtlasPictogram[], caaPalavras: Set<string>): { covered: number; total: number; pct: number } {
+  const words = new Set(pictos.map((p) => (p.palavra ?? "").toLowerCase().trim()));
+  let covered = 0;
+  for (const w of caaPalavras) {
+    if (words.has(w)) covered++;
+  }
+  const total = caaPalavras.size;
+  return { covered, total, pct: total > 0 ? +((covered / total) * 100).toFixed(1) : 0 };
+}
+
+interface AtlasMetricsEntry extends AtlasMetricsResult {
+  name: string;
+  slug: string;
+  href: string;
+  color: string;
+  vizinhosMethod: string;
+  vectorModel: string;
+  aacCoverage: { covered: number; total: number; pct: number };
+}
+
+router.get("/atlas-metrics", (req, res) => {
+  try {
+    const results: AtlasMetricsEntry[] = [];
+
+    // Load CAA words as reference AAC vocabulary
+    let caaPalavras = new Set<string>();
+    if (existsSync(CAA_ATLAS_PATH)) {
+      const caaRaw = JSON.parse(readFileSync(CAA_ATLAS_PATH, "utf-8")) as { pictos: AtlasPictogram[] };
+      caaPalavras = new Set((caaRaw.pictos ?? []).map((p) => (p.palavra ?? "").toLowerCase().trim()));
+    }
+
+    // Noun 3k
+    if (existsSync(NOUN_ATLAS_PATH)) {
+      const noun = JSON.parse(readFileSync(NOUN_ATLAS_PATH, "utf-8")) as { pictos: AtlasPictogram[]; vizinhosMethod?: string };
+      const metrics = computeAtlasMetrics(noun.pictos ?? []);
+      const aacCoverage = computeAACCoverage(noun.pictos ?? [], caaPalavras);
+      results.push({
+        name: "Noun 3k",
+        slug: "noun-3k",
+        href: "/noun-atlas",
+        color: "#10b981",
+        vizinhosMethod: noun.vizinhosMethod ?? "wasserstein-12d",
+        vectorModel: "gemma-4-31b-it",
+        aacCoverage,
+        ...metrics,
+      });
+    }
+
+    // CAA
+    if (existsSync(CAA_ATLAS_PATH)) {
+      const caa = JSON.parse(readFileSync(CAA_ATLAS_PATH, "utf-8")) as { pictos: AtlasPictogram[]; vizinhosMethod?: string; mdsInfo?: { vectorModel?: string } };
+      const metrics = computeAtlasMetrics(caa.pictos ?? []);
+      results.push({
+        name: "Atlas CAA",
+        slug: "caa",
+        href: "/caa-atlas",
+        color: "#06b6d4",
+        vizinhosMethod: caa.vizinhosMethod ?? "wasserstein-gemma4-12d-global-mds",
+        vectorModel: caa.mdsInfo?.vectorModel ?? "gemma-4-31b-it",
+        aacCoverage: { covered: caaPalavras.size, total: caaPalavras.size, pct: 100 },
+        ...metrics,
+      });
+    }
+
+    // Disfasia
+    if (existsSync(DISFASIA_ATLAS_PATH)) {
+      const dis = JSON.parse(readFileSync(DISFASIA_ATLAS_PATH, "utf-8")) as { pictos: AtlasPictogram[]; vizinhosMethod?: string; geminiModel?: string };
+      const metrics = computeAtlasMetrics(dis.pictos ?? []);
+      const aacCoverage = computeAACCoverage(dis.pictos ?? [], caaPalavras);
+      results.push({
+        name: "Atlas Disfasia",
+        slug: "disfasia",
+        href: "/disfasia-atlas",
+        color: "#f59e0b",
+        vizinhosMethod: dis.vizinhosMethod ?? "wasserstein-gemma4-12d-mds",
+        vectorModel: dis.geminiModel ?? "gemma-4-31b-it",
+        aacCoverage,
+        ...metrics,
+      });
+    }
+
+    res.json({ atlases: results, geradoEm: new Date().toISOString() });
+  } catch (err) {
+    handleRouteError(err, res, (msg) => req.log.error(msg), "compute atlas metrics");
   }
 });
 
