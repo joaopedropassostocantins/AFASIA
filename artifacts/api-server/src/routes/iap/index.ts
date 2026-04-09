@@ -819,4 +819,110 @@ Retorne APENAS um objeto JSON com os campos abaixo (sem markdown, sem texto extr
   }
 });
 
+// ── Atlas Metrics ─────────────────────────────────────────────────────────────
+
+function computeAtlasMetrics(pictos: AtlasPictogram[]) {
+  const cats = new Set(pictos.map((p) => p.categoria));
+
+  // Collect first-neighbor Wasserstein distances
+  const dists: number[] = [];
+  for (const p of pictos) {
+    if (Array.isArray(p.vizinhos) && p.vizinhos.length > 0) {
+      const d = (p.vizinhos[0] as { distancia?: number }).distancia;
+      if (typeof d === "number" && isFinite(d)) dists.push(d);
+    }
+  }
+
+  const avgDist = dists.length > 0 ? dists.reduce((s, d) => s + d, 0) / dists.length : 0;
+  const minDist = dists.length > 0 ? Math.min(...dists) : 0;
+  const maxDist = dists.length > 0 ? Math.max(...dists) : 0;
+
+  // MDS variance
+  const xs = pictos.map((p) => p.coordX ?? 0);
+  const ys = pictos.map((p) => p.coordY ?? 0);
+  const meanX = xs.reduce((s, v) => s + v, 0) / xs.length;
+  const meanY = ys.reduce((s, v) => s + v, 0) / ys.length;
+  const varX = xs.reduce((s, v) => s + (v - meanX) ** 2, 0) / xs.length;
+  const varY = ys.reduce((s, v) => s + (v - meanY) ** 2, 0) / ys.length;
+
+  // Histogram bins [0-0.1, 0.1-0.2, ..., 0.9-1.0, >1.0]
+  const BINS = 11;
+  const histogram = Array(BINS).fill(0) as number[];
+  for (const d of dists) {
+    const bin = Math.min(Math.floor(d / 0.1), BINS - 1);
+    histogram[bin]++;
+  }
+
+  // Vizinhos with distance < 0.3
+  const closeNeighbors = dists.filter((d) => d < 0.3).length;
+
+  return {
+    total: pictos.length,
+    categorias: cats.size,
+    wasserstein: {
+      min: +minDist.toFixed(4),
+      avg: +avgDist.toFixed(4),
+      max: +maxDist.toFixed(4),
+    },
+    mdsVariance: { x: +varX.toFixed(4), y: +varY.toFixed(4) },
+    histogram,
+    closeNeighbors,
+  };
+}
+
+router.get("/atlas-metrics", (req, res) => {
+  try {
+    const results = [] as unknown[];
+
+    // Noun 3k
+    if (existsSync(NOUN_ATLAS_PATH)) {
+      const noun = JSON.parse(readFileSync(NOUN_ATLAS_PATH, "utf-8")) as { pictos: AtlasPictogram[]; vizinhosMethod?: string };
+      const metrics = computeAtlasMetrics(noun.pictos ?? []);
+      results.push({
+        name: "Noun 3k",
+        slug: "noun-3k",
+        href: "/noun-atlas",
+        color: "#10b981",
+        vizinhosMethod: noun.vizinhosMethod ?? "wasserstein-12d",
+        vectorModel: "gemma-4-31b-it",
+        ...metrics,
+      });
+    }
+
+    // CAA
+    if (existsSync(CAA_ATLAS_PATH)) {
+      const caa = JSON.parse(readFileSync(CAA_ATLAS_PATH, "utf-8")) as { pictos: AtlasPictogram[]; vizinhosMethod?: string; mdsInfo?: { vectorModel?: string } };
+      const metrics = computeAtlasMetrics(caa.pictos ?? []);
+      results.push({
+        name: "Atlas CAA",
+        slug: "caa",
+        href: "/caa-atlas",
+        color: "#06b6d4",
+        vizinhosMethod: caa.vizinhosMethod ?? "wasserstein-gemma4-12d-global-mds",
+        vectorModel: caa.mdsInfo?.vectorModel ?? "gemma-4-31b-it",
+        ...metrics,
+      });
+    }
+
+    // Disfasia
+    if (existsSync(DISFASIA_ATLAS_PATH)) {
+      const dis = JSON.parse(readFileSync(DISFASIA_ATLAS_PATH, "utf-8")) as { pictos: AtlasPictogram[]; vizinhosMethod?: string; geminiModel?: string };
+      const metrics = computeAtlasMetrics(dis.pictos ?? []);
+      results.push({
+        name: "Atlas Disfasia",
+        slug: "disfasia",
+        href: "/disfasia-atlas",
+        color: "#f59e0b",
+        vizinhosMethod: dis.vizinhosMethod ?? "wasserstein-gemma4-12d-mds",
+        vectorModel: dis.geminiModel ?? "gemma-4-31b-it",
+        ...metrics,
+      });
+    }
+
+    res.json({ atlases: results, geradoEm: new Date().toISOString() });
+  } catch (err) {
+    handleRouteError(err, res, (msg) => req.log.error(msg), "compute atlas metrics");
+  }
+});
+
 export default router;
