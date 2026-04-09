@@ -10,6 +10,7 @@ export function Navbar() {
     { href: "/algorithm", label: "Algoritmo JP", icon: BrainCircuit },
     { href: "/afasia", label: "Comunicador AAC", icon: Accessibility },
     { href: "/disfasia", label: "Disfasia", icon: MessageSquare },
+    { href: "/disfasia-atlas", label: "Atlas Disfasia", icon: Network },
     { href: "/topology", label: "Topologia", icon: Network },
     { href: "/atlas", label: "Atlas", icon: MapPin },
     { href: "/noun-atlas", label: "Atlas 3k", icon: Globe },

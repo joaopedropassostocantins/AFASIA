@@ -336,6 +336,48 @@ export default function DisfasiaAtlas() {
               </div>
             </div>
 
+            <div>
+              <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-3">
+                Pictogramas ARASAAC — Disfasia ({pictos.length})
+              </h2>
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
+                {pictos.map((p) => (
+                  <motion.button
+                    key={p.id}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => setSelected(p)}
+                    className={`flex flex-col items-center gap-1.5 rounded-xl border-2 p-2 text-center transition-all bg-white hover:shadow-sm ${
+                      selected?.id === p.id ? "shadow-md" : "border-transparent"
+                    }`}
+                    style={
+                      selected?.id === p.id
+                        ? { borderColor: CAT_COLOR[p.categoria] ?? "#ccc", backgroundColor: `${CAT_COLOR[p.categoria]}10` }
+                        : {}
+                    }
+                  >
+                    <img
+                      src={p.imagemUrl}
+                      alt={p.palavra}
+                      className="w-12 h-12 object-contain"
+                      loading="lazy"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = `https://api.arasaac.org/api/pictograms/${p.id}?download=false&skin=white&resolution=500`;
+                      }}
+                    />
+                    <span className="text-xs font-medium text-foreground leading-tight capitalize line-clamp-2">
+                      {p.palavra}
+                    </span>
+                    <div
+                      className="w-1.5 h-1.5 rounded-full"
+                      style={{ backgroundColor: CAT_COLOR[p.categoria] ?? "#ccc" }}
+                      title={CAT_LABEL[p.categoria] ?? p.categoria}
+                    />
+                  </motion.button>
+                ))}
+              </div>
+            </div>
+
             <Card className="border border-border/60 bg-violet-50/30">
               <CardContent className="p-4">
                 <p className="text-xs text-muted-foreground italic leading-relaxed">

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { useMutation } from "@tanstack/react-query";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,13 +13,15 @@ import {
   Trash2,
   MessageSquare,
   AlertCircle,
-  Check,
+  Network,
   ChevronDown,
   ChevronRight,
   RefreshCw,
   LayoutGrid,
   Grid3x3,
+  ArrowRight,
 } from "lucide-react";
+
 
 interface Symbol {
   id: string;
@@ -577,16 +580,25 @@ export default function Disfasia() {
         </Card>
 
         <Card className="border shadow-sm bg-violet-50/40">
-          <CardContent className="px-4 py-3">
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-1">
-              Sobre a Disfasia e o IAP
-            </p>
-            <p className="text-xs text-muted-foreground leading-relaxed">
-              A disfasia afeta a fluência e organização da fala, não a compreensão. A pessoa compreende
-              tudo, mas tem dificuldade em organizar e articular as palavras. A teoria IAP (Inteligência
-              Artificial Pictórica) modela o pensamento em espaços topológicos pré-linguísticos — ideal
-              para apoiar utilizadores com disfasia via símbolos pictóricos e Gemini.
-            </p>
+          <CardContent className="px-4 py-3 space-y-3">
+            <div>
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-1">
+                Sobre a Disfasia e o IAP
+              </p>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                A disfasia afeta a fluência e organização da fala, não a compreensão. A pessoa compreende
+                tudo, mas tem dificuldade em organizar e articular as palavras. A teoria IAP (Inteligência
+                Artificial Pictórica) modela o pensamento em espaços topológicos pré-linguísticos — ideal
+                para apoiar utilizadores com disfasia via símbolos pictóricos e Gemini.
+              </p>
+            </div>
+            <Link href="/disfasia-atlas">
+              <Button variant="outline" size="sm" className="w-full border-violet-400/40 hover:border-violet-400 text-xs">
+                <Network className="h-3.5 w-3.5 mr-1.5" />
+                Ver Atlas Semântico da Disfasia
+                <ArrowRight className="h-3.5 w-3.5 ml-auto" />
+              </Button>
+            </Link>
           </CardContent>
         </Card>
       </div>
