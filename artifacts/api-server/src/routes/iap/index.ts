@@ -664,7 +664,7 @@ router.get("/noun-atlas", (req, res) => {
         return;
       }
     }
-    res.status(503).json({ error: "Atlas Noun Project não disponível. Execute: node scripts/noun_fetch.mjs", pictos: [] });
+    res.status(503).json({ error: "Atlas Noun Project não disponível. Pipeline: 1) node scripts/noun_fetch.mjs  2) node scripts/noun_recompute_wasserstein.mjs", pictos: [] });
   } catch (err) {
     handleRouteError(err, res, (msg) => req.log.error(msg), "fetch noun atlas");
   }

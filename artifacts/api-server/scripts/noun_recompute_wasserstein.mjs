@@ -148,29 +148,6 @@ function classicalMDS(D, k = 2) {
   return { coords, eigenvalues: results.map(r => r.val), varExplained, varTotal };
 }
 
-// ─── Projeção Nyström para ícones fora da amostra ────────────────────────────
-
-function nystromProject(dLandmarks, landmarkCoords, landmarkD2mean, gm) {
-  // dLandmarks: vetor de distâncias ao quadrado para os L landmarks
-  // Formula: y = -0.5 * Phi_L^+ (d^2 - d_mean^2)  [aproximação]
-  // Simplificado: interpolar pelas coordenadas dos L mais próximos
-  const L = dLandmarks.length;
-  const sorted = Array.from({ length: L }, (_, i) => i).sort(
-    (a, b) => dLandmarks[a] - dLandmarks[b]
-  );
-  // Usar os 5 landmarks mais próximos com peso 1/d²
-  const K = Math.min(5, L);
-  let wx = 0, wy = 0, wt = 0;
-  for (let k = 0; k < K; k++) {
-    const li = sorted[k];
-    const w = 1 / (dLandmarks[li] + 1e-9);
-    wx += w * landmarkCoords[li][0];
-    wy += w * landmarkCoords[li][1];
-    wt += w;
-  }
-  return [wx / wt, wy / wt];
-}
-
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -181,8 +158,8 @@ async function main() {
   const N_ALL = allPictos.length;
   console.log(`   Total de ícones no arquivo: ${N_ALL}`);
 
-  // ─── Passo 1: Amostrar 3.000 ícones (250 por categoria) ─────────────────
-  const SAMPLE_PER_CAT = 300; // → 3443 total (300 per category; escola limited to 143)
+  // ─── Passo 1: Amostrar ≥3.000 ícones (300 por categoria) ────────────────
+  const SAMPLE_PER_CAT = 300; // 300 per category → 3.443 total (escola limited to 143 available)
   const cats = Object.keys(CAT_STATE_VECTORS);
   const byCat = {};
   for (const p of allPictos) {
