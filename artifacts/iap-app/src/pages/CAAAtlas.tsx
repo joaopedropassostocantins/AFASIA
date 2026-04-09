@@ -278,7 +278,7 @@ export default function CAAAtlas() {
     );
   }
 
-  const gemmaCount = pictos.filter((p) => p.vectorSource && p.vectorSource !== "fallback").length;
+  const geminiCount = pictos.filter((p) => p.vectorSource === "gemini").length;
 
   return (
     <div className="flex-1 flex flex-col min-h-0">
@@ -292,10 +292,10 @@ export default function CAAAtlas() {
           Comunicação Aumentativa e Alternativa · {visible.length.toLocaleString("pt-BR")} ícones ·{" "}
           <span className="text-cyan-400">IAP + Gemma 4 31B</span>
         </span>
-        {gemmaCount > 0 && (
+        {geminiCount > 0 && (
           <Badge variant="outline" className="border-cyan-400/40 text-cyan-400 text-xs gap-1">
             <Sparkles className="h-3 w-3" />
-            {gemmaCount} vetores Gemma 4
+            {geminiCount} vetores Gemini
           </Badge>
         )}
         <div className="ml-auto flex gap-2">

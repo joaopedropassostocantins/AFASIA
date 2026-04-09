@@ -14,7 +14,7 @@
       1,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6383090:online presentation": {
     "vec": [
@@ -31,7 +31,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "604774:presentation chat": {
     "vec": [
@@ -48,7 +48,7 @@
       1,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4831245:remote presentation": {
     "vec": [
@@ -65,7 +65,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "508605:flipchart": {
     "vec": [
@@ -82,7 +82,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "354950:User": {
     "vec": [
@@ -99,7 +99,7 @@
       1,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "515487:download clipboard": {
     "vec": [
@@ -116,7 +116,7 @@
       1,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "508548:business support": {
     "vec": [
@@ -133,7 +133,7 @@
       1,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "479580:clipboard code": {
     "vec": [
@@ -150,7 +150,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "479578:Clipboard Remove": {
     "vec": [
@@ -167,7 +167,7 @@
       1,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8256796:speech": {
     "vec": [
@@ -184,7 +184,7 @@
       8,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7790221:articulation": {
     "vec": [
@@ -201,7 +201,7 @@
       5,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3118114:knee": {
     "vec": [
@@ -218,7 +218,7 @@
       4,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2444404:articulation body part": {
     "vec": [
@@ -235,7 +235,7 @@
       8,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5738861:marcato": {
     "vec": [
@@ -252,7 +252,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5738858:staccatissimo": {
     "vec": [
@@ -269,7 +269,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5738846:staccato": {
     "vec": [
@@ -286,7 +286,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5738844:tenuto": {
     "vec": [
@@ -303,7 +303,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5738841:Fermata": {
     "vec": [
@@ -320,7 +320,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5738839:accent": {
     "vec": [
@@ -337,7 +337,7 @@
       0,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3522945:joints": {
     "vec": [
@@ -354,7 +354,7 @@
       4,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3522931:elbow": {
     "vec": [
@@ -371,7 +371,7 @@
       2,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3519229:anatomy": {
     "vec": [
@@ -388,7 +388,7 @@
       2,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3454329:Leg Bone": {
     "vec": [
@@ -405,7 +405,7 @@
       3,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3331410:bones": {
     "vec": [
@@ -422,7 +422,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8258956:joint": {
     "vec": [
@@ -439,7 +439,7 @@
       4,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7966718:Communication Skills": {
     "vec": [
@@ -456,7 +456,7 @@
       9,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7497346:speech writing": {
     "vec": [
@@ -473,7 +473,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7434888:tone": {
     "vec": [
@@ -490,7 +490,7 @@
       2,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7339275:bone pain": {
     "vec": [
@@ -507,7 +507,7 @@
       9,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7322800:Phonology": {
     "vec": [
@@ -524,7 +524,7 @@
       0,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6684280:hinge joint": {
     "vec": [
@@ -541,7 +541,7 @@
       1,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6684278:saddle joint": {
     "vec": [
@@ -558,7 +558,7 @@
       2,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5647126:elbow joint": {
     "vec": [
@@ -575,7 +575,7 @@
       4,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2895592:Bone": {
     "vec": [
@@ -592,7 +592,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2521168:foot orthopedic shoes": {
     "vec": [
@@ -609,7 +609,7 @@
       6,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "797503:Bone Joints": {
     "vec": [
@@ -626,7 +626,7 @@
       2,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8244638:Clarity Speaker": {
     "vec": [
@@ -643,7 +643,7 @@
       8,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8191171:Lips": {
     "vec": [
@@ -660,7 +660,7 @@
       6,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7966741:oral communication": {
     "vec": [
@@ -677,7 +677,7 @@
       9,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5859739:voice": {
     "vec": [
@@ -694,7 +694,7 @@
       9,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8335389:no voice": {
     "vec": [
@@ -711,7 +711,7 @@
       9,
       10
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7306913:singing": {
     "vec": [
@@ -728,7 +728,7 @@
       2,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5207082:pottery": {
     "vec": [
@@ -745,7 +745,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7647412:scream": {
     "vec": [
@@ -762,7 +762,7 @@
       8,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6176315:beluga whale": {
     "vec": [
@@ -779,7 +779,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "230025:sing": {
     "vec": [
@@ -796,7 +796,7 @@
       2,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5110880:Audio": {
     "vec": [
@@ -813,7 +813,7 @@
       6,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "1231806:Audio to Audio": {
     "vec": [
@@ -830,7 +830,7 @@
       4,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7756783:no audio": {
     "vec": [
@@ -847,7 +847,7 @@
       3,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2333618:sound waves": {
     "vec": [
@@ -864,7 +864,7 @@
       1,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8353658:Sound Wave": {
     "vec": [
@@ -881,7 +881,7 @@
       1,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8349637:wave sound": {
     "vec": [
@@ -898,7 +898,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6698186:vocals": {
     "vec": [
@@ -915,7 +915,7 @@
       6,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6211920:vocal": {
     "vec": [
@@ -932,7 +932,7 @@
       7,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7924528:vocal cords": {
     "vec": [
@@ -949,7 +949,7 @@
       3,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8246948:Vocal Booth": {
     "vec": [
@@ -966,7 +966,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7019225:vocal inject": {
     "vec": [
@@ -983,7 +983,7 @@
       7,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6564640:Vocal Microphone": {
     "vec": [
@@ -1000,7 +1000,7 @@
       1,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5167788:vocal recording": {
     "vec": [
@@ -1017,7 +1017,7 @@
       4,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2529036:vocal chords": {
     "vec": [
@@ -1034,7 +1034,7 @@
       3,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6169238:singer": {
     "vec": [
@@ -1051,7 +1051,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "31765:Music": {
     "vec": [
@@ -1068,7 +1068,7 @@
       3,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7621751:Microphone": {
     "vec": [
@@ -1085,7 +1085,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7457208:mic": {
     "vec": [
@@ -1102,7 +1102,7 @@
       2,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6788730:voice control": {
     "vec": [
@@ -1119,7 +1119,7 @@
       4,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6455156:podcast": {
     "vec": [
@@ -1136,7 +1136,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3370028:Mute Microphone": {
     "vec": [
@@ -1153,7 +1153,7 @@
       1,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7915148:choir": {
     "vec": [
@@ -1170,7 +1170,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7309641:Vocalist": {
     "vec": [
@@ -1187,7 +1187,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8076489:hearing": {
     "vec": [
@@ -1204,7 +1204,7 @@
       8,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3859236:hearings": {
     "vec": [
@@ -1221,7 +1221,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5042229:Ear": {
     "vec": [
@@ -1238,7 +1238,7 @@
       7,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8076024:earings": {
     "vec": [
@@ -1255,7 +1255,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7916738:Earing": {
     "vec": [
@@ -1272,7 +1272,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7914185:ears": {
     "vec": [
@@ -1289,7 +1289,7 @@
       7,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8137534:hearing aid": {
     "vec": [
@@ -1306,7 +1306,7 @@
       7,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8125116:listening": {
     "vec": [
@@ -1323,7 +1323,7 @@
       7,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8242354:Listen": {
     "vec": [
@@ -1340,7 +1340,7 @@
       7,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7691501:auditory": {
     "vec": [
@@ -1357,7 +1357,7 @@
       4,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7438794:auditory learning": {
     "vec": [
@@ -1374,7 +1374,7 @@
       2,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6135609:auditory language": {
     "vec": [
@@ -1391,7 +1391,7 @@
       8,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "1421555:target auditory": {
     "vec": [
@@ -1408,7 +1408,7 @@
       3,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6944463:Eavesdropping": {
     "vec": [
@@ -1425,7 +1425,7 @@
       0,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "98135:Phonendoscope": {
     "vec": [
@@ -1442,7 +1442,7 @@
       3,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7906305:social listening": {
     "vec": [
@@ -1459,7 +1459,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7309750:active listening": {
     "vec": [
@@ -1476,7 +1476,7 @@
       3,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7025196:eavesdropping attacks": {
     "vec": [
@@ -1493,7 +1493,7 @@
       1,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7007820:hear": {
     "vec": [
@@ -1510,7 +1510,7 @@
       7,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "263589:heart eye": {
     "vec": [
@@ -1527,7 +1527,7 @@
       1,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6729358:Eye": {
     "vec": [
@@ -1544,7 +1544,7 @@
       8,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "66041:Look": {
     "vec": [
@@ -1561,7 +1561,7 @@
       4,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4258559:assistive listening": {
     "vec": [
@@ -1578,7 +1578,7 @@
       7,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6613730:person with an amputation": {
     "vec": [
@@ -1595,7 +1595,7 @@
       3,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3520119:person who uses forearm crutches": {
     "vec": [
@@ -1612,7 +1612,7 @@
       7,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4948336:accessibility testing": {
     "vec": [
@@ -1629,7 +1629,7 @@
       2,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4948319:Accessibility": {
     "vec": [
@@ -1646,7 +1646,7 @@
       8,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7530863:Heart": {
     "vec": [
@@ -1663,7 +1663,7 @@
       7,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6135710:learning support": {
     "vec": [
@@ -1680,7 +1680,7 @@
       5,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8314084:Charity": {
     "vec": [
@@ -1697,7 +1697,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8338858:Gesture": {
     "vec": [
@@ -1714,7 +1714,7 @@
       5,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7965204:gestures": {
     "vec": [
@@ -1731,7 +1731,7 @@
       7,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7946556:no gesture": {
     "vec": [
@@ -1748,7 +1748,7 @@
       2,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8330230:point": {
     "vec": [
@@ -1765,7 +1765,7 @@
       5,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3535879:point to point": {
     "vec": [
@@ -1782,7 +1782,7 @@
       3,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8350336:pointing": {
     "vec": [
@@ -1799,7 +1799,7 @@
       7,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8169863:Wave Hand": {
     "vec": [
@@ -1816,7 +1816,7 @@
       3,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8124530:Waving Hand": {
     "vec": [
@@ -1833,7 +1833,7 @@
       3,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5201895:Hand wave": {
     "vec": [
@@ -1850,7 +1850,7 @@
       4,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5071002:hand waving": {
     "vec": [
@@ -1867,7 +1867,7 @@
       4,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4286495:wave hands": {
     "vec": [
@@ -1884,7 +1884,7 @@
       3,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6927746:wave": {
     "vec": [
@@ -1901,7 +1901,7 @@
       3,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6664986:Hand": {
     "vec": [
@@ -1918,7 +1918,7 @@
       8,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "1356001:Stop": {
     "vec": [
@@ -1935,7 +1935,7 @@
       8,
       10
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7693150:hand gesture": {
     "vec": [
@@ -1952,7 +1952,7 @@
       6,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3815244:raised hand": {
     "vec": [
@@ -1969,7 +1969,7 @@
       4,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2060682:Wave palm left": {
     "vec": [
@@ -1986,7 +1986,7 @@
       3,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2060634:Wave palm right": {
     "vec": [
@@ -2003,7 +2003,7 @@
       3,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "1356002:hello": {
     "vec": [
@@ -2020,7 +2020,7 @@
       6,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3566911:nodding": {
     "vec": [
@@ -2037,7 +2037,7 @@
       3,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "673730:nod": {
     "vec": [
@@ -2054,7 +2054,7 @@
       4,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7209781:face nod": {
     "vec": [
@@ -2071,7 +2071,7 @@
       5,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6546716:Network": {
     "vec": [
@@ -2088,7 +2088,7 @@
       2,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8035624:Customary greetings": {
     "vec": [
@@ -2105,7 +2105,7 @@
       4,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2247280:pumpjack": {
     "vec": [
@@ -2122,7 +2122,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7827131:Oil Pumpjacks": {
     "vec": [
@@ -2139,7 +2139,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7310185:block head calming nod": {
     "vec": [
@@ -2156,7 +2156,7 @@
       3,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "377647:easter email": {
     "vec": [
@@ -2173,7 +2173,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "223724:connectivity": {
     "vec": [
@@ -2190,7 +2190,7 @@
       4,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "491638:bow": {
     "vec": [
@@ -2207,7 +2207,7 @@
       1,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8318243:Waving Hand": {
     "vec": [
@@ -2224,7 +2224,7 @@
       3,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6116368:hand-waving": {
     "vec": [
@@ -2241,7 +2241,7 @@
       3,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4049907:hand waving": {
     "vec": [
@@ -2258,7 +2258,7 @@
       4,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5585173:hands up": {
     "vec": [
@@ -2275,7 +2275,7 @@
       4,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7615406:help and support": {
     "vec": [
@@ -2292,7 +2292,7 @@
       9,
       10
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7603998:help support": {
     "vec": [
@@ -2309,7 +2309,7 @@
       9,
       10
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5872142:Support help": {
     "vec": [
@@ -2326,7 +2326,7 @@
       9,
       10
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3972391:help": {
     "vec": [
@@ -2343,7 +2343,7 @@
       10,
       10
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2970600:support": {
     "vec": [
@@ -2360,7 +2360,7 @@
       8,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "750593:User Help": {
     "vec": [
@@ -2377,7 +2377,7 @@
       8,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6835721:FAQ": {
     "vec": [
@@ -2394,7 +2394,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4954230:lifebuoy": {
     "vec": [
@@ -2411,7 +2411,7 @@
       6,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4942211:live chat": {
     "vec": [
@@ -2428,7 +2428,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4942188:rescue": {
     "vec": [
@@ -2445,7 +2445,7 @@
       9,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4893611:Question": {
     "vec": [
@@ -2462,7 +2462,7 @@
       5,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4652306:ask": {
     "vec": [
@@ -2479,7 +2479,7 @@
       8,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4575614:lifesaver": {
     "vec": [
@@ -2496,7 +2496,7 @@
       8,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4218830:Information": {
     "vec": [
@@ -2513,7 +2513,7 @@
       4,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4207167:help and support service": {
     "vec": [
@@ -2530,7 +2530,7 @@
       8,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3836849:about": {
     "vec": [
@@ -2547,7 +2547,7 @@
       2,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3660709:Safety": {
     "vec": [
@@ -2564,7 +2564,7 @@
       10,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3649621:online help": {
     "vec": [
@@ -2581,7 +2581,7 @@
       2,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3615711:service": {
     "vec": [
@@ -2598,7 +2598,7 @@
       6,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3560580:Buoy": {
     "vec": [
@@ -2615,7 +2615,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3399310:Headset": {
     "vec": [
@@ -2632,7 +2632,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2614471:Headphones": {
     "vec": [
@@ -2649,7 +2649,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2269163:Handshake": {
     "vec": [
@@ -2666,7 +2666,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2233196:contract": {
     "vec": [
@@ -2683,7 +2683,7 @@
       2,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8227855:assistant": {
     "vec": [
@@ -2700,7 +2700,7 @@
       6,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7557028:Info": {
     "vec": [
@@ -2717,7 +2717,7 @@
       5,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7458538:waving hands": {
     "vec": [
@@ -2734,7 +2734,7 @@
       4,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "238942:The Lonely Eye": {
     "vec": [
@@ -2751,7 +2751,7 @@
       0,
       0
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "238937:The Night Eye": {
     "vec": [
@@ -2768,7 +2768,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8261671:help": {
     "vec": [
@@ -2785,7 +2785,7 @@
       10,
       10
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6041859:face emotion": {
     "vec": [
@@ -2802,7 +2802,7 @@
       7,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "1961096:Emotion Face": {
     "vec": [
@@ -2819,7 +2819,7 @@
       7,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3589656:smile face emotion": {
     "vec": [
@@ -2836,7 +2836,7 @@
       5,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3589646:bad face emotion": {
     "vec": [
@@ -2853,7 +2853,7 @@
       7,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6885341:Angel": {
     "vec": [
@@ -2870,7 +2870,7 @@
       0,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8048837:Smile": {
     "vec": [
@@ -2887,7 +2887,7 @@
       3,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8358339:Face": {
     "vec": [
@@ -2904,7 +2904,7 @@
       4,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8061965:serious": {
     "vec": [
@@ -2921,7 +2921,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7656185:emotion": {
     "vec": [
@@ -2938,7 +2938,7 @@
       8,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7173337:nervous face": {
     "vec": [
@@ -2955,7 +2955,7 @@
       5,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445380:No": {
     "vec": [
@@ -2972,7 +2972,7 @@
       9,
       10
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445379:nice": {
     "vec": [
@@ -2989,7 +2989,7 @@
       2,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445377:wink": {
     "vec": [
@@ -3006,7 +3006,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445376:tired": {
     "vec": [
@@ -3023,7 +3023,7 @@
       9,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445374:interesting": {
     "vec": [
@@ -3040,7 +3040,7 @@
       0,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445373:Love": {
     "vec": [
@@ -3057,7 +3057,7 @@
       9,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445371:surprised": {
     "vec": [
@@ -3074,7 +3074,7 @@
       2,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445369:angry": {
     "vec": [
@@ -3091,7 +3091,7 @@
       6,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445366:sleepy": {
     "vec": [
@@ -3108,7 +3108,7 @@
       9,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445363:kiss": {
     "vec": [
@@ -3125,7 +3125,7 @@
       4,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445362:curiosity": {
     "vec": [
@@ -3142,7 +3142,7 @@
       2,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445360:smiling": {
     "vec": [
@@ -3159,7 +3159,7 @@
       3,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445358:wonderful": {
     "vec": [
@@ -3176,7 +3176,7 @@
       1,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445357:weak": {
     "vec": [
@@ -3193,7 +3193,7 @@
       6,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445356:Kidding": {
     "vec": [
@@ -3210,7 +3210,7 @@
       1,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6445355:yuck": {
     "vec": [
@@ -3227,7 +3227,7 @@
       5,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6116362:hand waving": {
     "vec": [
@@ -3244,7 +3244,7 @@
       3,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6582670:internet": {
     "vec": [
@@ -3261,7 +3261,7 @@
       4,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3450926:mobile communication": {
     "vec": [
@@ -3278,7 +3278,7 @@
       5,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "953265:Mobile": {
     "vec": [
@@ -3295,7 +3295,7 @@
       5,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5748749:Phone": {
     "vec": [
@@ -3312,7 +3312,7 @@
       5,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4460002:Smartphone": {
     "vec": [
@@ -3329,7 +3329,7 @@
       5,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4277077:mobile phone": {
     "vec": [
@@ -3346,7 +3346,7 @@
       6,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3587202:Technology": {
     "vec": [
@@ -3363,7 +3363,7 @@
       3,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "1317446:chatting": {
     "vec": [
@@ -3380,7 +3380,7 @@
       5,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "986391:Social Media": {
     "vec": [
@@ -3397,7 +3397,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "932768:I Phone": {
     "vec": [
@@ -3414,7 +3414,7 @@
       4,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "913793:More tablet": {
     "vec": [
@@ -3431,7 +3431,7 @@
       7,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "680947:add": {
     "vec": [
@@ -3448,7 +3448,7 @@
       3,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8053320:tablet message": {
     "vec": [
@@ -3465,7 +3465,7 @@
       7,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7880268:Tablet": {
     "vec": [
@@ -3482,7 +3482,7 @@
       5,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7779286:Video Call": {
     "vec": [
@@ -3499,7 +3499,7 @@
       3,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7021888:touchscreen": {
     "vec": [
@@ -3516,7 +3516,7 @@
       6,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5772678:Telephone": {
     "vec": [
@@ -3533,7 +3533,7 @@
       5,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5387452:android phone": {
     "vec": [
@@ -3550,7 +3550,7 @@
       4,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4833129:network tablet": {
     "vec": [
@@ -3567,7 +3567,7 @@
       8,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4552203:handpone": {
     "vec": [
@@ -3584,7 +3584,7 @@
       4,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4170212:Personal hotspot": {
     "vec": [
@@ -3601,7 +3601,7 @@
       4,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4170204:Share": {
     "vec": [
@@ -3618,7 +3618,7 @@
       3,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4080017:video calling": {
     "vec": [
@@ -3635,7 +3635,7 @@
       5,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3963494:chat": {
     "vec": [
@@ -3652,7 +3652,7 @@
       3,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3612030:reading tablet": {
     "vec": [
@@ -3669,7 +3669,7 @@
       2,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2889832:pad": {
     "vec": [
@@ -3686,7 +3686,7 @@
       8,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2648202:handphone": {
     "vec": [
@@ -3703,7 +3703,7 @@
       5,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2491187:devices": {
     "vec": [
@@ -3720,7 +3720,7 @@
       7,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "1317448:email message": {
     "vec": [
@@ -3737,7 +3737,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7979285:Teacher": {
     "vec": [
@@ -3754,7 +3754,7 @@
       4,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7739911:awarding a student": {
     "vec": [
@@ -3771,7 +3771,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7388809:Computer": {
     "vec": [
@@ -3788,7 +3788,7 @@
       3,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7388806:School": {
     "vec": [
@@ -3805,7 +3805,7 @@
       5,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7388801:Male Student": {
     "vec": [
@@ -3822,7 +3822,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7388795:File": {
     "vec": [
@@ -3839,7 +3839,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7068779:Class": {
     "vec": [
@@ -3856,7 +3856,7 @@
       3,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5334960:university": {
     "vec": [
@@ -3873,7 +3873,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4524029:Teacher Desk": {
     "vec": [
@@ -3890,7 +3890,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3781976:Brain": {
     "vec": [
@@ -3907,7 +3907,7 @@
       4,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3781972:eyeglasses": {
     "vec": [
@@ -3924,7 +3924,7 @@
       7,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3781963:world": {
     "vec": [
@@ -3941,7 +3941,7 @@
       0,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2847283:education": {
     "vec": [
@@ -3958,7 +3958,7 @@
       5,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2317642:presentation": {
     "vec": [
@@ -3975,7 +3975,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2193154:profile": {
     "vec": [
@@ -3992,7 +3992,7 @@
       2,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2134858:conference": {
     "vec": [
@@ -4009,7 +4009,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "1971083:teacher teaching": {
     "vec": [
@@ -4026,7 +4026,7 @@
       3,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "1491786:classroom": {
     "vec": [
@@ -4043,7 +4043,7 @@
       3,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8316188:investigator": {
     "vec": [
@@ -4060,7 +4060,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8091355:study": {
     "vec": [
@@ -4077,7 +4077,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8029254:teaching": {
     "vec": [
@@ -4094,7 +4094,7 @@
       3,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7565126:education industry": {
     "vec": [
@@ -4111,7 +4111,7 @@
       4,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7386584:teach": {
     "vec": [
@@ -4128,7 +4128,7 @@
       4,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7288045:mentorship": {
     "vec": [
@@ -4145,7 +4145,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7205141:teacher with students": {
     "vec": [
@@ -4162,7 +4162,7 @@
       4,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6304319:Graduation Cap": {
     "vec": [
@@ -4179,7 +4179,7 @@
       0,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6292993:academician": {
     "vec": [
@@ -4196,7 +4196,7 @@
       0,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5904874:graduate": {
     "vec": [
@@ -4213,7 +4213,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5873108:Mentor": {
     "vec": [
@@ -4230,7 +4230,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5429780:school building": {
     "vec": [
@@ -4247,7 +4247,7 @@
       4,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8322910:Sign Language": {
     "vec": [
@@ -4264,7 +4264,7 @@
       8,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7859822:hand sign": {
     "vec": [
@@ -4281,7 +4281,7 @@
       6,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4134123:hand-sign": {
     "vec": [
@@ -4298,7 +4298,7 @@
       7,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "3088580:hand signs": {
     "vec": [
@@ -4315,7 +4315,7 @@
       7,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "1204665:No Hand Sign": {
     "vec": [
@@ -4332,7 +4332,7 @@
       2,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8252650:stop hand sign": {
     "vec": [
@@ -4349,7 +4349,7 @@
       8,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8123725:sign language hands": {
     "vec": [
@@ -4366,7 +4366,7 @@
       8,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7942348:okay hand sign": {
     "vec": [
@@ -4383,7 +4383,7 @@
       2,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7920590:signature": {
     "vec": [
@@ -4400,7 +4400,7 @@
       3,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7849988:Stop": {
     "vec": [
@@ -4417,7 +4417,7 @@
       8,
       10
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7819597:peace hand sign": {
     "vec": [
@@ -4434,7 +4434,7 @@
       1,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7566346:sign language hand": {
     "vec": [
@@ -4451,7 +4451,7 @@
       8,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7401744:Heart": {
     "vec": [
@@ -4468,7 +4468,7 @@
       10,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7401736:high five": {
     "vec": [
@@ -4485,7 +4485,7 @@
       1,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7401730:clap": {
     "vec": [
@@ -4502,7 +4502,7 @@
       1,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7401729:call": {
     "vec": [
@@ -4519,7 +4519,7 @@
       7,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7212596:Peace": {
     "vec": [
@@ -4536,7 +4536,7 @@
       4,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7082426:two hand sign": {
     "vec": [
@@ -4553,7 +4553,7 @@
       5,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7082419:five hand sign": {
     "vec": [
@@ -4570,7 +4570,7 @@
       3,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7082404:zero hand sign": {
     "vec": [
@@ -4587,7 +4587,7 @@
       3,
       5
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7082398:four hand sign": {
     "vec": [
@@ -4604,7 +4604,7 @@
       3,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7082395:one hand sign": {
     "vec": [
@@ -4621,7 +4621,7 @@
       7,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8270438:Deaf": {
     "vec": [
@@ -4638,7 +4638,7 @@
       7,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7882393:Deafness": {
     "vec": [
@@ -4655,7 +4655,7 @@
       7,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7965896:Deaf to feedback": {
     "vec": [
@@ -4672,7 +4672,7 @@
       0,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7576105:Deaf Awareness": {
     "vec": [
@@ -4689,7 +4689,7 @@
       3,
       7
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7401272:deaf and mute": {
     "vec": [
@@ -4706,7 +4706,7 @@
       5,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7015552:hearing problem": {
     "vec": [
@@ -4723,7 +4723,7 @@
       7,
       6
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "1717835:three": {
     "vec": [
@@ -4740,7 +4740,7 @@
       2,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "1717834:two": {
     "vec": [
@@ -4757,7 +4757,7 @@
       3,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8237233:communication board": {
     "vec": [
@@ -4774,7 +4774,7 @@
       9,
       10
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4908079:presentation board": {
     "vec": [
@@ -4791,7 +4791,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2260265:conference": {
     "vec": [
@@ -4808,7 +4808,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7539090:whiteboard": {
     "vec": [
@@ -4825,7 +4825,7 @@
       2,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "8116777:Bulletin Board": {
     "vec": [
@@ -4842,7 +4842,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "6984439:presentation": {
     "vec": [
@@ -4859,7 +4859,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5660614:Conversation": {
     "vec": [
@@ -4876,7 +4876,7 @@
       8,
       8
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5206922:chat": {
     "vec": [
@@ -4893,7 +4893,7 @@
       3,
       4
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "5075064:information board": {
     "vec": [
@@ -4910,7 +4910,7 @@
       2,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4908066:board presentation": {
     "vec": [
@@ -4927,7 +4927,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4754595:mailbox": {
     "vec": [
@@ -4944,7 +4944,7 @@
       2,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4746873:project communication": {
     "vec": [
@@ -4961,7 +4961,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4401331:Video Conference": {
     "vec": [
@@ -4978,7 +4978,7 @@
       3,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4351588:bulletin": {
     "vec": [
@@ -4995,7 +4995,7 @@
       2,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2698470:lecture": {
     "vec": [
@@ -5012,7 +5012,7 @@
       1,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2628169:Antenna": {
     "vec": [
@@ -5029,7 +5029,7 @@
       1,
       1
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2228785:speech": {
     "vec": [
@@ -5046,7 +5046,7 @@
       9,
       9
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "2147272:board meeting": {
     "vec": [
@@ -5063,7 +5063,7 @@
       0,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "7875075:message board": {
     "vec": [
@@ -5080,7 +5080,7 @@
       3,
       3
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   },
   "4400793:Work At Home": {
     "vec": [
@@ -5097,6 +5097,6 @@
       4,
       2
     ],
-    "source": "gemma-4-31b-it"
+    "source": "gemini"
   }
 }

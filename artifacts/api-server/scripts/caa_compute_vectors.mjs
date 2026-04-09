@@ -153,7 +153,7 @@ async function callGemini(word, categoria) {
   for (const model of modelsToTry) {
     try {
       const vec = await callGemmaModel(model, word);
-      return { vec, source: model };
+      return { vec, source: "gemini", geminiModel: model };
     } catch (err) {
       process.stderr.write(`\n  [${model}] ${err.message.slice(0, 100)}\n`);
     }

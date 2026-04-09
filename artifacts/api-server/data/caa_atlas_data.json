@@ -24,7 +24,7 @@
           "distancia": 0.126
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7859822",
@@ -50,7 +50,7 @@
           "distancia": 0.101
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4134123",
@@ -76,7 +76,7 @@
           "distancia": 0.075
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3088580",
@@ -102,7 +102,7 @@
           "distancia": 0.093
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "1204665",
@@ -128,7 +128,7 @@
           "distancia": 0.148
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8252650",
@@ -154,7 +154,7 @@
           "distancia": 0.166
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8123725",
@@ -180,7 +180,7 @@
           "distancia": 0.069
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7942348",
@@ -206,7 +206,7 @@
           "distancia": 0.13
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7920590",
@@ -232,7 +232,7 @@
           "distancia": 0.171
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7849988",
@@ -258,7 +258,7 @@
           "distancia": 0.114
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7819597",
@@ -284,7 +284,7 @@
           "distancia": 0.145
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7566346",
@@ -310,7 +310,7 @@
           "distancia": 0.063
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7401744",
@@ -336,7 +336,7 @@
           "distancia": 0.224
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7401736",
@@ -362,7 +362,7 @@
           "distancia": 0.123
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7401730",
@@ -388,7 +388,7 @@
           "distancia": 0.151
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7401729",
@@ -414,7 +414,7 @@
           "distancia": 0.136
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7212596",
@@ -440,7 +440,7 @@
           "distancia": 0.292
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7082426",
@@ -466,7 +466,7 @@
           "distancia": 0.092
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7082419",
@@ -492,7 +492,7 @@
           "distancia": 0.129
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7082404",
@@ -518,7 +518,7 @@
           "distancia": 0.125
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7082398",
@@ -544,7 +544,7 @@
           "distancia": 0.123
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7082395",
@@ -570,7 +570,7 @@
           "distancia": 0.075
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8270438",
@@ -596,7 +596,7 @@
           "distancia": 0.145
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7882393",
@@ -622,7 +622,7 @@
           "distancia": 0.154
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7965896",
@@ -648,7 +648,7 @@
           "distancia": 0.15
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7576105",
@@ -674,7 +674,7 @@
           "distancia": 0.181
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7401272",
@@ -700,7 +700,7 @@
           "distancia": 0.187
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7015552",
@@ -726,7 +726,7 @@
           "distancia": 0.184
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "1717835",
@@ -752,7 +752,7 @@
           "distancia": 0.303
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "1717834",
@@ -778,7 +778,7 @@
           "distancia": 0.333
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8237233",
@@ -804,7 +804,7 @@
           "distancia": 0.128
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4908079",
@@ -830,7 +830,7 @@
           "distancia": 0.157
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2260265",
@@ -856,7 +856,7 @@
           "distancia": 0.08
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7539090",
@@ -882,7 +882,7 @@
           "distancia": 0.137
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8116777",
@@ -908,7 +908,7 @@
           "distancia": 0.148
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6984439",
@@ -934,7 +934,7 @@
           "distancia": 0.095
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5660614",
@@ -960,7 +960,7 @@
           "distancia": 0.163
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5206922",
@@ -986,7 +986,7 @@
           "distancia": 0.126
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5075064",
@@ -1012,7 +1012,7 @@
           "distancia": 0.16
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4908066",
@@ -1038,7 +1038,7 @@
           "distancia": 0.072
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4754595",
@@ -1064,7 +1064,7 @@
           "distancia": 0.154
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4746873",
@@ -1090,7 +1090,7 @@
           "distancia": 0.099
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4401331",
@@ -1116,7 +1116,7 @@
           "distancia": 0.104
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4351588",
@@ -1142,7 +1142,7 @@
           "distancia": 0.176
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2698470",
@@ -1168,7 +1168,7 @@
           "distancia": 0.082
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2628169",
@@ -1194,7 +1194,7 @@
           "distancia": 0.214
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2228785",
@@ -1220,7 +1220,7 @@
           "distancia": 0.146
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2147272",
@@ -1246,7 +1246,7 @@
           "distancia": 0.095
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7875075",
@@ -1272,7 +1272,7 @@
           "distancia": 0.148
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4400793",
@@ -1298,7 +1298,7 @@
           "distancia": 0.25
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "1923373",
@@ -1324,7 +1324,7 @@
           "distancia": 0.209
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6383090",
@@ -1350,7 +1350,7 @@
           "distancia": 0.081
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "604774",
@@ -1376,7 +1376,7 @@
           "distancia": 0.088
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4831245",
@@ -1402,7 +1402,7 @@
           "distancia": 0.102
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "508605",
@@ -1428,7 +1428,7 @@
           "distancia": 0.118
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "354950",
@@ -1454,7 +1454,7 @@
           "distancia": 0.197
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "515487",
@@ -1480,7 +1480,7 @@
           "distancia": 0.271
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "508548",
@@ -1506,7 +1506,7 @@
           "distancia": 0.185
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "479580",
@@ -1532,7 +1532,7 @@
           "distancia": 0.346
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "479578",
@@ -1558,7 +1558,7 @@
           "distancia": 0.266
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8256796",
@@ -1584,7 +1584,7 @@
           "distancia": 0.123
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7790221",
@@ -1610,7 +1610,7 @@
           "distancia": 0.182
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3118114",
@@ -1636,7 +1636,7 @@
           "distancia": 0.167
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2444404",
@@ -1662,7 +1662,7 @@
           "distancia": 0.182
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5738861",
@@ -1688,7 +1688,7 @@
           "distancia": 0.259
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5738858",
@@ -1714,7 +1714,7 @@
           "distancia": 0.181
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5738846",
@@ -1740,7 +1740,7 @@
           "distancia": 0.176
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5738844",
@@ -1766,7 +1766,7 @@
           "distancia": 0.201
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5738841",
@@ -1792,7 +1792,7 @@
           "distancia": 0.126
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5738839",
@@ -1818,7 +1818,7 @@
           "distancia": 0.207
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3522945",
@@ -1844,7 +1844,7 @@
           "distancia": 0.134
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3522931",
@@ -1870,7 +1870,7 @@
           "distancia": 0.167
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3519229",
@@ -1896,7 +1896,7 @@
           "distancia": 0.265
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3454329",
@@ -1922,7 +1922,7 @@
           "distancia": 0.145
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3331410",
@@ -1948,7 +1948,7 @@
           "distancia": 0.18
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8258956",
@@ -1974,7 +1974,7 @@
           "distancia": 0.194
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7966718",
@@ -2000,7 +2000,7 @@
           "distancia": 0.154
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7497346",
@@ -2026,7 +2026,7 @@
           "distancia": 0.102
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7434888",
@@ -2052,7 +2052,7 @@
           "distancia": 0.201
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7339275",
@@ -2078,7 +2078,7 @@
           "distancia": 0.249
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7322800",
@@ -2104,7 +2104,7 @@
           "distancia": 0.297
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6684280",
@@ -2130,7 +2130,7 @@
           "distancia": 0.166
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6684278",
@@ -2156,7 +2156,7 @@
           "distancia": 0.181
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5647126",
@@ -2182,7 +2182,7 @@
           "distancia": 0.145
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2895592",
@@ -2208,7 +2208,7 @@
           "distancia": 0.226
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2521168",
@@ -2234,7 +2234,7 @@
           "distancia": 0.173
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "797503",
@@ -2260,7 +2260,7 @@
           "distancia": 0.133
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8244638",
@@ -2286,7 +2286,7 @@
           "distancia": 0.118
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8191171",
@@ -2312,7 +2312,7 @@
           "distancia": 0.181
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7966741",
@@ -2338,7 +2338,7 @@
           "distancia": 0.139
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5859739",
@@ -2364,7 +2364,7 @@
           "distancia": 0.15
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8335389",
@@ -2390,7 +2390,7 @@
           "distancia": 0.167
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7306913",
@@ -2416,7 +2416,7 @@
           "distancia": 0.235
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5207082",
@@ -2442,7 +2442,7 @@
           "distancia": 0.27
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7647412",
@@ -2468,7 +2468,7 @@
           "distancia": 0.157
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6176315",
@@ -2494,7 +2494,7 @@
           "distancia": 0.277
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "230025",
@@ -2520,7 +2520,7 @@
           "distancia": 0.213
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5110880",
@@ -2546,7 +2546,7 @@
           "distancia": 0.157
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "1231806",
@@ -2572,7 +2572,7 @@
           "distancia": 0.142
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7756783",
@@ -2598,7 +2598,7 @@
           "distancia": 0.239
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2333618",
@@ -2624,7 +2624,7 @@
           "distancia": 0.225
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8353658",
@@ -2650,7 +2650,7 @@
           "distancia": 0.254
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8349637",
@@ -2676,7 +2676,7 @@
           "distancia": 0.331
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6698186",
@@ -2702,7 +2702,7 @@
           "distancia": 0.207
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6211920",
@@ -2728,7 +2728,7 @@
           "distancia": 0.145
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7924528",
@@ -2754,7 +2754,7 @@
           "distancia": 0.213
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8246948",
@@ -2780,7 +2780,7 @@
           "distancia": 0.2
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7019225",
@@ -2806,7 +2806,7 @@
           "distancia": 0.184
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6564640",
@@ -2832,7 +2832,7 @@
           "distancia": 0.101
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5167788",
@@ -2858,7 +2858,7 @@
           "distancia": 0.189
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2529036",
@@ -2884,7 +2884,7 @@
           "distancia": 0.185
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6169238",
@@ -2910,7 +2910,7 @@
           "distancia": 0.13
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "31765",
@@ -2936,7 +2936,7 @@
           "distancia": 0.203
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7621751",
@@ -2962,7 +2962,7 @@
           "distancia": 0.109
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7457208",
@@ -2988,7 +2988,7 @@
           "distancia": 0.101
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6788730",
@@ -3014,7 +3014,7 @@
           "distancia": 0.133
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6455156",
@@ -3040,7 +3040,7 @@
           "distancia": 0.124
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3370028",
@@ -3066,7 +3066,7 @@
           "distancia": 0.197
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7915148",
@@ -3092,7 +3092,7 @@
           "distancia": 0.132
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7309641",
@@ -3118,7 +3118,7 @@
           "distancia": 0.121
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8076489",
@@ -3144,7 +3144,7 @@
           "distancia": 0.185
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3859236",
@@ -3170,7 +3170,7 @@
           "distancia": 0.19
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5042229",
@@ -3196,7 +3196,7 @@
           "distancia": 0.148
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8076024",
@@ -3222,7 +3222,7 @@
           "distancia": 0.228
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7916738",
@@ -3248,7 +3248,7 @@
           "distancia": 0.228
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7914185",
@@ -3274,7 +3274,7 @@
           "distancia": 0.141
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8137534",
@@ -3300,7 +3300,7 @@
           "distancia": 0.148
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8125116",
@@ -3326,7 +3326,7 @@
           "distancia": 0.158
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8242354",
@@ -3352,7 +3352,7 @@
           "distancia": 0.124
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7691501",
@@ -3378,7 +3378,7 @@
           "distancia": 0.191
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7438794",
@@ -3404,7 +3404,7 @@
           "distancia": 0.171
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6135609",
@@ -3430,7 +3430,7 @@
           "distancia": 0.15
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "1421555",
@@ -3456,7 +3456,7 @@
           "distancia": 0.202
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6944463",
@@ -3482,7 +3482,7 @@
           "distancia": 0.16
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "98135",
@@ -3508,7 +3508,7 @@
           "distancia": 0.226
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7906305",
@@ -3534,7 +3534,7 @@
           "distancia": 0.093
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7309750",
@@ -3560,7 +3560,7 @@
           "distancia": 0.14
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7025196",
@@ -3586,7 +3586,7 @@
           "distancia": 0.196
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7007820",
@@ -3612,7 +3612,7 @@
           "distancia": 0.158
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "263589",
@@ -3638,7 +3638,7 @@
           "distancia": 0.239
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6729358",
@@ -3664,7 +3664,7 @@
           "distancia": 0.118
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "66041",
@@ -3690,7 +3690,7 @@
           "distancia": 0.176
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4258559",
@@ -3716,7 +3716,7 @@
           "distancia": 0.172
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6613730",
@@ -3742,7 +3742,7 @@
           "distancia": 0.276
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3520119",
@@ -3768,7 +3768,7 @@
           "distancia": 0.233
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4948336",
@@ -3794,7 +3794,7 @@
           "distancia": 0.165
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4948319",
@@ -3820,7 +3820,7 @@
           "distancia": 0.172
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7530863",
@@ -3846,7 +3846,7 @@
           "distancia": 0.231
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6135710",
@@ -3872,7 +3872,7 @@
           "distancia": 0.169
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8314084",
@@ -3898,7 +3898,7 @@
           "distancia": 0.229
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8338858",
@@ -3924,7 +3924,7 @@
           "distancia": 0.11
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7965204",
@@ -3950,7 +3950,7 @@
           "distancia": 0.099
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7946556",
@@ -3976,7 +3976,7 @@
           "distancia": 0.12
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8330230",
@@ -4002,7 +4002,7 @@
           "distancia": 0.165
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3535879",
@@ -4028,7 +4028,7 @@
           "distancia": 0.22
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8350336",
@@ -4054,7 +4054,7 @@
           "distancia": 0.129
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8169863",
@@ -4080,7 +4080,7 @@
           "distancia": 0.04
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8124530",
@@ -4106,7 +4106,7 @@
           "distancia": 0.034
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5201895",
@@ -4132,7 +4132,7 @@
           "distancia": 0.044
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5071002",
@@ -4158,7 +4158,7 @@
           "distancia": 0.034
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4286495",
@@ -4184,7 +4184,7 @@
           "distancia": 0.047
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6927746",
@@ -4210,7 +4210,7 @@
           "distancia": 0.096
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6664986",
@@ -4236,7 +4236,7 @@
           "distancia": 0.183
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "1356001",
@@ -4262,7 +4262,7 @@
           "distancia": 0.126
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7693150",
@@ -4288,7 +4288,7 @@
           "distancia": 0.09
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3815244",
@@ -4314,7 +4314,7 @@
           "distancia": 0.101
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2060682",
@@ -4340,7 +4340,7 @@
           "distancia": 0.094
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2060634",
@@ -4366,7 +4366,7 @@
           "distancia": 0.087
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "1356002",
@@ -4392,7 +4392,7 @@
           "distancia": 0.198
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3566911",
@@ -4418,7 +4418,7 @@
           "distancia": 0.089
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "673730",
@@ -4444,7 +4444,7 @@
           "distancia": 0.093
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7209781",
@@ -4470,7 +4470,7 @@
           "distancia": 0.114
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6546716",
@@ -4496,7 +4496,7 @@
           "distancia": 0.14
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8035624",
@@ -4522,7 +4522,7 @@
           "distancia": 0.235
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2247280",
@@ -4548,7 +4548,7 @@
           "distancia": 0.278
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7827131",
@@ -4574,7 +4574,7 @@
           "distancia": 0.263
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7310185",
@@ -4600,7 +4600,7 @@
           "distancia": 0.132
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "377647",
@@ -4626,7 +4626,7 @@
           "distancia": 0.181
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "223724",
@@ -4652,7 +4652,7 @@
           "distancia": 0.163
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "491638",
@@ -4678,7 +4678,7 @@
           "distancia": 0.172
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8318243",
@@ -4704,7 +4704,7 @@
           "distancia": 0.048
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6116368",
@@ -4730,7 +4730,7 @@
           "distancia": 0.055
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4049907",
@@ -4756,7 +4756,7 @@
           "distancia": 0.047
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5585173",
@@ -4782,7 +4782,7 @@
           "distancia": 0.133
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7615406",
@@ -4808,7 +4808,7 @@
           "distancia": 0.073
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7603998",
@@ -4834,7 +4834,7 @@
           "distancia": 0.072
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5872142",
@@ -4860,7 +4860,7 @@
           "distancia": 0.069
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3972391",
@@ -4886,7 +4886,7 @@
           "distancia": 0.106
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2970600",
@@ -4912,7 +4912,7 @@
           "distancia": 0.178
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "750593",
@@ -4938,7 +4938,7 @@
           "distancia": 0.14
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6835721",
@@ -4964,7 +4964,7 @@
           "distancia": 0.18
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4954230",
@@ -4990,7 +4990,7 @@
           "distancia": 0.234
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4942211",
@@ -5016,7 +5016,7 @@
           "distancia": 0.177
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4942188",
@@ -5042,7 +5042,7 @@
           "distancia": 0.217
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4893611",
@@ -5068,7 +5068,7 @@
           "distancia": 0.173
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4652306",
@@ -5094,7 +5094,7 @@
           "distancia": 0.162
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4575614",
@@ -5120,7 +5120,7 @@
           "distancia": 0.268
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4218830",
@@ -5146,7 +5146,7 @@
           "distancia": 0.174
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4207167",
@@ -5172,7 +5172,7 @@
           "distancia": 0.152
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3836849",
@@ -5198,7 +5198,7 @@
           "distancia": 0.227
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3660709",
@@ -5224,7 +5224,7 @@
           "distancia": 0.223
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3649621",
@@ -5250,7 +5250,7 @@
           "distancia": 0.158
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3615711",
@@ -5276,7 +5276,7 @@
           "distancia": 0.234
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3560580",
@@ -5302,7 +5302,7 @@
           "distancia": 0.221
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3399310",
@@ -5328,7 +5328,7 @@
           "distancia": 0.118
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2614471",
@@ -5354,7 +5354,7 @@
           "distancia": 0.186
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2269163",
@@ -5380,7 +5380,7 @@
           "distancia": 0.143
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2233196",
@@ -5406,7 +5406,7 @@
           "distancia": 0.191
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8227855",
@@ -5432,7 +5432,7 @@
           "distancia": 0.172
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7557028",
@@ -5458,7 +5458,7 @@
           "distancia": 0.194
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7458538",
@@ -5484,7 +5484,7 @@
           "distancia": 0.082
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "238942",
@@ -5510,7 +5510,7 @@
           "distancia": 0.431
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "238937",
@@ -5536,7 +5536,7 @@
           "distancia": 0.329
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8261671",
@@ -5562,7 +5562,7 @@
           "distancia": 0.072
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6041859",
@@ -5588,7 +5588,7 @@
           "distancia": 0.164
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "1961096",
@@ -5614,7 +5614,7 @@
           "distancia": 0.134
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3589656",
@@ -5640,7 +5640,7 @@
           "distancia": 0.14
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3589646",
@@ -5666,7 +5666,7 @@
           "distancia": 0.111
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6885341",
@@ -5692,7 +5692,7 @@
           "distancia": 0.323
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8048837",
@@ -5718,7 +5718,7 @@
           "distancia": 0.144
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8358339",
@@ -5744,7 +5744,7 @@
           "distancia": 0.221
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8061965",
@@ -5770,7 +5770,7 @@
           "distancia": 0.262
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7656185",
@@ -5796,7 +5796,7 @@
           "distancia": 0.195
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7173337",
@@ -5822,7 +5822,7 @@
           "distancia": 0.118
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445380",
@@ -5848,7 +5848,7 @@
           "distancia": 0.16
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445379",
@@ -5874,7 +5874,7 @@
           "distancia": 0.247
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445377",
@@ -5900,7 +5900,7 @@
           "distancia": 0.135
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445376",
@@ -5926,7 +5926,7 @@
           "distancia": 0.219
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445374",
@@ -5952,7 +5952,7 @@
           "distancia": 0.227
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445373",
@@ -5978,7 +5978,7 @@
           "distancia": 0.206
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445371",
@@ -6004,7 +6004,7 @@
           "distancia": 0.254
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445369",
@@ -6030,7 +6030,7 @@
           "distancia": 0.129
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445366",
@@ -6056,7 +6056,7 @@
           "distancia": 0.257
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445363",
@@ -6082,7 +6082,7 @@
           "distancia": 0.143
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445362",
@@ -6108,7 +6108,7 @@
           "distancia": 0.25
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445360",
@@ -6134,7 +6134,7 @@
           "distancia": 0.127
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445358",
@@ -6160,7 +6160,7 @@
           "distancia": 0.248
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445357",
@@ -6186,7 +6186,7 @@
           "distancia": 0.248
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445356",
@@ -6212,7 +6212,7 @@
           "distancia": 0.148
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6445355",
@@ -6238,7 +6238,7 @@
           "distancia": 0.173
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6116362",
@@ -6264,7 +6264,7 @@
           "distancia": 0.049
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6582670",
@@ -6290,7 +6290,7 @@
           "distancia": 0.127
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3450926",
@@ -6316,7 +6316,7 @@
           "distancia": 0.151
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "953265",
@@ -6342,7 +6342,7 @@
           "distancia": 0.076
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5748749",
@@ -6368,7 +6368,7 @@
           "distancia": 0.117
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4460002",
@@ -6394,7 +6394,7 @@
           "distancia": 0.097
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4277077",
@@ -6420,7 +6420,7 @@
           "distancia": 0.102
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3587202",
@@ -6446,7 +6446,7 @@
           "distancia": 0.13
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "1317446",
@@ -6472,7 +6472,7 @@
           "distancia": 0.154
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "986391",
@@ -6498,7 +6498,7 @@
           "distancia": 0.093
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "932768",
@@ -6524,7 +6524,7 @@
           "distancia": 0.075
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "913793",
@@ -6550,7 +6550,7 @@
           "distancia": 0.191
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "680947",
@@ -6576,7 +6576,7 @@
           "distancia": 0.248
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8053320",
@@ -6602,7 +6602,7 @@
           "distancia": 0.144
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7880268",
@@ -6628,7 +6628,7 @@
           "distancia": 0.133
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7779286",
@@ -6654,7 +6654,7 @@
           "distancia": 0.127
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7021888",
@@ -6680,7 +6680,7 @@
           "distancia": 0.153
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5772678",
@@ -6706,7 +6706,7 @@
           "distancia": 0.131
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5387452",
@@ -6732,7 +6732,7 @@
           "distancia": 0.075
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4833129",
@@ -6758,7 +6758,7 @@
           "distancia": 0.174
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4552203",
@@ -6784,7 +6784,7 @@
           "distancia": 0.066
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4170212",
@@ -6810,7 +6810,7 @@
           "distancia": 0.232
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4170204",
@@ -6836,7 +6836,7 @@
           "distancia": 0.198
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4080017",
@@ -6862,7 +6862,7 @@
           "distancia": 0.171
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3963494",
@@ -6888,7 +6888,7 @@
           "distancia": 0.127
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3612030",
@@ -6914,7 +6914,7 @@
           "distancia": 0.192
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2889832",
@@ -6940,7 +6940,7 @@
           "distancia": 0.153
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2648202",
@@ -6966,7 +6966,7 @@
           "distancia": 0.085
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2491187",
@@ -6992,7 +6992,7 @@
           "distancia": 0.157
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "1317448",
@@ -7018,7 +7018,7 @@
           "distancia": 0.123
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7979285",
@@ -7044,7 +7044,7 @@
           "distancia": 0.138
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7739911",
@@ -7070,7 +7070,7 @@
           "distancia": 0.192
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7388809",
@@ -7096,7 +7096,7 @@
           "distancia": 0.19
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7388806",
@@ -7122,7 +7122,7 @@
           "distancia": 0.176
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7388801",
@@ -7148,7 +7148,7 @@
           "distancia": 0.191
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7388795",
@@ -7174,7 +7174,7 @@
           "distancia": 0.207
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7068779",
@@ -7200,7 +7200,7 @@
           "distancia": 0.197
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5334960",
@@ -7226,7 +7226,7 @@
           "distancia": 0.201
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "4524029",
@@ -7252,7 +7252,7 @@
           "distancia": 0.174
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3781976",
@@ -7278,7 +7278,7 @@
           "distancia": 0.194
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3781972",
@@ -7304,7 +7304,7 @@
           "distancia": 0.22
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "3781963",
@@ -7330,7 +7330,7 @@
           "distancia": 0.278
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2847283",
@@ -7356,7 +7356,7 @@
           "distancia": 0.182
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2317642",
@@ -7382,7 +7382,7 @@
           "distancia": 0.082
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2193154",
@@ -7408,7 +7408,7 @@
           "distancia": 0.148
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "2134858",
@@ -7434,7 +7434,7 @@
           "distancia": 0.1
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "1971083",
@@ -7460,7 +7460,7 @@
           "distancia": 0.147
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "1491786",
@@ -7486,7 +7486,7 @@
           "distancia": 0.161
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8316188",
@@ -7512,7 +7512,7 @@
           "distancia": 0.186
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8091355",
@@ -7538,7 +7538,7 @@
           "distancia": 0.271
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "8029254",
@@ -7564,7 +7564,7 @@
           "distancia": 0.13
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7565126",
@@ -7590,7 +7590,7 @@
           "distancia": 0.21
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7386584",
@@ -7616,7 +7616,7 @@
           "distancia": 0.138
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7288045",
@@ -7642,7 +7642,7 @@
           "distancia": 0.087
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "7205141",
@@ -7668,7 +7668,7 @@
           "distancia": 0.17
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6304319",
@@ -7694,7 +7694,7 @@
           "distancia": 0.254
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "6292993",
@@ -7720,7 +7720,7 @@
           "distancia": 0.228
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5904874",
@@ -7746,7 +7746,7 @@
           "distancia": 0.265
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5873108",
@@ -7772,7 +7772,7 @@
           "distancia": 0.088
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     },
     {
       "id": "5429780",
@@ -7798,7 +7798,7 @@
           "distancia": 0.185
         }
       ],
-      "vectorSource": "gemma-4-31b-it"
+      "vectorSource": "gemini"
     }
   ],
   "keywords": [
@@ -7828,7 +7828,7 @@
     "dispositivo_caa": 30,
     "familia_cuidador": 30
   },
-  "vizinhosMethod": "wasserstein-gemma4-12d-global-mds",
+  "vizinhosMethod": "wasserstein-gemini-12d-global-mds",
   "mdsInfo": {
     "method": "classical-mds-power-iteration",
     "sampleSize": 300,
