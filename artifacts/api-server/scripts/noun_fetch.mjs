@@ -1,5 +1,14 @@
 /**
- * noun_fetch.mjs — Coleta ≥ 3.000 ícones do Noun Project e gera noun_atlas_data.json
+ * noun_fetch.mjs — Coleta ≥ 3.000 ícones do Noun Project
+ *
+ * Passo 1 do pipeline IAP (executar em ordem):
+ *   1. node scripts/noun_fetch.mjs              ← coleta ícones (300ms/req)
+ *   2. node scripts/noun_recompute_wasserstein.mjs ← Wasserstein global + MDS
+ *
+ * Este script busca ícones sequencialmente (300ms entre cada requisição) e
+ * grava noun_atlas_data.json com coordenadas provisórias (category-MDS local).
+ * O passo 2 substitui as coordenadas por MDS clássico global via distâncias
+ * Wasserstein O(n²) exatas sobre amostra de 3.000 ícones.
  *
  * Uso: node scripts/noun_fetch.mjs
  *
@@ -405,35 +414,32 @@ async function main() {
     allPairs.push({ cat, q, page: 2 });
   }
 
-  const CONCURRENCY = 10;
+  // ─── Sequential fetch with 300ms delay per request ────────────────────────
+  // Rate-limit: 300ms between each individual request (Noun Project fair-use)
+  const DELAY_MS = 300;
   let done = 0;
-  for (let i = 0; i < allPairs.length; i += CONCURRENCY) {
-    const batch = allPairs.slice(i, i + CONCURRENCY);
-    await Promise.all(
-      batch.map(async ({ cat, q, page }) => {
-        const idx = ++done;
-        try {
-          const icons = await fetchIcons(q, page);
-          let added = 0;
-          for (const ic of icons) {
-            if (!allIcons.has(ic.id)) {
-              const categoria = inferCategoryFromTags(ic.term, ic.tags);
-              allIcons.set(ic.id, {
-                id: ic.id,
-                palavra: (ic.term ?? q).slice(0, 60),
-                imagemUrl: ic.thumbnail_url ?? "",
-                categoria,
-              });
-              added++;
-            }
-          }
-          console.log(`  [${idx}/${allPairs.length}] ${cat}:"${q}" p${page} → ${icons.length} fetched, ${added} new (total: ${allIcons.size})`);
-        } catch (e) {
-          console.log(`  [${idx}/${allPairs.length}] ${cat}:"${q}" p${page} → ERROR: ${e.message}`);
+  for (const { cat, q, page } of allPairs) {
+    const idx = ++done;
+    try {
+      const icons = await fetchIcons(q, page);
+      let added = 0;
+      for (const ic of icons) {
+        if (!allIcons.has(ic.id)) {
+          const categoria = inferCategoryFromTags(ic.term, ic.tags);
+          allIcons.set(ic.id, {
+            id: ic.id,
+            palavra: (ic.term ?? q).slice(0, 60),
+            imagemUrl: ic.thumbnail_url ?? "",
+            categoria,
+          });
+          added++;
         }
-      })
-    );
-    await sleep(350); // batch rate-limit pause
+      }
+      console.log(`  [${idx}/${allPairs.length}] ${cat}:"${q}" p${page} → ${icons.length} fetched, ${added} new (total: ${allIcons.size})`);
+    } catch (e) {
+      console.log(`  [${idx}/${allPairs.length}] ${cat}:"${q}" p${page} → ERROR: ${e.message}`);
+    }
+    await sleep(DELAY_MS); // 300ms per request
   }
 
   const pictos = [...allIcons.values()];
