@@ -31,7 +31,7 @@ if (!GEMINI_KEY) {
 const GEMINI_MODEL = "gemma-4-31b-it";
 const FALLBACK_MODEL = "gemma-3-27b-it";
 const API_VERSION = "v1beta"; // Gemma 4 requer v1beta
-const DELAY_MS = 5000; // 5s = 12 RPM < 15 RPM limit
+const DELAY_MS = 1000; // 1s — Gemma 4 31B reasoning já demora 15-20s por chamada, well under rate limit
 
 // IAP 12 dimensões semânticas (Algoritmo JP)
 const IAP_DIMENSIONS = [
@@ -199,9 +199,7 @@ async function main() {
     if (result.source !== "fallback") {
       gemmaCount++;
       cache[cacheKey] = result;
-      if (gemmaCount % 10 === 0) {
-        fs.writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
-      }
+      fs.writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
       await sleep(DELAY_MS);
     } else {
       fallbackCount++;

@@ -172,7 +172,7 @@ async function main() {
     pictos: pictos.map((p) => ({
       id: p.id,
       palavra: p.palavra,
-      imagemUrl: p.imagemUrl,
+      imagemUrl: `/icons/caa/${p.id}.png`,
       categoria: p.categoria,
       coordX: p.coordX,
       coordY: p.coordY,
