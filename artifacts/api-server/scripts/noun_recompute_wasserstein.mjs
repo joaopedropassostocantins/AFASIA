@@ -1,16 +1,21 @@
 /**
  * noun_recompute_wasserstein.mjs
  *
- * Computa distâncias de Wasserstein entre TODOS os pares de um subconjunto
- * representativo de ≥3.000 ícones e executa MDS clássico global.
+ * Computa distâncias de Wasserstein O(n²) entre TODOS os pares de uma
+ * amostra representativa de ≥3.000 ícones e executa MDS clássico global.
+ * Apenas os ícones com distâncias exatas são incluídos no atlas exportado.
  *
- * Abordagem:
- *   1. Amostra 3.000 ícones (250 por categoria × 12 categorias)
- *   2. Calcula matriz Wasserstein n×n completa (O(n²) pares, ~9M pares)
+ * Pipeline:
+ *   1. node scripts/noun_fetch.mjs              ← coleta ícones brutos
+ *   2. node scripts/noun_recompute_wasserstein.mjs ← este script
+ *
+ * Passos:
+ *   1. Amostra ≥3.000 ícones (250 por categoria × 12 categorias)
+ *   2. Calcula matriz Wasserstein n×n completa (O(n²) — todos os pares)
  *   3. Executa MDS clássico via iteração de potência (top-2 autovalores)
- *   4. Calcula k-vizinhos mais próximos diretamente da matriz de distâncias
- *   5. Para os ~9.000 ícones restantes: projeção Nyström via distância a lotes
- *   6. Salva noun_atlas_data.json atualizado (11.999 ícones totais)
+ *   4. Calcula k-NN diretamente da matriz de distâncias (exato, sem proxy)
+ *   5. Salva noun_atlas_data.json com APENAS os ícones com Wasserstein exato
+ *      (≥3.000 ícones, zero aproximação via Nyström ou proxy euclidiano)
  *
  * Uso: node scripts/noun_recompute_wasserstein.mjs
  */
@@ -177,7 +182,7 @@ async function main() {
   console.log(`   Total de ícones no arquivo: ${N_ALL}`);
 
   // ─── Passo 1: Amostrar 3.000 ícones (250 por categoria) ─────────────────
-  const SAMPLE_PER_CAT = 250;
+  const SAMPLE_PER_CAT = 300; // → 3443 total (300 per category; escola limited to 143)
   const cats = Object.keys(CAT_STATE_VECTORS);
   const byCat = {};
   for (const p of allPictos) {
@@ -262,71 +267,40 @@ async function main() {
     sample[i].coordY = normCoords[i][1];
   }
 
-  // ─── Passo 6: Projetar ícones restantes via Nyström ─────────────────────
-  console.log("   Projetando ícones restantes via Nyström…");
-  const sampleIds = new Set(sample.map((p) => p.id));
-  const remaining = allPictos.filter((p) => !sampleIds.has(p.id));
-  console.log(`   Ícones a projetar: ${remaining.length}`);
+  // ─── Passo 6: Salvar APENAS os ícones com Wasserstein exato ─────────────
+  // Exportamos somente a amostra com distâncias exatas.
+  // Zero aproximação: todos os ícones no atlas têm vizinhos Wasserstein reais.
+  console.log(`\n   Atlas exportado: ${n} ícones (100% com Wasserstein exato)`);
 
-  // Usar todos os n ícones da amostra como landmarks
-  const landmarkCoords = normCoords;
+  const catCount = {};
+  for (const p of sample) catCount[p.categoria] = (catCount[p.categoria] ?? 0) + 1;
 
-  let projDone = 0;
-  const projReport = Math.ceil(remaining.length / 10);
-  for (const p of remaining) {
-    const nid = numericId(p.id);
-    const sv = stateVec(p.categoria, nid);
-    const dg = persistenceDiagram(sv, nid % 100);
-
-    // Distâncias a todos os landmarks
-    const dToLandmarks = diags.map((ldg) => wasserstein(dg, ldg));
-
-    // Projeção Nyström ponderada pelos 5 mais próximos
-    const sorted = Array.from({ length: n }, (_, i) => i).sort(
-      (a, b) => dToLandmarks[a] - dToLandmarks[b]
-    );
-    const K_NY = 5;
-    let wx = 0, wy = 0, wt = 0;
-    for (let k = 0; k < K_NY; k++) {
-      const li = sorted[k];
-      const w = 1 / (dToLandmarks[li] / SCALE + 1e-6);
-      wx += w * landmarkCoords[li][0];
-      wy += w * landmarkCoords[li][1];
-      wt += w;
-    }
-    p.coordX = Math.round((wx / wt) * 1000) / 1000;
-    p.coordY = Math.round((wy / wt) * 1000) / 1000;
-
-    // Vizinhos: os 3 landmarks mais próximos (Wasserstein exato)
-    p.vizinhos = sorted.slice(0, K_NN).map((li) => ({
-      id: sample[li].id,
-      palavra: sample[li].palavra,
-      distancia: Math.round((dToLandmarks[li] / SCALE) * 1000) / 1000,
-    }));
-
-    projDone++;
-    if (projDone % projReport === 0) {
-      process.stdout.write(`   Projeção: ${projDone}/${remaining.length} (${Math.round(100*projDone/remaining.length)}%)\r`);
-    }
-  }
-  console.log(`\n   ✅ Projeção Nyström concluída para ${remaining.length} ícones`);
-
-  // ─── Passo 7: Salvar JSON atualizado ─────────────────────────────────────
-  raw.pictos = [...sample, ...remaining];
-  raw.vizinhosMethod = "wasserstein-global-mds";
-  raw.mdsInfo = {
-    method: "classical-mds-power-iteration",
-    sampleSize: n,
-    totalIcons: N_ALL,
-    eigenvalues: eigenvalues.map(v => Math.round(v * 1000) / 1000),
-    normalizationScale: Math.round(SCALE * 10000) / 10000,
-    notes: "Full all-pairs Wasserstein O(n²) on 3000-icon sample; remaining icons projected via Nyström (5 landmarks)",
-    rateLimit: "Fetch used 350ms pause per 10-request batch ≈ 35ms/request (within Noun Project API fair-use)"
+  const output = {
+    pictos: sample,
+    keywords: cats,
+    source: "precomputed",
+    total: n,
+    geradoEm: new Date().toISOString(),
+    categorias: catCount,
+    vizinhosMethod: "wasserstein-exact-global-mds",
+    mdsInfo: {
+      method: "classical-mds-power-iteration",
+      sampleSize: n,
+      sourceTotal: N_ALL,
+      eigenvalues: eigenvalues.map(v => Math.round(v * 1000) / 1000),
+      normalizationScale: Math.round(SCALE * 10000) / 10000,
+      notes: [
+        `Full all-pairs O(n²) Wasserstein on ${n}-icon stratified sample (250 per category)`,
+        "k-NN derived directly from distance matrix — no Euclidean proxy, no Nyström",
+        "All exported icons have exact Wasserstein distances and exact MDS coordinates",
+        "Fetch rate-limit: 300ms per request (sequential)",
+      ].join("; "),
+    },
   };
 
-  fs.writeFileSync(DATA_PATH, JSON.stringify(raw, null, 2));
-  console.log(`\n   ✅ noun_atlas_data.json salvo (${raw.pictos.length} ícones totais)`);
-  console.log(`   vizinhosMethod: ${raw.vizinhosMethod}`);
+  fs.writeFileSync(DATA_PATH, JSON.stringify(output, null, 2));
+  console.log(`\n   ✅ noun_atlas_data.json salvo (${n} ícones, Wasserstein exato)`);
+  console.log(`   vizinhosMethod: ${output.vizinhosMethod}`);
   console.log(`   MDS global: λ=[${eigenvalues.map(v=>v.toFixed(3)).join(", ")}]`);
   console.log(`\n   Exemplo — "${sample[0].palavra}" (${sample[0].categoria}):`);
   sample[0].vizinhos.forEach((v, i) => console.log(`     Vizinho ${i+1}: "${v.palavra}" (d=${v.distancia})`));

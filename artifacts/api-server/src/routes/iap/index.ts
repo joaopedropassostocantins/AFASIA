@@ -649,7 +649,7 @@ router.get("/noun-atlas", (req, res) => {
   try {
     if (existsSync(NOUN_ATLAS_PATH)) {
       const raw = readFileSync(NOUN_ATLAS_PATH, "utf-8");
-      const data = JSON.parse(raw) as { pictos: AtlasPictogram[]; keywords?: string[]; total?: number; categorias?: Record<string, number> };
+      const data = JSON.parse(raw) as { pictos: AtlasPictogram[]; keywords?: string[]; total?: number; categorias?: Record<string, number>; vizinhosMethod?: string; mdsInfo?: unknown; geradoEm?: string };
       if (Array.isArray(data?.pictos) && data.pictos.length > 0) {
         res.json({
           pictos: data.pictos,
@@ -657,7 +657,9 @@ router.get("/noun-atlas", (req, res) => {
           source: "precomputed",
           total: data.total ?? data.pictos.length,
           categorias: data.categorias ?? {},
-          geradoEm: (data as { geradoEm?: string }).geradoEm ?? null,
+          geradoEm: data.geradoEm ?? null,
+          vizinhosMethod: data.vizinhosMethod ?? "precomputed",
+          mdsInfo: data.mdsInfo ?? null,
         });
         return;
       }
