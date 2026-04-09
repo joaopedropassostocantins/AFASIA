@@ -1,0 +1,7845 @@
+{
+  "pictos": [
+    {
+      "id": "8322910",
+      "palavra": "Sign Language",
+      "imagemUrl": "/icons/caa/8322910.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        },
+        {
+          "id": "3088580",
+          "palavra": "hand signs",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7859822",
+      "palavra": "hand sign",
+      "imagemUrl": "/icons/caa/7859822.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        },
+        {
+          "id": "3088580",
+          "palavra": "hand signs",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4134123",
+      "palavra": "hand-sign",
+      "imagemUrl": "/icons/caa/4134123.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "3088580",
+          "palavra": "hand signs",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3088580",
+      "palavra": "hand signs",
+      "imagemUrl": "/icons/caa/3088580.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "1204665",
+      "palavra": "No Hand Sign",
+      "imagemUrl": "/icons/caa/1204665.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8252650",
+      "palavra": "stop hand sign",
+      "imagemUrl": "/icons/caa/8252650.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8123725",
+      "palavra": "sign language hands",
+      "imagemUrl": "/icons/caa/8123725.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7942348",
+      "palavra": "okay hand sign",
+      "imagemUrl": "/icons/caa/7942348.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7920590",
+      "palavra": "signature",
+      "imagemUrl": "/icons/caa/7920590.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7849988",
+      "palavra": "Stop",
+      "imagemUrl": "/icons/caa/7849988.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7819597",
+      "palavra": "peace hand sign",
+      "imagemUrl": "/icons/caa/7819597.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7566346",
+      "palavra": "sign language hand",
+      "imagemUrl": "/icons/caa/7566346.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7401744",
+      "palavra": "Heart",
+      "imagemUrl": "/icons/caa/7401744.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7401736",
+      "palavra": "high five",
+      "imagemUrl": "/icons/caa/7401736.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7401730",
+      "palavra": "clap",
+      "imagemUrl": "/icons/caa/7401730.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7401729",
+      "palavra": "call",
+      "imagemUrl": "/icons/caa/7401729.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7212596",
+      "palavra": "Peace",
+      "imagemUrl": "/icons/caa/7212596.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7082426",
+      "palavra": "two hand sign",
+      "imagemUrl": "/icons/caa/7082426.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7082419",
+      "palavra": "five hand sign",
+      "imagemUrl": "/icons/caa/7082419.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7082404",
+      "palavra": "zero hand sign",
+      "imagemUrl": "/icons/caa/7082404.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7082398",
+      "palavra": "four hand sign",
+      "imagemUrl": "/icons/caa/7082398.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7082395",
+      "palavra": "one hand sign",
+      "imagemUrl": "/icons/caa/7082395.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8270438",
+      "palavra": "Deaf",
+      "imagemUrl": "/icons/caa/8270438.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7882393",
+      "palavra": "Deafness",
+      "imagemUrl": "/icons/caa/7882393.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7965896",
+      "palavra": "Deaf to feedback",
+      "imagemUrl": "/icons/caa/7965896.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7576105",
+      "palavra": "Deaf Awareness",
+      "imagemUrl": "/icons/caa/7576105.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7401272",
+      "palavra": "deaf and mute",
+      "imagemUrl": "/icons/caa/7401272.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7015552",
+      "palavra": "hearing problem",
+      "imagemUrl": "/icons/caa/7015552.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "1717835",
+      "palavra": "three",
+      "imagemUrl": "/icons/caa/1717835.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "1717834",
+      "palavra": "two",
+      "imagemUrl": "/icons/caa/1717834.png",
+      "categoria": "linguagem_sinais",
+      "coordX": 0.128,
+      "coordY": -0.506,
+      "vizinhos": [
+        {
+          "id": "8322910",
+          "palavra": "Sign Language",
+          "distancia": 0
+        },
+        {
+          "id": "7859822",
+          "palavra": "hand sign",
+          "distancia": 0
+        },
+        {
+          "id": "4134123",
+          "palavra": "hand-sign",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8237233",
+      "palavra": "communication board",
+      "imagemUrl": "/icons/caa/8237233.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        },
+        {
+          "id": "7539090",
+          "palavra": "whiteboard",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4908079",
+      "palavra": "presentation board",
+      "imagemUrl": "/icons/caa/4908079.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        },
+        {
+          "id": "7539090",
+          "palavra": "whiteboard",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2260265",
+      "palavra": "conference",
+      "imagemUrl": "/icons/caa/2260265.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "7539090",
+          "palavra": "whiteboard",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7539090",
+      "palavra": "whiteboard",
+      "imagemUrl": "/icons/caa/7539090.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8116777",
+      "palavra": "Bulletin Board",
+      "imagemUrl": "/icons/caa/8116777.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6984439",
+      "palavra": "presentation",
+      "imagemUrl": "/icons/caa/6984439.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5660614",
+      "palavra": "Conversation",
+      "imagemUrl": "/icons/caa/5660614.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5206922",
+      "palavra": "chat",
+      "imagemUrl": "/icons/caa/5206922.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5075064",
+      "palavra": "information board",
+      "imagemUrl": "/icons/caa/5075064.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4908066",
+      "palavra": "board presentation",
+      "imagemUrl": "/icons/caa/4908066.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4754595",
+      "palavra": "mailbox",
+      "imagemUrl": "/icons/caa/4754595.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4746873",
+      "palavra": "project communication",
+      "imagemUrl": "/icons/caa/4746873.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4401331",
+      "palavra": "Video Conference",
+      "imagemUrl": "/icons/caa/4401331.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4351588",
+      "palavra": "bulletin",
+      "imagemUrl": "/icons/caa/4351588.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2698470",
+      "palavra": "lecture",
+      "imagemUrl": "/icons/caa/2698470.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2628169",
+      "palavra": "Antenna",
+      "imagemUrl": "/icons/caa/2628169.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2228785",
+      "palavra": "speech",
+      "imagemUrl": "/icons/caa/2228785.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2147272",
+      "palavra": "board meeting",
+      "imagemUrl": "/icons/caa/2147272.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7875075",
+      "palavra": "message board",
+      "imagemUrl": "/icons/caa/7875075.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4400793",
+      "palavra": "Work At Home",
+      "imagemUrl": "/icons/caa/4400793.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "1923373",
+      "palavra": "playing piece",
+      "imagemUrl": "/icons/caa/1923373.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6383090",
+      "palavra": "online presentation",
+      "imagemUrl": "/icons/caa/6383090.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "604774",
+      "palavra": "presentation chat",
+      "imagemUrl": "/icons/caa/604774.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4831245",
+      "palavra": "remote presentation",
+      "imagemUrl": "/icons/caa/4831245.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "508605",
+      "palavra": "flipchart",
+      "imagemUrl": "/icons/caa/508605.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "354950",
+      "palavra": "User",
+      "imagemUrl": "/icons/caa/354950.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "515487",
+      "palavra": "download clipboard",
+      "imagemUrl": "/icons/caa/515487.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "508548",
+      "palavra": "business support",
+      "imagemUrl": "/icons/caa/508548.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "479580",
+      "palavra": "clipboard code",
+      "imagemUrl": "/icons/caa/479580.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "479578",
+      "palavra": "Clipboard Remove",
+      "imagemUrl": "/icons/caa/479578.png",
+      "categoria": "prancha_comunicacao",
+      "coordX": 0.478,
+      "coordY": -0.177,
+      "vizinhos": [
+        {
+          "id": "8237233",
+          "palavra": "communication board",
+          "distancia": 0
+        },
+        {
+          "id": "4908079",
+          "palavra": "presentation board",
+          "distancia": 0
+        },
+        {
+          "id": "2260265",
+          "palavra": "conference",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8256796",
+      "palavra": "speech",
+      "imagemUrl": "/icons/caa/8256796.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        },
+        {
+          "id": "2444404",
+          "palavra": "articulation body part",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7790221",
+      "palavra": "articulation",
+      "imagemUrl": "/icons/caa/7790221.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        },
+        {
+          "id": "2444404",
+          "palavra": "articulation body part",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3118114",
+      "palavra": "knee",
+      "imagemUrl": "/icons/caa/3118114.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "2444404",
+          "palavra": "articulation body part",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2444404",
+      "palavra": "articulation body part",
+      "imagemUrl": "/icons/caa/2444404.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5738861",
+      "palavra": "marcato",
+      "imagemUrl": "/icons/caa/5738861.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5738858",
+      "palavra": "staccatissimo",
+      "imagemUrl": "/icons/caa/5738858.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5738846",
+      "palavra": "staccato",
+      "imagemUrl": "/icons/caa/5738846.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5738844",
+      "palavra": "tenuto",
+      "imagemUrl": "/icons/caa/5738844.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5738841",
+      "palavra": "Fermata",
+      "imagemUrl": "/icons/caa/5738841.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5738839",
+      "palavra": "accent",
+      "imagemUrl": "/icons/caa/5738839.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3522945",
+      "palavra": "joints",
+      "imagemUrl": "/icons/caa/3522945.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3522931",
+      "palavra": "elbow",
+      "imagemUrl": "/icons/caa/3522931.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3519229",
+      "palavra": "anatomy",
+      "imagemUrl": "/icons/caa/3519229.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3454329",
+      "palavra": "Leg Bone",
+      "imagemUrl": "/icons/caa/3454329.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3331410",
+      "palavra": "bones",
+      "imagemUrl": "/icons/caa/3331410.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8258956",
+      "palavra": "joint",
+      "imagemUrl": "/icons/caa/8258956.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7966718",
+      "palavra": "Communication Skills",
+      "imagemUrl": "/icons/caa/7966718.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7497346",
+      "palavra": "speech writing",
+      "imagemUrl": "/icons/caa/7497346.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7434888",
+      "palavra": "tone",
+      "imagemUrl": "/icons/caa/7434888.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7339275",
+      "palavra": "bone pain",
+      "imagemUrl": "/icons/caa/7339275.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7322800",
+      "palavra": "Phonology",
+      "imagemUrl": "/icons/caa/7322800.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6684280",
+      "palavra": "hinge joint",
+      "imagemUrl": "/icons/caa/6684280.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6684278",
+      "palavra": "saddle joint",
+      "imagemUrl": "/icons/caa/6684278.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5647126",
+      "palavra": "elbow joint",
+      "imagemUrl": "/icons/caa/5647126.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2895592",
+      "palavra": "Bone",
+      "imagemUrl": "/icons/caa/2895592.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2521168",
+      "palavra": "foot orthopedic shoes",
+      "imagemUrl": "/icons/caa/2521168.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "797503",
+      "palavra": "Bone Joints",
+      "imagemUrl": "/icons/caa/797503.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8244638",
+      "palavra": "Clarity Speaker",
+      "imagemUrl": "/icons/caa/8244638.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8191171",
+      "palavra": "Lips",
+      "imagemUrl": "/icons/caa/8191171.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7966741",
+      "palavra": "oral communication",
+      "imagemUrl": "/icons/caa/7966741.png",
+      "categoria": "fala_articulacao",
+      "coordX": -0.103,
+      "coordY": 0.272,
+      "vizinhos": [
+        {
+          "id": "8256796",
+          "palavra": "speech",
+          "distancia": 0
+        },
+        {
+          "id": "7790221",
+          "palavra": "articulation",
+          "distancia": 0
+        },
+        {
+          "id": "3118114",
+          "palavra": "knee",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5859739",
+      "palavra": "voice",
+      "imagemUrl": "/icons/caa/5859739.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        },
+        {
+          "id": "5207082",
+          "palavra": "pottery",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8335389",
+      "palavra": "no voice",
+      "imagemUrl": "/icons/caa/8335389.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        },
+        {
+          "id": "5207082",
+          "palavra": "pottery",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7306913",
+      "palavra": "singing",
+      "imagemUrl": "/icons/caa/7306913.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "5207082",
+          "palavra": "pottery",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5207082",
+      "palavra": "pottery",
+      "imagemUrl": "/icons/caa/5207082.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7647412",
+      "palavra": "scream",
+      "imagemUrl": "/icons/caa/7647412.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6176315",
+      "palavra": "beluga whale",
+      "imagemUrl": "/icons/caa/6176315.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "230025",
+      "palavra": "sing",
+      "imagemUrl": "/icons/caa/230025.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5110880",
+      "palavra": "Audio",
+      "imagemUrl": "/icons/caa/5110880.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "1231806",
+      "palavra": "Audio to Audio",
+      "imagemUrl": "/icons/caa/1231806.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7756783",
+      "palavra": "no audio",
+      "imagemUrl": "/icons/caa/7756783.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2333618",
+      "palavra": "sound waves",
+      "imagemUrl": "/icons/caa/2333618.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8353658",
+      "palavra": "Sound Wave",
+      "imagemUrl": "/icons/caa/8353658.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8349637",
+      "palavra": "wave sound",
+      "imagemUrl": "/icons/caa/8349637.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6698186",
+      "palavra": "vocals",
+      "imagemUrl": "/icons/caa/6698186.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6211920",
+      "palavra": "vocal",
+      "imagemUrl": "/icons/caa/6211920.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7924528",
+      "palavra": "vocal cords",
+      "imagemUrl": "/icons/caa/7924528.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8246948",
+      "palavra": "Vocal Booth",
+      "imagemUrl": "/icons/caa/8246948.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7019225",
+      "palavra": "vocal inject",
+      "imagemUrl": "/icons/caa/7019225.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6564640",
+      "palavra": "Vocal Microphone",
+      "imagemUrl": "/icons/caa/6564640.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5167788",
+      "palavra": "vocal recording",
+      "imagemUrl": "/icons/caa/5167788.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2529036",
+      "palavra": "vocal chords",
+      "imagemUrl": "/icons/caa/2529036.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6169238",
+      "palavra": "singer",
+      "imagemUrl": "/icons/caa/6169238.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "31765",
+      "palavra": "Music",
+      "imagemUrl": "/icons/caa/31765.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7621751",
+      "palavra": "Microphone",
+      "imagemUrl": "/icons/caa/7621751.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7457208",
+      "palavra": "mic",
+      "imagemUrl": "/icons/caa/7457208.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6788730",
+      "palavra": "voice control",
+      "imagemUrl": "/icons/caa/6788730.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6455156",
+      "palavra": "podcast",
+      "imagemUrl": "/icons/caa/6455156.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3370028",
+      "palavra": "Mute Microphone",
+      "imagemUrl": "/icons/caa/3370028.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7915148",
+      "palavra": "choir",
+      "imagemUrl": "/icons/caa/7915148.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7309641",
+      "palavra": "Vocalist",
+      "imagemUrl": "/icons/caa/7309641.png",
+      "categoria": "voz",
+      "coordX": -0.268,
+      "coordY": 0.219,
+      "vizinhos": [
+        {
+          "id": "5859739",
+          "palavra": "voice",
+          "distancia": 0
+        },
+        {
+          "id": "8335389",
+          "palavra": "no voice",
+          "distancia": 0
+        },
+        {
+          "id": "7306913",
+          "palavra": "singing",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8076489",
+      "palavra": "hearing",
+      "imagemUrl": "/icons/caa/8076489.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        },
+        {
+          "id": "8076024",
+          "palavra": "earings",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3859236",
+      "palavra": "hearings",
+      "imagemUrl": "/icons/caa/3859236.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        },
+        {
+          "id": "8076024",
+          "palavra": "earings",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5042229",
+      "palavra": "Ear",
+      "imagemUrl": "/icons/caa/5042229.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "8076024",
+          "palavra": "earings",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8076024",
+      "palavra": "earings",
+      "imagemUrl": "/icons/caa/8076024.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7916738",
+      "palavra": "Earing",
+      "imagemUrl": "/icons/caa/7916738.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7914185",
+      "palavra": "ears",
+      "imagemUrl": "/icons/caa/7914185.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8137534",
+      "palavra": "hearing aid",
+      "imagemUrl": "/icons/caa/8137534.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8125116",
+      "palavra": "listening",
+      "imagemUrl": "/icons/caa/8125116.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8242354",
+      "palavra": "Listen",
+      "imagemUrl": "/icons/caa/8242354.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7691501",
+      "palavra": "auditory",
+      "imagemUrl": "/icons/caa/7691501.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7438794",
+      "palavra": "auditory learning",
+      "imagemUrl": "/icons/caa/7438794.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6135609",
+      "palavra": "auditory language",
+      "imagemUrl": "/icons/caa/6135609.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "1421555",
+      "palavra": "target auditory",
+      "imagemUrl": "/icons/caa/1421555.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6944463",
+      "palavra": "Eavesdropping",
+      "imagemUrl": "/icons/caa/6944463.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "98135",
+      "palavra": "Phonendoscope",
+      "imagemUrl": "/icons/caa/98135.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7906305",
+      "palavra": "social listening",
+      "imagemUrl": "/icons/caa/7906305.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7309750",
+      "palavra": "active listening",
+      "imagemUrl": "/icons/caa/7309750.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7025196",
+      "palavra": "eavesdropping attacks",
+      "imagemUrl": "/icons/caa/7025196.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7007820",
+      "palavra": "hear",
+      "imagemUrl": "/icons/caa/7007820.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "263589",
+      "palavra": "heart eye",
+      "imagemUrl": "/icons/caa/263589.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6729358",
+      "palavra": "Eye",
+      "imagemUrl": "/icons/caa/6729358.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "66041",
+      "palavra": "Look",
+      "imagemUrl": "/icons/caa/66041.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4258559",
+      "palavra": "assistive listening",
+      "imagemUrl": "/icons/caa/4258559.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6613730",
+      "palavra": "person with an amputation",
+      "imagemUrl": "/icons/caa/6613730.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3520119",
+      "palavra": "person who uses forearm crutches",
+      "imagemUrl": "/icons/caa/3520119.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4948336",
+      "palavra": "accessibility testing",
+      "imagemUrl": "/icons/caa/4948336.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4948319",
+      "palavra": "Accessibility",
+      "imagemUrl": "/icons/caa/4948319.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7530863",
+      "palavra": "Heart",
+      "imagemUrl": "/icons/caa/7530863.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6135710",
+      "palavra": "learning support",
+      "imagemUrl": "/icons/caa/6135710.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8314084",
+      "palavra": "Charity",
+      "imagemUrl": "/icons/caa/8314084.png",
+      "categoria": "audicao",
+      "coordX": 0.005,
+      "coordY": 1,
+      "vizinhos": [
+        {
+          "id": "8076489",
+          "palavra": "hearing",
+          "distancia": 0
+        },
+        {
+          "id": "3859236",
+          "palavra": "hearings",
+          "distancia": 0
+        },
+        {
+          "id": "5042229",
+          "palavra": "Ear",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8338858",
+      "palavra": "Gesture",
+      "imagemUrl": "/icons/caa/8338858.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        },
+        {
+          "id": "8330230",
+          "palavra": "point",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7965204",
+      "palavra": "gestures",
+      "imagemUrl": "/icons/caa/7965204.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        },
+        {
+          "id": "8330230",
+          "palavra": "point",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7946556",
+      "palavra": "no gesture",
+      "imagemUrl": "/icons/caa/7946556.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "8330230",
+          "palavra": "point",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8330230",
+      "palavra": "point",
+      "imagemUrl": "/icons/caa/8330230.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3535879",
+      "palavra": "point to point",
+      "imagemUrl": "/icons/caa/3535879.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8350336",
+      "palavra": "pointing",
+      "imagemUrl": "/icons/caa/8350336.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8169863",
+      "palavra": "Wave Hand",
+      "imagemUrl": "/icons/caa/8169863.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8124530",
+      "palavra": "Waving Hand",
+      "imagemUrl": "/icons/caa/8124530.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5201895",
+      "palavra": "Hand wave",
+      "imagemUrl": "/icons/caa/5201895.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5071002",
+      "palavra": "hand waving",
+      "imagemUrl": "/icons/caa/5071002.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4286495",
+      "palavra": "wave hands",
+      "imagemUrl": "/icons/caa/4286495.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6927746",
+      "palavra": "wave",
+      "imagemUrl": "/icons/caa/6927746.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6664986",
+      "palavra": "Hand",
+      "imagemUrl": "/icons/caa/6664986.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "1356001",
+      "palavra": "Stop",
+      "imagemUrl": "/icons/caa/1356001.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7693150",
+      "palavra": "hand gesture",
+      "imagemUrl": "/icons/caa/7693150.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3815244",
+      "palavra": "raised hand",
+      "imagemUrl": "/icons/caa/3815244.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2060682",
+      "palavra": "Wave palm left",
+      "imagemUrl": "/icons/caa/2060682.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2060634",
+      "palavra": "Wave palm right",
+      "imagemUrl": "/icons/caa/2060634.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "1356002",
+      "palavra": "hello",
+      "imagemUrl": "/icons/caa/1356002.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3566911",
+      "palavra": "nodding",
+      "imagemUrl": "/icons/caa/3566911.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "673730",
+      "palavra": "nod",
+      "imagemUrl": "/icons/caa/673730.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7209781",
+      "palavra": "face nod",
+      "imagemUrl": "/icons/caa/7209781.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6546716",
+      "palavra": "Network",
+      "imagemUrl": "/icons/caa/6546716.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8035624",
+      "palavra": "Customary greetings",
+      "imagemUrl": "/icons/caa/8035624.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2247280",
+      "palavra": "pumpjack",
+      "imagemUrl": "/icons/caa/2247280.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7827131",
+      "palavra": "Oil Pumpjacks",
+      "imagemUrl": "/icons/caa/7827131.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7310185",
+      "palavra": "block head calming nod",
+      "imagemUrl": "/icons/caa/7310185.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "377647",
+      "palavra": "easter email",
+      "imagemUrl": "/icons/caa/377647.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "223724",
+      "palavra": "connectivity",
+      "imagemUrl": "/icons/caa/223724.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "491638",
+      "palavra": "bow",
+      "imagemUrl": "/icons/caa/491638.png",
+      "categoria": "gesto",
+      "coordX": -0.301,
+      "coordY": -1,
+      "vizinhos": [
+        {
+          "id": "8338858",
+          "palavra": "Gesture",
+          "distancia": 0
+        },
+        {
+          "id": "7965204",
+          "palavra": "gestures",
+          "distancia": 0
+        },
+        {
+          "id": "7946556",
+          "palavra": "no gesture",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8318243",
+      "palavra": "Waving Hand",
+      "imagemUrl": "/icons/caa/8318243.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "5585173",
+          "palavra": "hands up",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6116368",
+      "palavra": "hand-waving",
+      "imagemUrl": "/icons/caa/6116368.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "5585173",
+          "palavra": "hands up",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4049907",
+      "palavra": "hand waving",
+      "imagemUrl": "/icons/caa/4049907.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "5585173",
+          "palavra": "hands up",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5585173",
+      "palavra": "hands up",
+      "imagemUrl": "/icons/caa/5585173.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7615406",
+      "palavra": "help and support",
+      "imagemUrl": "/icons/caa/7615406.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7603998",
+      "palavra": "help support",
+      "imagemUrl": "/icons/caa/7603998.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5872142",
+      "palavra": "Support help",
+      "imagemUrl": "/icons/caa/5872142.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3972391",
+      "palavra": "help",
+      "imagemUrl": "/icons/caa/3972391.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2970600",
+      "palavra": "support",
+      "imagemUrl": "/icons/caa/2970600.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "750593",
+      "palavra": "User Help",
+      "imagemUrl": "/icons/caa/750593.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6835721",
+      "palavra": "FAQ",
+      "imagemUrl": "/icons/caa/6835721.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4954230",
+      "palavra": "lifebuoy",
+      "imagemUrl": "/icons/caa/4954230.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4942211",
+      "palavra": "live chat",
+      "imagemUrl": "/icons/caa/4942211.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4942188",
+      "palavra": "rescue",
+      "imagemUrl": "/icons/caa/4942188.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4893611",
+      "palavra": "Question",
+      "imagemUrl": "/icons/caa/4893611.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4652306",
+      "palavra": "ask",
+      "imagemUrl": "/icons/caa/4652306.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4575614",
+      "palavra": "lifesaver",
+      "imagemUrl": "/icons/caa/4575614.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4218830",
+      "palavra": "Information",
+      "imagemUrl": "/icons/caa/4218830.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4207167",
+      "palavra": "help and support service",
+      "imagemUrl": "/icons/caa/4207167.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3836849",
+      "palavra": "about",
+      "imagemUrl": "/icons/caa/3836849.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3660709",
+      "palavra": "Safety",
+      "imagemUrl": "/icons/caa/3660709.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3649621",
+      "palavra": "online help",
+      "imagemUrl": "/icons/caa/3649621.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3615711",
+      "palavra": "service",
+      "imagemUrl": "/icons/caa/3615711.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3560580",
+      "palavra": "Buoy",
+      "imagemUrl": "/icons/caa/3560580.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3399310",
+      "palavra": "Headset",
+      "imagemUrl": "/icons/caa/3399310.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2614471",
+      "palavra": "Headphones",
+      "imagemUrl": "/icons/caa/2614471.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2269163",
+      "palavra": "Handshake",
+      "imagemUrl": "/icons/caa/2269163.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2233196",
+      "palavra": "contract",
+      "imagemUrl": "/icons/caa/2233196.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8227855",
+      "palavra": "assistant",
+      "imagemUrl": "/icons/caa/8227855.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7557028",
+      "palavra": "Info",
+      "imagemUrl": "/icons/caa/7557028.png",
+      "categoria": "apoio_terapia",
+      "coordX": -0.629,
+      "coordY": 0.554,
+      "vizinhos": [
+        {
+          "id": "8318243",
+          "palavra": "Waving Hand",
+          "distancia": 0
+        },
+        {
+          "id": "6116368",
+          "palavra": "hand-waving",
+          "distancia": 0
+        },
+        {
+          "id": "4049907",
+          "palavra": "hand waving",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7458538",
+      "palavra": "waving hands",
+      "imagemUrl": "/icons/caa/7458538.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        },
+        {
+          "id": "8261671",
+          "palavra": "help",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "238942",
+      "palavra": "The Lonely Eye",
+      "imagemUrl": "/icons/caa/238942.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        },
+        {
+          "id": "8261671",
+          "palavra": "help",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "238937",
+      "palavra": "The Night Eye",
+      "imagemUrl": "/icons/caa/238937.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "8261671",
+          "palavra": "help",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8261671",
+      "palavra": "help",
+      "imagemUrl": "/icons/caa/8261671.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6041859",
+      "palavra": "face emotion",
+      "imagemUrl": "/icons/caa/6041859.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "1961096",
+      "palavra": "Emotion Face",
+      "imagemUrl": "/icons/caa/1961096.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3589656",
+      "palavra": "smile face emotion",
+      "imagemUrl": "/icons/caa/3589656.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3589646",
+      "palavra": "bad face emotion",
+      "imagemUrl": "/icons/caa/3589646.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6885341",
+      "palavra": "Angel",
+      "imagemUrl": "/icons/caa/6885341.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8048837",
+      "palavra": "Smile",
+      "imagemUrl": "/icons/caa/8048837.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8358339",
+      "palavra": "Face",
+      "imagemUrl": "/icons/caa/8358339.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8061965",
+      "palavra": "serious",
+      "imagemUrl": "/icons/caa/8061965.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7656185",
+      "palavra": "emotion",
+      "imagemUrl": "/icons/caa/7656185.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7173337",
+      "palavra": "nervous face",
+      "imagemUrl": "/icons/caa/7173337.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445380",
+      "palavra": "No",
+      "imagemUrl": "/icons/caa/6445380.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445379",
+      "palavra": "nice",
+      "imagemUrl": "/icons/caa/6445379.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445377",
+      "palavra": "wink",
+      "imagemUrl": "/icons/caa/6445377.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445376",
+      "palavra": "tired",
+      "imagemUrl": "/icons/caa/6445376.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445374",
+      "palavra": "interesting",
+      "imagemUrl": "/icons/caa/6445374.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445373",
+      "palavra": "Love",
+      "imagemUrl": "/icons/caa/6445373.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445371",
+      "palavra": "surprised",
+      "imagemUrl": "/icons/caa/6445371.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445369",
+      "palavra": "angry",
+      "imagemUrl": "/icons/caa/6445369.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445366",
+      "palavra": "sleepy",
+      "imagemUrl": "/icons/caa/6445366.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445363",
+      "palavra": "kiss",
+      "imagemUrl": "/icons/caa/6445363.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445362",
+      "palavra": "curiosity",
+      "imagemUrl": "/icons/caa/6445362.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445360",
+      "palavra": "smiling",
+      "imagemUrl": "/icons/caa/6445360.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445358",
+      "palavra": "wonderful",
+      "imagemUrl": "/icons/caa/6445358.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445357",
+      "palavra": "weak",
+      "imagemUrl": "/icons/caa/6445357.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445356",
+      "palavra": "Kidding",
+      "imagemUrl": "/icons/caa/6445356.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6445355",
+      "palavra": "yuck",
+      "imagemUrl": "/icons/caa/6445355.png",
+      "categoria": "emocao_expressao",
+      "coordX": -0.885,
+      "coordY": 0.883,
+      "vizinhos": [
+        {
+          "id": "7458538",
+          "palavra": "waving hands",
+          "distancia": 0
+        },
+        {
+          "id": "238942",
+          "palavra": "The Lonely Eye",
+          "distancia": 0
+        },
+        {
+          "id": "238937",
+          "palavra": "The Night Eye",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6116362",
+      "palavra": "hand waving",
+      "imagemUrl": "/icons/caa/6116362.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        },
+        {
+          "id": "953265",
+          "palavra": "Mobile",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6582670",
+      "palavra": "internet",
+      "imagemUrl": "/icons/caa/6582670.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        },
+        {
+          "id": "953265",
+          "palavra": "Mobile",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3450926",
+      "palavra": "mobile communication",
+      "imagemUrl": "/icons/caa/3450926.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "953265",
+          "palavra": "Mobile",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "953265",
+      "palavra": "Mobile",
+      "imagemUrl": "/icons/caa/953265.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5748749",
+      "palavra": "Phone",
+      "imagemUrl": "/icons/caa/5748749.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4460002",
+      "palavra": "Smartphone",
+      "imagemUrl": "/icons/caa/4460002.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4277077",
+      "palavra": "mobile phone",
+      "imagemUrl": "/icons/caa/4277077.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3587202",
+      "palavra": "Technology",
+      "imagemUrl": "/icons/caa/3587202.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "1317446",
+      "palavra": "chatting",
+      "imagemUrl": "/icons/caa/1317446.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "986391",
+      "palavra": "Social Media",
+      "imagemUrl": "/icons/caa/986391.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "932768",
+      "palavra": "I Phone",
+      "imagemUrl": "/icons/caa/932768.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "913793",
+      "palavra": "More tablet",
+      "imagemUrl": "/icons/caa/913793.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "680947",
+      "palavra": "add",
+      "imagemUrl": "/icons/caa/680947.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8053320",
+      "palavra": "tablet message",
+      "imagemUrl": "/icons/caa/8053320.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7880268",
+      "palavra": "Tablet",
+      "imagemUrl": "/icons/caa/7880268.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7779286",
+      "palavra": "Video Call",
+      "imagemUrl": "/icons/caa/7779286.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7021888",
+      "palavra": "touchscreen",
+      "imagemUrl": "/icons/caa/7021888.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5772678",
+      "palavra": "Telephone",
+      "imagemUrl": "/icons/caa/5772678.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5387452",
+      "palavra": "android phone",
+      "imagemUrl": "/icons/caa/5387452.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4833129",
+      "palavra": "network tablet",
+      "imagemUrl": "/icons/caa/4833129.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4552203",
+      "palavra": "handpone",
+      "imagemUrl": "/icons/caa/4552203.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4170212",
+      "palavra": "Personal hotspot",
+      "imagemUrl": "/icons/caa/4170212.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4170204",
+      "palavra": "Share",
+      "imagemUrl": "/icons/caa/4170204.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4080017",
+      "palavra": "video calling",
+      "imagemUrl": "/icons/caa/4080017.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3963494",
+      "palavra": "chat",
+      "imagemUrl": "/icons/caa/3963494.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3612030",
+      "palavra": "reading tablet",
+      "imagemUrl": "/icons/caa/3612030.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2889832",
+      "palavra": "pad",
+      "imagemUrl": "/icons/caa/2889832.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2648202",
+      "palavra": "handphone",
+      "imagemUrl": "/icons/caa/2648202.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2491187",
+      "palavra": "devices",
+      "imagemUrl": "/icons/caa/2491187.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "1317448",
+      "palavra": "email message",
+      "imagemUrl": "/icons/caa/1317448.png",
+      "categoria": "dispositivo_caa",
+      "coordX": 1,
+      "coordY": 0.624,
+      "vizinhos": [
+        {
+          "id": "6116362",
+          "palavra": "hand waving",
+          "distancia": 0
+        },
+        {
+          "id": "6582670",
+          "palavra": "internet",
+          "distancia": 0
+        },
+        {
+          "id": "3450926",
+          "palavra": "mobile communication",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7979285",
+      "palavra": "Teacher",
+      "imagemUrl": "/icons/caa/7979285.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        },
+        {
+          "id": "7388806",
+          "palavra": "School",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7739911",
+      "palavra": "awarding a student",
+      "imagemUrl": "/icons/caa/7739911.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        },
+        {
+          "id": "7388806",
+          "palavra": "School",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7388809",
+      "palavra": "Computer",
+      "imagemUrl": "/icons/caa/7388809.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388806",
+          "palavra": "School",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7388806",
+      "palavra": "School",
+      "imagemUrl": "/icons/caa/7388806.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7388801",
+      "palavra": "Male Student",
+      "imagemUrl": "/icons/caa/7388801.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7388795",
+      "palavra": "File",
+      "imagemUrl": "/icons/caa/7388795.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7068779",
+      "palavra": "Class",
+      "imagemUrl": "/icons/caa/7068779.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5334960",
+      "palavra": "university",
+      "imagemUrl": "/icons/caa/5334960.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "4524029",
+      "palavra": "Teacher Desk",
+      "imagemUrl": "/icons/caa/4524029.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3781976",
+      "palavra": "Brain",
+      "imagemUrl": "/icons/caa/3781976.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3781972",
+      "palavra": "eyeglasses",
+      "imagemUrl": "/icons/caa/3781972.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "3781963",
+      "palavra": "world",
+      "imagemUrl": "/icons/caa/3781963.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2847283",
+      "palavra": "education",
+      "imagemUrl": "/icons/caa/2847283.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2317642",
+      "palavra": "presentation",
+      "imagemUrl": "/icons/caa/2317642.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2193154",
+      "palavra": "profile",
+      "imagemUrl": "/icons/caa/2193154.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "2134858",
+      "palavra": "conference",
+      "imagemUrl": "/icons/caa/2134858.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "1971083",
+      "palavra": "teacher teaching",
+      "imagemUrl": "/icons/caa/1971083.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "1491786",
+      "palavra": "classroom",
+      "imagemUrl": "/icons/caa/1491786.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8316188",
+      "palavra": "investigator",
+      "imagemUrl": "/icons/caa/8316188.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8091355",
+      "palavra": "study",
+      "imagemUrl": "/icons/caa/8091355.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "8029254",
+      "palavra": "teaching",
+      "imagemUrl": "/icons/caa/8029254.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7565126",
+      "palavra": "education industry",
+      "imagemUrl": "/icons/caa/7565126.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7386584",
+      "palavra": "teach",
+      "imagemUrl": "/icons/caa/7386584.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7288045",
+      "palavra": "mentorship",
+      "imagemUrl": "/icons/caa/7288045.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "7205141",
+      "palavra": "teacher with students",
+      "imagemUrl": "/icons/caa/7205141.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6304319",
+      "palavra": "Graduation Cap",
+      "imagemUrl": "/icons/caa/6304319.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "6292993",
+      "palavra": "academician",
+      "imagemUrl": "/icons/caa/6292993.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5904874",
+      "palavra": "graduate",
+      "imagemUrl": "/icons/caa/5904874.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5873108",
+      "palavra": "Mentor",
+      "imagemUrl": "/icons/caa/5873108.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    },
+    {
+      "id": "5429780",
+      "palavra": "school building",
+      "imagemUrl": "/icons/caa/5429780.png",
+      "categoria": "familia_cuidador",
+      "coordX": -1,
+      "coordY": -0.167,
+      "vizinhos": [
+        {
+          "id": "7979285",
+          "palavra": "Teacher",
+          "distancia": 0
+        },
+        {
+          "id": "7739911",
+          "palavra": "awarding a student",
+          "distancia": 0
+        },
+        {
+          "id": "7388809",
+          "palavra": "Computer",
+          "distancia": 0
+        }
+      ],
+      "vectorSource": "fallback"
+    }
+  ],
+  "keywords": [
+    "linguagem_sinais",
+    "prancha_comunicacao",
+    "fala_articulacao",
+    "voz",
+    "audicao",
+    "gesto",
+    "dispositivo_caa",
+    "apoio_terapia",
+    "familia_cuidador",
+    "emocao_expressao"
+  ],
+  "source": "precomputed",
+  "total": 300,
+  "geradoEm": "2026-04-09T14:16:44.987Z",
+  "categorias": {
+    "linguagem_sinais": 30,
+    "prancha_comunicacao": 30,
+    "fala_articulacao": 30,
+    "voz": 30,
+    "audicao": 30,
+    "gesto": 30,
+    "apoio_terapia": 30,
+    "emocao_expressao": 30,
+    "dispositivo_caa": 30,
+    "familia_cuidador": 30
+  },
+  "vizinhosMethod": "wasserstein-gemini-12d-global-mds",
+  "mdsInfo": {
+    "method": "classical-mds-power-iteration",
+    "sampleSize": 300,
+    "eigenvalues": [
+      22.819,
+      8.707
+    ],
+    "normalizationScale": 0.3634,
+    "vectorModel": "gemini-1.5-flash",
+    "dimensions": 12,
+    "notes": "Real 12D IAP semantic vectors from Gemini; Vietoris-Rips persistence H0+H1; exact Wasserstein"
+  },
+  "imagensLocais": true
+}

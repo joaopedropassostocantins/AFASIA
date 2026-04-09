@@ -680,6 +680,44 @@ router.get("/noun-atlas", (req, res) => {
   }
 });
 
+const CAA_ATLAS_PATH = resolveDataPath("caa_atlas_data.json");
+
+router.get("/caa-atlas", (req, res) => {
+  try {
+    if (existsSync(CAA_ATLAS_PATH)) {
+      const raw = readFileSync(CAA_ATLAS_PATH, "utf-8");
+      const data = JSON.parse(raw) as {
+        pictos: AtlasPictogram[];
+        keywords?: string[];
+        total?: number;
+        categorias?: Record<string, number>;
+        vizinhosMethod?: string;
+        mdsInfo?: unknown;
+        geradoEm?: string;
+      };
+      if (Array.isArray(data?.pictos) && data.pictos.length > 0) {
+        res.json({
+          pictos: data.pictos,
+          keywords: data.keywords ?? [],
+          source: "precomputed",
+          total: data.total ?? data.pictos.length,
+          categorias: data.categorias ?? {},
+          geradoEm: data.geradoEm ?? null,
+          vizinhosMethod: data.vizinhosMethod ?? "wasserstein-gemini-12d",
+          mdsInfo: data.mdsInfo ?? null,
+        });
+        return;
+      }
+    }
+    res.status(503).json({
+      error: "Atlas CAA não disponível. Pipeline: 1) caa_fetch.mjs 2) caa_sample.mjs 3) caa_compute_vectors.mjs 4) caa_wasserstein.mjs 5) caa_download_icons.mjs",
+      pictos: [],
+    });
+  } catch (err) {
+    handleRouteError(err, res, (msg) => req.log.error(msg), "fetch caa atlas");
+  }
+});
+
 const DISFASIA_ATLAS_PATH = resolveDataPath("disfasia_atlas_data.json");
 
 router.get("/disfasia-atlas", (req, res) => {

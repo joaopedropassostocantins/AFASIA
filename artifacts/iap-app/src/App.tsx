@@ -15,6 +15,7 @@ import FAQ from "@/pages/FAQ";
 import Disfasia from "@/pages/Disfasia";
 import DisfasiaAtlas from "@/pages/DisfasiaAtlas";
 import NounAtlas from "@/pages/NounAtlas";
+import CAAAtlas from "@/pages/CAAAtlas";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ function Router() {
       <Route path="/disfasia" component={Disfasia} />
       <Route path="/disfasia-atlas" component={DisfasiaAtlas} />
       <Route path="/noun-atlas" component={NounAtlas} />
+      <Route path="/caa-atlas" component={CAAAtlas} />
       <Route component={NotFound} />
     </Switch>
   );
