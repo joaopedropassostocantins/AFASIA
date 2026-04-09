@@ -821,7 +821,31 @@ Retorne APENAS um objeto JSON com os campos abaixo (sem markdown, sem texto extr
 
 // ── Atlas Metrics ─────────────────────────────────────────────────────────────
 
-function computeAtlasMetrics(pictos: AtlasPictogram[]) {
+interface AtlasMetricsResult {
+  total: number;
+  categorias: number;
+  categoryCounts: Record<string, number>;
+  wasserstein: { min: number; avg: number; max: number };
+  mdsVariance: { x: number; y: number };
+  histogram: number[];
+  closeNeighbors: number;
+  samplePoints: { x: number; y: number; cat: string }[];
+}
+
+function computeAtlasMetrics(pictos: AtlasPictogram[]): AtlasMetricsResult {
+  if (pictos.length === 0) {
+    return {
+      total: 0,
+      categorias: 0,
+      categoryCounts: {},
+      wasserstein: { min: 0, avg: 0, max: 0 },
+      mdsVariance: { x: 0, y: 0 },
+      histogram: Array(11).fill(0) as number[],
+      closeNeighbors: 0,
+      samplePoints: [],
+    };
+  }
+
   // Per-category counts
   const categoryCounts: Record<string, number> = {};
   for (const p of pictos) {
@@ -894,9 +918,19 @@ function computeAACCoverage(pictos: AtlasPictogram[], caaPalavras: Set<string>):
   return { covered, total, pct: total > 0 ? +((covered / total) * 100).toFixed(1) : 0 };
 }
 
+interface AtlasMetricsEntry extends AtlasMetricsResult {
+  name: string;
+  slug: string;
+  href: string;
+  color: string;
+  vizinhosMethod: string;
+  vectorModel: string;
+  aacCoverage: { covered: number; total: number; pct: number };
+}
+
 router.get("/atlas-metrics", (req, res) => {
   try {
-    const results = [] as unknown[];
+    const results: AtlasMetricsEntry[] = [];
 
     // Load CAA words as reference AAC vocabulary
     let caaPalavras = new Set<string>();
