@@ -248,6 +248,62 @@ export default function NounAtlas() {
 
   const resetView = () => { setZoom(1); setOffset({ x: 0, y: 0 }); };
 
+  // ── Touch handlers (pan + pinch-zoom) ──────────────────────────────────────
+  const touchRef = useRef<{ x: number; y: number; startX: number; startY: number; dist: number } | null>(null);
+
+  const getTouchDist = (t: React.TouchList) =>
+    t.length >= 2
+      ? Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY)
+      : 0;
+
+  const getTouchCenter = (t: React.TouchList) =>
+    t.length >= 2
+      ? { x: (t[0].clientX + t[1].clientX) / 2, y: (t[0].clientY + t[1].clientY) / 2 }
+      : { x: t[0].clientX, y: t[0].clientY };
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    e.preventDefault();
+    const center = getTouchCenter(e.touches);
+    touchRef.current = { x: center.x, y: center.y, startX: center.x, startY: center.y, dist: getTouchDist(e.touches) };
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    e.preventDefault();
+    if (!touchRef.current) return;
+    const center = getTouchCenter(e.touches);
+    const newDist = getTouchDist(e.touches);
+    const dx = center.x - touchRef.current.x;
+    const dy = center.y - touchRef.current.y;
+
+    if (e.touches.length >= 2 && touchRef.current.dist > 0 && newDist > 0) {
+      const ratio = newDist / touchRef.current.dist;
+      setZoom((z) => Math.max(0.3, Math.min(10, z * ratio)));
+    }
+
+    if (dx !== 0 || dy !== 0) {
+      setOffset((prev) => ({ x: prev.x + dx, y: prev.y + dy }));
+    }
+
+    touchRef.current.x = center.x;
+    touchRef.current.y = center.y;
+    touchRef.current.dist = newDist || touchRef.current.dist;
+  }, []);
+
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    e.preventDefault();
+    if (!touchRef.current) return;
+    if (e.changedTouches.length === 1 && e.touches.length === 0) {
+      const t = e.changedTouches[0];
+      const dx = Math.abs(t.clientX - touchRef.current.startX);
+      const dy = Math.abs(t.clientY - touchRef.current.startY);
+      if (dx < 8 && dy < 8) {
+        const hit = getHitPicto(t.clientX, t.clientY);
+        if (hit) setSelectedPicto(hit);
+      }
+    }
+    touchRef.current = null;
+  }, [getHitPicto]);
+
   if (isLoading) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center gap-4 p-8">
@@ -347,6 +403,10 @@ export default function NounAtlas() {
             onMouseUp={handleMouseUp}
             onMouseLeave={() => { setIsDragging(false); hoveredRef.current = null; setTooltip(null); draw(); }}
             onWheel={handleWheel}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            style={{ touchAction: "none" }}
           />
 
           {/* Tooltip */}

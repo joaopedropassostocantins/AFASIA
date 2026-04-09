@@ -13,8 +13,16 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = path.join(__dirname, "..", "data", "noun_atlas_data.json");
 
-const KEY = process.env.NOUN_PROJECT_KEY ?? "8a5f8214824142aba3dc76c74b6d5e9a";
-const SECRET = process.env.NOUN_PROJECT_SECRET ?? "bb3cc9e735d34d549a3a39bb5c50a4a3";
+const KEY = process.env.NOUN_PROJECT_KEY;
+const SECRET = process.env.NOUN_PROJECT_SECRET;
+
+if (!KEY || !SECRET) {
+  console.error("❌ Erro: NOUN_PROJECT_KEY e NOUN_PROJECT_SECRET são obrigatórios.");
+  console.error("   Export as variáveis antes de executar:");
+  console.error("   export NOUN_PROJECT_KEY=<sua_key>");
+  console.error("   export NOUN_PROJECT_SECRET=<seu_secret>");
+  process.exit(1);
+}
 
 // ─── OAuth 1.0 helper ────────────────────────────────────────────────────────
 
