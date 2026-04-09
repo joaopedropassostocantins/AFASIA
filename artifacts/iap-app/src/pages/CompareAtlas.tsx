@@ -23,10 +23,16 @@ import { Button } from "@/components/ui/button";
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
-interface WassersteinStats {
-  min: number;
-  avg: number;
-  max: number;
+interface SamplePoint {
+  x: number;
+  y: number;
+  cat: string;
+}
+
+interface AACCoverage {
+  covered: number;
+  total: number;
+  pct: number;
 }
 
 interface AtlasMetric {
@@ -38,10 +44,13 @@ interface AtlasMetric {
   vectorModel: string;
   total: number;
   categorias: number;
-  wasserstein: WassersteinStats;
+  categoryCounts: Record<string, number>;
+  wasserstein: { min: number; avg: number; max: number };
   mdsVariance: { x: number; y: number };
   histogram: number[];
   closeNeighbors: number;
+  samplePoints: SamplePoint[];
+  aacCoverage: AACCoverage;
 }
 
 interface MetricsResponse {
@@ -50,29 +59,31 @@ interface MetricsResponse {
 }
 
 const BIN_LABELS = [
-  "0–0.1",
-  "0.1–0.2",
-  "0.2–0.3",
-  "0.3–0.4",
-  "0.4–0.5",
-  "0.5–0.6",
-  "0.6–0.7",
-  "0.7–0.8",
-  "0.8–0.9",
-  "0.9–1.0",
-  ">1.0",
+  "0–0.1", "0.1–0.2", "0.2–0.3", "0.3–0.4", "0.4–0.5",
+  "0.5–0.6", "0.6–0.7", "0.7–0.8", "0.8–0.9", "0.9–1.0", ">1.0",
 ];
 
-function MiniDotCloud({ atlas }: { atlas: AtlasMetric }) {
+// Real mini atlas canvas using actual MDS coordinates
+function MiniCanvas({ atlas }: { atlas: AtlasMetric }) {
   const svgSize = 160;
   const pad = 8;
+  const pts = atlas.samplePoints;
+
+  const allX = pts.map((p) => p.x);
+  const allY = pts.map((p) => p.y);
+  const minX = Math.min(...allX);
+  const maxX = Math.max(...allX);
+  const minY = Math.min(...allY);
+  const maxY = Math.max(...allY);
+  const rangeX = maxX - minX || 1;
+  const rangeY = maxY - minY || 1;
   const inner = svgSize - pad * 2;
 
-  // Use histogram as a proxy for the dot cloud — render a simple scatter
-  // We don't have individual coords here, so render a representative
-  // silhouette from histogram density
-  const maxCount = Math.max(...atlas.histogram, 1);
-  const bars = atlas.histogram.slice(0, 10);
+  // Assign stable colors to categories
+  const cats = [...new Set(pts.map((p) => p.cat))];
+  const catColor: Record<string, string> = {};
+  const palette = ["#10b981", "#06b6d4", "#f59e0b", "#ef4444", "#8b5cf6", "#ec4899", "#14b8a6", "#f97316", "#84cc16", "#64748b"];
+  cats.forEach((c, i) => { catColor[c] = palette[i % palette.length]; });
 
   return (
     <svg
@@ -82,21 +93,17 @@ function MiniDotCloud({ atlas }: { atlas: AtlasMetric }) {
       className="rounded-lg"
     >
       <rect width={svgSize} height={svgSize} rx={8} fill="hsl(var(--card))" />
-      {bars.map((count, i) => {
-        const barW = inner / bars.length;
-        const barH = (count / maxCount) * (inner * 0.8);
-        const x = pad + i * barW + barW * 0.1;
-        const y = svgSize - pad - barH;
+      {pts.map((p, i) => {
+        const cx = pad + ((p.x - minX) / rangeX) * inner;
+        const cy = pad + (1 - (p.y - minY) / rangeY) * inner;
         return (
-          <rect
+          <circle
             key={i}
-            x={x}
-            y={y}
-            width={barW * 0.8}
-            height={barH}
-            rx={2}
-            fill={atlas.color}
-            opacity={0.7 + (i / bars.length) * 0.3}
+            cx={cx}
+            cy={cy}
+            r={atlas.total > 1000 ? 1.5 : atlas.total > 100 ? 2.5 : 3.5}
+            fill={catColor[p.cat] ?? atlas.color}
+            opacity={0.75}
           />
         );
       })}
@@ -106,7 +113,7 @@ function MiniDotCloud({ atlas }: { atlas: AtlasMetric }) {
 
 const METRIC_ROWS: {
   label: string;
-  key: keyof AtlasMetric | string;
+  key: string;
   format: (v: AtlasMetric) => React.ReactNode;
   hint?: string;
 }[] = [
@@ -121,6 +128,19 @@ const METRIC_ROWS: {
     key: "categorias",
     format: (a) => a.categorias,
     hint: "Grupos semânticos distintos",
+  },
+  {
+    label: "Cobertura vocab. AAC",
+    key: "aac",
+    format: (a) => (
+      <span>
+        {a.aacCoverage.covered}{" "}
+        <span className="text-muted-foreground">
+          / {a.aacCoverage.total} ({a.aacCoverage.pct}%)
+        </span>
+      </span>
+    ),
+    hint: "Palavras do vocabulário CAA (300) presentes neste atlas",
   },
   {
     label: "Distância W. mínima",
@@ -171,8 +191,8 @@ const METRIC_ROWS: {
   },
 ];
 
-function getBestAtlas(atlases: AtlasMetric[]): string {
-  // Best = highest % of close neighbors (< 0.3)
+function getBestAtlas(atlases: AtlasMetric[]): string | null {
+  if (!atlases || atlases.length === 0) return null;
   let best = atlases[0];
   for (const a of atlases) {
     if (a.closeNeighbors / a.total > best.closeNeighbors / best.total) {
@@ -244,7 +264,7 @@ export default function CompareAtlas() {
         </div>
         <p className="text-muted-foreground text-sm mt-1">
           Avaliação comparativa dos atlases topológicos — Noun 3k, CAA e Disfasia — com métricas de
-          Wasserstein, MDS e cobertura de vocabulário.
+          Wasserstein, MDS, cobertura de vocabulário AAC e projeção semântica.
         </p>
       </div>
 
@@ -279,7 +299,8 @@ export default function CompareAtlas() {
                 )}
               </div>
 
-              <MiniDotCloud atlas={atlas} />
+              {/* Real MDS mini-canvas */}
+              <MiniCanvas atlas={atlas} />
 
               <div className="grid grid-cols-2 gap-2 text-xs">
                 <div className="bg-muted/30 rounded-lg p-2">
@@ -302,14 +323,37 @@ export default function CompareAtlas() {
                   </div>
                 </div>
                 <div className="bg-muted/30 rounded-lg p-2">
-                  <div className="text-muted-foreground">Viz. &lt;0.3</div>
+                  <div className="text-muted-foreground">Cob. AAC</div>
                   <div
                     className="font-bold font-mono"
                     style={{ color: atlas.color }}
                   >
-                    {((atlas.closeNeighbors / atlas.total) * 100).toFixed(0)}%
+                    {atlas.aacCoverage.pct}%
                   </div>
                 </div>
+              </div>
+
+              {/* Category breakdown */}
+              <div className="text-xs space-y-1">
+                <div className="text-muted-foreground font-medium mb-1">Distribuição por categoria</div>
+                {Object.entries(atlas.categoryCounts)
+                  .sort((a, b) => b[1] - a[1])
+                  .slice(0, 5)
+                  .map(([cat, count]) => (
+                    <div key={cat} className="flex items-center gap-1">
+                      <div
+                        className="h-1.5 rounded-full"
+                        style={{
+                          width: `${(count / atlas.total) * 100}%`,
+                          maxWidth: "100%",
+                          backgroundColor: atlas.color,
+                          opacity: 0.6 + (count / atlas.total) * 0.4,
+                        }}
+                      />
+                      <span className="text-muted-foreground truncate shrink-0 w-24">{cat}</span>
+                      <span className="font-mono text-foreground shrink-0">{count}</span>
+                    </div>
+                  ))}
               </div>
 
               <Link href={atlas.href}>
@@ -423,15 +467,13 @@ export default function CompareAtlas() {
 
         {/* Scientific interpretation */}
         <div className="bg-card border border-border/50 rounded-xl p-4">
-          <h3 className="font-bold font-mono text-sm mb-2">
+          <h3 className="font-bold font-mono text-sm mb-3">
             Interpretação Científica
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-muted-foreground">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-muted-foreground">
             {data.atlases.map((a) => (
-              <div key={a.slug} className="space-y-1">
-                <div
-                  className="font-bold text-foreground flex items-center gap-1"
-                >
+              <div key={a.slug} className="space-y-2">
+                <div className="font-bold text-foreground flex items-center gap-1">
                   <span
                     className="w-2 h-2 rounded-full inline-block"
                     style={{ backgroundColor: a.color }}
@@ -440,22 +482,25 @@ export default function CompareAtlas() {
                 </div>
                 <p>
                   Distância Wasserstein média de{" "}
-                  <span className="font-mono">{a.wasserstein.avg.toFixed(3)}</span>{" "}
-                  entre pictogramas —{" "}
-                  {a.wasserstein.avg < 0.2
-                    ? "cluster muito compacto, vocabulário altamente coeso."
-                    : a.wasserstein.avg < 0.4
-                    ? "cluster moderadamente coeso, boa separação semântica."
+                  <span className="font-mono text-foreground">{a.wasserstein.avg.toFixed(3)}</span>{" "}
+                  —{" "}
+                  {a.wasserstein.avg < 0.05
+                    ? "cluster ultra-compacto, vocabulário extremamente coeso."
+                    : a.wasserstein.avg < 0.15
+                    ? "cluster compacto, boa coesão semântica."
+                    : a.wasserstein.avg < 0.3
+                    ? "densidade moderada, separação semântica equilibrada."
                     : "maior diversidade semântica entre ícones."}
                 </p>
                 <p>
-                  {((a.closeNeighbors / a.total) * 100).toFixed(0)}% dos ícones têm vizinho
-                  próximo (&lt;0.3), indicando{" "}
-                  {a.closeNeighbors / a.total > 0.6
-                    ? "alta densidade topológica."
-                    : a.closeNeighbors / a.total > 0.3
-                    ? "densidade topológica moderada."
-                    : "vocabulário mais disperso no espaço semântico."}
+                  Cobertura do vocabulário CAA:{" "}
+                  <span className="font-mono text-foreground">{a.aacCoverage.pct}%</span>{" "}
+                  ({a.aacCoverage.covered} de {a.aacCoverage.total} palavras)
+                  {a.slug === "caa"
+                    ? " — atlas de referência AAC/CAA."
+                    : a.aacCoverage.pct > 5
+                    ? " — sobreposição relevante com vocabulário AAC."
+                    : " — vocabulário especializado distinto do CAA."}
                 </p>
               </div>
             ))}

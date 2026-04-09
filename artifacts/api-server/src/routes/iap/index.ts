@@ -822,7 +822,11 @@ Retorne APENAS um objeto JSON com os campos abaixo (sem markdown, sem texto extr
 // ── Atlas Metrics ─────────────────────────────────────────────────────────────
 
 function computeAtlasMetrics(pictos: AtlasPictogram[]) {
-  const cats = new Set(pictos.map((p) => p.categoria));
+  // Per-category counts
+  const categoryCounts: Record<string, number> = {};
+  for (const p of pictos) {
+    categoryCounts[p.categoria] = (categoryCounts[p.categoria] ?? 0) + 1;
+  }
 
   // Collect first-neighbor Wasserstein distances
   const dists: number[] = [];
@@ -856,9 +860,18 @@ function computeAtlasMetrics(pictos: AtlasPictogram[]) {
   // Vizinhos with distance < 0.3
   const closeNeighbors = dists.filter((d) => d < 0.3).length;
 
+  // Sample up to 150 points for mini-canvas rendering (evenly spaced)
+  const SAMPLE = 150;
+  const step = Math.max(1, Math.floor(pictos.length / SAMPLE));
+  const samplePoints = pictos
+    .filter((_, i) => i % step === 0)
+    .slice(0, SAMPLE)
+    .map((p) => ({ x: p.coordX ?? 0, y: p.coordY ?? 0, cat: p.categoria }));
+
   return {
     total: pictos.length,
-    categorias: cats.size,
+    categorias: Object.keys(categoryCounts).length,
+    categoryCounts,
     wasserstein: {
       min: +minDist.toFixed(4),
       avg: +avgDist.toFixed(4),
@@ -867,17 +880,36 @@ function computeAtlasMetrics(pictos: AtlasPictogram[]) {
     mdsVariance: { x: +varX.toFixed(4), y: +varY.toFixed(4) },
     histogram,
     closeNeighbors,
+    samplePoints,
   };
+}
+
+function computeAACCoverage(pictos: AtlasPictogram[], caaPalavras: Set<string>): { covered: number; total: number; pct: number } {
+  const words = new Set(pictos.map((p) => (p.palavra ?? "").toLowerCase().trim()));
+  let covered = 0;
+  for (const w of caaPalavras) {
+    if (words.has(w)) covered++;
+  }
+  const total = caaPalavras.size;
+  return { covered, total, pct: total > 0 ? +((covered / total) * 100).toFixed(1) : 0 };
 }
 
 router.get("/atlas-metrics", (req, res) => {
   try {
     const results = [] as unknown[];
 
+    // Load CAA words as reference AAC vocabulary
+    let caaPalavras = new Set<string>();
+    if (existsSync(CAA_ATLAS_PATH)) {
+      const caaRaw = JSON.parse(readFileSync(CAA_ATLAS_PATH, "utf-8")) as { pictos: AtlasPictogram[] };
+      caaPalavras = new Set((caaRaw.pictos ?? []).map((p) => (p.palavra ?? "").toLowerCase().trim()));
+    }
+
     // Noun 3k
     if (existsSync(NOUN_ATLAS_PATH)) {
       const noun = JSON.parse(readFileSync(NOUN_ATLAS_PATH, "utf-8")) as { pictos: AtlasPictogram[]; vizinhosMethod?: string };
       const metrics = computeAtlasMetrics(noun.pictos ?? []);
+      const aacCoverage = computeAACCoverage(noun.pictos ?? [], caaPalavras);
       results.push({
         name: "Noun 3k",
         slug: "noun-3k",
@@ -885,6 +917,7 @@ router.get("/atlas-metrics", (req, res) => {
         color: "#10b981",
         vizinhosMethod: noun.vizinhosMethod ?? "wasserstein-12d",
         vectorModel: "gemma-4-31b-it",
+        aacCoverage,
         ...metrics,
       });
     }
@@ -900,6 +933,7 @@ router.get("/atlas-metrics", (req, res) => {
         color: "#06b6d4",
         vizinhosMethod: caa.vizinhosMethod ?? "wasserstein-gemma4-12d-global-mds",
         vectorModel: caa.mdsInfo?.vectorModel ?? "gemma-4-31b-it",
+        aacCoverage: { covered: caaPalavras.size, total: caaPalavras.size, pct: 100 },
         ...metrics,
       });
     }
@@ -908,6 +942,7 @@ router.get("/atlas-metrics", (req, res) => {
     if (existsSync(DISFASIA_ATLAS_PATH)) {
       const dis = JSON.parse(readFileSync(DISFASIA_ATLAS_PATH, "utf-8")) as { pictos: AtlasPictogram[]; vizinhosMethod?: string; geminiModel?: string };
       const metrics = computeAtlasMetrics(dis.pictos ?? []);
+      const aacCoverage = computeAACCoverage(dis.pictos ?? [], caaPalavras);
       results.push({
         name: "Atlas Disfasia",
         slug: "disfasia",
@@ -915,6 +950,7 @@ router.get("/atlas-metrics", (req, res) => {
         color: "#f59e0b",
         vizinhosMethod: dis.vizinhosMethod ?? "wasserstein-gemma4-12d-mds",
         vectorModel: dis.geminiModel ?? "gemma-4-31b-it",
+        aacCoverage,
         ...metrics,
       });
     }
