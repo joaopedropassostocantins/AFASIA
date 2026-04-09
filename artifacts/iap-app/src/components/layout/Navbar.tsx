@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "wouter";
-import { BrainCircuit, Activity, Accessibility, Network, MapPin, BookOpen, HelpCircle, MessageSquare } from "lucide-react";
+import { BrainCircuit, Activity, Accessibility, Network, MapPin, BookOpen, HelpCircle, MessageSquare, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Navbar() {
@@ -12,6 +12,7 @@ export function Navbar() {
     { href: "/disfasia", label: "Disfasia", icon: MessageSquare },
     { href: "/topology", label: "Topologia", icon: Network },
     { href: "/atlas", label: "Atlas", icon: MapPin },
+    { href: "/noun-atlas", label: "Atlas 3k", icon: Globe },
     { href: "/appendice", label: "Apêndice", icon: BookOpen },
     { href: "/faq", label: "FAQ", icon: HelpCircle },
   ];
@@ -23,14 +24,14 @@ export function Navbar() {
           <Activity className="h-6 w-6 text-primary" />
           <span className="font-bold font-mono tracking-tight text-lg">IAP</span>
         </Link>
-        <nav className="flex flex-1 items-center gap-6 text-sm font-medium overflow-x-auto">
+        <nav className="flex flex-1 items-center gap-5 text-sm font-medium overflow-x-auto">
           {links.map((link) => {
             const isActive = location === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`flex items-center gap-2 transition-colors hover:text-primary relative py-2 whitespace-nowrap ${
+                className={`flex items-center gap-1.5 transition-colors hover:text-primary relative py-2 whitespace-nowrap ${
                   isActive ? "text-primary" : "text-muted-foreground"
                 }`}
               >

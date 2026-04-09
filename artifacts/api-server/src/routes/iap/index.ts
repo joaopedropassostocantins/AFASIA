@@ -643,6 +643,31 @@ router.get("/atlas/categorias", async (req, res) => {
   }
 });
 
+const NOUN_ATLAS_PATH = join(process.cwd(), "data", "noun_atlas_data.json");
+
+router.get("/noun-atlas", (req, res) => {
+  try {
+    if (existsSync(NOUN_ATLAS_PATH)) {
+      const raw = readFileSync(NOUN_ATLAS_PATH, "utf-8");
+      const data = JSON.parse(raw) as { pictos: AtlasPictogram[]; keywords?: string[]; total?: number; categorias?: Record<string, number> };
+      if (Array.isArray(data?.pictos) && data.pictos.length > 0) {
+        res.json({
+          pictos: data.pictos,
+          keywords: data.keywords ?? [],
+          source: "precomputed",
+          total: data.total ?? data.pictos.length,
+          categorias: data.categorias ?? {},
+          geradoEm: (data as { geradoEm?: string }).geradoEm ?? null,
+        });
+        return;
+      }
+    }
+    res.status(503).json({ error: "Atlas Noun Project não disponível. Execute: node scripts/noun_fetch.mjs", pictos: [] });
+  } catch (err) {
+    handleRouteError(err, res, (msg) => req.log.error(msg), "fetch noun atlas");
+  }
+});
+
 const DISFASIA_ATLAS_PATH = join(process.cwd(), "data", "disfasia_atlas_data.json");
 
 router.get("/disfasia-atlas", (req, res) => {

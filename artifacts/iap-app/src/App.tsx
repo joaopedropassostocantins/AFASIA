@@ -14,6 +14,7 @@ import Appendix from "@/pages/Appendix";
 import FAQ from "@/pages/FAQ";
 import Disfasia from "@/pages/Disfasia";
 import DisfasiaAtlas from "@/pages/DisfasiaAtlas";
+import NounAtlas from "@/pages/NounAtlas";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/faq" component={FAQ} />
       <Route path="/disfasia" component={Disfasia} />
       <Route path="/disfasia-atlas" component={DisfasiaAtlas} />
+      <Route path="/noun-atlas" component={NounAtlas} />
       <Route component={NotFound} />
     </Switch>
   );

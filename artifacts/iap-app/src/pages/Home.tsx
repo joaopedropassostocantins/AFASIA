@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { BrainCircuit, Accessibility, Network, ArrowRight, MapPin, BookOpen, HelpCircle, MessageSquare } from "lucide-react";
+import { BrainCircuit, Accessibility, Network, ArrowRight, MapPin, BookOpen, HelpCircle, MessageSquare, Globe } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -142,6 +142,27 @@ export default function Home() {
               <Link href="/atlas" className="w-full">
                 <Button variant="outline" className="w-full group">
                   Explorar Módulo 4
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card/50 backdrop-blur border-indigo-400/30 hover:border-indigo-400/60 transition-all flex flex-col">
+            <CardHeader>
+              <div className="h-12 w-12 rounded-lg bg-indigo-500/10 flex items-center justify-center mb-4 text-indigo-400">
+                <Globe size={24} />
+              </div>
+              <CardTitle className="font-mono">Atlas 3k — Noun Project</CardTitle>
+              <CardDescription>3.000+ ícones com distâncias de Wasserstein IAP</CardDescription>
+            </CardHeader>
+            <CardContent className="flex-1 flex flex-col justify-end">
+              <p className="text-sm text-muted-foreground mb-6">
+                Maior atlas semântico IAP: 3.000+ ícones do Noun Project classificados em 12 categorias e mapeados por topologia.
+              </p>
+              <Link href="/noun-atlas" className="w-full">
+                <Button variant="outline" className="w-full group border-indigo-400/40 hover:border-indigo-400">
+                  Abrir Atlas 3k
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
