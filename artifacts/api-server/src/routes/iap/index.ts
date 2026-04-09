@@ -1,5 +1,5 @@
 import { Router, type IRouter, type Response } from "express";
-import { ai } from "@workspace/integrations-gemini-ai";
+import { generateWithGemma } from "../../gemma-client";
 import {
   RunJpAlgorithmBody,
   PictorialChatBody,
@@ -240,18 +240,10 @@ Retorne APENAS um objeto JSON com os campos abaixo (sem markdown, sem texto extr
 - sugestoes: array com exatamente 3 IDs de símbolos válidos (da lista fornecida)
 - nota_cuidador: string (instrução em português, máx. 60 caracteres)`;
 
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: [
-        { role: "user", parts: [{ text: systemPrompt + "\n\n" + userPrompt }] },
-      ],
-      config: {
-        maxOutputTokens: 1024,
-        responseMimeType: "application/json",
-      },
-    });
-
-    const rawText = response.text ?? "{}";
+    const { text: rawText } = await generateWithGemma(
+      systemPrompt + "\n\n" + userPrompt,
+      { maxOutputTokens: 1024, responseMimeType: "application/json" }
+    );
 
     let parsed: {
       intencao?: string;
@@ -778,13 +770,10 @@ Retorne APENAS um objeto JSON com os campos abaixo (sem markdown, sem texto extr
 - sugestoes: array com exatamente 3 IDs de símbolos válidos (da lista fornecida)
 - nota_cuidador: string (instrução em português, máx. 60 caracteres)`;
 
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: [{ role: "user", parts: [{ text: systemPrompt + "\n\n" + userPrompt }] }],
-      config: { maxOutputTokens: 1024, responseMimeType: "application/json" },
-    });
-
-    const rawText = response.text ?? "{}";
+    const { text: rawText } = await generateWithGemma(
+      systemPrompt + "\n\n" + userPrompt,
+      { maxOutputTokens: 1024, responseMimeType: "application/json" }
+    );
     let parsed: {
       intencao?: string; urgencia?: number; emocao?: string;
       confianca?: number; sugestoes?: string[]; nota_cuidador?: string;

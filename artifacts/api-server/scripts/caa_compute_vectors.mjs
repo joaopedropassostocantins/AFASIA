@@ -28,7 +28,9 @@ if (!GEMINI_KEY) {
   process.exit(1);
 }
 
-const GEMINI_MODEL = "gemini-2.0-flash";
+const GEMINI_MODEL = "gemma-4-31b-it";
+const FALLBACK_MODEL = "gemma-3-27b-it";
+const API_VERSION = "v1beta"; // Gemma 4 requer v1beta
 const DELAY_MS = 5000; // 5s = 12 RPM < 15 RPM limit
 
 // IAP 12 dimensões semânticas (Algoritmo JP)
@@ -87,47 +89,54 @@ const CAT_FALLBACK = {
   emocao_expressao:    [4, 10, 5, 6, 5, 4, 2, 5, 8, 5, 6, 6],
 };
 
-async function callGemini(word, categoria) {
-  const url = `https://generativelanguage.googleapis.com/v1/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_KEY}`;
+async function callGemmaModel(model, word) {
+  const url = `https://generativelanguage.googleapis.com/${API_VERSION}/models/${model}:generateContent?key=${GEMINI_KEY}`;
   const body = {
     contents: [{ parts: [{ text: IAP_PROMPT(word) }] }],
     generationConfig: { temperature: 0.1, maxOutputTokens: 200 },
   };
 
-  try {
-    const resp = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
-      signal: AbortSignal.timeout(30000),
-    });
+  const resp = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(30000),
+  });
 
-    if (!resp.ok) {
-      const errText = await resp.text();
-      throw new Error(`HTTP ${resp.status}: ${errText.slice(0, 200)}`);
-    }
-
-    const data = await resp.json();
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
-    const jsonMatch = text.match(/\{[^}]+\}/);
-    if (!jsonMatch) throw new Error("No JSON in response");
-
-    const parsed = JSON.parse(jsonMatch[0]);
-    const vec = IAP_DIMENSIONS.map((dim) => {
-      const v = parsed[dim];
-      return typeof v === "number" ? Math.max(0, Math.min(10, v)) : 5;
-    });
-
-    return { vec, source: "gemini" };
-  } catch (err) {
-    return { vec: CAT_FALLBACK[categoria] ?? Array(12).fill(5), source: "fallback", error: err.message };
+  if (!resp.ok) {
+    const errText = await resp.text();
+    throw new Error(`HTTP ${resp.status}: ${errText.slice(0, 200)}`);
   }
+
+  const data = await resp.json();
+  const text = data?.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
+  const jsonMatch = text.match(/\{[^}]+\}/);
+  if (!jsonMatch) throw new Error("No JSON in response");
+
+  const parsed = JSON.parse(jsonMatch[0]);
+  return IAP_DIMENSIONS.map((dim) => {
+    const v = parsed[dim];
+    return typeof v === "number" ? Math.max(0, Math.min(10, v)) : 5;
+  });
+}
+
+async function callGemini(word, categoria) {
+  const modelsToTry = [GEMINI_MODEL, FALLBACK_MODEL];
+  for (const model of modelsToTry) {
+    try {
+      const vec = await callGemmaModel(model, word);
+      return { vec, source: model };
+    } catch (err) {
+      process.stderr.write(`\n  [${model}] ${err.message.slice(0, 100)}\n`);
+    }
+  }
+  return { vec: CAT_FALLBACK[categoria] ?? Array(12).fill(5), source: "fallback" };
 }
 
 function sleep(ms) { return new Promise((r) => setTimeout(r, ms)); }
 
 async function main() {
-  console.log("CAA Vectors — Gemini IAP 12D");
+  console.log(`CAA Vectors — Gemma 4 31B IAP 12D (modelo: ${GEMINI_MODEL})`);
 
   const raw = JSON.parse(fs.readFileSync(RAW_PATH, "utf-8"));
   const pictos = raw.pictos;
@@ -140,7 +149,7 @@ async function main() {
     console.log(`Cache: ${Object.keys(cache).length} vetores em disco`);
   }
 
-  let geminiCount = 0;
+  let gemmaCount = 0;
   let fallbackCount = 0;
   let cacheHit = 0;
 
@@ -152,35 +161,33 @@ async function main() {
       cacheHit++;
       p.vector12d = cache[cacheKey].vec;
       p.vectorSource = cache[cacheKey].source;
-      process.stdout.write(`\r[${i + 1}/${pictos.length}] gemini=${geminiCount} cache=${cacheHit} fallback=${fallbackCount}   `);
+      process.stdout.write(`\r[${i + 1}/${pictos.length}] gemma=${gemmaCount} cache=${cacheHit} fallback=${fallbackCount}   `);
       continue;
     }
 
     const result = await callGemini(p.palavra, p.categoria);
     p.vector12d = result.vec;
     p.vectorSource = result.source;
-    if (result.source === "gemini") {
-      geminiCount++;
+    if (result.source !== "fallback") {
+      gemmaCount++;
       cache[cacheKey] = result;
-      // Save cache periodically (only for Gemini successes)
-      if (geminiCount % 10 === 0) {
+      if (gemmaCount % 10 === 0) {
         fs.writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
       }
       await sleep(DELAY_MS);
     } else {
       fallbackCount++;
-      if (result.error) process.stderr.write(`\n  Fallback [${p.palavra}]: ${result.error.slice(0, 80)}\n`);
     }
 
-    process.stdout.write(`\r[${i + 1}/${pictos.length}] gemini=${geminiCount} cache=${cacheHit} fallback=${fallbackCount}   `);
+    process.stdout.write(`\r[${i + 1}/${pictos.length}] gemma=${gemmaCount} cache=${cacheHit} fallback=${fallbackCount}   `);
   }
 
   // Final cache save
   fs.writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
 
   console.log(`\n\nVetores calculados:`);
-  console.log(`  Gemini: ${geminiCount}`);
-  console.log(`  Cache:  ${cacheHit}`);
+  console.log(`  Gemma 4: ${gemmaCount}`);
+  console.log(`  Cache:   ${cacheHit}`);
   console.log(`  Fallback: ${fallbackCount}`);
 
   const output = {
@@ -190,7 +197,7 @@ async function main() {
     geradoEm: new Date().toISOString(),
     geminiModel: GEMINI_MODEL,
     categorias: raw.categorias,
-    stats: { gemini: geminiCount, cache: cacheHit, fallback: fallbackCount },
+    stats: { gemma: gemmaCount, cache: cacheHit, fallback: fallbackCount },
   };
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2));

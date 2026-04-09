@@ -20,7 +20,9 @@ if (!GEMINI_KEY) {
   process.exit(1);
 }
 
-const GEMINI_MODEL = "gemini-2.0-flash";
+const GEMINI_MODEL = "gemma-4-31b-it";
+const FALLBACK_MODEL = "gemma-3-27b-it";
+const API_VERSION = "v1beta";
 const DELAY_MS = 5000;
 
 const IAP_DIMENSIONS = [
@@ -60,31 +62,42 @@ const CAT_FALLBACK = {
   comunicacao: [4, 5, 6, 8, 5, 4, 3, 4, 10, 5, 6, 9],
 };
 
-async function callGemini(word, categoria) {
-  const url = `https://generativelanguage.googleapis.com/v1/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_KEY}`;
-  try {
-    const resp = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: IAP_PROMPT(word, categoria) }] }],
-        generationConfig: { temperature: 0.1, maxOutputTokens: 200 },
-      }),
-      signal: AbortSignal.timeout(30000),
-    });
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    const data = await resp.json();
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
-    const m = text.match(/\{[^}]+\}/);
-    if (!m) throw new Error("No JSON");
-    const parsed = JSON.parse(m[0]);
-    const vec = IAP_DIMENSIONS.map((dim) => {
-      const v = parsed[dim]; return typeof v === "number" ? Math.max(0, Math.min(10, v)) : 5;
-    });
-    return { vec, source: "gemini" };
-  } catch (err) {
-    return { vec: CAT_FALLBACK[categoria] ?? Array(12).fill(5), source: "fallback", error: err.message };
+async function callGemmaModel(model, word, categoria) {
+  const url = `https://generativelanguage.googleapis.com/${API_VERSION}/models/${model}:generateContent?key=${GEMINI_KEY}`;
+  const resp = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      contents: [{ parts: [{ text: IAP_PROMPT(word, categoria) }] }],
+      generationConfig: { temperature: 0.1, maxOutputTokens: 200 },
+    }),
+    signal: AbortSignal.timeout(30000),
+  });
+  if (!resp.ok) {
+    const errText = await resp.text();
+    throw new Error(`HTTP ${resp.status}: ${errText.slice(0, 200)}`);
   }
+  const data = await resp.json();
+  const text = data?.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
+  const m = text.match(/\{[^}]+\}/);
+  if (!m) throw new Error("No JSON");
+  const parsed = JSON.parse(m[0]);
+  return IAP_DIMENSIONS.map((dim) => {
+    const v = parsed[dim]; return typeof v === "number" ? Math.max(0, Math.min(10, v)) : 5;
+  });
+}
+
+async function callGemini(word, categoria) {
+  const modelsToTry = [GEMINI_MODEL, FALLBACK_MODEL];
+  for (const model of modelsToTry) {
+    try {
+      const vec = await callGemmaModel(model, word, categoria);
+      return { vec, source: model };
+    } catch (err) {
+      process.stderr.write(`\n  [${model}] ${err.message.slice(0, 100)}\n`);
+    }
+  }
+  return { vec: CAT_FALLBACK[categoria] ?? Array(12).fill(5), source: "fallback" };
 }
 
 function persistenceDiagram(vec12d) {
@@ -138,7 +151,7 @@ function miniMDS(D, n) {
 function sleep(ms) { return new Promise((r) => setTimeout(r, ms)); }
 
 async function main() {
-  console.log("Disfasia — Atualização com vetores Gemini 12D");
+  console.log(`Disfasia — Atualização com vetores Gemma 4 31B (${GEMINI_MODEL})`);
 
   const data = JSON.parse(fs.readFileSync(DISFASIA_PATH, "utf-8"));
   const pictos = data.pictos;
@@ -147,7 +160,7 @@ async function main() {
   let cache = {};
   if (fs.existsSync(CACHE_PATH)) cache = JSON.parse(fs.readFileSync(CACHE_PATH, "utf-8"));
 
-  let geminiCount = 0, fallbackCount = 0, cacheHit = 0;
+  let gemmaCount = 0, fallbackCount = 0, cacheHit = 0;
   const vectors = [];
 
   for (let i = 0; i < pictos.length; i++) {
@@ -156,19 +169,19 @@ async function main() {
     if (cache[key]) {
       cacheHit++;
       vectors.push(cache[key].vec);
-      process.stdout.write(`\r[${i + 1}/${pictos.length}] gemini=${geminiCount} cache=${cacheHit}   `);
+      process.stdout.write(`\r[${i + 1}/${pictos.length}] gemma=${gemmaCount} cache=${cacheHit}   `);
       continue;
     }
     const result = await callGemini(p.palavra, p.categoria);
     vectors.push(result.vec);
     cache[key] = result;
-    if (result.source === "gemini") { geminiCount++; await sleep(DELAY_MS); }
+    if (result.source !== "fallback") { gemmaCount++; await sleep(DELAY_MS); }
     else { fallbackCount++; }
-    process.stdout.write(`\r[${i + 1}/${pictos.length}] gemini=${geminiCount} cache=${cacheHit} fallback=${fallbackCount}   `);
+    process.stdout.write(`\r[${i + 1}/${pictos.length}] gemma=${gemmaCount} cache=${cacheHit} fallback=${fallbackCount}   `);
   }
 
   fs.writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
-  console.log(`\n\nVetores: gemini=${geminiCount} cache=${cacheHit} fallback=${fallbackCount}`);
+  console.log(`\n\nVetores: gemma=${gemmaCount} cache=${cacheHit} fallback=${fallbackCount}`);
 
   // Recompute Wasserstein + MDS
   console.log("Recomputando Wasserstein + MDS...");
@@ -199,14 +212,14 @@ async function main() {
     pictos[i].vizinhos = sorted.slice(0, K).map((j) => ({
       id: pictos[j].id, palavra: pictos[j].palavra, distancia: Math.round((D[i][j] / SCALE) * 1000) / 1000,
     }));
-    pictos[i].vectorSource = "gemini";
+    pictos[i].vectorSource = GEMINI_MODEL;
   }
 
-  data.vizinhosMethod = "wasserstein-gemini-12d-mds";
+  data.vizinhosMethod = "wasserstein-gemma4-12d-mds";
   data.geradoEm = new Date().toISOString();
   data.geminiModel = GEMINI_MODEL;
   fs.writeFileSync(DISFASIA_PATH, JSON.stringify(data, null, 2));
-  console.log(`disfasia_atlas_data.json atualizado com vetores Gemini.`);
+  console.log(`disfasia_atlas_data.json atualizado com vetores Gemma 4 31B.`);
 }
 
 main().catch((e) => { console.error("Erro:", e); process.exit(1); });
