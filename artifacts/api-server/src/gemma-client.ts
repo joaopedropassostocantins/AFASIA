@@ -5,7 +5,6 @@ const GEMMA_MODELS = ["gemma-4-31b-it", "gemma-3-27b-it"];
 const FALLBACK_MODEL = "gemini-2.5-flash";
 
 let _directAi: GoogleGenAI | null = null;
-let _workingModel: string | null = null;
 
 function getDirectClient(): GoogleGenAI | null {
   const key = process.env.GEMINI_USER_API_KEY;
@@ -23,9 +22,7 @@ export async function generateWithGemma(
   const client = getDirectClient();
 
   if (client) {
-    const modelsToTry = _workingModel ? [_workingModel] : GEMMA_MODELS;
-
-    for (const model of modelsToTry) {
+    for (const model of GEMMA_MODELS) {
       try {
         const response = await client.models.generateContent({
           model,
@@ -37,7 +34,6 @@ export async function generateWithGemma(
               : {}),
           },
         });
-        _workingModel = model;
         console.log(`[IAP-Gemma] Modelo: ${model}`);
         return { text: response.text ?? "{}", model };
       } catch (err: unknown) {
