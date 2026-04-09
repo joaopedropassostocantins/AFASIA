@@ -6,7 +6,17 @@ import {
   ComputeTopologyBody,
 } from "@workspace/api-zod";
 import { readFileSync, existsSync } from "node:fs";
-import { join } from "node:path";
+import { join, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
+function resolveDataPath(filename: string): string {
+  const candidates = [
+    join(dirname(fileURLToPath(import.meta.url)), "..", "data", filename),
+    join(process.cwd(), "artifacts", "api-server", "data", filename),
+    join(process.cwd(), "data", filename),
+  ];
+  return candidates.find(existsSync) ?? candidates[0];
+}
 
 function isZodError(err: unknown): err is { issues: unknown[] } {
   return typeof err === "object" && err !== null && "issues" in err && Array.isArray((err as { issues: unknown }).issues);
@@ -601,7 +611,7 @@ const ATLAS_CATEGORIAS_KEYWORDS = [
   "ajuda", "sim", "nao", "sair", "feliz", "triste", "remedio", "banheiro",
 ];
 
-const ATLAS_DATA_PATH = join(process.cwd(), "data", "atlas_data.json");
+const ATLAS_DATA_PATH = resolveDataPath("atlas_data.json");
 
 router.get("/atlas/categorias", async (req, res) => {
   try {
@@ -643,7 +653,7 @@ router.get("/atlas/categorias", async (req, res) => {
   }
 });
 
-const NOUN_ATLAS_PATH = join(process.cwd(), "data", "noun_atlas_data.json");
+const NOUN_ATLAS_PATH = resolveDataPath("noun_atlas_data.json");
 
 router.get("/noun-atlas", (req, res) => {
   try {
@@ -670,7 +680,7 @@ router.get("/noun-atlas", (req, res) => {
   }
 });
 
-const DISFASIA_ATLAS_PATH = join(process.cwd(), "data", "disfasia_atlas_data.json");
+const DISFASIA_ATLAS_PATH = resolveDataPath("disfasia_atlas_data.json");
 
 router.get("/disfasia-atlas", (req, res) => {
   try {
