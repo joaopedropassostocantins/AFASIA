@@ -89,18 +89,53 @@ const CAT_FALLBACK = {
   emocao_expressao:    [4, 10, 5, 6, 5, 4, 2, 5, 8, 5, 6, 6],
 };
 
+function parseGemmaResponse(text, dims) {
+  // 1. Try JSON object first
+  const jsonMatch = text.match(/\{[\s\S]*?\}/);
+  if (jsonMatch) {
+    try {
+      const parsed = JSON.parse(jsonMatch[0]);
+      if (dims.some((d) => d in parsed)) {
+        return dims.map((dim) => {
+          const v = parsed[dim];
+          return typeof v === "number" ? Math.max(0, Math.min(10, v)) : 5;
+        });
+      }
+    } catch (_) { /* fall through */ }
+  }
+
+  // 2. Gemma 4 reasoning mode: extract "dim: N" bullet patterns
+  // Must capture full number (e.g. "10" not just "1")
+  const result = {};
+  for (const dim of dims) {
+    const re = new RegExp(
+      `${dim}[:\\s*]+(?:[^(\\n]*\\(\\s*)?(10|[0-9](?:\\.[0-9]+)?)(?:[\\s\\)\\n,]|$)`,
+      "i"
+    );
+    const m = text.match(re);
+    if (m) {
+      result[dim] = Math.max(0, Math.min(10, Math.round(parseFloat(m[1]))));
+    }
+  }
+  if (dims.filter((d) => d in result).length >= 10) {
+    return dims.map((dim) => result[dim] ?? 5);
+  }
+
+  throw new Error(`Cannot parse response (text: ${text.slice(0, 80)})`);
+}
+
 async function callGemmaModel(model, word) {
   const url = `https://generativelanguage.googleapis.com/${API_VERSION}/models/${model}:generateContent?key=${GEMINI_KEY}`;
   const body = {
     contents: [{ parts: [{ text: IAP_PROMPT(word) }] }],
-    generationConfig: { temperature: 0.1, maxOutputTokens: 200 },
+    generationConfig: { temperature: 0.1, maxOutputTokens: 512 },
   };
 
   const resp = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
-    signal: AbortSignal.timeout(30000),
+    signal: AbortSignal.timeout(45000),
   });
 
   if (!resp.ok) {
@@ -110,14 +145,7 @@ async function callGemmaModel(model, word) {
 
   const data = await resp.json();
   const text = data?.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
-  const jsonMatch = text.match(/\{[^}]+\}/);
-  if (!jsonMatch) throw new Error("No JSON in response");
-
-  const parsed = JSON.parse(jsonMatch[0]);
-  return IAP_DIMENSIONS.map((dim) => {
-    const v = parsed[dim];
-    return typeof v === "number" ? Math.max(0, Math.min(10, v)) : 5;
-  });
+  return parseGemmaResponse(text, IAP_DIMENSIONS);
 }
 
 async function callGemini(word, categoria) {

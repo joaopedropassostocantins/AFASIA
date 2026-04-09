@@ -716,9 +716,16 @@ router.get("/disfasia-atlas", (req, res) => {
   try {
     if (existsSync(DISFASIA_ATLAS_PATH)) {
       const raw = readFileSync(DISFASIA_ATLAS_PATH, "utf-8");
-      const data = JSON.parse(raw) as { pictos: AtlasPictogram[]; keywords?: string[] };
+      const data = JSON.parse(raw) as { pictos: AtlasPictogram[]; keywords?: string[]; geminiModel?: string; vizinhosMethod?: string; geradoEm?: string };
       if (Array.isArray(data?.pictos) && data.pictos.length > 0) {
-        res.json({ pictos: data.pictos, keywords: data.keywords ?? [], source: "precomputed" });
+        res.json({
+          pictos: data.pictos,
+          keywords: data.keywords ?? [],
+          source: "precomputed",
+          geminiModel: data.geminiModel ?? null,
+          vizinhosMethod: data.vizinhosMethod ?? null,
+          geradoEm: data.geradoEm ?? null,
+        });
         return;
       }
     }

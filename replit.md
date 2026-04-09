@@ -30,7 +30,7 @@ pnpm workspace monorepo with:
 - **Routing**: wouter
 - **Data fetching**: TanStack Query (Orval-generated hooks)
 - **Charts**: Recharts
-- **AI**: Google Generative AI (`@google/genai`) via Replit AI Integrations
+- **AI**: Google Generative AI (`@google/genai`); **Gemma 4 31B** via `GEMINI_USER_API_KEY` (direct) for IAP vectors + chat; Replit AI Integrations as fallback (`gemini-2.5-flash`)
 
 ## App Modules
 

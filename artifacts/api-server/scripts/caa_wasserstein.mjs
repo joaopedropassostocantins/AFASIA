@@ -184,15 +184,15 @@ async function main() {
     total: n,
     geradoEm: new Date().toISOString(),
     categorias: catCount,
-    vizinhosMethod: "wasserstein-gemini-12d-global-mds",
+    vizinhosMethod: "wasserstein-gemma4-12d-global-mds",
     mdsInfo: {
       method: "classical-mds-power-iteration",
       sampleSize: n,
       eigenvalues: eigenvalues.map((v) => Math.round(v * 1000) / 1000),
       normalizationScale: Math.round(SCALE * 10000) / 10000,
-      vectorModel: "gemini-1.5-flash",
+      vectorModel: "gemma-4-31b-it",
       dimensions: 12,
-      notes: "Real 12D IAP semantic vectors from Gemini; Vietoris-Rips persistence H0+H1; exact Wasserstein",
+      notes: "Real 12D IAP semantic vectors from Gemma 4 31B; Vietoris-Rips persistence H0+H1; exact Wasserstein",
     },
   };
 

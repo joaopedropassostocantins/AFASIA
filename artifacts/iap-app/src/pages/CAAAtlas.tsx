@@ -262,7 +262,7 @@ export default function CAAAtlas() {
     return (
       <div className="flex-1 flex flex-col items-center justify-center gap-4 p-8">
         <div className="w-10 h-10 rounded-full border-2 border-cyan-400 border-t-transparent animate-spin" />
-        <p className="text-muted-foreground font-mono text-sm">Carregando atlas CAA com vetores Gemini…</p>
+        <p className="text-muted-foreground font-mono text-sm">Carregando atlas CAA com vetores Gemma 4 31B…</p>
       </div>
     );
   }
@@ -278,7 +278,7 @@ export default function CAAAtlas() {
     );
   }
 
-  const geminiCount = pictos.filter((p) => p.vectorSource === "gemini").length;
+  const gemmaCount = pictos.filter((p) => p.vectorSource && p.vectorSource !== "fallback").length;
 
   return (
     <div className="flex-1 flex flex-col min-h-0">
@@ -290,12 +290,12 @@ export default function CAAAtlas() {
         </div>
         <span className="text-muted-foreground text-sm">
           Comunicação Aumentativa e Alternativa · {visible.length.toLocaleString("pt-BR")} ícones ·{" "}
-          <span className="text-cyan-400">IAP + Gemini 12D</span>
+          <span className="text-cyan-400">IAP + Gemma 4 31B</span>
         </span>
-        {geminiCount > 0 && (
+        {gemmaCount > 0 && (
           <Badge variant="outline" className="border-cyan-400/40 text-cyan-400 text-xs gap-1">
             <Sparkles className="h-3 w-3" />
-            {geminiCount} vetores Gemini
+            {gemmaCount} vetores Gemma 4
           </Badge>
         )}
         <div className="ml-auto flex gap-2">
@@ -437,7 +437,7 @@ export default function CAAAtlas() {
                   <div className="flex justify-center mt-1">
                     <Badge variant="outline" className="text-xs border-cyan-400/30 text-cyan-400">
                       <Sparkles className="h-2.5 w-2.5 mr-1" />
-                      {selectedPicto.vectorSource === "gemini" ? "Vetor Gemini" : "Vetor sintético"}
+                      {selectedPicto.vectorSource && selectedPicto.vectorSource !== "fallback" ? `Vetor ${selectedPicto.vectorSource}` : "Vetor sintético"}
                     </Badge>
                   </div>
                 )}
@@ -463,7 +463,7 @@ export default function CAAAtlas() {
 
               <div className="mt-auto pt-3 border-t border-border/40">
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                  Posição calculada pelo Algoritmo JP: vetores semânticos 12D gerados por Gemini, diagramas de persistência Vietoris-Rips, distâncias de Wasserstein exatas e MDS global — atlas CAA com {pictos.length.toLocaleString("pt-BR")} ícones.
+                  Posição calculada pelo Algoritmo JP: vetores semânticos 12D gerados por Gemma 4 31B, diagramas de persistência Vietoris-Rips, distâncias de Wasserstein exatas e MDS global — atlas CAA com {pictos.length.toLocaleString("pt-BR")} ícones.
                 </p>
               </div>
             </motion.div>

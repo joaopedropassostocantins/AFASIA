@@ -5,950 +5,988 @@
       "palavra": "parar",
       "imagemUrl": "https://static.arasaac.org/pictograms/7196/7196_500.png",
       "categoria": "fluencia",
-      "coordX": -0.461,
-      "coordY": 0.058,
+      "coordX": -0.112,
+      "coordY": 0.112,
       "vizinhos": [
         {
-          "id": 4676,
-          "palavra": "devagar",
-          "distancia": 0
+          "id": 12252,
+          "palavra": "ajuda",
+          "distancia": 0.288
         },
         {
-          "id": 36914,
-          "palavra": "esperar",
-          "distancia": 0.182
+          "id": 9031,
+          "palavra": "responder",
+          "distancia": 0.347
         },
         {
-          "id": 24998,
-          "palavra": "continuar",
-          "distancia": 0.186
+          "id": 6517,
+          "palavra": "falar",
+          "distancia": 0.353
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 24998,
       "palavra": "continuar",
       "imagemUrl": "https://static.arasaac.org/pictograms/24998/24998_500.png",
       "categoria": "fluencia",
-      "coordX": -0.417,
-      "coordY": 0.158,
+      "coordX": 0.561,
+      "coordY": -0.559,
       "vizinhos": [
         {
-          "id": 7158,
-          "palavra": "vez",
-          "distancia": 0.023
+          "id": 5431,
+          "palavra": "inicio",
+          "distancia": 0.145
         },
         {
-          "id": 7196,
-          "palavra": "parar",
-          "distancia": 0.186
+          "id": 5358,
+          "palavra": "fim",
+          "distancia": 0.199
         },
         {
-          "id": 4676,
-          "palavra": "devagar",
-          "distancia": 0.186
+          "id": 36914,
+          "palavra": "esperar",
+          "distancia": 0.204
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 4676,
       "palavra": "devagar",
       "imagemUrl": "https://static.arasaac.org/pictograms/4676/4676_500.png",
       "categoria": "fluencia",
-      "coordX": -0.461,
-      "coordY": 0.058,
+      "coordX": 0.651,
+      "coordY": -0.652,
       "vizinhos": [
         {
-          "id": 7196,
-          "palavra": "parar",
-          "distancia": 0
-        },
-        {
-          "id": 36914,
-          "palavra": "esperar",
-          "distancia": 0.182
+          "id": 5431,
+          "palavra": "inicio",
+          "distancia": 0.227
         },
         {
           "id": 24998,
           "palavra": "continuar",
-          "distancia": 0.186
+          "distancia": 0.247
+        },
+        {
+          "id": 5358,
+          "palavra": "fim",
+          "distancia": 0.275
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 5306,
       "palavra": "rapido",
       "imagemUrl": "https://static.arasaac.org/pictograms/5306/5306_500.png",
       "categoria": "fluencia",
-      "coordX": 0.267,
-      "coordY": 0.073,
+      "coordX": 0.714,
+      "coordY": -0.712,
       "vizinhos": [
         {
-          "id": 40986,
-          "palavra": "frustrado",
-          "distancia": 0.403
+          "id": 4676,
+          "palavra": "devagar",
+          "distancia": 0.356
         },
         {
-          "id": 9847,
-          "palavra": "perguntar",
-          "distancia": 0.411
+          "id": 24998,
+          "palavra": "continuar",
+          "distancia": 0.36
         },
         {
-          "id": 9907,
-          "palavra": "feliz",
-          "distancia": 0.423
+          "id": 5431,
+          "palavra": "inicio",
+          "distancia": 0.364
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 36914,
       "palavra": "esperar",
       "imagemUrl": "https://static.arasaac.org/pictograms/36914/36914_500.png",
       "categoria": "fluencia",
-      "coordX": -0.467,
-      "coordY": -0.031,
+      "coordX": 0.731,
+      "coordY": -0.733,
       "vizinhos": [
         {
-          "id": 7196,
-          "palavra": "parar",
-          "distancia": 0.182
+          "id": 5358,
+          "palavra": "fim",
+          "distancia": 0.152
         },
         {
-          "id": 4676,
-          "palavra": "devagar",
-          "distancia": 0.182
+          "id": 37753,
+          "palavra": "primeiro",
+          "distancia": 0.161
         },
         {
-          "id": 11752,
-          "palavra": "repetir",
-          "distancia": 0.196
+          "id": 5431,
+          "palavra": "inicio",
+          "distancia": 0.191
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 11752,
       "palavra": "repetir",
       "imagemUrl": "https://static.arasaac.org/pictograms/11752/11752_500.png",
       "categoria": "fluencia",
-      "coordX": -0.43,
-      "coordY": -0.125,
+      "coordX": 0.393,
+      "coordY": -0.394,
       "vizinhos": [
         {
-          "id": 36914,
-          "palavra": "esperar",
-          "distancia": 0.196
+          "id": 24998,
+          "palavra": "continuar",
+          "distancia": 0.214
         },
         {
-          "id": 7196,
-          "palavra": "parar",
-          "distancia": 0.377
+          "id": 32747,
+          "palavra": "agora",
+          "distancia": 0.273
         },
         {
-          "id": 4676,
-          "palavra": "devagar",
-          "distancia": 0.377
+          "id": 9031,
+          "palavra": "responder",
+          "distancia": 0.285
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 7158,
       "palavra": "vez",
       "imagemUrl": "https://static.arasaac.org/pictograms/7158/7158_500.png",
       "categoria": "fluencia",
-      "coordX": -0.411,
-      "coordY": 0.176,
+      "coordX": 0.895,
+      "coordY": -0.895,
       "vizinhos": [
         {
-          "id": 24998,
-          "palavra": "continuar",
-          "distancia": 0.023
+          "id": 32749,
+          "palavra": "depois",
+          "distancia": 0.277
         },
         {
-          "id": 7196,
-          "palavra": "parar",
-          "distancia": 0.204
+          "id": 38279,
+          "palavra": "ontem",
+          "distancia": 0.285
         },
         {
-          "id": 4676,
-          "palavra": "devagar",
-          "distancia": 0.204
+          "id": 11752,
+          "palavra": "repetir",
+          "distancia": 0.3
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 37753,
       "palavra": "primeiro",
       "imagemUrl": "https://static.arasaac.org/pictograms/37753/37753_500.png",
       "categoria": "sequencia",
-      "coordX": -0.197,
-      "coordY": -0.071,
+      "coordX": 0.558,
+      "coordY": -0.559,
       "vizinhos": [
         {
-          "id": 41093,
-          "palavra": "nao entendi",
-          "distancia": 0.41
+          "id": 36914,
+          "palavra": "esperar",
+          "distancia": 0.161
         },
         {
-          "id": 6517,
-          "palavra": "falar",
-          "distancia": 0.42
+          "id": 32749,
+          "palavra": "depois",
+          "distancia": 0.169
         },
         {
-          "id": 11697,
-          "palavra": "entender",
-          "distancia": 0.42
+          "id": 5431,
+          "palavra": "inicio",
+          "distancia": 0.17
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 32749,
       "palavra": "depois",
       "imagemUrl": "https://static.arasaac.org/pictograms/32749/32749_500.png",
       "categoria": "sequencia",
-      "coordX": 0.372,
-      "coordY": 0.371,
+      "coordX": 0.809,
+      "coordY": -0.808,
       "vizinhos": [
         {
-          "id": 5431,
-          "palavra": "inicio",
-          "distancia": 0.17
+          "id": 38278,
+          "palavra": "amanha",
+          "distancia": 0.13
         },
         {
-          "id": 32747,
-          "palavra": "agora",
-          "distancia": 0.198
+          "id": 32745,
+          "palavra": "antes",
+          "distancia": 0.143
         },
         {
-          "id": 9031,
-          "palavra": "responder",
-          "distancia": 0.37
+          "id": 38279,
+          "palavra": "ontem",
+          "distancia": 0.155
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 32747,
       "palavra": "agora",
       "imagemUrl": "https://static.arasaac.org/pictograms/32747/32747_500.png",
       "categoria": "sequencia",
-      "coordX": 0.451,
-      "coordY": 0.221,
+      "coordX": 0.528,
+      "coordY": -0.529,
       "vizinhos": [
         {
           "id": 32749,
           "palavra": "depois",
-          "distancia": 0.198
+          "distancia": 0.238
         },
         {
-          "id": 32745,
-          "palavra": "antes",
-          "distancia": 0.212
+          "id": 24998,
+          "palavra": "continuar",
+          "distancia": 0.245
         },
         {
-          "id": 31408,
-          "palavra": "orgulhoso",
-          "distancia": 0.356
+          "id": 37753,
+          "palavra": "primeiro",
+          "distancia": 0.252
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 32745,
       "palavra": "antes",
       "imagemUrl": "https://static.arasaac.org/pictograms/32745/32745_500.png",
       "categoria": "sequencia",
-      "coordX": 0.487,
-      "coordY": 0.07,
+      "coordX": 0.832,
+      "coordY": -0.832,
       "vizinhos": [
         {
-          "id": 32747,
-          "palavra": "agora",
-          "distancia": 0.212
+          "id": 38278,
+          "palavra": "amanha",
+          "distancia": 0.116
         },
         {
-          "id": 9907,
-          "palavra": "feliz",
-          "distancia": 0.321
+          "id": 38279,
+          "palavra": "ontem",
+          "distancia": 0.139
         },
         {
-          "id": 40986,
-          "palavra": "frustrado",
-          "distancia": 0.329
+          "id": 32749,
+          "palavra": "depois",
+          "distancia": 0.143
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 38278,
       "palavra": "amanha",
       "imagemUrl": "https://static.arasaac.org/pictograms/38278/38278_500.png",
       "categoria": "sequencia",
-      "coordX": -0.237,
-      "coordY": 0.287,
+      "coordX": 0.97,
+      "coordY": -0.97,
       "vizinhos": [
-        {
-          "id": 5358,
-          "palavra": "fim",
-          "distancia": 0.017
-        },
         {
           "id": 38279,
           "palavra": "ontem",
-          "distancia": 0.105
+          "distancia": 0.107
         },
         {
-          "id": 8579,
-          "palavra": "explicar",
-          "distancia": 0.362
+          "id": 32745,
+          "palavra": "antes",
+          "distancia": 0.116
+        },
+        {
+          "id": 32749,
+          "palavra": "depois",
+          "distancia": 0.13
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 38279,
       "palavra": "ontem",
       "imagemUrl": "https://static.arasaac.org/pictograms/38279/38279_500.png",
       "categoria": "sequencia",
-      "coordX": -0.214,
-      "coordY": 0.38,
+      "coordX": 1,
+      "coordY": -1,
       "vizinhos": [
-        {
-          "id": 5358,
-          "palavra": "fim",
-          "distancia": 0.092
-        },
         {
           "id": 38278,
           "palavra": "amanha",
-          "distancia": 0.105
+          "distancia": 0.107
         },
         {
-          "id": 25839,
-          "palavra": "baixo",
-          "distancia": 0.4
+          "id": 32745,
+          "palavra": "antes",
+          "distancia": 0.139
+        },
+        {
+          "id": 32749,
+          "palavra": "depois",
+          "distancia": 0.155
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 5431,
       "palavra": "inicio",
       "imagemUrl": "https://static.arasaac.org/pictograms/5431/5431_500.png",
       "categoria": "sequencia",
-      "coordX": 0.287,
-      "coordY": 0.457,
+      "coordX": 0.759,
+      "coordY": -0.76,
       "vizinhos": [
         {
-          "id": 32749,
-          "palavra": "depois",
+          "id": 24998,
+          "palavra": "continuar",
+          "distancia": 0.145
+        },
+        {
+          "id": 5358,
+          "palavra": "fim",
+          "distancia": 0.149
+        },
+        {
+          "id": 37753,
+          "palavra": "primeiro",
           "distancia": 0.17
-        },
-        {
-          "id": 32747,
-          "palavra": "agora",
-          "distancia": 0.366
-        },
-        {
-          "id": 9031,
-          "palavra": "responder",
-          "distancia": 0.38
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 5358,
       "palavra": "fim",
       "imagemUrl": "https://static.arasaac.org/pictograms/5358/5358_500.png",
       "categoria": "sequencia",
-      "coordX": -0.227,
-      "coordY": 0.309,
+      "coordX": 0.671,
+      "coordY": -0.673,
       "vizinhos": [
         {
-          "id": 38278,
-          "palavra": "amanha",
-          "distancia": 0.017
+          "id": 5431,
+          "palavra": "inicio",
+          "distancia": 0.149
         },
         {
-          "id": 38279,
-          "palavra": "ontem",
-          "distancia": 0.092
+          "id": 36914,
+          "palavra": "esperar",
+          "distancia": 0.152
         },
         {
-          "id": 8579,
-          "palavra": "explicar",
-          "distancia": 0.379
+          "id": 24998,
+          "palavra": "continuar",
+          "distancia": 0.199
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 40986,
       "palavra": "frustrado",
       "imagemUrl": "https://static.arasaac.org/pictograms/40986/40986_500.png",
       "categoria": "emocao",
-      "coordX": 0.492,
-      "coordY": -0.108,
+      "coordX": -0.199,
+      "coordY": 0.199,
       "vizinhos": [
+        {
+          "id": 30391,
+          "palavra": "nervoso",
+          "distancia": 0.177
+        },
         {
           "id": 35545,
           "palavra": "triste",
-          "distancia": 0.09
+          "distancia": 0.189
         },
         {
-          "id": 9847,
-          "palavra": "perguntar",
-          "distancia": 0.092
-        },
-        {
-          "id": 9907,
-          "palavra": "feliz",
-          "distancia": 0.105
+          "id": 12252,
+          "palavra": "ajuda",
+          "distancia": 0.278
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 31310,
       "palavra": "tranquilo",
       "imagemUrl": "https://static.arasaac.org/pictograms/31310/31310_500.png",
       "categoria": "emocao",
-      "coordX": 0.454,
-      "coordY": 0.182,
+      "coordX": 0.016,
+      "coordY": -0.016,
       "vizinhos": [
+        {
+          "id": 35545,
+          "palavra": "triste",
+          "distancia": 0.283
+        },
+        {
+          "id": 9907,
+          "palavra": "feliz",
+          "distancia": 0.344
+        },
         {
           "id": 30391,
           "palavra": "nervoso",
-          "distancia": 0.094
-        },
-        {
-          "id": 9031,
-          "palavra": "responder",
-          "distancia": 0.105
-        },
-        {
-          "id": 31408,
-          "palavra": "orgulhoso",
-          "distancia": 0.182
+          "distancia": 0.348
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 30484,
       "palavra": "ansioso",
       "imagemUrl": "https://static.arasaac.org/pictograms/30484/30484_500.png",
       "categoria": "emocao",
-      "coordX": 0.44,
-      "coordY": -0.294,
+      "coordX": 0.132,
+      "coordY": -0.13,
       "vizinhos": [
         {
-          "id": 31724,
-          "palavra": "cima",
-          "distancia": 0.083
-        },
-        {
-          "id": 30383,
-          "palavra": "perto",
-          "distancia": 0.1
+          "id": 30391,
+          "palavra": "nervoso",
+          "distancia": 0.157
         },
         {
           "id": 35545,
           "palavra": "triste",
-          "distancia": 0.11
+          "distancia": 0.258
+        },
+        {
+          "id": 40986,
+          "palavra": "frustrado",
+          "distancia": 0.286
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 9907,
       "palavra": "feliz",
       "imagemUrl": "https://static.arasaac.org/pictograms/9907/9907_500.png",
       "categoria": "emocao",
-      "coordX": 0.502,
-      "coordY": -0.015,
+      "coordX": -0.197,
+      "coordY": 0.196,
       "vizinhos": [
         {
-          "id": 9847,
-          "palavra": "perguntar",
-          "distancia": 0.017
-        },
-        {
-          "id": 31408,
-          "palavra": "orgulhoso",
-          "distancia": 0.088
+          "id": 35545,
+          "palavra": "triste",
+          "distancia": 0.215
         },
         {
           "id": 40986,
           "palavra": "frustrado",
-          "distancia": 0.105
+          "distancia": 0.285
+        },
+        {
+          "id": 30391,
+          "palavra": "nervoso",
+          "distancia": 0.308
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 35545,
       "palavra": "triste",
       "imagemUrl": "https://static.arasaac.org/pictograms/35545/35545_500.png",
       "categoria": "emocao",
-      "coordX": 0.477,
-      "coordY": -0.183,
+      "coordX": -0.137,
+      "coordY": 0.136,
       "vizinhos": [
+        {
+          "id": 30391,
+          "palavra": "nervoso",
+          "distancia": 0.152
+        },
         {
           "id": 40986,
           "palavra": "frustrado",
-          "distancia": 0.09
+          "distancia": 0.189
         },
         {
-          "id": 30385,
-          "palavra": "longe",
-          "distancia": 0.103
-        },
-        {
-          "id": 30484,
-          "palavra": "ansioso",
-          "distancia": 0.11
+          "id": 9907,
+          "palavra": "feliz",
+          "distancia": 0.215
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 30391,
       "palavra": "nervoso",
       "imagemUrl": "https://static.arasaac.org/pictograms/30391/30391_500.png",
       "categoria": "emocao",
-      "coordX": 0.419,
-      "coordY": 0.25,
+      "coordX": -0.127,
+      "coordY": 0.127,
       "vizinhos": [
         {
-          "id": 9031,
-          "palavra": "responder",
-          "distancia": 0.013
+          "id": 35545,
+          "palavra": "triste",
+          "distancia": 0.152
         },
         {
-          "id": 31310,
-          "palavra": "tranquilo",
-          "distancia": 0.094
+          "id": 30484,
+          "palavra": "ansioso",
+          "distancia": 0.157
         },
         {
-          "id": 31408,
-          "palavra": "orgulhoso",
-          "distancia": 0.276
+          "id": 40986,
+          "palavra": "frustrado",
+          "distancia": 0.177
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 31408,
       "palavra": "orgulhoso",
       "imagemUrl": "https://static.arasaac.org/pictograms/31408/31408_500.png",
       "categoria": "emocao",
-      "coordX": 0.494,
-      "coordY": 0.049,
+      "coordX": 0.443,
+      "coordY": -0.442,
       "vizinhos": [
         {
           "id": 9907,
           "palavra": "feliz",
-          "distancia": 0.088
+          "distancia": 0.403
         },
         {
-          "id": 9847,
-          "palavra": "perguntar",
-          "distancia": 0.099
+          "id": 8579,
+          "palavra": "explicar",
+          "distancia": 0.408
         },
         {
-          "id": 31310,
-          "palavra": "tranquilo",
-          "distancia": 0.182
+          "id": 11697,
+          "palavra": "entender",
+          "distancia": 0.441
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 5382,
       "palavra": "aqui",
       "imagemUrl": "https://static.arasaac.org/pictograms/5382/5382_500.png",
       "categoria": "espaco",
-      "coordX": 0.327,
-      "coordY": -0.421,
+      "coordX": -0.807,
+      "coordY": 0.805,
       "vizinhos": [
+        {
+          "id": 5375,
+          "palavra": "ali",
+          "distancia": 0.168
+        },
+        {
+          "id": 5475,
+          "palavra": "fora",
+          "distancia": 0.191
+        },
         {
           "id": 30383,
           "palavra": "perto",
-          "distancia": 0.105
-        },
-        {
-          "id": 31724,
-          "palavra": "cima",
-          "distancia": 0.189
-        },
-        {
-          "id": 30484,
-          "palavra": "ansioso",
-          "distancia": 0.189
+          "distancia": 0.226
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 5375,
       "palavra": "ali",
       "imagemUrl": "https://static.arasaac.org/pictograms/5375/5375_500.png",
       "categoria": "espaco",
-      "coordX": -0.466,
-      "coordY": -0.136,
+      "coordX": -0.834,
+      "coordY": 0.835,
       "vizinhos": [
+        {
+          "id": 5382,
+          "palavra": "aqui",
+          "distancia": 0.168
+        },
+        {
+          "id": 31724,
+          "palavra": "cima",
+          "distancia": 0.293
+        },
         {
           "id": 5475,
           "palavra": "fora",
-          "distancia": 0.003
-        },
-        {
-          "id": 6517,
-          "palavra": "falar",
-          "distancia": 0.203
-        },
-        {
-          "id": 11697,
-          "palavra": "entender",
-          "distancia": 0.203
+          "distancia": 0.294
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 30385,
       "palavra": "longe",
       "imagemUrl": "https://static.arasaac.org/pictograms/30385/30385_500.png",
       "categoria": "espaco",
-      "coordX": 0.434,
-      "coordY": -0.227,
+      "coordX": -0.501,
+      "coordY": 0.499,
       "vizinhos": [
         {
-          "id": 31724,
-          "palavra": "cima",
-          "distancia": 0.094
+          "id": 30383,
+          "palavra": "perto",
+          "distancia": 0.195
         },
         {
-          "id": 35545,
-          "palavra": "triste",
-          "distancia": 0.103
+          "id": 5475,
+          "palavra": "fora",
+          "distancia": 0.237
         },
         {
-          "id": 30484,
-          "palavra": "ansioso",
-          "distancia": 0.123
+          "id": 5439,
+          "palavra": "dentro",
+          "distancia": 0.243
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 30383,
       "palavra": "perto",
       "imagemUrl": "https://static.arasaac.org/pictograms/30383/30383_500.png",
       "categoria": "espaco",
-      "coordX": 0.382,
-      "coordY": -0.367,
+      "coordX": -0.455,
+      "coordY": 0.454,
       "vizinhos": [
         {
-          "id": 31724,
-          "palavra": "cima",
-          "distancia": 0.086
+          "id": 30385,
+          "palavra": "longe",
+          "distancia": 0.195
         },
         {
-          "id": 30484,
-          "palavra": "ansioso",
-          "distancia": 0.1
+          "id": 5475,
+          "palavra": "fora",
+          "distancia": 0.199
         },
         {
           "id": 5382,
           "palavra": "aqui",
-          "distancia": 0.105
+          "distancia": 0.226
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 5439,
       "palavra": "dentro",
       "imagemUrl": "https://static.arasaac.org/pictograms/5439/5439_500.png",
       "categoria": "espaco",
-      "coordX": -0.476,
-      "coordY": 0.078,
+      "coordX": -0.802,
+      "coordY": 0.802,
       "vizinhos": [
         {
-          "id": 25839,
-          "palavra": "baixo",
-          "distancia": 0.01
+          "id": 31724,
+          "palavra": "cima",
+          "distancia": 0.199
         },
         {
-          "id": 8579,
-          "palavra": "explicar",
-          "distancia": 0.09
+          "id": 30383,
+          "palavra": "perto",
+          "distancia": 0.237
         },
         {
-          "id": 6517,
-          "palavra": "falar",
-          "distancia": 0.203
+          "id": 5475,
+          "palavra": "fora",
+          "distancia": 0.239
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 5475,
       "palavra": "fora",
       "imagemUrl": "https://static.arasaac.org/pictograms/5475/5475_500.png",
       "categoria": "espaco",
-      "coordX": -0.467,
-      "coordY": -0.135,
+      "coordX": -0.829,
+      "coordY": 0.829,
       "vizinhos": [
         {
-          "id": 5375,
-          "palavra": "ali",
-          "distancia": 0.003
+          "id": 5382,
+          "palavra": "aqui",
+          "distancia": 0.191
         },
         {
-          "id": 6517,
-          "palavra": "falar",
-          "distancia": 0.2
+          "id": 30383,
+          "palavra": "perto",
+          "distancia": 0.199
         },
         {
-          "id": 11697,
-          "palavra": "entender",
-          "distancia": 0.2
+          "id": 30385,
+          "palavra": "longe",
+          "distancia": 0.237
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 31724,
       "palavra": "cima",
       "imagemUrl": "https://static.arasaac.org/pictograms/31724/31724_500.png",
       "categoria": "espaco",
-      "coordX": 0.407,
-      "coordY": -0.317,
+      "coordX": -1,
+      "coordY": 1,
       "vizinhos": [
         {
-          "id": 30484,
-          "palavra": "ansioso",
-          "distancia": 0.083
+          "id": 5439,
+          "palavra": "dentro",
+          "distancia": 0.199
         },
         {
-          "id": 30383,
-          "palavra": "perto",
-          "distancia": 0.086
+          "id": 5475,
+          "palavra": "fora",
+          "distancia": 0.249
         },
         {
           "id": 30385,
           "palavra": "longe",
-          "distancia": 0.094
+          "distancia": 0.253
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 25839,
       "palavra": "baixo",
       "imagemUrl": "https://static.arasaac.org/pictograms/25839/25839_500.png",
       "categoria": "espaco",
-      "coordX": -0.473,
-      "coordY": 0.078,
+      "coordX": -0.779,
+      "coordY": 0.778,
       "vizinhos": [
+        {
+          "id": 30385,
+          "palavra": "longe",
+          "distancia": 0.284
+        },
         {
           "id": 5439,
           "palavra": "dentro",
-          "distancia": 0.01
+          "distancia": 0.299
         },
         {
-          "id": 8579,
-          "palavra": "explicar",
-          "distancia": 0.08
-        },
-        {
-          "id": 6517,
-          "palavra": "falar",
-          "distancia": 0.206
+          "id": 31724,
+          "palavra": "cima",
+          "distancia": 0.307
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 6517,
       "palavra": "falar",
       "imagemUrl": "https://static.arasaac.org/pictograms/6517/6517_500.png",
       "categoria": "comunicacao",
-      "coordX": -0.434,
-      "coordY": -0.06,
+      "coordX": -0.25,
+      "coordY": 0.25,
       "vizinhos": [
         {
-          "id": 11697,
-          "palavra": "entender",
-          "distancia": 0
+          "id": 9031,
+          "palavra": "responder",
+          "distancia": 0.174
         },
         {
-          "id": 8579,
-          "palavra": "explicar",
-          "distancia": 0.182
+          "id": 9847,
+          "palavra": "perguntar",
+          "distancia": 0.184
         },
         {
-          "id": 5475,
-          "palavra": "fora",
-          "distancia": 0.2
+          "id": 12252,
+          "palavra": "ajuda",
+          "distancia": 0.214
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 6572,
       "palavra": "ouvir",
       "imagemUrl": "https://static.arasaac.org/pictograms/6572/6572_500.png",
       "categoria": "comunicacao",
-      "coordX": -0.286,
-      "coordY": -0.341,
+      "coordX": -0.473,
+      "coordY": 0.472,
       "vizinhos": [
+        {
+          "id": 6517,
+          "palavra": "falar",
+          "distancia": 0.37
+        },
+        {
+          "id": 7196,
+          "palavra": "parar",
+          "distancia": 0.409
+        },
         {
           "id": 12252,
           "palavra": "ajuda",
-          "distancia": 0.023
-        },
-        {
-          "id": 41093,
-          "palavra": "nao entendi",
-          "distancia": 0.083
-        },
-        {
-          "id": 5375,
-          "palavra": "ali",
-          "distancia": 0.285
+          "distancia": 0.413
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 11697,
       "palavra": "entender",
       "imagemUrl": "https://static.arasaac.org/pictograms/11697/11697_500.png",
       "categoria": "comunicacao",
-      "coordX": -0.434,
-      "coordY": -0.06,
+      "coordX": 0.077,
+      "coordY": -0.076,
       "vizinhos": [
         {
-          "id": 6517,
-          "palavra": "falar",
-          "distancia": 0
+          "id": 9847,
+          "palavra": "perguntar",
+          "distancia": 0.189
+        },
+        {
+          "id": 41093,
+          "palavra": "nao entendi",
+          "distancia": 0.22
         },
         {
           "id": 8579,
           "palavra": "explicar",
-          "distancia": 0.182
-        },
-        {
-          "id": 5475,
-          "palavra": "fora",
-          "distancia": 0.2
+          "distancia": 0.224
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 8579,
       "palavra": "explicar",
       "imagemUrl": "https://static.arasaac.org/pictograms/8579/8579_500.png",
       "categoria": "comunicacao",
-      "coordX": -0.421,
-      "coordY": 0.041,
+      "coordX": 0.478,
+      "coordY": -0.478,
       "vizinhos": [
         {
-          "id": 25839,
-          "palavra": "baixo",
-          "distancia": 0.08
+          "id": 11697,
+          "palavra": "entender",
+          "distancia": 0.224
         },
         {
-          "id": 5439,
-          "palavra": "dentro",
-          "distancia": 0.09
+          "id": 41093,
+          "palavra": "nao entendi",
+          "distancia": 0.322
         },
         {
-          "id": 6517,
-          "palavra": "falar",
-          "distancia": 0.182
+          "id": 9847,
+          "palavra": "perguntar",
+          "distancia": 0.333
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 9847,
       "palavra": "perguntar",
       "imagemUrl": "https://static.arasaac.org/pictograms/9847/9847_500.png",
       "categoria": "comunicacao",
-      "coordX": 0.497,
-      "coordY": -0.034,
+      "coordX": -0.009,
+      "coordY": 0.007,
       "vizinhos": [
         {
-          "id": 9907,
-          "palavra": "feliz",
-          "distancia": 0.017
+          "id": 9031,
+          "palavra": "responder",
+          "distancia": 0.169
         },
         {
-          "id": 40986,
-          "palavra": "frustrado",
-          "distancia": 0.092
+          "id": 41093,
+          "palavra": "nao entendi",
+          "distancia": 0.175
         },
         {
-          "id": 31408,
-          "palavra": "orgulhoso",
-          "distancia": 0.099
+          "id": 6517,
+          "palavra": "falar",
+          "distancia": 0.184
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 9031,
       "palavra": "responder",
       "imagemUrl": "https://static.arasaac.org/pictograms/9031/9031_500.png",
       "categoria": "comunicacao",
-      "coordX": 0.42,
-      "coordY": 0.264,
+      "coordX": 0.104,
+      "coordY": -0.103,
       "vizinhos": [
         {
-          "id": 30391,
-          "palavra": "nervoso",
-          "distancia": 0.013
+          "id": 9847,
+          "palavra": "perguntar",
+          "distancia": 0.169
         },
         {
-          "id": 31310,
-          "palavra": "tranquilo",
-          "distancia": 0.105
+          "id": 6517,
+          "palavra": "falar",
+          "distancia": 0.174
         },
         {
-          "id": 31408,
-          "palavra": "orgulhoso",
+          "id": 11752,
+          "palavra": "repetir",
           "distancia": 0.285
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 12252,
       "palavra": "ajuda",
       "imagemUrl": "https://static.arasaac.org/pictograms/12252/12252_500.png",
       "categoria": "comunicacao",
-      "coordX": -0.291,
-      "coordY": -0.345,
+      "coordX": -0.43,
+      "coordY": 0.43,
       "vizinhos": [
         {
-          "id": 6572,
-          "palavra": "ouvir",
-          "distancia": 0.023
+          "id": 6517,
+          "palavra": "falar",
+          "distancia": 0.214
         },
         {
-          "id": 41093,
-          "palavra": "nao entendi",
-          "distancia": 0.097
+          "id": 40986,
+          "palavra": "frustrado",
+          "distancia": 0.278
         },
         {
-          "id": 5375,
-          "palavra": "ali",
-          "distancia": 0.294
+          "id": 7196,
+          "palavra": "parar",
+          "distancia": 0.288
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": 41093,
       "palavra": "nao entendi",
       "imagemUrl": "https://static.arasaac.org/pictograms/41093/41093_500.png",
       "categoria": "comunicacao",
-      "coordX": -0.34,
-      "coordY": -0.288,
+      "coordX": 0.097,
+      "coordY": -0.097,
       "vizinhos": [
         {
-          "id": 6572,
-          "palavra": "ouvir",
-          "distancia": 0.083
+          "id": 9847,
+          "palavra": "perguntar",
+          "distancia": 0.175
         },
         {
-          "id": 12252,
-          "palavra": "ajuda",
-          "distancia": 0.097
+          "id": 11697,
+          "palavra": "entender",
+          "distancia": 0.22
         },
         {
-          "id": 5375,
-          "palavra": "ali",
-          "distancia": 0.203
+          "id": 8579,
+          "palavra": "explicar",
+          "distancia": 0.322
         }
-      ]
+      ],
+      "vectorSource": "gemma-4-31b-it"
     }
   ],
   "keywords": [
@@ -991,5 +1029,8 @@
     "ajuda",
     "nao entendi"
   ],
-  "geradoPor": "simulado (modo fallback) — substitua pelo atlas exportado do notebook Kaggle com Gemma real"
+  "geradoPor": "simulado (modo fallback) — substitua pelo atlas exportado do notebook Kaggle com Gemma real",
+  "vizinhosMethod": "wasserstein-gemma4-12d-mds",
+  "geradoEm": "2026-04-09T18:36:52.519Z",
+  "geminiModel": "gemma-4-31b-it"
 }

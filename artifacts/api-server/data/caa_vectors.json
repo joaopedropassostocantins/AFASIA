@@ -6,20 +6,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8322910-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
-        7,
+        6,
         5,
-        7,
         9,
+        10,
         3,
-        4,
-        3,
+        2,
+        7,
         3,
         10,
-        5,
-        4,
-        10
+        7,
+        8,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7859822",
@@ -27,20 +27,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7859822-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
+        8,
+        3,
         7,
+        6,
+        2,
+        1,
         5,
-        7,
+        4,
         9,
-        3,
-        4,
-        3,
-        3,
-        10,
-        5,
-        4,
-        10
+        6,
+        2,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "4134123",
@@ -49,19 +49,19 @@
       "categoria": "linguagem_sinais",
       "vector12d": [
         7,
+        3,
+        8,
+        6,
+        2,
+        1,
         5,
-        7,
+        4,
         9,
+        6,
         3,
-        4,
-        3,
-        3,
-        10,
-        5,
-        4,
-        10
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "3088580",
@@ -70,19 +70,19 @@
       "categoria": "linguagem_sinais",
       "vector12d": [
         7,
-        5,
-        7,
+        4,
+        8,
         9,
         3,
-        4,
-        3,
+        2,
+        6,
         3,
         10,
-        5,
-        4,
-        10
+        6,
+        2,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "1204665",
@@ -90,20 +90,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/1204665-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
+        6,
+        3,
         7,
-        5,
-        7,
-        9,
-        3,
+        6,
         4,
+        2,
         3,
-        3,
-        10,
         5,
+        8,
+        6,
         4,
-        10
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "8252650",
@@ -111,20 +111,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8252650-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
-        7,
-        5,
-        7,
         9,
         3,
+        8,
+        7,
+        6,
         4,
-        3,
-        3,
-        10,
         5,
-        4,
-        10
+        2,
+        9,
+        3,
+        5,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "8123725",
@@ -133,19 +133,19 @@
       "categoria": "linguagem_sinais",
       "vector12d": [
         7,
-        5,
-        7,
+        4,
+        8,
         9,
         3,
-        4,
-        3,
+        2,
+        6,
         3,
         10,
-        5,
-        4,
-        10
+        6,
+        6,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7942348",
@@ -154,19 +154,19 @@
       "categoria": "linguagem_sinais",
       "vector12d": [
         7,
-        5,
-        7,
+        3,
+        6,
+        8,
+        2,
+        1,
+        2,
+        1,
         9,
-        3,
         4,
-        3,
-        3,
-        10,
-        5,
-        4,
-        10
+        2,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7920590",
@@ -174,20 +174,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7920590-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
+        6,
+        3,
+        4,
         7,
-        5,
-        7,
+        2,
+        3,
+        2,
+        1,
         9,
-        3,
+        7,
         4,
-        3,
-        3,
-        10,
-        5,
-        4,
-        10
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7849988",
@@ -195,20 +195,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7849988-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
+        6,
         7,
-        5,
-        7,
+        8,
         9,
-        3,
-        4,
-        3,
-        3,
-        10,
+        9,
         5,
+        3,
         4,
+        10,
+        3,
+        8,
         10
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7819597",
@@ -217,19 +217,19 @@
       "categoria": "linguagem_sinais",
       "vector12d": [
         7,
-        5,
-        7,
+        6,
+        8,
         9,
         3,
-        4,
+        2,
         3,
-        3,
-        10,
+        1,
+        9,
         5,
         4,
-        10
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7566346",
@@ -238,19 +238,19 @@
       "categoria": "linguagem_sinais",
       "vector12d": [
         7,
-        5,
-        7,
+        3,
+        8,
         9,
-        3,
+        2,
+        1,
+        6,
         4,
-        3,
-        3,
         10,
+        6,
         5,
-        4,
-        10
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7401744",
@@ -258,20 +258,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7401744-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
-        7,
-        5,
-        7,
+        3,
         9,
-        3,
+        2,
+        7,
+        6,
+        1,
+        2,
+        8,
+        6,
         4,
-        3,
-        3,
-        10,
         5,
-        4,
-        10
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7401736",
@@ -279,20 +279,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7401736-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
-        7,
-        5,
+        8,
         7,
         9,
-        3,
-        4,
-        3,
-        3,
         10,
+        2,
+        6,
+        7,
+        3,
+        8,
         5,
-        4,
-        10
+        1,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7401730",
@@ -300,20 +300,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7401730-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
-        7,
-        5,
-        7,
+        8,
+        6,
         9,
+        7,
         3,
-        4,
-        3,
-        3,
-        10,
         5,
-        4,
-        10
+        2,
+        3,
+        7,
+        3,
+        2,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7401729",
@@ -321,20 +321,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7401729-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
+        3,
+        4,
+        6,
         7,
         5,
-        7,
+        6,
+        2,
+        3,
         9,
-        3,
-        4,
-        3,
-        3,
-        10,
         5,
-        4,
-        10
+        6,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7212596",
@@ -342,20 +342,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7212596-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
+        2,
         7,
-        5,
-        7,
-        9,
+        1,
+        8,
         3,
-        4,
+        0,
+        0,
         3,
-        3,
-        10,
-        5,
-        4,
-        10
+        6,
+        6,
+        6,
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7082426",
@@ -364,19 +364,19 @@
       "categoria": "linguagem_sinais",
       "vector12d": [
         7,
+        3,
+        8,
+        6,
+        2,
+        1,
         5,
-        7,
+        4,
         9,
-        3,
-        4,
-        3,
-        3,
-        10,
-        5,
-        4,
-        10
+        6,
+        1,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7082419",
@@ -384,20 +384,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7082419-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
+        8,
+        3,
         7,
+        6,
+        2,
+        1,
         5,
-        7,
+        4,
         9,
-        3,
-        4,
-        3,
-        3,
-        10,
-        5,
-        4,
-        10
+        6,
+        1,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7082404",
@@ -405,20 +405,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7082404-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
+        8,
+        2,
         7,
+        6,
+        3,
+        1,
         5,
-        7,
+        3,
         9,
-        3,
         4,
-        3,
-        3,
-        10,
-        5,
-        4,
-        10
+        2,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7082398",
@@ -426,20 +426,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7082398-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
+        8,
+        3,
         7,
+        6,
+        2,
+        1,
         5,
-        7,
+        6,
         9,
-        3,
+        6,
         4,
-        3,
-        3,
-        10,
-        5,
-        4,
-        10
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7082395",
@@ -448,19 +448,19 @@
       "categoria": "linguagem_sinais",
       "vector12d": [
         7,
+        3,
+        8,
+        6,
+        4,
+        2,
         5,
-        7,
+        4,
         9,
-        3,
-        4,
-        3,
-        3,
-        10,
+        6,
         5,
-        4,
-        10
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "8270438",
@@ -468,20 +468,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8270438-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
-        7,
-        5,
+        3,
+        6,
+        2,
+        8,
+        4,
+        1,
+        1,
         7,
         9,
-        3,
-        4,
-        3,
-        3,
-        10,
         5,
-        4,
-        10
+        5,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7882393",
@@ -489,20 +489,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7882393-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
+        3,
+        6,
+        2,
         7,
-        5,
-        7,
+        4,
+        1,
+        2,
+        8,
         9,
-        3,
-        4,
-        3,
-        3,
-        10,
+        7,
         5,
-        4,
-        10
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7965896",
@@ -510,20 +510,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7965896-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
+        3,
+        6,
+        2,
         7,
-        5,
-        7,
+        4,
+        3,
+        1,
+        2,
         9,
+        8,
         3,
-        4,
-        3,
-        3,
-        10,
-        5,
-        4,
-        10
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7576105",
@@ -531,20 +531,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7576105-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
-        7,
-        5,
-        7,
+        3,
+        6,
+        2,
         9,
-        3,
         4,
-        3,
-        3,
-        10,
+        1,
+        2,
         5,
-        4,
-        10
+        8,
+        7,
+        6,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7401272",
@@ -552,20 +552,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7401272-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
-        7,
-        5,
-        7,
-        9,
         3,
+        6,
+        2,
+        8,
         4,
-        3,
-        3,
+        1,
+        1,
+        7,
         10,
-        5,
-        4,
-        10
+        7,
+        6,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7015552",
@@ -573,20 +573,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7015552-200.png",
       "categoria": "linguagem_sinais",
       "vector12d": [
-        7,
+        3,
+        4,
+        1,
+        6,
         5,
-        7,
+        2,
+        2,
         9,
-        3,
-        4,
-        3,
-        3,
-        10,
-        5,
-        4,
-        10
+        7,
+        6,
+        7,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "1717835",
@@ -595,19 +595,19 @@
       "categoria": "linguagem_sinais",
       "vector12d": [
         7,
-        5,
-        7,
-        9,
+        1,
+        2,
         3,
+        1,
+        3,
+        2,
+        1,
+        6,
         4,
-        3,
-        3,
-        10,
-        5,
-        4,
-        10
+        2,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "1717834",
@@ -616,19 +616,19 @@
       "categoria": "linguagem_sinais",
       "vector12d": [
         7,
-        5,
-        7,
-        9,
+        1,
+        2,
         3,
-        4,
+        1,
         3,
+        2,
+        1,
+        6,
         3,
-        10,
-        5,
-        4,
-        10
+        2,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "8237233",
@@ -636,20 +636,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8237233-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
+        8,
+        3,
         2,
-        7,
+        9,
+        6,
         4,
-        3,
-        3,
-        3,
-        10,
         3,
         5,
+        10,
+        6,
+        9,
         10
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "4908079",
@@ -657,20 +657,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4908079-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
-        2,
         7,
+        3,
+        2,
+        6,
+        1,
         4,
-        3,
-        3,
-        3,
-        10,
-        3,
-        5,
-        10
+        6,
+        1,
+        9,
+        6,
+        2,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "2260265",
@@ -678,20 +678,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2260265-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
+        3,
         4,
+        5,
+        9,
         2,
         7,
-        4,
+        6,
+        1,
+        8,
+        7,
         3,
-        3,
-        3,
-        10,
-        3,
-        5,
-        10
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7539090",
@@ -700,19 +700,19 @@
       "categoria": "prancha_comunicacao",
       "vector12d": [
         9,
-        4,
         2,
+        3,
+        6,
+        1,
+        3,
         7,
+        1,
+        8,
         4,
         3,
-        3,
-        3,
-        10,
-        3,
-        5,
-        10
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "8116777",
@@ -720,20 +720,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8116777-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
+        8,
+        3,
         2,
-        7,
-        4,
-        3,
-        3,
-        3,
-        10,
-        3,
+        6,
+        1,
         5,
-        10
+        9,
+        1,
+        7,
+        6,
+        2,
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "6984439",
@@ -741,20 +741,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6984439-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
+        3,
         4,
-        2,
-        7,
-        4,
-        3,
-        3,
-        3,
-        10,
-        3,
         5,
-        10
+        8,
+        2,
+        6,
+        5,
+        1,
+        9,
+        7,
+        3,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "5660614",
@@ -762,20 +762,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5660614-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
-        2,
-        7,
-        4,
         3,
-        3,
-        3,
-        10,
-        3,
+        6,
         5,
-        10
+        10,
+        4,
+        7,
+        2,
+        1,
+        10,
+        7,
+        8,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "5206922",
@@ -783,20 +783,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5206922-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
+        3,
         4,
         2,
-        7,
-        4,
-        3,
-        3,
-        3,
-        10,
+        9,
         3,
         5,
-        10
+        1,
+        0,
+        10,
+        6,
+        6,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "5075064",
@@ -804,20 +804,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5075064-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
-        2,
         7,
+        2,
+        3,
+        6,
+        3,
         4,
+        8,
         3,
-        3,
-        3,
-        10,
-        3,
+        9,
+        6,
         5,
-        10
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "4908066",
@@ -825,20 +825,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4908066-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
         4,
-        2,
-        7,
-        4,
-        3,
-        3,
-        3,
-        10,
         3,
         5,
-        10
+        8,
+        2,
+        6,
+        5,
+        1,
+        9,
+        7,
+        2,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "4754595",
@@ -847,19 +847,19 @@
       "categoria": "prancha_comunicacao",
       "vector12d": [
         9,
-        4,
         2,
-        7,
+        3,
+        4,
+        1,
+        3,
+        8,
+        0,
+        6,
         4,
         3,
-        3,
-        3,
-        10,
-        3,
-        5,
-        10
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "4746873",
@@ -867,20 +867,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4746873-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
+        3,
         2,
-        7,
-        4,
-        3,
-        3,
-        3,
-        10,
-        3,
         5,
-        10
+        8,
+        4,
+        7,
+        3,
+        1,
+        9,
+        7,
+        5,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "4401331",
@@ -888,20 +888,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4401331-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
         4,
-        2,
-        7,
-        4,
-        3,
-        3,
-        3,
-        10,
         3,
         5,
-        10
+        9,
+        2,
+        6,
+        3,
+        2,
+        10,
+        7,
+        4,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "4351588",
@@ -909,20 +909,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4351588-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
+        3,
         2,
-        7,
-        4,
-        3,
-        3,
-        3,
-        10,
+        1,
+        6,
         3,
         5,
-        10
+        4,
+        1,
+        8,
+        6,
+        4,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "2698470",
@@ -930,20 +930,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2698470-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
+        3,
         2,
-        7,
         4,
-        3,
-        3,
-        3,
-        10,
-        3,
+        7,
+        1,
+        6,
         5,
-        10
+        0,
+        8,
+        7,
+        3,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "2628169",
@@ -951,20 +951,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2628169-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
+        8,
+        1,
+        3,
         2,
-        7,
-        4,
+        2,
+        1,
+        6,
         3,
-        3,
-        3,
-        10,
-        3,
+        6,
         5,
-        10
+        1,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "2228785",
@@ -972,20 +972,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2228785-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
+        3,
+        6,
+        5,
         9,
+        7,
         4,
         2,
         7,
-        4,
-        3,
-        3,
-        3,
         10,
-        3,
-        5,
-        10
+        7,
+        8,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "2147272",
@@ -993,20 +993,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2147272-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
+        3,
         2,
-        7,
         4,
+        9,
         3,
-        3,
-        3,
-        10,
-        3,
-        5,
-        10
+        7,
+        6,
+        1,
+        7,
+        8,
+        2,
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "7875075",
@@ -1014,20 +1014,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7875075-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
+        6,
+        3,
         2,
-        7,
+        8,
+        2,
         4,
-        3,
-        3,
-        3,
-        10,
-        3,
         5,
-        10
+        1,
+        9,
+        7,
+        6,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "4400793",
@@ -1035,20 +1035,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4400793-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
         4,
-        2,
-        7,
-        4,
-        3,
-        3,
-        3,
-        10,
         3,
         5,
-        10
+        6,
+        2,
+        6,
+        5,
+        1,
+        7,
+        7,
+        6,
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-3-27b-it"
     },
     {
       "id": "1923373",
@@ -1056,20 +1056,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/1923373-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
-        2,
-        7,
-        4,
-        3,
-        3,
-        3,
         10,
+        2,
+        4,
+        7,
+        0,
+        1,
         3,
-        5,
-        10
+        0,
+        2,
+        2,
+        1,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6383090",
@@ -1077,20 +1077,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6383090-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
+        3,
         2,
-        7,
         4,
-        3,
-        3,
-        3,
-        10,
-        3,
+        8,
+        1,
         5,
-        10
+        2,
+        0,
+        10,
+        7,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "604774",
@@ -1098,20 +1098,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/604774-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
+        3,
         2,
-        7,
         4,
-        3,
-        3,
-        3,
-        10,
-        3,
+        9,
+        1,
         5,
-        10
+        2,
+        0,
+        10,
+        6,
+        1,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4831245",
@@ -1119,20 +1119,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4831245-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
+        3,
         2,
-        7,
         4,
+        9,
+        1,
         3,
-        3,
-        3,
+        4,
+        0,
         10,
-        3,
-        5,
-        10
+        6,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "508605",
@@ -1140,20 +1140,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/508605-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
-        2,
-        7,
-        4,
-        3,
-        3,
-        3,
         10,
-        3,
-        5,
-        10
+        1,
+        4,
+        8,
+        0,
+        1,
+        6,
+        0,
+        9,
+        2,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "354950",
@@ -1161,20 +1161,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/354950-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
+        7,
+        1,
+        3,
+        6,
+        1,
+        1,
+        1,
+        2,
         9,
         4,
-        2,
-        7,
-        4,
-        3,
-        3,
-        3,
-        10,
-        3,
-        5,
-        10
+        1,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "515487",
@@ -1182,20 +1182,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/515487-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
         2,
-        7,
+        1,
+        3,
+        2,
+        1,
+        2,
+        1,
+        0,
         4,
-        3,
-        3,
-        3,
-        10,
-        3,
-        5,
-        10
+        8,
+        1,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "508548",
@@ -1203,20 +1203,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/508548-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
         2,
+        2,
+        3,
         7,
+        1,
+        2,
+        3,
+        0,
         4,
-        3,
-        3,
-        3,
-        10,
-        3,
-        5,
-        10
+        8,
+        1,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "479580",
@@ -1224,20 +1224,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/479580-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
-        4,
+        3,
+        0,
         2,
-        7,
-        4,
+        1,
+        0,
+        1,
+        2,
+        0,
         3,
-        3,
-        3,
-        10,
-        3,
-        5,
-        10
+        8,
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "479578",
@@ -1245,20 +1245,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/479578-200.png",
       "categoria": "prancha_comunicacao",
       "vector12d": [
-        9,
+        3,
+        1,
         4,
+        1,
+        1,
         2,
-        7,
-        4,
-        3,
-        3,
-        3,
-        10,
-        3,
-        5,
-        10
+        2,
+        0,
+        6,
+        6,
+        1,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8256796",
@@ -1266,20 +1266,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8256796-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
+        3,
         4,
         6,
-        8,
-        4,
+        9,
         3,
         2,
+        3,
         7,
         10,
-        5,
-        4,
+        3,
+        8,
         9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7790221",
@@ -1287,20 +1287,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7790221-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
         4,
-        6,
-        8,
-        4,
-        3,
         2,
+        8,
         7,
+        3,
+        3,
+        8,
+        9,
         10,
+        7,
         5,
-        4,
         9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3118114",
@@ -1308,20 +1308,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3118114-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
-        3,
-        2,
-        7,
         10,
-        5,
+        1,
+        3,
+        1,
+        6,
+        0,
+        10,
+        10,
+        1,
+        1,
         4,
-        9
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2444404",
@@ -1329,20 +1329,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2444404-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
-        3,
-        2,
-        7,
         10,
-        5,
+        2,
+        8,
+        7,
+        3,
+        1,
+        10,
+        10,
+        10,
         4,
+        8,
         9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5738861",
@@ -1350,20 +1350,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5738861-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
         3,
-        2,
-        7,
-        10,
-        5,
         4,
-        9
+        7,
+        3,
+        0,
+        4,
+        0,
+        0,
+        3,
+        8,
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5738858",
@@ -1371,20 +1371,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5738858-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
-        3,
         2,
-        7,
-        10,
+        3,
         5,
-        4,
-        9
+        2,
+        0,
+        7,
+        0,
+        0,
+        2,
+        8,
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5738846",
@@ -1392,20 +1392,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5738846-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
-        3,
         2,
-        7,
-        10,
-        5,
+        2,
         4,
-        9
+        1,
+        0,
+        7,
+        0,
+        0,
+        3,
+        8,
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5738844",
@@ -1413,20 +1413,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5738844-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
-        3,
         2,
+        2,
+        0,
+        2,
+        0,
+        8,
+        0,
+        1,
+        3,
         7,
-        10,
-        5,
-        4,
-        9
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5738841",
@@ -1434,20 +1434,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5738841-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
         3,
         2,
-        7,
-        10,
-        5,
-        4,
-        9
+        3,
+        2,
+        0,
+        9,
+        0,
+        0,
+        2,
+        8,
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5738839",
@@ -1455,20 +1455,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5738839-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
+        1,
         3,
         2,
-        7,
-        10,
-        5,
-        4,
-        9
+        8,
+        0,
+        1,
+        6,
+        2,
+        9,
+        6,
+        0,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3522945",
@@ -1476,20 +1476,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3522945-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
-        3,
+        9,
         2,
-        7,
-        10,
+        6,
+        1,
         5,
+        0,
+        8,
+        10,
+        1,
+        3,
         4,
-        9
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3522931",
@@ -1497,20 +1497,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3522931-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
-        3,
-        2,
-        7,
         10,
-        5,
+        1,
         4,
-        9
+        1,
+        4,
+        0,
+        10,
+        10,
+        1,
+        1,
+        2,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3519229",
@@ -1519,19 +1519,19 @@
       "categoria": "fala_articulacao",
       "vector12d": [
         5,
-        4,
+        2,
+        1,
+        2,
+        2,
+        1,
         6,
-        8,
-        4,
-        3,
+        10,
         2,
         7,
-        10,
-        5,
-        4,
-        9
+        2,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3454329",
@@ -1539,20 +1539,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3454329-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
-        3,
-        2,
-        7,
         10,
-        5,
+        2,
+        1,
+        1,
         4,
-        9
+        0,
+        9,
+        10,
+        1,
+        2,
+        3,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3331410",
@@ -1560,20 +1560,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3331410-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
-        3,
-        2,
-        7,
         10,
-        5,
-        4,
-        9
+        3,
+        1,
+        1,
+        3,
+        0,
+        8,
+        10,
+        0,
+        2,
+        2,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8258956",
@@ -1581,20 +1581,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8258956-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
+        9,
         3,
+        6,
         2,
-        7,
-        10,
         5,
+        1,
+        8,
+        10,
+        2,
+        3,
         4,
-        9
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7966718",
@@ -1602,20 +1602,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7966718-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
+        1,
         3,
-        2,
-        7,
-        10,
-        5,
         4,
-        9
+        10,
+        2,
+        2,
+        0,
+        4,
+        10,
+        8,
+        9,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7497346",
@@ -1623,20 +1623,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7497346-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
         3,
-        2,
-        7,
-        10,
-        5,
+        3,
         4,
-        9
+        8,
+        1,
+        4,
+        2,
+        1,
+        10,
+        8,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7434888",
@@ -1644,20 +1644,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7434888-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
+        2,
         6,
-        8,
-        4,
-        3,
         2,
         7,
-        10,
+        2,
+        1,
+        1,
         5,
-        4,
-        9
+        9,
+        6,
+        2,
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7339275",
@@ -1665,20 +1665,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7339275-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
         4,
-        6,
-        8,
-        4,
-        3,
-        2,
         7,
-        10,
-        5,
+        2,
+        2,
+        9,
         4,
-        9
+        8,
+        10,
+        3,
+        3,
+        9,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7322800",
@@ -1686,20 +1686,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7322800-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
-        3,
+        1,
+        1,
+        1,
         2,
-        7,
-        10,
-        5,
-        4,
-        9
+        0,
+        1,
+        0,
+        2,
+        8,
+        9,
+        0,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6684280",
@@ -1707,20 +1707,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6684280-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
+        9,
+        1,
         6,
-        8,
-        4,
-        3,
+        1,
         2,
+        0,
         7,
-        10,
-        5,
-        4,
-        9
+        9,
+        1,
+        6,
+        1,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6684278",
@@ -1728,20 +1728,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6684278-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
+        9,
+        1,
         4,
-        6,
-        8,
-        4,
-        3,
+        1,
         2,
-        7,
+        0,
+        8,
         10,
-        5,
-        4,
-        9
+        1,
+        7,
+        2,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5647126",
@@ -1749,20 +1749,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5647126-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
-        3,
-        2,
-        7,
         10,
-        5,
+        1,
+        7,
+        1,
+        3,
+        0,
+        10,
+        10,
+        1,
+        2,
         4,
-        9
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2895592",
@@ -1770,20 +1770,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2895592-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
-        3,
-        2,
-        7,
         10,
-        5,
+        2,
+        0,
+        1,
+        3,
+        0,
         4,
-        9
+        10,
+        0,
+        1,
+        2,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2521168",
@@ -1791,20 +1791,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2521168-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
+        10,
+        2,
         3,
         2,
+        3,
+        1,
         7,
-        10,
-        5,
-        4,
-        9
+        9,
+        1,
+        3,
+        6,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "797503",
@@ -1812,20 +1812,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/797503-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
-        3,
-        2,
-        7,
         10,
-        5,
+        1,
+        6,
+        0,
+        3,
+        0,
+        9,
+        10,
+        0,
         4,
-        9
+        2,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8244638",
@@ -1833,20 +1833,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8244638-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
         8,
-        4,
         3,
-        2,
-        7,
-        10,
-        5,
         4,
+        9,
+        6,
+        2,
+        5,
+        6,
+        10,
+        3,
+        8,
         9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8191171",
@@ -1854,20 +1854,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8191171-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
-        4,
-        3,
-        2,
-        7,
         10,
         5,
         4,
-        9
+        7,
+        2,
+        0,
+        10,
+        8,
+        9,
+        1,
+        6,
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7966741",
@@ -1875,20 +1875,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7966741-200.png",
       "categoria": "fala_articulacao",
       "vector12d": [
-        5,
-        4,
-        6,
-        8,
         4,
         3,
-        2,
+        6,
+        10,
+        3,
+        4,
+        5,
         7,
         10,
-        5,
         4,
-        9
+        9,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5859739",
@@ -1897,19 +1897,19 @@
       "categoria": "voz",
       "vector12d": [
         3,
-        5,
-        5,
         7,
+        5,
+        9,
+        4,
         3,
-        3,
-        2,
-        6,
+        5,
+        8,
         10,
-        4,
-        4,
+        2,
+        9,
         8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8335389",
@@ -1918,19 +1918,19 @@
       "categoria": "voz",
       "vector12d": [
         3,
-        5,
-        5,
-        7,
-        3,
-        3,
-        2,
+        8,
+        1,
+        9,
         6,
+        3,
+        4,
+        9,
         10,
         4,
-        4,
-        8
+        9,
+        10
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7306913",
@@ -1938,20 +1938,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7306913-200.png",
       "categoria": "voz",
       "vector12d": [
+        4,
+        8,
+        7,
+        6,
+        1,
         3,
-        5,
+        2,
         5,
         7,
         3,
-        3,
         2,
-        6,
-        10,
-        4,
-        4,
-        8
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5207082",
@@ -1959,20 +1959,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5207082-200.png",
       "categoria": "voz",
       "vector12d": [
+        9,
         3,
+        6,
+        4,
+        1,
+        2,
         5,
-        5,
-        7,
-        3,
+        2,
+        1,
         3,
         2,
-        6,
-        10,
-        4,
-        4,
-        8
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7647412",
@@ -1980,20 +1980,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7647412-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
-        5,
-        5,
-        7,
-        3,
-        3,
-        2,
-        6,
+        4,
         10,
-        4,
-        4,
+        9,
+        7,
+        10,
+        6,
+        2,
+        7,
+        9,
+        1,
+        8,
         8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6176315",
@@ -2001,20 +2001,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6176315-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
-        5,
-        5,
-        7,
-        3,
+        10,
         3,
         2,
-        6,
-        10,
-        4,
-        4,
-        8
+        1,
+        0,
+        0,
+        3,
+        0,
+        0,
+        2,
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "230025",
@@ -2022,20 +2022,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/230025-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
-        5,
-        5,
+        4,
         7,
-        3,
+        8,
+        6,
+        1,
         3,
         2,
-        6,
-        10,
         4,
-        4,
-        8
+        7,
+        3,
+        2,
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5110880",
@@ -2044,19 +2044,19 @@
       "categoria": "voz",
       "vector12d": [
         3,
-        5,
-        5,
-        7,
-        3,
-        3,
         2,
-        6,
+        3,
+        7,
+        2,
+        5,
+        2,
+        3,
         10,
-        4,
-        4,
+        3,
+        6,
         8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "1231806",
@@ -2064,20 +2064,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/1231806-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
-        5,
-        5,
-        7,
-        3,
-        3,
         2,
-        6,
-        10,
+        2,
+        3,
+        8,
+        2,
+        3,
+        1,
         4,
+        10,
+        7,
         4,
         8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7756783",
@@ -2085,20 +2085,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7756783-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
-        5,
-        5,
-        7,
-        3,
-        3,
         2,
+        2,
+        1,
+        4,
         6,
-        10,
-        4,
-        4,
-        8
+        5,
+        2,
+        1,
+        9,
+        3,
+        3,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2333618",
@@ -2107,19 +2107,19 @@
       "categoria": "voz",
       "vector12d": [
         3,
-        5,
-        5,
-        7,
-        3,
+        2,
+        4,
+        2,
+        1,
         3,
         2,
-        6,
-        10,
-        4,
-        4,
-        8
+        3,
+        8,
+        7,
+        1,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8353658",
@@ -2128,19 +2128,19 @@
       "categoria": "voz",
       "vector12d": [
         3,
-        5,
-        5,
-        7,
-        3,
-        3,
         2,
         6,
-        10,
+        3,
+        1,
+        5,
+        3,
         4,
-        4,
-        8
+        9,
+        7,
+        1,
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8349637",
@@ -2148,20 +2148,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8349637-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
+        4,
         5,
-        5,
-        7,
         3,
-        3,
+        1,
+        0,
         2,
-        6,
-        10,
-        4,
-        4,
-        8
+        7,
+        1,
+        2,
+        3,
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6698186",
@@ -2170,19 +2170,19 @@
       "categoria": "voz",
       "vector12d": [
         3,
+        6,
         5,
+        8,
+        2,
+        4,
         5,
         7,
-        3,
-        3,
-        2,
-        6,
         10,
         4,
-        4,
-        8
+        6,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6211920",
@@ -2191,19 +2191,19 @@
       "categoria": "voz",
       "vector12d": [
         3,
-        5,
-        5,
-        7,
         3,
-        3,
+        5,
+        8,
+        2,
         2,
         6,
+        7,
         10,
-        4,
-        4,
+        3,
+        7,
         8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7924528",
@@ -2211,20 +2211,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7924528-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
-        5,
-        5,
         7,
-        3,
+        2,
+        4,
         3,
         2,
-        6,
+        0,
+        9,
         10,
-        4,
-        4,
-        8
+        10,
+        6,
+        3,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8246948",
@@ -2232,20 +2232,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8246948-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
-        5,
-        5,
-        7,
-        3,
+        9,
+        2,
         3,
         2,
-        6,
-        10,
+        0,
+        1,
+        8,
+        0,
+        7,
         4,
-        4,
-        8
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7019225",
@@ -2254,19 +2254,19 @@
       "categoria": "voz",
       "vector12d": [
         3,
+        2,
         5,
-        5,
-        7,
-        3,
+        4,
+        2,
         3,
         2,
         6,
         10,
-        4,
-        4,
-        8
+        8,
+        7,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6564640",
@@ -2274,20 +2274,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6564640-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
-        5,
-        5,
-        7,
-        3,
-        3,
-        2,
-        6,
         10,
+        2,
         4,
-        4,
-        8
+        8,
+        1,
+        0,
+        2,
+        2,
+        10,
+        2,
+        1,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5167788",
@@ -2295,20 +2295,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5167788-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
-        5,
-        5,
-        7,
-        3,
-        3,
+        4,
         2,
         6,
+        7,
+        3,
+        7,
+        2,
+        3,
         10,
-        4,
+        5,
         4,
         8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2529036",
@@ -2316,20 +2316,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2529036-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
-        5,
-        5,
-        7,
-        3,
+        9,
+        2,
+        4,
         3,
         2,
-        6,
+        0,
         10,
-        4,
-        4,
-        8
+        10,
+        10,
+        6,
+        3,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6169238",
@@ -2337,20 +2337,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6169238-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
-        5,
-        5,
-        7,
-        3,
-        3,
-        2,
+        9,
         6,
-        10,
-        4,
-        4,
-        8
+        5,
+        8,
+        1,
+        2,
+        3,
+        3,
+        7,
+        2,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "31765",
@@ -2359,19 +2359,19 @@
       "categoria": "voz",
       "vector12d": [
         3,
-        5,
-        5,
-        7,
-        3,
-        3,
-        2,
+        9,
+        4,
         6,
-        10,
-        4,
-        4,
-        8
+        1,
+        5,
+        2,
+        3,
+        6,
+        3,
+        3,
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7621751",
@@ -2379,20 +2379,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7621751-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
-        5,
-        5,
-        7,
-        3,
-        3,
-        2,
-        6,
         10,
-        4,
-        4,
-        8
+        2,
+        3,
+        8,
+        1,
+        0,
+        2,
+        0,
+        10,
+        2,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7457208",
@@ -2400,20 +2400,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7457208-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
-        5,
-        5,
-        7,
-        3,
-        3,
-        2,
-        6,
         10,
-        4,
-        4,
-        8
+        2,
+        3,
+        8,
+        2,
+        1,
+        3,
+        1,
+        10,
+        2,
+        2,
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6788730",
@@ -2422,19 +2422,19 @@
       "categoria": "voz",
       "vector12d": [
         3,
+        2,
         5,
-        5,
-        7,
-        3,
+        4,
         3,
         2,
+        1,
+        4,
+        9,
         6,
-        10,
         4,
-        4,
-        8
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6455156",
@@ -2443,19 +2443,19 @@
       "categoria": "voz",
       "vector12d": [
         3,
-        5,
-        5,
-        7,
-        3,
-        3,
+        2,
         2,
         6,
-        10,
-        4,
-        4,
-        8
+        0,
+        3,
+        1,
+        0,
+        8,
+        5,
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3370028",
@@ -2463,20 +2463,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3370028-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
+        6,
+        2,
         5,
-        5,
-        7,
+        8,
         3,
         3,
         2,
-        6,
+        0,
         10,
         4,
-        4,
-        8
+        1,
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7915148",
@@ -2484,20 +2484,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7915148-200.png",
       "categoria": "voz",
       "vector12d": [
-        3,
-        5,
-        5,
         7,
-        3,
-        3,
-        2,
         6,
+        5,
         10,
+        1,
+        2,
         4,
+        2,
+        7,
         4,
-        8
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7309641",
@@ -2505,20 +2505,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7309641-200.png",
       "categoria": "voz",
       "vector12d": [
+        8,
+        6,
+        5,
+        8,
+        1,
+        2,
         3,
-        5,
-        5,
+        4,
         7,
         3,
-        3,
-        2,
-        6,
-        10,
-        4,
-        4,
-        8
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8076489",
@@ -2527,19 +2527,19 @@
       "categoria": "audicao",
       "vector12d": [
         4,
-        4,
-        2,
-        5,
         3,
         3,
-        2,
-        7,
         8,
         4,
         5,
-        8
+        7,
+        9,
+        10,
+        2,
+        8,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3859236",
@@ -2547,20 +2547,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3859236-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
-        2,
-        5,
         3,
-        3,
-        2,
         7,
-        8,
         4,
-        5,
-        8
+        9,
+        3,
+        6,
+        7,
+        2,
+        8,
+        8,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5042229",
@@ -2568,20 +2568,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5042229-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
+        10,
         2,
-        5,
+        1,
         3,
-        3,
-        2,
-        7,
+        4,
+        0,
+        10,
+        10,
         8,
-        4,
-        5,
-        8
+        1,
+        7,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8076024",
@@ -2589,20 +2589,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8076024-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
+        10,
+        2,
         2,
         5,
-        3,
-        3,
-        2,
-        7,
+        0,
+        0,
         8,
-        4,
-        5,
-        8
+        3,
+        1,
+        1,
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7916738",
@@ -2610,20 +2610,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7916738-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
+        10,
+        2,
         2,
         5,
-        3,
-        3,
-        2,
-        7,
+        0,
+        0,
         8,
-        4,
-        5,
-        8
+        3,
+        1,
+        1,
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7914185",
@@ -2631,20 +2631,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7914185-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
+        10,
         2,
-        5,
+        1,
         3,
         3,
-        2,
-        7,
+        0,
+        10,
+        10,
         8,
-        4,
-        5,
-        8
+        1,
+        7,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8137534",
@@ -2652,20 +2652,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8137534-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
+        10,
+        2,
         2,
         5,
         3,
-        3,
+        1,
+        8,
+        9,
+        9,
         2,
         7,
-        8,
-        4,
-        5,
-        8
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8125116",
@@ -2673,20 +2673,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8125116-200.png",
       "categoria": "audicao",
       "vector12d": [
+        3,
         4,
-        4,
-        2,
+        3,
+        9,
+        3,
         5,
-        3,
-        3,
         2,
+        4,
+        10,
+        3,
         7,
-        8,
-        4,
-        5,
         8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8242354",
@@ -2694,20 +2694,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8242354-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
-        2,
-        5,
         3,
         3,
-        2,
-        7,
+        6,
         8,
-        4,
+        3,
         5,
+        2,
+        5,
+        10,
+        3,
+        7,
         8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7691501",
@@ -2715,20 +2715,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7691501-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
+        3,
+        2,
         2,
         5,
-        3,
-        3,
         2,
+        1,
+        3,
         7,
-        8,
-        4,
+        9,
         5,
-        8
+        4,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7438794",
@@ -2736,20 +2736,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7438794-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
         2,
+        2,
+        3,
         5,
+        1,
         3,
+        1,
         3,
-        2,
-        7,
         8,
-        4,
-        5,
-        8
+        8,
+        2,
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6135609",
@@ -2757,20 +2757,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6135609-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
+        2,
+        3,
+        10,
+        9,
+        2,
         4,
         2,
         5,
-        3,
-        3,
-        2,
-        7,
+        10,
+        6,
         8,
-        4,
-        5,
         8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "1421555",
@@ -2778,20 +2778,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/1421555-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
         2,
+        2,
+        3,
         5,
+        1,
+        4,
         3,
-        3,
-        2,
         7,
         8,
-        4,
-        5,
-        8
+        7,
+        3,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6944463",
@@ -2799,20 +2799,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6944463-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
-        2,
+        3,
         5,
+        6,
+        9,
+        1,
         3,
-        3,
-        2,
+        5,
+        0,
         7,
-        8,
-        4,
-        5,
-        8
+        7,
+        0,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "98135",
@@ -2820,20 +2820,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/98135-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
+        10,
+        2,
+        3,
         4,
         2,
-        5,
-        3,
-        3,
+        0,
         2,
-        7,
-        8,
-        4,
-        5,
-        8
+        10,
+        1,
+        3,
+        3,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7906305",
@@ -2841,20 +2841,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7906305-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
         2,
-        5,
+        4,
         3,
-        3,
+        10,
+        1,
         2,
-        7,
+        2,
+        1,
+        9,
         8,
-        4,
-        5,
-        8
+        2,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7309750",
@@ -2862,20 +2862,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7309750-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
         2,
         5,
         3,
+        10,
+        1,
         3,
+        1,
         2,
-        7,
+        10,
         8,
-        4,
-        5,
-        8
+        3,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7025196",
@@ -2883,20 +2883,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7025196-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
         2,
-        5,
-        3,
-        3,
-        2,
-        7,
+        6,
+        4,
         8,
-        4,
-        5,
-        8
+        3,
+        3,
+        3,
+        0,
+        9,
+        9,
+        1,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7007820",
@@ -2905,19 +2905,19 @@
       "categoria": "audicao",
       "vector12d": [
         4,
-        4,
-        2,
-        5,
         3,
         3,
-        2,
-        7,
         8,
         4,
         5,
-        8
+        5,
+        8,
+        10,
+        2,
+        7,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "263589",
@@ -2925,20 +2925,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/263589-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
         2,
-        5,
-        3,
-        3,
+        9,
         2,
-        7,
         8,
-        4,
-        5,
-        8
+        1,
+        1,
+        0,
+        2,
+        8,
+        3,
+        1,
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6729358",
@@ -2946,20 +2946,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6729358-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
-        2,
-        5,
-        3,
+        10,
         3,
         2,
+        6,
+        4,
+        0,
+        9,
+        10,
         7,
+        1,
         8,
-        4,
-        5,
-        8
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "66041",
@@ -2967,20 +2967,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/66041-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
-        2,
         5,
         3,
-        3,
-        2,
         7,
         8,
         4,
         5,
-        8
+        6,
+        3,
+        9,
+        2,
+        4,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4258559",
@@ -2988,20 +2988,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4258559-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
-        2,
-        5,
-        3,
-        3,
-        2,
         7,
+        2,
+        3,
+        9,
+        3,
+        2,
+        3,
         8,
+        10,
         4,
-        5,
-        8
+        7,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6613730",
@@ -3009,20 +3009,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6613730-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
-        2,
-        5,
-        3,
-        3,
-        2,
+        9,
         7,
-        8,
-        4,
+        2,
         5,
-        8
+        3,
+        2,
+        3,
+        10,
+        2,
+        3,
+        3,
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3520119",
@@ -3030,20 +3030,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3520119-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
+        10,
+        3,
+        6,
         4,
         2,
-        5,
+        1,
         3,
-        3,
+        10,
+        2,
         2,
         7,
-        8,
-        4,
-        5,
-        8
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4948336",
@@ -3051,20 +3051,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4948336-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
         2,
+        1,
+        3,
         5,
-        3,
-        3,
+        1,
         2,
-        7,
+        2,
+        3,
         8,
-        4,
-        5,
-        8
+        8,
+        2,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4948319",
@@ -3072,20 +3072,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4948319-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
         2,
+        3,
+        2,
+        8,
+        2,
+        1,
+        3,
         5,
-        3,
-        3,
-        2,
+        9,
         7,
         8,
-        4,
-        5,
-        8
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7530863",
@@ -3093,20 +3093,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7530863-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
-        2,
-        5,
+        8,
+        10,
         3,
+        8,
+        9,
+        1,
+        9,
+        10,
         3,
         2,
         7,
-        8,
-        4,
-        5,
         8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6135710",
@@ -3114,20 +3114,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6135710-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
         2,
-        5,
         3,
-        3,
-        2,
-        7,
+        4,
         8,
-        4,
+        1,
+        2,
+        2,
+        3,
+        7,
+        6,
         5,
-        8
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8314084",
@@ -3135,20 +3135,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8314084-200.png",
       "categoria": "audicao",
       "vector12d": [
-        4,
-        4,
         2,
-        5,
-        3,
-        3,
-        2,
-        7,
         8,
         4,
-        5,
-        8
+        10,
+        1,
+        1,
+        1,
+        1,
+        2,
+        7,
+        2,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8338858",
@@ -3157,19 +3157,19 @@
       "categoria": "gesto",
       "vector12d": [
         6,
-        5,
-        8,
-        8,
-        3,
-        4,
-        3,
         4,
         9,
+        10,
         3,
         3,
-        7
+        4,
+        5,
+        10,
+        3,
+        5,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7965204",
@@ -3177,20 +3177,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7965204-200.png",
       "categoria": "gesto",
       "vector12d": [
+        7,
         6,
-        5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
         9,
+        10,
+        4,
         3,
-        3,
-        7
+        4,
+        6,
+        10,
+        4,
+        7,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7946556",
@@ -3198,20 +3198,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7946556-200.png",
       "categoria": "gesto",
       "vector12d": [
+        3,
+        2,
+        2,
         6,
-        5,
-        8,
-        8,
-        3,
-        4,
-        3,
+        2,
+        2,
+        1,
         4,
         9,
-        3,
-        3,
-        7
+        6,
+        2,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8330230",
@@ -3219,20 +3219,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8330230-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
-        5,
+        7,
+        2,
         8,
-        8,
-        3,
+        7,
         4,
-        3,
-        4,
+        2,
         9,
         3,
-        3,
-        7
+        10,
+        2,
+        5,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3535879",
@@ -3240,20 +3240,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3535879-200.png",
       "categoria": "gesto",
       "vector12d": [
+        4,
+        1,
+        7,
         6,
-        5,
+        2,
+        2,
         8,
-        8,
-        3,
-        4,
-        3,
-        4,
+        2,
         9,
+        4,
         3,
-        3,
-        7
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8350336",
@@ -3261,20 +3261,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8350336-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
-        5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
         9,
         3,
-        3,
-        7
+        8,
+        9,
+        5,
+        2,
+        10,
+        4,
+        10,
+        2,
+        7,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8169863",
@@ -3282,20 +3282,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8169863-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
-        5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
         9,
+        4,
+        8,
+        10,
+        2,
         3,
+        2,
         3,
-        7
+        10,
+        1,
+        3,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8124530",
@@ -3303,20 +3303,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8124530-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
-        5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
         9,
+        4,
+        8,
+        10,
+        2,
         3,
+        2,
         3,
-        7
+        10,
+        1,
+        3,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5201895",
@@ -3324,20 +3324,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5201895-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
-        5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
         9,
+        4,
+        8,
+        10,
+        2,
         3,
         3,
-        7
+        3,
+        10,
+        1,
+        4,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5071002",
@@ -3345,20 +3345,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5071002-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
-        5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
         9,
+        4,
+        8,
+        10,
+        3,
+        2,
         3,
         3,
-        7
+        10,
+        1,
+        4,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4286495",
@@ -3366,20 +3366,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4286495-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
-        5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
         9,
+        4,
+        8,
+        10,
+        2,
         3,
+        3,
+        4,
+        10,
+        1,
         3,
         7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6927746",
@@ -3387,20 +3387,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6927746-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
-        5,
-        8,
-        8,
-        3,
+        7,
         4,
-        3,
-        4,
+        8,
         9,
+        2,
+        4,
         3,
+        2,
+        10,
+        1,
         3,
-        7
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6664986",
@@ -3408,20 +3408,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6664986-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
-        5,
+        10,
+        2,
         8,
-        8,
+        7,
         3,
-        4,
-        3,
-        4,
+        0,
         9,
-        3,
-        3,
-        7
+        10,
+        9,
+        1,
+        8,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "1356001",
@@ -3429,20 +3429,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/1356001-200.png",
       "categoria": "gesto",
       "vector12d": [
+        3,
         6,
-        5,
         8,
-        8,
-        3,
-        4,
-        3,
-        4,
         9,
-        3,
-        3,
-        7
+        9,
+        8,
+        2,
+        7,
+        10,
+        1,
+        8,
+        10
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7693150",
@@ -3450,20 +3450,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7693150-200.png",
       "categoria": "gesto",
       "vector12d": [
+        8,
+        5,
+        9,
+        10,
+        4,
+        3,
         6,
         5,
-        8,
-        8,
+        10,
         3,
-        4,
-        3,
-        4,
-        9,
-        3,
-        3,
-        7
+        6,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3815244",
@@ -3471,20 +3471,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3815244-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
-        5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
         9,
         3,
+        7,
+        9,
+        5,
         3,
-        7
+        6,
+        4,
+        10,
+        2,
+        4,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2060682",
@@ -3492,20 +3492,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2060682-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
-        5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
         9,
+        4,
+        8,
+        9,
+        2,
         3,
+        7,
+        4,
+        10,
+        2,
         3,
-        7
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2060634",
@@ -3513,20 +3513,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2060634-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
+        9,
         5,
         8,
-        8,
-        3,
-        4,
-        3,
-        4,
         9,
+        2,
         3,
+        6,
+        4,
+        10,
+        2,
         3,
         7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "1356002",
@@ -3534,20 +3534,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/1356002-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
+        2,
+        4,
+        10,
+        10,
+        2,
         5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
-        9,
-        3,
-        3,
-        7
+        1,
+        0,
+        10,
+        1,
+        6,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3566911",
@@ -3555,20 +3555,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3566911-200.png",
       "categoria": "gesto",
       "vector12d": [
+        8,
+        3,
         6,
-        5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
         9,
-        3,
+        2,
+        2,
+        5,
+        4,
+        10,
+        1,
         3,
         7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "673730",
@@ -3576,20 +3576,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/673730-200.png",
       "categoria": "gesto",
       "vector12d": [
+        8,
+        3,
         6,
-        5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
         9,
         3,
-        3,
+        2,
+        5,
+        4,
+        10,
+        1,
+        4,
         7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7209781",
@@ -3597,20 +3597,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7209781-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
-        5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
         9,
         3,
-        3,
+        8,
+        10,
+        2,
+        2,
+        7,
+        5,
+        10,
+        1,
+        5,
         7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6546716",
@@ -3618,20 +3618,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6546716-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
-        5,
-        8,
-        8,
+        2,
+        2,
         3,
-        4,
+        8,
+        1,
+        2,
         3,
-        4,
+        1,
         9,
-        3,
-        3,
-        7
+        7,
+        2,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8035624",
@@ -3639,20 +3639,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8035624-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
+        3,
+        4,
         5,
-        8,
-        8,
         3,
+        2,
         4,
-        3,
+        2,
+        1,
+        10,
+        5,
         4,
-        9,
-        3,
-        3,
-        7
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2247280",
@@ -3660,20 +3660,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2247280-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
+        10,
+        1,
+        7,
+        1,
+        0,
+        1,
         5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
-        9,
-        3,
-        3,
-        7
+        0,
+        0,
+        6,
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7827131",
@@ -3681,20 +3681,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7827131-200.png",
       "categoria": "gesto",
       "vector12d": [
+        10,
+        1,
         6,
-        5,
-        8,
-        8,
-        3,
+        1,
+        0,
+        1,
         4,
-        3,
+        0,
+        0,
         4,
-        9,
-        3,
-        3,
-        7
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7310185",
@@ -3702,20 +3702,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7310185-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
+        7,
         5,
-        8,
-        8,
-        3,
         4,
+        8,
+        2,
+        3,
         3,
         4,
         9,
+        2,
         3,
-        3,
-        7
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "377647",
@@ -3723,20 +3723,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/377647-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
+        2,
+        4,
+        3,
+        8,
+        1,
+        7,
+        1,
+        0,
+        10,
         5,
-        8,
-        8,
-        3,
-        4,
-        3,
-        4,
-        9,
-        3,
-        3,
-        7
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "223724",
@@ -3744,20 +3744,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/223724-200.png",
       "categoria": "gesto",
       "vector12d": [
-        6,
-        5,
-        8,
-        8,
-        3,
+        2,
         4,
+        2,
+        8,
+        2,
         3,
-        4,
+        2,
+        1,
         9,
-        3,
-        3,
-        7
+        7,
+        4,
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "491638",
@@ -3766,19 +3766,19 @@
       "categoria": "gesto",
       "vector12d": [
         6,
-        5,
-        8,
-        8,
-        3,
         4,
-        3,
-        4,
+        8,
         9,
+        1,
         3,
+        2,
         3,
-        7
+        8,
+        4,
+        1,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8318243",
@@ -3786,20 +3786,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8318243-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
+        9,
         4,
         8,
-        5,
-        3,
+        10,
+        2,
         4,
-        7,
-        7,
-        5,
-        7,
-        8
+        3,
+        3,
+        10,
+        1,
+        3,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6116368",
@@ -3807,20 +3807,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6116368-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
+        9,
         4,
         8,
-        5,
+        10,
         3,
-        4,
-        7,
-        7,
-        5,
-        7,
-        8
+        2,
+        3,
+        3,
+        10,
+        1,
+        3,
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4049907",
@@ -3828,20 +3828,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4049907-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
+        9,
         4,
         8,
-        5,
+        10,
         3,
+        2,
+        3,
+        3,
+        10,
+        1,
         4,
-        7,
-        7,
-        5,
-        7,
-        8
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5585173",
@@ -3849,20 +3849,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5585173-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
+        9,
         4,
+        9,
         8,
         5,
         3,
+        6,
+        7,
+        9,
+        2,
         4,
-        7,
-        7,
-        5,
-        7,
-        8
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7615406",
@@ -3870,20 +3870,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7615406-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
+        2,
+        7,
         5,
-        6,
-        4,
+        10,
         8,
         5,
+        2,
+        7,
+        9,
         3,
-        4,
-        7,
-        7,
-        5,
-        7,
-        8
+        9,
+        10
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7603998",
@@ -3891,20 +3891,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7603998-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
-        4,
-        8,
-        5,
         3,
-        4,
         7,
-        7,
+        6,
+        10,
+        9,
         5,
+        2,
         7,
-        8
+        9,
+        3,
+        9,
+        10
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5872142",
@@ -3912,20 +3912,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5872142-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
+        2,
+        7,
         6,
-        4,
+        10,
         8,
         5,
+        2,
+        6,
+        10,
         3,
-        4,
-        7,
-        7,
-        5,
-        7,
-        8
+        9,
+        10
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3972391",
@@ -3933,20 +3933,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3972391-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
-        4,
+        2,
         8,
-        5,
-        3,
-        4,
+        2,
+        10,
+        9,
         7,
+        2,
         7,
-        5,
-        7,
-        8
+        10,
+        2,
+        10,
+        10
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2970600",
@@ -3954,20 +3954,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2970600-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
+        4,
         6,
-        4,
+        5,
+        9,
+        5,
+        2,
+        2,
+        7,
+        6,
+        6,
         8,
-        5,
-        3,
-        4,
-        7,
-        7,
-        5,
-        7,
-        8
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "750593",
@@ -3975,20 +3975,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/750593-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
+        2,
         4,
+        5,
         8,
-        5,
-        3,
+        7,
         4,
-        7,
-        7,
-        5,
-        7,
-        8
+        1,
+        3,
+        9,
+        3,
+        8,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6835721",
@@ -3996,20 +3996,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6835721-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
+        2,
+        1,
+        2,
         4,
+        1,
+        2,
+        2,
+        1,
         8,
-        5,
-        3,
-        4,
         7,
-        7,
-        5,
-        7,
-        8
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4954230",
@@ -4017,20 +4017,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4954230-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
+        10,
+        6,
         5,
         6,
-        4,
-        8,
-        5,
-        3,
-        4,
+        9,
+        1,
         7,
         7,
-        5,
-        7,
-        8
+        1,
+        2,
+        6,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4942211",
@@ -4038,20 +4038,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4942211-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
+        3,
+        2,
+        3,
+        9,
         4,
         8,
-        5,
-        3,
-        4,
-        7,
-        7,
-        5,
-        7,
-        8
+        1,
+        1,
+        10,
+        6,
+        2,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4942188",
@@ -4060,19 +4060,19 @@
       "categoria": "apoio_terapia",
       "vector12d": [
         5,
-        6,
-        4,
+        9,
+        9,
         8,
-        5,
-        3,
+        10,
         4,
-        7,
-        7,
         5,
-        7,
-        8
+        8,
+        4,
+        4,
+        9,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4893611",
@@ -4080,20 +4080,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4893611-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
-        4,
-        8,
-        5,
+        1,
         3,
         4,
-        7,
-        7,
+        9,
+        4,
+        3,
+        0,
+        1,
+        10,
+        6,
         5,
-        7,
         8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4652306",
@@ -4101,20 +4101,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4652306-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
+        2,
+        3,
         5,
+        10,
         6,
+        2,
+        0,
+        2,
+        10,
         4,
         8,
-        5,
-        3,
-        4,
-        7,
-        7,
-        5,
-        7,
-        8
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4575614",
@@ -4122,20 +4122,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4575614-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
-        4,
+        7,
         8,
-        5,
+        7,
+        8,
+        9,
         3,
         4,
-        7,
-        7,
+        9,
+        2,
         5,
-        7,
-        8
+        8,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4218830",
@@ -4143,20 +4143,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4218830-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
+        1,
+        2,
+        2,
         6,
-        4,
-        8,
-        5,
         3,
+        3,
+        1,
+        2,
+        10,
+        8,
         4,
-        7,
-        7,
-        5,
-        7,
-        8
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4207167",
@@ -4164,20 +4164,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4207167-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
-        4,
+        2,
+        7,
         8,
-        5,
+        10,
+        8,
         3,
         4,
         7,
-        7,
-        5,
-        7,
+        8,
+        6,
+        8,
         8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3836849",
@@ -4185,20 +4185,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3836849-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
+        1,
+        1,
+        2,
         4,
-        8,
-        5,
+        0,
+        4,
         3,
-        4,
-        7,
-        7,
-        5,
-        7,
-        8
+        0,
+        8,
+        8,
+        2,
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3660709",
@@ -4206,20 +4206,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3660709-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
-        4,
+        2,
         8,
-        5,
         3,
-        4,
+        6,
         7,
-        7,
-        5,
-        7,
-        8
+        2,
+        3,
+        8,
+        3,
+        6,
+        10,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3649621",
@@ -4227,20 +4227,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3649621-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
+        2,
+        2,
+        3,
         6,
-        4,
-        8,
-        5,
         3,
         4,
+        1,
+        1,
+        8,
         7,
-        7,
-        5,
-        7,
-        8
+        2,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3615711",
@@ -4248,20 +4248,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3615711-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
-        4,
-        8,
-        5,
+        2,
         3,
         4,
-        7,
-        7,
+        8,
+        3,
+        4,
+        3,
+        4,
         5,
         7,
-        8
+        6,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3560580",
@@ -4269,20 +4269,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3560580-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
-        4,
+        10,
+        2,
+        2,
+        1,
+        2,
+        0,
         8,
-        5,
+        0,
         3,
-        4,
-        7,
-        7,
-        5,
-        7,
-        8
+        2,
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3399310",
@@ -4290,20 +4290,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3399310-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
-        4,
-        8,
-        5,
+        10,
+        2,
         3,
-        4,
         7,
-        7,
-        5,
-        7,
-        8
+        1,
+        0,
+        6,
+        2,
+        9,
+        2,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2614471",
@@ -4311,20 +4311,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2614471-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
-        4,
-        8,
-        5,
+        10,
+        2,
         3,
         4,
+        1,
+        0,
         7,
-        7,
-        5,
-        7,
-        8
+        3,
+        6,
+        1,
+        2,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2269163",
@@ -4332,20 +4332,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2269163-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
+        9,
         4,
         8,
-        5,
+        10,
+        1,
         3,
         4,
-        7,
-        7,
-        5,
-        7,
-        8
+        3,
+        8,
+        2,
+        2,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2233196",
@@ -4353,20 +4353,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2233196-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
         4,
-        8,
-        5,
         3,
-        4,
-        7,
-        7,
+        2,
+        8,
+        1,
         5,
-        7,
-        8
+        1,
+        1,
+        6,
+        8,
+        2,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8227855",
@@ -4374,20 +4374,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8227855-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
         6,
-        4,
-        8,
-        5,
         3,
         4,
-        7,
-        7,
+        9,
+        3,
+        2,
+        3,
         5,
         7,
-        8
+        5,
+        6,
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7557028",
@@ -4395,20 +4395,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7557028-200.png",
       "categoria": "apoio_terapia",
       "vector12d": [
-        5,
-        6,
+        1,
+        2,
+        2,
+        7,
         4,
-        8,
-        5,
         3,
-        4,
-        7,
-        7,
+        1,
+        3,
+        10,
+        6,
         5,
-        7,
-        8
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7458538",
@@ -4416,20 +4416,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7458538-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
-        6,
-        5,
-        4,
-        2,
+        9,
         5,
         8,
-        5,
-        6,
-        6
+        10,
+        3,
+        4,
+        3,
+        4,
+        10,
+        2,
+        4,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "238942",
@@ -4437,20 +4437,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/238942-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
         10,
-        5,
-        6,
-        5,
-        4,
-        2,
-        5,
         8,
-        5,
-        6,
-        6
+        1,
+        3,
+        0,
+        0,
+        0,
+        3,
+        2,
+        8,
+        0,
+        0
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "238937",
@@ -4458,20 +4458,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/238937-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
-        6,
-        5,
-        4,
         2,
+        4,
+        1,
+        2,
+        0,
         5,
+        3,
+        2,
+        1,
         8,
-        5,
-        6,
-        6
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8261671",
@@ -4479,20 +4479,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8261671-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
-        6,
-        5,
-        4,
         2,
-        5,
         8,
-        5,
+        7,
+        10,
+        9,
         6,
-        6
+        2,
+        7,
+        10,
+        2,
+        10,
+        10
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6041859",
@@ -4500,20 +4500,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6041859-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
+        6,
+        10,
+        3,
+        10,
         4,
+        3,
+        8,
+        6,
         10,
         5,
-        6,
-        5,
-        4,
-        2,
-        5,
-        8,
-        5,
-        6,
-        6
+        7,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "1961096",
@@ -4521,20 +4521,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/1961096-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
         6,
-        5,
-        4,
+        10,
+        2,
+        9,
+        6,
+        3,
         2,
         5,
-        8,
-        5,
-        6,
-        6
+        10,
+        3,
+        7,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3589656",
@@ -4542,20 +4542,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3589656-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
         6,
-        5,
-        4,
+        9,
+        3,
+        9,
         2,
+        1,
+        2,
+        3,
+        10,
+        1,
         5,
-        8,
-        5,
-        6,
-        6
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3589646",
@@ -4563,20 +4563,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3589646-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
         5,
-        6,
-        5,
-        4,
+        9,
         2,
-        5,
         8,
-        5,
         6,
-        6
+        2,
+        1,
+        5,
+        10,
+        2,
+        7,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6885341",
@@ -4584,20 +4584,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6885341-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
-        6,
-        5,
-        4,
-        2,
-        5,
+        3,
         8,
-        5,
+        2,
+        4,
+        1,
+        1,
+        2,
+        1,
+        2,
         6,
-        6
+        0,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8048837",
@@ -4605,20 +4605,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8048837-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
+        7,
+        9,
         4,
         10,
-        5,
-        6,
-        5,
-        4,
         2,
-        5,
-        8,
-        5,
+        2,
         6,
-        6
+        4,
+        10,
+        1,
+        3,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8358339",
@@ -4626,20 +4626,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8358339-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
         10,
-        5,
-        6,
-        5,
-        4,
-        2,
-        5,
         8,
-        5,
-        6,
-        6
+        3,
+        10,
+        2,
+        0,
+        9,
+        9,
+        10,
+        1,
+        4,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8061965",
@@ -4647,20 +4647,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8061965-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
-        6,
-        5,
-        4,
         2,
         5,
-        8,
+        1,
+        7,
+        4,
+        1,
+        0,
         5,
         6,
-        6
+        6,
+        2,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7656185",
@@ -4668,20 +4668,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7656185-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
+        1,
         10,
-        5,
-        6,
-        5,
-        4,
         2,
-        5,
         8,
-        5,
+        3,
+        3,
+        1,
         6,
-        6
+        9,
+        7,
+        8,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7173337",
@@ -4689,20 +4689,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7173337-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
         6,
-        5,
+        9,
+        2,
+        8,
         4,
         2,
+        3,
         5,
-        8,
+        9,
+        3,
         5,
-        6,
-        6
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445380",
@@ -4710,20 +4710,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445380-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
+        1,
+        7,
+        2,
+        9,
+        8,
+        2,
+        0,
         4,
         10,
-        5,
-        6,
-        5,
-        4,
         2,
-        5,
-        8,
-        5,
-        6,
-        6
+        9,
+        10
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445379",
@@ -4731,20 +4731,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445379-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
-        6,
-        5,
-        4,
         2,
-        5,
-        8,
-        5,
         6,
-        6
+        1,
+        9,
+        1,
+        0,
+        0,
+        0,
+        8,
+        3,
+        2,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445377",
@@ -4752,20 +4752,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445377-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
-        6,
-        5,
-        4,
-        2,
-        5,
         8,
-        5,
         6,
-        6
+        5,
+        9,
+        1,
+        3,
+        7,
+        4,
+        8,
+        4,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445376",
@@ -4773,20 +4773,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445376-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
+        3,
         5,
-        6,
-        5,
-        4,
         2,
-        5,
-        8,
+        4,
         5,
         6,
-        6
+        2,
+        8,
+        7,
+        2,
+        9,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445374",
@@ -4794,20 +4794,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445374-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
+        1,
+        3,
+        1,
         5,
+        0,
+        1,
+        0,
+        0,
         6,
-        5,
-        4,
-        2,
-        5,
-        8,
-        5,
-        6,
-        6
+        7,
+        0,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445373",
@@ -4815,20 +4815,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445373-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
+        1,
         10,
-        5,
-        6,
-        5,
-        4,
+        3,
+        10,
         2,
-        5,
-        8,
-        5,
-        6,
-        6
+        1,
+        0,
+        3,
+        9,
+        7,
+        9,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445371",
@@ -4836,20 +4836,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445371-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
-        6,
-        5,
-        4,
         2,
-        5,
-        8,
-        5,
+        9,
+        4,
         6,
-        6
+        3,
+        5,
+        0,
+        2,
+        8,
+        3,
+        2,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445369",
@@ -4857,20 +4857,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445369-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
-        6,
-        5,
-        4,
         2,
-        5,
+        10,
+        1,
         8,
-        5,
+        7,
+        2,
+        1,
+        4,
+        9,
+        2,
         6,
-        6
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445366",
@@ -4878,20 +4878,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445366-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
-        6,
-        5,
-        4,
+        3,
+        3,
         2,
+        2,
+        4,
         5,
+        2,
         8,
         5,
-        6,
-        6
+        2,
+        9,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445363",
@@ -4899,20 +4899,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445363-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
-        6,
-        5,
-        4,
-        2,
-        5,
         8,
-        5,
-        6,
+        9,
+        7,
+        10,
+        2,
+        2,
+        4,
+        3,
+        8,
+        2,
+        4,
         6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445362",
@@ -4920,20 +4920,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445362-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
+        1,
         5,
-        6,
-        5,
+        3,
         4,
+        1,
         2,
+        0,
+        1,
         5,
         8,
-        5,
-        6,
-        6
+        2,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445360",
@@ -4941,20 +4941,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445360-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
+        8,
+        9,
         4,
         10,
-        5,
-        6,
-        5,
-        4,
         2,
-        5,
-        8,
-        5,
-        6,
-        6
+        2,
+        3,
+        4,
+        10,
+        1,
+        3,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445358",
@@ -4962,20 +4962,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445358-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
-        6,
-        5,
-        4,
-        2,
-        5,
+        1,
+        9,
+        1,
         8,
-        5,
-        6,
-        6
+        1,
+        1,
+        0,
+        0,
+        7,
+        4,
+        1,
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445357",
@@ -4983,20 +4983,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445357-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
+        3,
         5,
+        3,
+        3,
         6,
-        5,
-        4,
         2,
-        5,
-        8,
-        5,
+        4,
+        9,
+        3,
+        4,
         6,
-        6
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445356",
@@ -5004,20 +5004,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445356-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
+        1,
         6,
-        5,
-        4,
         2,
-        5,
+        10,
+        0,
+        2,
+        0,
+        0,
+        9,
         8,
-        5,
-        6,
-        6
+        1,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6445355",
@@ -5025,20 +5025,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6445355-200.png",
       "categoria": "emocao_expressao",
       "vector12d": [
-        4,
-        10,
-        5,
+        3,
+        9,
+        3,
         6,
         5,
-        4,
         2,
-        5,
-        8,
-        5,
+        1,
         6,
-        6
+        8,
+        1,
+        5,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6116362",
@@ -5047,19 +5047,19 @@
       "categoria": "dispositivo_caa",
       "vector12d": [
         9,
-        2,
-        2,
-        5,
+        4,
+        8,
+        10,
         3,
         2,
+        3,
         2,
-        2,
-        8,
-        6,
-        4,
-        10
+        10,
+        1,
+        3,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6582670",
@@ -5067,20 +5067,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6582670-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
         2,
-        2,
-        5,
         3,
-        2,
-        2,
-        2,
+        3,
         8,
-        6,
+        2,
+        2,
+        1,
+        1,
+        10,
+        7,
         4,
-        10
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3450926",
@@ -5088,20 +5088,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3450926-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
-        2,
-        2,
+        6,
+        3,
         5,
+        10,
+        4,
         3,
         2,
         2,
-        2,
-        8,
-        6,
+        10,
         4,
-        10
+        5,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "953265",
@@ -5109,20 +5109,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/953265-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
+        10,
         2,
+        3,
+        9,
+        4,
+        1,
+        2,
+        2,
+        10,
         2,
         5,
-        3,
-        2,
-        2,
-        2,
-        8,
-        6,
-        4,
-        10
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5748749",
@@ -5130,20 +5130,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5748749-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
+        10,
+        3,
+        3,
         9,
+        7,
         2,
+        4,
+        2,
+        10,
         2,
         5,
-        3,
-        2,
-        2,
-        2,
-        8,
-        6,
-        4,
-        10
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4460002",
@@ -5151,20 +5151,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4460002-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
+        10,
+        3,
+        4,
         9,
+        4,
         2,
-        2,
-        5,
         3,
         2,
-        2,
-        2,
-        8,
-        6,
-        4,
-        10
+        10,
+        3,
+        5,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4277077",
@@ -5172,20 +5172,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4277077-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
+        10,
+        3,
+        4,
         9,
+        6,
         2,
-        2,
-        5,
         3,
         2,
+        10,
         2,
-        2,
-        8,
         6,
-        4,
-        10
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3587202",
@@ -5193,20 +5193,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3587202-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
-        2,
-        2,
-        5,
         3,
         2,
-        2,
-        2,
-        8,
-        6,
+        3,
         4,
-        10
+        1,
+        2,
+        1,
+        3,
+        9,
+        7,
+        3,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "1317446",
@@ -5214,20 +5214,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/1317446-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
+        3,
+        4,
+        6,
+        10,
         2,
-        2,
-        5,
         3,
         2,
         2,
-        2,
-        8,
-        6,
-        4,
-        10
+        10,
+        3,
+        5,
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "986391",
@@ -5235,20 +5235,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/986391-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
-        2,
         2,
         5,
-        3,
-        2,
-        2,
-        2,
-        8,
-        6,
         4,
-        10
+        10,
+        1,
+        3,
+        1,
+        1,
+        10,
+        7,
+        2,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "932768",
@@ -5256,20 +5256,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/932768-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
+        10,
         2,
-        2,
-        5,
         3,
-        2,
-        2,
-        2,
         8,
-        6,
+        3,
+        1,
+        2,
+        1,
+        10,
+        2,
         4,
-        10
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "913793",
@@ -5277,20 +5277,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/913793-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
-        2,
-        2,
-        5,
-        3,
-        2,
-        2,
-        2,
         8,
-        6,
+        3,
         4,
-        10
+        6,
+        3,
+        5,
+        4,
+        1,
+        10,
+        2,
+        7,
+        9
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "680947",
@@ -5298,20 +5298,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/680947-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
-        2,
-        2,
-        5,
+        4,
+        1,
+        7,
         3,
         2,
         2,
-        2,
-        8,
-        6,
-        4,
-        10
+        1,
+        1,
+        5,
+        5,
+        3,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8053320",
@@ -5319,20 +5319,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8053320-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
+        8,
+        3,
+        4,
         9,
-        2,
-        2,
-        5,
+        4,
+        3,
         3,
         2,
-        2,
-        2,
-        8,
-        6,
-        4,
-        10
+        10,
+        5,
+        7,
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7880268",
@@ -5340,20 +5340,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7880268-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
+        10,
         2,
+        3,
+        6,
         2,
-        5,
+        1,
         3,
         2,
+        10,
         2,
-        2,
-        8,
-        6,
-        4,
-        10
+        5,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7779286",
@@ -5361,20 +5361,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7779286-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
-        2,
-        2,
+        4,
         5,
+        4,
+        10,
+        3,
+        6,
         3,
         2,
-        2,
-        2,
-        8,
-        6,
+        10,
         4,
-        10
+        3,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7021888",
@@ -5384,18 +5384,18 @@
       "vector12d": [
         9,
         2,
-        2,
         5,
-        3,
-        2,
-        2,
-        2,
-        8,
-        6,
         4,
-        10
+        2,
+        1,
+        4,
+        2,
+        10,
+        3,
+        6,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5772678",
@@ -5403,20 +5403,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5772678-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
+        10,
+        2,
+        4,
         9,
+        6,
         2,
-        2,
-        5,
         3,
         2,
+        10,
         2,
-        2,
-        8,
-        6,
-        4,
-        10
+        5,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5387452",
@@ -5424,20 +5424,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5387452-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
+        10,
         2,
-        2,
-        5,
         3,
-        2,
-        2,
-        2,
         8,
-        6,
+        3,
+        1,
+        2,
+        1,
+        10,
+        2,
         4,
-        10
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4833129",
@@ -5445,20 +5445,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4833129-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
+        10,
+        1,
+        2,
+        7,
+        2,
+        1,
         2,
         2,
+        10,
         5,
-        3,
-        2,
-        2,
-        2,
         8,
-        6,
-        4,
-        10
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4552203",
@@ -5466,20 +5466,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4552203-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
+        10,
         2,
-        2,
-        5,
         3,
+        9,
+        5,
+        1,
         2,
+        1,
+        10,
         2,
-        2,
-        8,
-        6,
         4,
-        10
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4170212",
@@ -5487,20 +5487,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4170212-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
-        2,
-        2,
-        5,
         3,
+        1,
         2,
-        2,
-        2,
-        8,
-        6,
         4,
-        10
+        3,
+        1,
+        2,
+        0,
+        9,
+        8,
+        4,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4170204",
@@ -5508,20 +5508,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4170204-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
+        4,
+        5,
+        6,
+        10,
         2,
         2,
+        2,
+        1,
+        7,
         5,
         3,
-        2,
-        2,
-        2,
-        8,
-        6,
-        4,
-        10
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4080017",
@@ -5529,20 +5529,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4080017-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
-        2,
-        2,
-        5,
+        4,
+        7,
+        4,
+        10,
+        3,
+        6,
         3,
         2,
-        2,
-        2,
-        8,
-        6,
+        10,
         4,
-        10
+        5,
+        3
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3963494",
@@ -5550,20 +5550,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3963494-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
-        2,
+        3,
+        3,
+        4,
+        10,
         2,
         5,
-        3,
         2,
-        2,
-        2,
-        8,
-        6,
+        1,
+        10,
         4,
-        10
+        3,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3612030",
@@ -5571,20 +5571,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3612030-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
+        10,
         2,
+        3,
+        3,
+        1,
+        1,
         2,
-        5,
+        1,
+        6,
         3,
         2,
-        2,
-        2,
-        8,
-        6,
-        4,
-        10
+        5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2889832",
@@ -5592,20 +5592,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2889832-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
+        10,
         2,
-        2,
+        3,
+        7,
+        4,
+        1,
         5,
         3,
-        2,
-        2,
+        10,
         2,
         8,
-        6,
-        4,
-        10
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2648202",
@@ -5613,20 +5613,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2648202-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
+        10,
         2,
+        3,
+        9,
+        6,
+        1,
+        2,
+        1,
+        10,
         2,
         5,
-        3,
-        2,
-        2,
-        2,
-        8,
-        6,
-        4,
-        10
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2491187",
@@ -5636,18 +5636,18 @@
       "vector12d": [
         9,
         2,
-        2,
-        5,
         3,
-        2,
-        2,
-        2,
-        8,
-        6,
         4,
-        10
+        2,
+        1,
+        3,
+        4,
+        10,
+        4,
+        7,
+        8
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "1317448",
@@ -5655,20 +5655,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/1317448-200.png",
       "categoria": "dispositivo_caa",
       "vector12d": [
-        9,
-        2,
-        2,
-        5,
         3,
         2,
-        2,
-        2,
+        3,
         8,
+        2,
+        3,
+        1,
+        0,
+        10,
         6,
-        4,
-        10
+        2,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7979285",
@@ -5676,20 +5676,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7979285-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
+        9,
         4,
-        10,
-        4,
-        3,
-        3,
         5,
-        7,
+        10,
+        2,
+        2,
+        6,
+        1,
+        9,
+        3,
         4,
-        8,
-        5
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7739911",
@@ -5699,18 +5699,18 @@
       "vector12d": [
         6,
         8,
-        4,
+        6,
         10,
+        1,
         4,
-        3,
-        3,
         5,
-        7,
-        4,
-        8,
-        5
+        0,
+        5,
+        6,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7388809",
@@ -5718,20 +5718,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7388809-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
+        9,
+        2,
+        3,
+        4,
+        2,
+        1,
         6,
+        1,
         8,
         4,
-        10,
-        4,
         3,
-        3,
-        5,
-        7,
-        4,
-        8,
         5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7388806",
@@ -5739,20 +5739,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7388806-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
         8,
         4,
+        3,
+        9,
+        2,
+        3,
         10,
-        4,
+        1,
         3,
         3,
         5,
-        7,
-        4,
-        8,
-        5
+        6
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7388801",
@@ -5760,20 +5760,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7388801-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
+        9,
+        2,
+        3,
         8,
+        1,
+        2,
         4,
-        10,
-        4,
+        1,
         3,
         3,
-        5,
-        7,
-        4,
-        8,
-        5
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7388795",
@@ -5781,20 +5781,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7388795-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
         8,
-        4,
-        10,
-        4,
+        1,
+        2,
+        2,
+        1,
+        1,
         3,
-        3,
-        5,
-        7,
+        0,
         4,
-        8,
-        5
+        2,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7068779",
@@ -5802,20 +5802,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7068779-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
+        4,
+        3,
+        3,
         8,
-        4,
-        10,
-        4,
-        3,
-        3,
+        1,
         5,
         7,
-        4,
-        8,
-        5
+        1,
+        6,
+        5,
+        3,
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5334960",
@@ -5823,20 +5823,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5334960-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
-        4,
-        10,
-        4,
-        3,
-        3,
-        5,
         7,
-        4,
+        3,
+        3,
         8,
-        5
+        1,
+        2,
+        9,
+        1,
+        3,
+        6,
+        2,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "4524029",
@@ -5844,20 +5844,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/4524029-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
-        4,
         10,
-        4,
-        3,
-        3,
-        5,
-        7,
-        4,
+        2,
+        1,
+        6,
+        1,
+        1,
         8,
-        5
+        0,
+        4,
+        2,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3781976",
@@ -5865,20 +5865,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3781976-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
-        4,
-        10,
-        4,
-        3,
-        3,
-        5,
         7,
+        3,
+        2,
+        2,
+        3,
+        0,
+        9,
+        10,
+        6,
+        6,
         4,
-        8,
         5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3781972",
@@ -5886,20 +5886,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3781972-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
-        4,
         10,
+        2,
+        2,
+        3,
         4,
-        3,
-        3,
-        5,
+        0,
+        6,
         7,
-        4,
-        8,
-        5
+        2,
+        1,
+        7,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "3781963",
@@ -5907,20 +5907,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/3781963-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
-        4,
-        10,
-        4,
         3,
         3,
+        1,
         5,
-        7,
-        4,
+        0,
+        1,
+        6,
+        0,
+        2,
         8,
-        5
+        0,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2847283",
@@ -5928,20 +5928,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2847283-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
+        2,
         4,
-        10,
-        4,
-        3,
-        3,
         5,
-        7,
-        4,
         8,
-        5
+        1,
+        4,
+        5,
+        2,
+        6,
+        7,
+        5,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2317642",
@@ -5949,20 +5949,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2317642-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
+        3,
+        3,
         6,
-        8,
-        4,
-        10,
-        4,
-        3,
-        3,
+        9,
+        1,
         5,
-        7,
         4,
-        8,
-        5
+        1,
+        10,
+        7,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2193154",
@@ -5970,20 +5970,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2193154-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
-        4,
-        10,
-        4,
         3,
-        3,
-        5,
+        2,
+        1,
         7,
-        4,
+        1,
+        2,
+        1,
+        2,
         8,
-        5
+        6,
+        2,
+        7
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "2134858",
@@ -5991,20 +5991,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/2134858-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
+        3,
+        2,
         4,
         10,
-        4,
-        3,
-        3,
+        1,
         5,
-        7,
-        4,
-        8,
-        5
+        6,
+        1,
+        9,
+        6,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "1971083",
@@ -6012,20 +6012,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/1971083-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
         8,
-        4,
-        10,
-        4,
         3,
-        3,
-        5,
         7,
+        10,
+        1,
+        3,
+        6,
+        1,
+        9,
         4,
-        8,
-        5
+        3,
+        4
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "1491786",
@@ -6033,20 +6033,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/1491786-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
+        9,
+        3,
+        2,
         8,
-        4,
+        1,
+        2,
         10,
-        4,
+        0,
         3,
         3,
-        5,
-        7,
-        4,
-        8,
-        5
+        3,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8316188",
@@ -6054,20 +6054,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8316188-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
-        4,
-        10,
-        4,
-        3,
+        7,
         3,
         5,
-        7,
-        4,
         8,
-        5
+        2,
+        2,
+        3,
+        1,
+        4,
+        6,
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8091355",
@@ -6075,20 +6075,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8091355-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
-        4,
-        10,
-        4,
         3,
-        3,
+        2,
         5,
-        7,
+        3,
+        1,
         4,
-        8,
-        5
+        4,
+        1,
+        3,
+        7,
+        2,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "8029254",
@@ -6096,20 +6096,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/8029254-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
-        4,
-        10,
-        4,
         3,
-        3,
-        5,
+        4,
         7,
+        9,
+        1,
         4,
-        8,
-        5
+        3,
+        1,
+        10,
+        6,
+        3,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7565126",
@@ -6117,20 +6117,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7565126-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
-        4,
-        10,
-        4,
+        2,
         3,
-        3,
-        5,
-        7,
-        4,
+        2,
         8,
-        5
+        1,
+        2,
+        3,
+        1,
+        4,
+        9,
+        4,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7386584",
@@ -6138,20 +6138,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7386584-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
+        3,
+        4,
         6,
-        8,
-        4,
         10,
+        2,
         4,
         3,
-        3,
-        5,
-        7,
+        2,
+        9,
+        6,
         4,
-        8,
         5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7288045",
@@ -6159,20 +6159,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7288045-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
+        2,
         4,
+        3,
         10,
-        4,
+        1,
         3,
-        3,
-        5,
-        7,
-        4,
+        1,
+        1,
         8,
-        5
+        8,
+        2,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "7205141",
@@ -6180,20 +6180,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/7205141-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
+        9,
         4,
-        10,
-        4,
-        3,
-        3,
         5,
-        7,
-        4,
+        10,
+        1,
+        2,
         8,
-        5
+        1,
+        9,
+        3,
+        4,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6304319",
@@ -6201,20 +6201,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/6304319-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
-        4,
         10,
-        4,
-        3,
-        3,
-        5,
         7,
-        4,
+        2,
         8,
-        5
+        0,
+        3,
+        3,
+        0,
+        3,
+        2,
+        0,
+        1
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "6292993",
@@ -6223,19 +6223,19 @@
       "categoria": "familia_cuidador",
       "vector12d": [
         6,
+        2,
+        2,
         8,
-        4,
-        10,
-        4,
+        0,
+        1,
         3,
-        3,
-        5,
-        7,
+        0,
         4,
         8,
-        5
+        0,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5904874",
@@ -6243,20 +6243,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5904874-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
+        3,
+        8,
+        4,
+        9,
+        1,
         6,
-        8,
-        4,
-        10,
-        4,
         3,
-        3,
+        0,
+        2,
         5,
-        7,
-        4,
-        8,
-        5
+        1,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5873108",
@@ -6264,20 +6264,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5873108-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
-        4,
-        10,
-        4,
-        3,
         3,
         5,
-        7,
-        4,
+        3,
+        10,
+        1,
+        2,
+        1,
+        1,
         8,
-        5
+        7,
+        2,
+        2
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     },
     {
       "id": "5429780",
@@ -6285,20 +6285,20 @@
       "imagemUrl": "https://static.thenounproject.com/png/5429780-200.png",
       "categoria": "familia_cuidador",
       "vector12d": [
-        6,
-        8,
-        4,
         10,
-        4,
         3,
-        3,
-        5,
-        7,
-        4,
+        1,
         8,
+        1,
+        1,
+        10,
+        1,
+        2,
+        2,
+        4,
         5
       ],
-      "vectorSource": "fallback"
+      "vectorSource": "gemma-4-31b-it"
     }
   ],
   "dimensions": [
@@ -6316,8 +6316,8 @@
     "especializado_caa"
   ],
   "total": 300,
-  "geradoEm": "2026-04-09T14:15:53.094Z",
-  "geminiModel": "gemini-1.5-flash",
+  "geradoEm": "2026-04-09T17:57:01.909Z",
+  "geminiModel": "gemma-4-31b-it",
   "categorias": {
     "linguagem_sinais": 30,
     "prancha_comunicacao": 30,
@@ -6331,8 +6331,8 @@
     "familia_cuidador": 30
   },
   "stats": {
-    "gemini": 0,
-    "cache": 0,
-    "fallback": 300
+    "gemma": 70,
+    "cache": 230,
+    "fallback": 0
   }
 }
