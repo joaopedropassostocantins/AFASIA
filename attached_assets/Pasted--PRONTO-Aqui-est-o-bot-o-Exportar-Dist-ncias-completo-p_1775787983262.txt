@@ -1,0 +1,107 @@
+✅ PRONTO! Aqui está o botão “Exportar Distâncias” completo para o Replit.
+1. Onde colocar o código (passo a passo)
+	1	Abra o projeto no Replit: https://replit.com/@seu-usuario/gemma-proof-concept (ou o nome do seu repl)
+	2	Vá na pasta do frontend (geralmente src/ ou app/)
+	3	Encontre o arquivo principal do atlas (provavelmente NounAtlas.tsx, AtlasCloud.tsx ou App.tsx)
+	4	Cole o componente abaixo no final do arquivo (antes do export default).
+2. Código do Botão (copie e cole inteiro)
+// ====================== BOTÃO EXPORTAR DISTÂNCIAS ======================
+// Cole este componente no final do seu arquivo principal do atlas
+
+import { useState } from 'react';
+
+interface Picto {
+  id: string | number;
+  palavra: string;
+  categoria: string;
+  coordX: number;
+  coordY: number;
+  imagemUrl?: string;
+}
+
+const ButtonExportDistances = ({ pictos }: { pictos: Picto[] }) => {
+  const [isExporting, setIsExporting] = useState(false);
+
+  const exportDistances = () => {
+    if (!pictos || pictos.length === 0) {
+      alert('❌ Nenhum pictograma carregado!');
+      return;
+    }
+
+    setIsExporting(true);
+    console.log(`🚀 Exportando distâncias de ${pictos.length} pictogramas...`);
+
+    // Calcular matriz de distâncias euclidianas (igual ao cloud)
+    const coords = pictos.map(p => [p.coordX, p.coordY]);
+
+    function euclidean(a: number[], b: number[]) {
+      return Math.hypot(a[0] - b[0], a[1] - b[1]);
+    }
+
+    const distMatrix = coords.map((c1, i) =>
+      coords.map((c2, j) => i === j ? 0 : parseFloat(euclidean(c1, c2).toFixed(6)))
+    );
+
+    const exportData = {
+      metadata: {
+        total_pictos: pictos.length,
+        algorithm: "Wasserstein + MDS (Euclidean projection)",
+        generated_at: new Date().toISOString(),
+        author: "João Pedro Pereira Passos - AFASIA IAP",
+        version: "1.0"
+      },
+      palavras: pictos.map(p => p.palavra),
+      dist_matrix: distMatrix,
+      pictos: pictos.map(p => ({
+        id: p.id,
+        palavra: p.palavra,
+        categoria: p.categoria,
+        coordX: p.coordX,
+        coordY: p.coordY,
+        imagemUrl: p.imagemUrl
+      }))
+    };
+
+    // Download automático
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `atlas_distances_full_${pictos.length}_icones.json`;
+    link.click();
+
+    URL.revokeObjectURL(url);
+    setIsExporting(false);
+
+    alert(`✅ Download concluído!\n\nArquivo: atlas_distances_full_${pictos.length}_icones.json\n\nAgora copie para o repositório GitHub AFASIA!`);
+  };
+
+  return (
+    
+      {isExporting ? '⏳ Exportando...' : '📤 Exportar Todas as Distâncias'}
+    
+  );
+};
+
+export default ButtonExportDistances;
+3. Como adicionar o botão na tela (fácil)
+No componente principal do atlas (onde ficam os filtros), cole isso dentro da div dos filtros ou no header:
+{/* Botão de exportar distâncias */}
+   {/* ou o nome da sua variável de estado */}
+Exemplo de onde colocar (procure a seção dos filtros):
+  {/* seus botões de filtro existentes */}
+  
+  {/* ← Adicione aqui o botão novo */}
+  
+
+4. Teste agora
+	•	Salve o arquivo
+	•	Clique em Run no Replit
+	•	Abra o site novamente
+	•	O botão verde “Exportar Todas as Distâncias” deve aparecer
+	•	Clique nele → o JSON será baixado automaticamente
+Depois de baixar, copie o arquivo para a pasta distances/ do seu repositório GitHub e faça commit.
+Quer que eu te mande também:
+	•	A versão com botão flutuante (fica sempre visível no canto)?
+	•	Ou um botão que já faz commit automático no GitHub (mais avançado)?
+É só dizer! 🚀

@@ -1,0 +1,80 @@
+✅ PRONTO! Aqui está o prompt EXATO que você vai colar no Replit.
+Passo a passo (faça exatamente nesta ordem):
+	1	Abra o site: https://gemma-proof-concept.replit.app/noun-atlas
+	2	Pressione F12 → aba Console
+	3	Copie e cole todo o código abaixo (é um único bloco) e pressione Enter:
+// ================================================
+// PROMPT DETERMINADO - EXPORTAR DISTÂNCIAS + PREPARAR PARA REPOSITÓRIO
+// Cole este bloco inteiro no Console do Replit
+// ================================================
+
+console.log("%c🚀 Iniciando exportação completa das distâncias...", "color:#00ff00; font-size:16px; font-weight:bold");
+
+const pictos = window.__ATLAS_PICTOS || 
+               (window.appState && window.appState.pictos) || 
+               (document.querySelector('[data-testid="atlas-cloud"]') && 
+                document.querySelector('[data-testid="atlas-cloud"]').__reactFiber?.memoizedState?.baseState?.pictos);
+
+if (!pictos || !Array.isArray(pictos) || pictos.length === 0) {
+    alert("❌ Não consegui encontrar os dados automaticamente.\n\n1. Instale a extensão React DevTools\n2. Abra a aba Components\n3. Procure o componente que contém 'pictos'\n4. Expanda e rode o script novamente.");
+    throw new Error("Dados não encontrados");
+}
+
+console.log(`✅ Encontrados ${pictos.length} pictogramas!`);
+
+// Extrair coordenadas e palavras
+const coords = pictos.map(p => [parseFloat(p.coordX), parseFloat(p.coordY)]);
+const palavras = pictos.map(p => p.palavra);
+
+// Calcular matriz de distâncias (exatamente como o app usa)
+function euclidean(a, b) {
+    return Math.hypot(a[0] - b[0], a[1] - b[1]);
+}
+
+const distMatrix = coords.map((c1, i) => 
+    coords.map((c2, j) => i === j ? 0 : parseFloat(euclidean(c1, c2).toFixed(6)))
+);
+
+const exportData = {
+    metadata: {
+        total_pictos: pictos.length,
+        algorithm: "Wasserstein + MDS (Euclidean projection)",
+        generated_at: new Date().toISOString(),
+        author: "João Pedro Pereira Passos"
+    },
+    palavras: palavras,
+    dist_matrix: distMatrix,
+    pictos: pictos.map(p => ({
+        id: p.id,
+        palavra: p.palavra,
+        categoria: p.categoria,
+        coordX: p.coordX,
+        coordY: p.coordY,
+        imagemUrl: p.imagemUrl
+    }))
+};
+
+// Baixar o arquivo automaticamente
+const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: "application/json" });
+const url = URL.createObjectURL(blob);
+const a = document.createElement("a");
+a.href = url;
+a.download = `atlas_distances_full_${pictos.length}_icones.json`;
+a.click();
+
+console.log("%c✅ ARQUIVO BAIXADO COM SUCESSO!", "color:#00ff00; font-size:18px");
+console.log("Nome do arquivo:", a.download);
+console.log("Agora copie este arquivo para a pasta do seu repositório GitHub.");
+
+alert("✅ Download concluído!\n\nO arquivo 'atlas_distances_full_XXXX_icones.json' foi baixado.\n\nPróximo passo: copie ele para a pasta do seu repositório AFASIA e faça commit.");
+Depois que o download terminar:
+	1	Abra seu repositório no GitHub: https://github.com/joaopedropassostocantins/AFASIA
+	2	Crie uma pasta nova chamada distances/ (se não existir).
+	3	Arraste o arquivo baixado para dentro da pasta distances/ no GitHub (ou use o botão “Add file → Upload files”).
+	4	No final da página escreva a mensagem de commit: feat: exporta matriz completa de distâncias (1500 pictogramas)
+	5	
+	6	Clique em Commit changes.
+Pronto! O arquivo já estará no repositório público.
+
+Quer que eu faça também uma versão que adiciona automaticamente um botão “Exportar Distâncias” direto no código do Replit (para você não precisar colar no console toda vez)?
+É só dizer “sim, manda o botão” que eu te entrego o código React pronto para colar no arquivo do app.
