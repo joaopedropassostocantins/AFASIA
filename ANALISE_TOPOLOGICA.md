@@ -12,7 +12,7 @@
 
 O atlas pictórico da IAP é construído em quatro etapas computacionais:
 
-1. **Vetorização semântica** — cada pictograma é descrito por texto e convertido em vetor de 12 dimensões pelo Gemma 4 31B via API Google AI
+1. **Vetorização semântica** — cada pictograma é descrito por texto e convertido em vetor semântico pelo Gemma 4 31B via API Google AI (dimensões conforme `disfasia_gemini_cache.json` do pipeline)
 2. **Distância de Wasserstein** — medida de transporte ótimo entre distribuições de probabilidade dos vetores semânticos (implementada sem bibliotecas externas, conforme AlgoritmoJP)
 3. **MDS 2D** (Multidimensional Scaling) — projeta os vetores de alta dimensão em coordenadas bidimensionais preservando as distâncias relativas
 4. **Matriz Euclidiana** — distâncias entre as coordenadas MDS (coordX, coordY), computadas e salvas em `distances/`
@@ -40,7 +40,7 @@ O atlas Disfasia contém 38 pictogramas distribuídos em 5 categorias com os seg
 - **Eixo oposto (Q2):** `espaco` — conceitos de localização e referência espacial
 - **Origem (Q1/Q3):** `emocao` e `comunicacao` — estados internos e interação social
 
-### 2.2 Distâncias Inter-Categoria (Centróide a Centróide)
+### 2.2 Principais Distâncias Inter-Categoria (Centróide a Centróide)
 
 | Par de Categorias | Distância | Interpretação |
 |-------------------|:---------:|---------------|
@@ -74,7 +74,7 @@ Os dez pares de pictogramas de categorias diferentes com menor distância Euclid
 |:-:|-------------|-----------|-------------|-----------|:---------:|
 | 1 | continuar | fluencia | primeiro | sequencia | **0.003** |
 | 2 | parar | fluencia | nervoso | emocao | 0.021 |
-| 3 | perto | espaco | ouvir | comunicacao | 0.026 |
+| 3 | perto | espaco | ouvir | comunicacao | 0.025 |
 | 4 | devagar | fluencia | fim | sequencia | 0.029 |
 | 5 | tranquilo | emocao | perguntar | comunicacao | 0.034 |
 | 6 | parar | fluencia | triste | emocao | 0.035 |
@@ -138,7 +138,7 @@ O AlgoritmoJP (Dijkstra sobre o grafo de vizinhos MDS) identifica caminhos míni
 | `emocao` → `comunicacao` | 0.058 | Quasi-direta — a menor mediação cognitiva necessária | Amígdala → Área de Broca (literatura: Démonet et al., 1992) |
 | `continuar` → `primeiro` | 0.003 | Fluência e sequência são semanticamente equivalentes | Córtex pré-frontal dorsolateral — sequenciamento motor |
 | `parar` → `nervoso` | 0.021 | Estado de inibição ligado a estado emocional | Córtex cingulado anterior — resposta ao erro |
-| `perto` → `ouvir` | 0.026 | Proximidade espacial evoca atenção comunicativa | Sulco temporal superior — integração espaço-comunicação |
+| `perto` → `ouvir` | 0.025 | Proximidade espacial evoca atenção comunicativa | Sulco temporal superior — integração espaço-comunicação |
 | `sequencia` → `espaco` | 2.145 | Rota longa — requer mediação por `comunicacao` | Alto custo de planejamento — envolve múltiplas áreas |
 
 *Hipóteses baseadas em literatura de neurociência cognitiva, não validadas diretamente pelos dados deste atlas.
@@ -208,7 +208,7 @@ Com base nos pares mais próximos inter-categoria, os pictogramas candidatos a "
 
 | Pictograma | Categoria | Conecta com | Distância |
 |------------|-----------|-------------|:---------:|
-| `ouvir` | comunicacao | `perto`(espaco) | 0.026 |
+| `ouvir` | comunicacao | `perto`(espaco) | 0.025 |
 | `perguntar` | comunicacao | `tranquilo`(emocao) | 0.034 |
 | `ajuda` | comunicacao | `perto`(espaco) | 0.035 |
 | `responder` | comunicacao | `ansioso`(emocao) | 0.039 |
