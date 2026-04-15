@@ -214,7 +214,7 @@ export default function Aphasia() {
       });
       return;
     }
-    if (selectedSymbols.length >= 4) return;
+    if (selectedSymbols.length >= 10) return;
     setSelectedSymbols((prev) => {
       const next = [...prev, symbol.id];
       scheduleInference(next);
@@ -250,7 +250,7 @@ export default function Aphasia() {
 
   const handleSuggestionClick = (symbolId: string) => {
     if (selectedSymbols.includes(symbolId)) return;
-    if (selectedSymbols.length >= 4) return;
+    if (selectedSymbols.length >= 10) return;
     setSelectedSymbols((prev) => {
       const next = [...prev, symbolId];
       scheduleInference(next);
@@ -328,7 +328,7 @@ export default function Aphasia() {
             <div className={`grid gap-2 ${gridLarge ? "grid-cols-3" : "grid-cols-2"}`}>
               {currentCat.symbols.map((sym) => {
                 const isSelected = selectedSymbols.includes(sym.id);
-                const isDisabled = !isSelected && selectedSymbols.length >= 4;
+                const isDisabled = !isSelected && selectedSymbols.length >= 10;
                 return (
                   <motion.button
                     key={sym.id}
@@ -365,7 +365,7 @@ export default function Aphasia() {
             </span>
             {mutation.data.sugestoes.map((sid) => {
               const sym = ALL_SYMBOLS.find((s) => s.id === sid);
-              const disabled = selectedSymbols.length >= 4 || selectedSymbols.includes(sid);
+              const disabled = selectedSymbols.length >= 10 || selectedSymbols.includes(sid);
               return (
                 <button
                   key={sid}
@@ -450,7 +450,7 @@ export default function Aphasia() {
                             </div>
                             <p className="text-foreground font-medium">{entry.intencao}</p>
                             <div className="flex gap-1 mt-1">
-                              {entry.symbols.slice(0, 4).map((sid) => {
+                              {entry.symbols.slice(0, 10).map((sid) => {
                                 const sym = ALL_SYMBOLS.find((s) => s.id === sid);
                                 return sym ? (
                                   <span key={sid} title={sym.label} className="text-base">
@@ -490,7 +490,7 @@ export default function Aphasia() {
           <div className="flex flex-wrap gap-1.5 min-h-[28px] items-center">
             <AnimatePresence>
               {selectedSymbols.length === 0 ? (
-                <span className="text-sm text-muted-foreground italic">Toque nos símbolos acima...</span>
+                <span className="text-sm text-muted-foreground italic">Selecione até 10 símbolos para comunicar…</span>
               ) : (
                 selectedSymbols.map((id) => {
                   const sym = ALL_SYMBOLS.find((s) => s.id === id);
@@ -512,8 +512,8 @@ export default function Aphasia() {
                 })
               )}
             </AnimatePresence>
-            {selectedSymbols.length >= 4 && (
-              <span className="text-xs text-amber-600 font-medium ml-1">máx. 4</span>
+            {selectedSymbols.length >= 10 && (
+              <span className="text-xs text-amber-600 font-medium ml-1">máx. 10</span>
             )}
           </div>
 

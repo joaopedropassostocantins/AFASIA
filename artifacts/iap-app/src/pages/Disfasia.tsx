@@ -235,7 +235,7 @@ export default function Disfasia() {
       });
       return;
     }
-    if (selectedSymbols.length >= 4) return;
+    if (selectedSymbols.length >= 10) return;
     setSelectedSymbols((prev) => {
       const next = [...prev, symbol.id];
       scheduleInference(next);
@@ -259,7 +259,7 @@ export default function Disfasia() {
 
   const handleSuggestionClick = (symbolId: string) => {
     if (selectedSymbols.includes(symbolId)) return;
-    if (selectedSymbols.length >= 4) return;
+    if (selectedSymbols.length >= 10) return;
     setSelectedSymbols((prev) => {
       const next = [...prev, symbolId];
       scheduleInference(next);
@@ -337,7 +337,7 @@ export default function Disfasia() {
             <div className={`grid gap-2 ${gridLarge ? "grid-cols-3" : "grid-cols-2"}`}>
               {currentCat.symbols.map((sym) => {
                 const isSelected = selectedSymbols.includes(sym.id);
-                const isDisabled = !isSelected && selectedSymbols.length >= 4;
+                const isDisabled = !isSelected && selectedSymbols.length >= 10;
                 return (
                   <motion.button
                     key={sym.id}
@@ -367,7 +367,7 @@ export default function Disfasia() {
           </CardContent>
         </Card>
 
-        <div className="flex items-center gap-2 min-h-[44px]">
+        <div className="flex items-center gap-2 min-h-[44px] flex-wrap overflow-x-auto">
           <AnimatePresence mode="popLayout">
             {selectedSymbols.length === 0 ? (
               <motion.p
@@ -377,7 +377,7 @@ export default function Disfasia() {
                 exit={{ opacity: 0 }}
                 className="text-sm text-muted-foreground italic"
               >
-                Selecione até 4 símbolos para comunicar…
+                Selecione até 10 símbolos para comunicar…
               </motion.p>
             ) : (
               selectedSymbols.map((id) => {
@@ -474,7 +474,7 @@ export default function Disfasia() {
             </span>
             {mutation.data.sugestoes.map((sid) => {
               const sym = ALL_SYMBOLS.find((s) => s.id === sid);
-              const disabled = selectedSymbols.length >= 4 || selectedSymbols.includes(sid);
+              const disabled = selectedSymbols.length >= 10 || selectedSymbols.includes(sid);
               return (
                 <button
                   key={sid}
@@ -559,7 +559,7 @@ export default function Disfasia() {
                             </div>
                             <p className="text-foreground font-medium">{entry.intencao}</p>
                             <div className="flex gap-1 mt-1">
-                              {entry.symbols.slice(0, 4).map((sid) => {
+                              {entry.symbols.slice(0, 10).map((sid) => {
                                 const sym = ALL_SYMBOLS.find((s) => s.id === sid);
                                 return sym ? (
                                   <span key={sid} title={sym.label} className="text-base">
