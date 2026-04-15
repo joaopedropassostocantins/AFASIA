@@ -3,7 +3,7 @@
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, GitBranch, X, RotateCcw, Search, ChevronDown, AlertCircle, CheckCircle2, Loader2 } from "lucide-react";
+import { ArrowRight, GitBranch, X, RotateCcw, Search, AlertCircle, CheckCircle2, Loader2, Sparkles, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useFlowVisualization } from "@/hooks/useFlowVisualization";
@@ -319,7 +319,8 @@ interface FlowVisualizerProps {
 export function FlowVisualizer({ pictos }: FlowVisualizerProps) {
   const {
     origem, destino, resultado, calculando, erro, naoEncontrado,
-    setOrigem, setDestino, calcularCaminho, limpar,
+    frases, modeloFrases, gerandoFrases, erroFrases,
+    setOrigem, setDestino, calcularCaminho, limpar, gerarFrases, regerarFrases,
   } = useFlowVisualization(pictos);
 
   const podeCalcular = origem !== null && destino !== null &&
@@ -507,6 +508,122 @@ export function FlowVisualizer({ pictos }: FlowVisualizerProps) {
                     </span>
                   ))}
                 </div>
+              </div>
+
+              {/* ── Seção de Frases Lógicas Geradas por IA ── */}
+              <div className="border-t border-border/40 pt-5 space-y-4">
+                <div className="flex items-center justify-between flex-wrap gap-3">
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="h-4 w-4" style={{ color: "#8b5cf6" }} />
+                    <h4 className="font-mono font-semibold text-sm text-foreground">
+                      Frases Lógicas Geradas por IA
+                    </h4>
+                  </div>
+
+                  {/* Botões de ação */}
+                  {!frases && !gerandoFrases && !erroFrases && (
+                    <Button
+                      size="sm"
+                      onClick={gerarFrases}
+                      className="gap-2 font-medium"
+                      style={{ backgroundColor: "#8b5cf6", color: "white" }}
+                    >
+                      <Sparkles className="h-3.5 w-3.5" />
+                      Gerar com IA
+                    </Button>
+                  )}
+
+                  {frases && !gerandoFrases && (
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={regerarFrases}
+                      className="gap-2 text-xs"
+                      style={{ borderColor: "#8b5cf644", color: "#8b5cf6" }}
+                    >
+                      <RotateCcw className="h-3 w-3" />
+                      Regerar
+                    </Button>
+                  )}
+                </div>
+
+                {/* Estado de loading */}
+                {gerandoFrases && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="flex items-center gap-3 py-4 text-sm"
+                    style={{ color: "#8b5cf6" }}
+                  >
+                    <Loader2 className="h-4 w-4 animate-spin shrink-0" />
+                    <span className="font-mono">Pensando no fluxo de pensamento…</span>
+                  </motion.div>
+                )}
+
+                {/* Erro de frases */}
+                {erroFrases && !gerandoFrases && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex items-start gap-3 p-3 rounded-lg border"
+                    style={{ borderColor: "#8b5cf633", backgroundColor: "#8b5cf610" }}
+                  >
+                    <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" style={{ color: "#8b5cf6" }} />
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm text-muted-foreground">{erroFrases}</p>
+                    </div>
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      onClick={gerarFrases}
+                      className="shrink-0 text-xs"
+                      style={{ color: "#8b5cf6" }}
+                    >
+                      Tentar novamente
+                    </Button>
+                  </motion.div>
+                )}
+
+                {/* Cards de frases */}
+                {frases && !gerandoFrases && (
+                  <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                      hidden: {},
+                      visible: { transition: { staggerChildren: 0.12 } },
+                    }}
+                    className="space-y-3"
+                  >
+                    {frases.map((frase, idx) => (
+                      <motion.div
+                        key={idx}
+                        variants={{
+                          hidden: { opacity: 0, x: -16 },
+                          visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 280, damping: 24 } },
+                        }}
+                        className="flex items-start gap-3 p-4 rounded-lg border"
+                        style={{ borderColor: "#8b5cf633", backgroundColor: "#8b5cf60a" }}
+                      >
+                        <Quote className="h-4 w-4 shrink-0 mt-0.5" style={{ color: "#8b5cf6" }} />
+                        <p className="flex-1 text-sm text-foreground leading-relaxed">{frase}</p>
+                        <span
+                          className="shrink-0 text-[10px] font-mono font-bold px-2 py-0.5 rounded-full"
+                          style={{ backgroundColor: "#8b5cf622", color: "#8b5cf6" }}
+                        >
+                          {idx + 1}
+                        </span>
+                      </motion.div>
+                    ))}
+
+                    {/* Modelo usado */}
+                    {modeloFrases && (
+                      <p className="text-[10px] text-muted-foreground font-mono text-right">
+                        Gerado por {modeloFrases} · IAP/UFT (Passos, 2024)
+                      </p>
+                    )}
+                  </motion.div>
+                )}
               </div>
 
               {/* Nota técnica */}

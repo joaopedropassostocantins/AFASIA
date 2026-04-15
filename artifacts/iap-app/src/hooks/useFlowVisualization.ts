@@ -1,9 +1,15 @@
 // Hook para o Visualizador de Fluxos de Pensamento (AlgoritmoJP)
-// Encapsula estado, construção do grafo e execução do Dijkstra
+// Encapsula estado, construção do grafo, execução do Dijkstra e geração de frases com IA
 
 import { useState, useRef, useCallback } from "react";
 import { dijkstra, type ResultadoDijkstra, type Grafo } from "@/algorithms/dijkstra";
 import { buildGraph, type PictoMinimo, type IndicePickto } from "@/utils/buildGraph";
+
+const BASE_URL = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
+
+function getApiUrl(path: string) {
+  return `${BASE_URL}${path}`;
+}
 
 export interface NoPensamento {
   id: string;
@@ -26,6 +32,10 @@ export interface EstadoFluxo {
   calculando: boolean;
   erro: string | null;
   naoEncontrado: boolean;
+  frases: string[] | null;
+  modeloFrases: string | null;
+  gerandoFrases: boolean;
+  erroFrases: string | null;
 }
 
 export interface AcoesFluxo {
@@ -33,11 +43,14 @@ export interface AcoesFluxo {
   setDestino: (picto: PictoMinimo | null) => void;
   calcularCaminho: () => void;
   limpar: () => void;
+  gerarFrases: () => void;
+  regerarFrases: () => void;
 }
 
 /**
  * Hook principal do Visualizador de Fluxos de Pensamento.
- * Recebe a lista de pictogramas e gerencia todo o estado do algoritmo JP.
+ * Recebe a lista de pictogramas e gerencia todo o estado do algoritmo JP
+ * incluindo geração de frases lógicas com IA e cache por caminho.
  */
 export function useFlowVisualization(pictos: PictoMinimo[]): EstadoFluxo & AcoesFluxo {
   const [origem, setOrigemState] = useState<PictoMinimo | null>(null);
@@ -46,6 +59,15 @@ export function useFlowVisualization(pictos: PictoMinimo[]): EstadoFluxo & Acoes
   const [calculando, setCalculando] = useState(false);
   const [erro, setErro] = useState<string | null>(null);
   const [naoEncontrado, setNaoEncontrado] = useState(false);
+
+  // Estados de frases com IA
+  const [frases, setFrases] = useState<string[] | null>(null);
+  const [modeloFrases, setModeloFrases] = useState<string | null>(null);
+  const [gerandoFrases, setGerandoFrases] = useState(false);
+  const [erroFrases, setErroFrases] = useState<string | null>(null);
+
+  // Cache de frases por caminho (chave = palavraPt/palavra dos nós unidas por "→")
+  const cacheRef = useRef<Map<string, { frases: string[]; modelo: string }>>(new Map());
 
   // Grafo e índice construídos de forma lazy e memoizados
   const grafoRef = useRef<Grafo | null>(null);
@@ -66,6 +88,9 @@ export function useFlowVisualization(pictos: PictoMinimo[]): EstadoFluxo & Acoes
     setResultado(null);
     setErro(null);
     setNaoEncontrado(false);
+    setFrases(null);
+    setModeloFrases(null);
+    setErroFrases(null);
   }, []);
 
   const setDestino = useCallback((picto: PictoMinimo | null) => {
@@ -73,6 +98,9 @@ export function useFlowVisualization(pictos: PictoMinimo[]): EstadoFluxo & Acoes
     setResultado(null);
     setErro(null);
     setNaoEncontrado(false);
+    setFrases(null);
+    setModeloFrases(null);
+    setErroFrases(null);
   }, []);
 
   const calcularCaminho = useCallback(() => {
@@ -89,6 +117,9 @@ export function useFlowVisualization(pictos: PictoMinimo[]): EstadoFluxo & Acoes
     setErro(null);
     setResultado(null);
     setNaoEncontrado(false);
+    setFrases(null);
+    setModeloFrases(null);
+    setErroFrases(null);
 
     // Executa de forma assíncrona para não travar a UI
     setTimeout(() => {
@@ -150,7 +181,71 @@ export function useFlowVisualization(pictos: PictoMinimo[]): EstadoFluxo & Acoes
     setErro(null);
     setNaoEncontrado(false);
     setCalculando(false);
+    setFrases(null);
+    setModeloFrases(null);
+    setGerandoFrases(false);
+    setErroFrases(null);
   }, []);
+
+  // Função interna para chamar o endpoint de frases
+  const chamarEndpointFrases = useCallback(async (nos: NoPensamento[], forceRefresh = false) => {
+    const caminhoLabels = nos.map((n) => n.palavraPt ?? n.palavra);
+    const cacheKey = caminhoLabels.join("→");
+
+    // Verificar cache
+    if (!forceRefresh && cacheRef.current.has(cacheKey)) {
+      const cached = cacheRef.current.get(cacheKey)!;
+      setFrases(cached.frases);
+      setModeloFrases(cached.modelo);
+      return;
+    }
+
+    setGerandoFrases(true);
+    setErroFrases(null);
+    setFrases(null);
+    setModeloFrases(null);
+
+    try {
+      const resp = await fetch(getApiUrl("/api/iap/flow-phrases"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ caminho: caminhoLabels }),
+      });
+
+      if (!resp.ok) {
+        const err = await resp.json().catch(() => ({}));
+        throw new Error((err as { error?: string }).error ?? `HTTP ${resp.status}`);
+      }
+
+      const data = await resp.json() as { frases: string[]; modelo: string };
+
+      if (!Array.isArray(data.frases) || data.frases.length === 0) {
+        throw new Error("O modelo não retornou frases. Tente novamente.");
+      }
+
+      // Salvar no cache
+      cacheRef.current.set(cacheKey, { frases: data.frases, modelo: data.modelo });
+
+      setFrases(data.frases);
+      setModeloFrases(data.modelo);
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : "Erro ao gerar frases. Tente novamente.";
+      setErroFrases(msg);
+      console.error("[FluxoPensamento] Erro ao gerar frases:", e);
+    } finally {
+      setGerandoFrases(false);
+    }
+  }, []);
+
+  const gerarFrases = useCallback(() => {
+    if (!resultado) return;
+    chamarEndpointFrases(resultado.nos, false);
+  }, [resultado, chamarEndpointFrases]);
+
+  const regerarFrases = useCallback(() => {
+    if (!resultado) return;
+    chamarEndpointFrases(resultado.nos, true);
+  }, [resultado, chamarEndpointFrases]);
 
   return {
     origem,
@@ -159,9 +254,15 @@ export function useFlowVisualization(pictos: PictoMinimo[]): EstadoFluxo & Acoes
     calculando,
     erro,
     naoEncontrado,
+    frases,
+    modeloFrases,
+    gerandoFrases,
+    erroFrases,
     setOrigem,
     setDestino,
     calcularCaminho,
     limpar,
+    gerarFrases,
+    regerarFrases,
   };
 }

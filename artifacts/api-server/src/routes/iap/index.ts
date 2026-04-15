@@ -365,6 +365,79 @@ function computeWasserstein(
   return Math.round(totalDist * 10000) / 10000;
 }
 
+router.post("/flow-phrases", async (req, res) => {
+  try {
+    const body = req.body as { caminho?: unknown };
+    if (!Array.isArray(body?.caminho) || body.caminho.length < 2) {
+      res.status(400).json({ error: "Campo 'caminho' deve ser um array com no mínimo 2 palavras." });
+      return;
+    }
+    const caminho = (body.caminho as unknown[]).map(String).filter(Boolean);
+    if (caminho.length < 2) {
+      res.status(400).json({ error: "Campo 'caminho' deve conter no mínimo 2 palavras válidas." });
+      return;
+    }
+
+    const caminhoTexto = caminho.join(" → ");
+    const origem = caminho[0];
+    const destino = caminho[caminho.length - 1];
+    const intermediarios = caminho.slice(1, -1);
+    const intermediariosTexto = intermediarios.length > 0
+      ? `Conceitos intermediários: ${intermediarios.join(", ")}.`
+      : "Transição direta entre origem e destino.";
+
+    const prompt = `Você é um sistema IAP (Inteligência Artificial Pictórica) baseado na teoria de João Pedro Pereira Passos (UFT, 2024).
+A IAP mapeia pensamentos em espaços topológicos pré-linguísticos usando o AlgoritmoJP (Wasserstein + MDS).
+
+O AlgoritmoJP calculou o seguinte fluxo de pensamento semântico:
+Caminho: ${caminhoTexto}
+Origem: "${origem}"
+Destino: "${destino}"
+${intermediariosTexto}
+
+Gere EXATAMENTE 3 frases em português do Brasil que representem possíveis intenções comunicativas de uma pessoa com afasia que selecionou este caminho semântico. Cada frase deve:
+- Fluir naturalmente pelos conceitos do caminho (origem → intermediários → destino)
+- Ser curta, clara e empática (máximo 25 palavras)
+- Usar conectores fluidos ("depois", "porque", "então", "quero", etc.)
+- Ser útil para comunicação aumentativa e alternativa (CAA)
+
+Responda APENAS com as 3 frases numeradas, sem texto adicional:
+1. [frase 1]
+2. [frase 2]
+3. [frase 3]`;
+
+    const { text: rawText, model } = await generateWithGemma(prompt, {
+      maxOutputTokens: 512,
+    });
+
+    // Parsear as 3 frases numeradas
+    const linhas = rawText.split("\n").map((l: string) => l.trim()).filter(Boolean);
+    const frases: string[] = [];
+    for (const linha of linhas) {
+      const match = linha.match(/^[123][.)]\s*(.+)/);
+      if (match && match[1]) {
+        frases.push(match[1].trim());
+      }
+      if (frases.length === 3) break;
+    }
+
+    // Fallback: tentar pegar linhas não vazias se o parsing falhou
+    if (frases.length < 3) {
+      const extras = linhas.filter((l: string) => !l.match(/^[123][.)]/)).slice(0, 3 - frases.length);
+      frases.push(...extras);
+    }
+
+    if (frases.length === 0) {
+      res.status(502).json({ error: "O modelo não retornou frases válidas. Tente novamente." });
+      return;
+    }
+
+    res.json({ frases: frases.slice(0, 3), modelo: model });
+  } catch (err) {
+    handleRouteError(err, res, (msg) => req.log.error(msg), "generate flow phrases");
+  }
+});
+
 router.post("/topology", async (req, res) => {
   try {
     const body = ComputeTopologyBody.parse(req.body);
