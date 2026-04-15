@@ -816,11 +816,16 @@ router.get("/disfasia-atlas", (req, res) => {
 });
 
 const DISFASIA_KNOWN_SYMBOL_IDS = [
-  "parar", "continuar", "devagar", "rapido", "esperar", "repetir", "vez",
+  "parar", "continuar", "devagar", "rapido", "esperar", "repetir", "vez", "vez_tu",
+  "mais_devagar", "alto", "silencio", "pronto",
   "primeiro", "depois", "agora", "antes", "amanha", "ontem", "logo", "inicio", "fim",
-  "frustrado", "tranquilo", "ansioso", "feliz", "triste", "nervoso", "calmo",
+  "semana", "sempre", "nunca",
+  "frustrado", "tranquilo", "ansioso", "feliz", "triste", "nervoso", "calmo", "confuso",
+  "orgulhoso", "com_medo", "surpreso", "animado",
   "aqui", "ali", "longe", "perto", "dentro", "fora", "cima", "baixo",
+  "lado", "frente", "atras", "meio",
   "falar", "ouvir", "entender", "explicar", "perguntar", "responder", "ajuda", "nao_entendi",
+  "sim", "nao", "mostrar", "escrever",
 ];
 
 router.post("/disfasia-chat", async (req, res) => {
