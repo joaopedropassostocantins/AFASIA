@@ -68,9 +68,11 @@ interface SeletorProps {
 
 function SeletorPensamento({ label, placeholder, pictos, selecionado, onSelecionar, destaque }: SeletorProps) {
   const [busca, setBusca] = useState("");
+  const [buscaDebounced, setBuscaDebounced] = useState("");
   const [aberto, setAberto] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Fechar ao clicar fora
   useEffect(() => {
@@ -83,10 +85,17 @@ function SeletorPensamento({ label, placeholder, pictos, selecionado, onSelecion
     return () => document.removeEventListener("mousedown", handleClickFora);
   }, []);
 
-  // Filtrar pictogramas por busca
-  const filtrados = busca.trim().length >= 1
+  // Debounce de 150ms para a busca — evita filtragem a cada tecla
+  useEffect(() => {
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => setBuscaDebounced(busca), 150);
+    return () => { if (debounceRef.current) clearTimeout(debounceRef.current); };
+  }, [busca]);
+
+  // Filtrar pictogramas usando termo debounced
+  const filtrados = buscaDebounced.trim().length >= 1
     ? pictos
-        .filter((p) => p.palavra.toLowerCase().includes(busca.toLowerCase()))
+        .filter((p) => p.palavra.toLowerCase().includes(buscaDebounced.toLowerCase()))
         .slice(0, 50)
     : [];
 

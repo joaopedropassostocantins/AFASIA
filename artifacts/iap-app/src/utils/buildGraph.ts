@@ -42,8 +42,13 @@ export function buildGraph(pictos: PictoMinimo[]): {
     indicePorPalavra.get(palavraLower)!.push(picto);
   }
 
-  // Construir lista de adjacência bidirecional (melhora a conectividade do grafo kNN)
-  // Primeiro passo: arestas dirigidas (A → vizinhos de A)
+  // Grafo BIDIRECIONAL: adicionamos arestas reversas (B→A) além das diretas (A→B).
+  // Motivo: o grafo kNN dirigido (~10 arestas/nó) é esparso e frequentemente
+  // desconexo para pares distantes. Torná-lo bidirecional garante que Dijkstra
+  // encontre caminhos entre quaisquer dois nós no mesmo componente conexo,
+  // que é o comportamento esperado para visualização de "fluxo de pensamento".
+  // Semântica: a distância de A→B é simétrica (distância Euclidiana no espaço MDS),
+  // portanto a aresta reversa mantém o mesmo peso e não distorce as distâncias.
   for (const picto of pictos) {
     const idStr = String(picto.id);
     if (!grafo.has(idStr)) grafo.set(idStr, []);
