@@ -268,7 +268,7 @@ const output = {
   totalConceitos: pictosFinal.length,
   totalVariantes: pictos.length,
   categorias,
-  vizinhosMethod: "euclidean-knn-k5-deduped",
+  vizinhosMethod: "euclidean-knn-k30-deduped",
   mdsInfo: {
     algorithm: "AlgoritmoJP — Wasserstein + MDS Clássico (projeção euclidiana)",
     note: "Coordenadas MDS derivadas de distâncias de Wasserstein calculadas pelo AlgoritmoJP (IAP/UFT, Passos 2024). Vizinhos recalculados sobre os 149 representantes únicos.",

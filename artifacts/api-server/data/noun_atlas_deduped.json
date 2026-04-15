@@ -24307,10 +24307,10 @@
     "tempo": 27,
     "escola": 18
   },
-  "vizinhosMethod": "euclidean-knn-k5-deduped",
+  "vizinhosMethod": "euclidean-knn-k30-deduped",
   "mdsInfo": {
     "algorithm": "AlgoritmoJP — Wasserstein + MDS Clássico (projeção euclidiana)",
     "note": "Coordenadas MDS derivadas de distâncias de Wasserstein calculadas pelo AlgoritmoJP (IAP/UFT, Passos 2024). Vizinhos recalculados sobre os 149 representantes únicos."
   },
-  "geradoEm": "2026-04-15T23:09:17.572Z"
+  "geradoEm": "2026-04-15T23:12:49.391Z"
 }
