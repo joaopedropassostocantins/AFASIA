@@ -219,8 +219,8 @@ export function useFlowVisualization(pictos: PictoMinimo[]): EstadoFluxo & Acoes
 
       const data = await resp.json() as { frases: string[]; modelo: string };
 
-      if (!Array.isArray(data.frases) || data.frases.length === 0) {
-        throw new Error("O modelo não retornou frases. Tente novamente.");
+      if (!Array.isArray(data.frases) || data.frases.length < 3) {
+        throw new Error("O modelo retornou menos de 3 frases. Clique em 'Regerar' para tentar novamente.");
       }
 
       // Salvar no cache

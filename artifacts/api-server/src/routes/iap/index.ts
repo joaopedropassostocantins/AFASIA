@@ -432,6 +432,11 @@ Responda APENAS com as 3 frases numeradas, sem texto adicional:
       return;
     }
 
+    if (frases.length < 3) {
+      res.status(502).json({ error: "O modelo retornou menos de 3 frases. Tente novamente." });
+      return;
+    }
+
     res.json({ frases: frases.slice(0, 3), modelo: model });
   } catch (err) {
     handleRouteError(err, res, (msg) => req.log.error(msg), "generate flow phrases");
