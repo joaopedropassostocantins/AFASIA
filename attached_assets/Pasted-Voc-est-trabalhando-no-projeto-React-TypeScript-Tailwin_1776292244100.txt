@@ -1,0 +1,48 @@
+Você está trabalhando no projeto React + TypeScript + TailwindCSS que está rodando em https://gemma-proof-concept.replit.app/noun-atlas
+O arquivo de dados principal é:
+/distances/noun_distances.json
+(3.443 registros com os campos: id, palavra, categoria, coordX, coordY, top10_vizinhos)
+Cada registro representa um “funcionário/pensamento”.
+A categoria é a “diretoria” (ex: comunicacao, emocao, corpo, alimentacao, etc.).
+IMPORTANTE:
+Todo o texto da interface (labels, botões, títulos, placeholders, estatísticas, tooltips, mensagens, etc.) deve estar 100% em Português do Brasil (pt-BR).
+Use linguagem natural, clara e profissional, exatamente como no Plano de Desenvolvimento PDF v3.0 que já enviei.
+Quero implementar exatamente o Visualizador de Fluxos de Pensamento descrito no Plano de Desenvolvimento v3.0 (PDF páginas 3-10).
+O que preciso que você faça agora:
+1.  Crie a funcionalidade completa de Visualizador de Fluxos de Pensamento (igual ao PDF).
+2.  Crie os seguintes arquivos novos na estrutura do projeto:
+•  src/components/FlowVisualizer.tsx (componente principal)
+•  src/utils/buildGraph.ts
+•  src/algorithms/dijkstra.ts
+•  src/hooks/useFlowVisualization.ts (opcional)
+3.  Atualize a página /noun-atlas (ou a rota principal) para incluir o novo componente FlowVisualizer.
+Requisitos técnicos exatos:
+•  Use o grafo k-NN já existente no campo top10_vizinhos (não precisa de matriz 3443x3443).
+•  Implemente o algoritmo Dijkstra (lógica exata do PDF páginas 4 e 16-17).
+•  O caminho deve mostrar: Origem → Intermediários → Destino com distâncias parciais e total.
+•  Cada nó deve ter cor baseada na categoria (diretoria).
+•  Interface deve seguir o layout do PDF página 14 (Header + Sidebar + Main Content com seletores + Diagrama do Fluxo + Estatísticas).
+UI/UX desejada (em Português do Brasil):
+•  Título da página: “Visualizador de Fluxos de Pensamento”
+•  Seletores grandes:
+	•  “Funcionário de Origem (A)” ou “Pensamento de Origem”
+	•  “Funcionário de Destino (B)” ou “Pensamento de Destino”
+•  Botão grande: “Calcular Caminho Mais Curto” ou “Visualizar Fluxo de Pensamento”
+•  Após calcular:
+	•  Fluxo visual em linha (cards com iniciais do nome + palavra completa + categoria + seta com distância)
+	•  Estatísticas em pt-BR: “Distância total”, “Número de intermediários”, “Diretorias envolvidas”, “Caminho encontrado”
+•  Design limpo, moderno, com cores vibrantes por categoria (use Tailwind).
+Exemplo de texto em pt-BR que deve aparecer:
+•  “Selecione o pensamento de origem”
+•  “Selecione o pensamento de destino”
+•  “Calcular caminho mais curto”
+•  “Distância total: X.XXXX”
+•  “Intermediários: 3”
+•  “Diretorias percorridas: 4”
+Dados de exemplo para teste:
+•  Origem: “pensamento” ou “ideia”
+•  Destino: “ação” ou “decisão”
+Quero que o código seja limpo, tipado em TypeScript, com comentários em português e totalmente integrado ao projeto atual.
+Por favor, gere todos os arquivos necessários e me mostre o código completo de cada um, pronto para eu copiar e colar.
+Depois de gerar, me diga quais arquivos foram criados e como devo importar o FlowVisualizer na página noun-atlas.
+Vamos implementar isso agora!
