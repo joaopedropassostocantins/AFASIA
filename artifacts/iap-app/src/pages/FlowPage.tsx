@@ -17,6 +17,8 @@ function getApiUrl(path: string) {
 interface AtlasData {
   pictos: PictoMinimo[];
   total: number;
+  totalConceitos: number;
+  totalVariantes: number;
 }
 
 export default function FlowPage() {
@@ -36,7 +38,7 @@ export default function FlowPage() {
       <div className="flex-1 flex flex-col items-center justify-center gap-4 p-8">
         <div className="w-10 h-10 rounded-full border-2 border-indigo-400 border-t-transparent animate-spin" />
         <p className="text-muted-foreground font-mono text-sm">
-          Carregando espaço semântico com 3.443 pictogramas…
+          Carregando espaço semântico com 149 conceitos…
         </p>
       </div>
     );
@@ -69,7 +71,7 @@ export default function FlowPage() {
           <span className="text-muted-foreground text-sm">
             AlgoritmoJP · Dijkstra sobre grafo kNN ·{" "}
             <span className="text-indigo-400">
-              {data.total.toLocaleString("pt-BR")} ícones · Gemma 4 31B
+              {(data.totalConceitos ?? data.total).toLocaleString("pt-BR")} conceitos únicos · {(data.totalVariantes ?? 3443).toLocaleString("pt-BR")} variantes
             </span>
           </span>
         </div>

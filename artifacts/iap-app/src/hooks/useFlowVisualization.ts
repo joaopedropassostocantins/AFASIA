@@ -8,6 +8,7 @@ import { buildGraph, type PictoMinimo, type IndicePickto } from "@/utils/buildGr
 export interface NoPensamento {
   id: string;
   palavra: string;
+  palavraPt?: string;
   categoria: string;
   distanciaAteProximo: number | null; // null para o último nó
 }
@@ -50,7 +51,7 @@ export function useFlowVisualization(pictos: PictoMinimo[]): EstadoFluxo & Acoes
   const grafoRef = useRef<Grafo | null>(null);
   const indicePorIdRef = useRef<Map<string, PictoMinimo> | null>(null);
 
-  // Garante que o grafo só é construído uma vez (3443 nós — operação cara)
+  // Garante que o grafo só é construído uma vez (149 conceitos únicos)
   const garantirGrafo = useCallback(() => {
     if (!grafoRef.current || !indicePorIdRef.current) {
       const { grafo, indicePorId } = buildGraph(pictos);
@@ -119,6 +120,7 @@ export function useFlowVisualization(pictos: PictoMinimo[]): EstadoFluxo & Acoes
           return {
             id,
             palavra: picto?.palavra ?? id,
+            palavraPt: picto?.palavraPt,
             categoria: picto?.categoria ?? "outros",
             distanciaAteProximo,
           };

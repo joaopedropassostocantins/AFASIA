@@ -92,10 +92,14 @@ function SeletorPensamento({ label, placeholder, pictos, selecionado, onSelecion
     return () => { if (debounceRef.current) clearTimeout(debounceRef.current); };
   }, [busca]);
 
-  // Filtrar pictogramas usando termo debounced
+  // Filtrar pictogramas usando termo debounced — busca em PT e EN
   const filtrados = buscaDebounced.trim().length >= 1
     ? pictos
-        .filter((p) => p.palavra.toLowerCase().includes(buscaDebounced.toLowerCase()))
+        .filter((p) => {
+          const q = buscaDebounced.toLowerCase();
+          const ptLabel = (p.palavraPt ?? "").toLowerCase();
+          return ptLabel.includes(q) || p.palavra.toLowerCase().includes(q);
+        })
         .slice(0, 50)
     : [];
 
@@ -132,11 +136,11 @@ function SeletorPensamento({ label, placeholder, pictos, selecionado, onSelecion
             className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0 text-white"
             style={{ backgroundColor: corCategoria(selecionado.categoria) }}
           >
-            {iniciais(selecionado.palavra)}
+            {iniciais(selecionado.palavraPt ?? selecionado.palavra)}
           </span>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-foreground truncate capitalize">
-              {selecionado.palavra}
+            <p className="text-sm font-medium text-foreground truncate">
+              {selecionado.palavraPt ?? selecionado.palavra}
             </p>
             <p className="text-xs text-muted-foreground truncate">
               {labelCategoria(selecionado.categoria)}
@@ -189,11 +193,11 @@ function SeletorPensamento({ label, placeholder, pictos, selecionado, onSelecion
                         className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 text-white"
                         style={{ backgroundColor: cor }}
                       >
-                        {iniciais(picto.palavra)}
+                        {iniciais(picto.palavraPt ?? picto.palavra)}
                       </span>
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm text-foreground capitalize truncate">
-                          {picto.palavra}
+                        <p className="text-sm text-foreground truncate">
+                          {picto.palavraPt ?? picto.palavra}
                         </p>
                         <p className="text-xs text-muted-foreground">
                           {labelCategoria(picto.categoria)}
@@ -229,14 +233,16 @@ function SeletorPensamento({ label, placeholder, pictos, selecionado, onSelecion
 // ── Card de nó do caminho ─────────────────────────────────────────────────────
 interface CardNoProps {
   palavra: string;
+  palavraPt?: string;
   categoria: string;
   isOrigem: boolean;
   isDestino: boolean;
   index: number;
 }
 
-function CardNo({ palavra, categoria, isOrigem, isDestino, index }: CardNoProps) {
+function CardNo({ palavra, palavraPt, categoria, isOrigem, isDestino, index }: CardNoProps) {
   const cor = corCategoria(categoria);
+  const label = palavraPt ?? palavra;
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -256,13 +262,13 @@ function CardNo({ palavra, categoria, isOrigem, isDestino, index }: CardNoProps)
           outlineOffset: "3px",
         }}
       >
-        {iniciais(palavra)}
+        {iniciais(label)}
       </div>
 
       {/* Palavra */}
       <div className="text-center max-w-[100px]">
-        <p className="text-xs font-medium text-foreground capitalize leading-tight line-clamp-2">
-          {palavra}
+        <p className="text-xs font-medium text-foreground leading-tight line-clamp-2">
+          {label}
         </p>
       </div>
 
@@ -386,7 +392,7 @@ export function FlowVisualizer({ pictos }: FlowVisualizerProps) {
           {/* Dica inicial */}
           {!origem && !destino && (
             <p className="text-xs text-muted-foreground">
-              Dica: experimente buscar "Book" como origem e "School" como destino para ver o AlgoritmoJP em ação.
+              Dica: experimente buscar "Livro" como origem e "Escola" como destino para ver o AlgoritmoJP em ação.
             </p>
           )}
         </div>
@@ -442,6 +448,7 @@ export function FlowVisualizer({ pictos }: FlowVisualizerProps) {
                     <React.Fragment key={no.id}>
                       <CardNo
                         palavra={no.palavra}
+                        palavraPt={no.palavraPt}
                         categoria={no.categoria}
                         isOrigem={idx === 0}
                         isDestino={idx === resultado.nos.length - 1}
@@ -467,7 +474,7 @@ export function FlowVisualizer({ pictos }: FlowVisualizerProps) {
                   valor={String(Math.max(0, intermediarios))}
                 />
                 <EstatCard
-                  titulo="Diretorias percorridas"
+                  titulo="Categorias Semânticas"
                   valor={String(resultado.categorias.length)}
                 />
                 <EstatCard
@@ -479,7 +486,7 @@ export function FlowVisualizer({ pictos }: FlowVisualizerProps) {
               {/* Categorias percorridas */}
               <div>
                 <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider mb-2">
-                  Diretorias Percorridas
+                  Categorias Semânticas Percorridas
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {resultado.categorias.map((cat) => (
@@ -504,9 +511,8 @@ export function FlowVisualizer({ pictos }: FlowVisualizerProps) {
 
               {/* Nota técnica */}
               <p className="text-xs text-muted-foreground border-t border-border/40 pt-4 leading-relaxed">
-                Caminho calculado pelo AlgoritmoJP usando Dijkstra sobre o grafo kNN (top-10 vizinhos por nó).
-                As distâncias representam proximidade semântica no espaço MDS gerado pelo Gemma 4 31B com
-                distâncias de Wasserstein entre pictogramas · IAP/UFT (Passos, 2024)
+                Caminho calculado pelo AlgoritmoJP usando Dijkstra sobre grafo kNN bidirecional.
+                Distâncias euclidianas no espaço MDS derivado do AlgoritmoJP (Wasserstein + MDS clássico) · IAP/UFT (Passos, 2024)
               </p>
             </motion.div>
           )}
@@ -523,7 +529,7 @@ export function FlowVisualizer({ pictos }: FlowVisualizerProps) {
                 </p>
                 <p className="text-sm text-muted-foreground mt-1 max-w-md">
                   Selecione um pensamento de origem e um de destino para encontrar
-                  o caminho mais curto no espaço semântico IAP com 3.443 ícones.
+                  o caminho mais curto no espaço semântico IAP com 149 conceitos únicos.
                 </p>
               </div>
               <div className="flex gap-3 flex-wrap justify-center mt-2">

@@ -8,6 +8,8 @@ import { Badge } from "@/components/ui/badge";
 interface NounPicto {
   id: string | number;
   palavra: string;
+  palavraPt: string;
+  varianteCount: number;
   imagemUrl: string;
   categoria: string;
   coordX: number;
@@ -20,6 +22,8 @@ interface AtlasData {
   keywords: string[];
   source: string;
   total: number;
+  totalConceitos: number;
+  totalVariantes: number;
   categorias: Record<string, number>;
 }
 
@@ -308,7 +312,7 @@ export default function NounAtlas() {
     return (
       <div className="flex-1 flex flex-col items-center justify-center gap-4 p-8">
         <div className="w-10 h-10 rounded-full border-2 border-indigo-400 border-t-transparent animate-spin" />
-        <p className="text-muted-foreground font-mono text-sm">Carregando atlas com 3.000+ ícones…</p>
+        <p className="text-muted-foreground font-mono text-sm">Carregando atlas com 149 conceitos…</p>
       </div>
     );
   }
@@ -333,8 +337,8 @@ export default function NounAtlas() {
           <span className="font-bold font-mono text-lg">ATLAS NOUN PROJECT</span>
         </div>
         <span className="text-muted-foreground text-sm">
-          Inteligência Artificial Pictórica · {visible.length.toLocaleString("pt-BR")} ícones ·{" "}
-          <span className="text-indigo-400">IAP Algorithm (Wasserstein + MDS)</span>
+          Inteligência Artificial Pictórica · {(data?.totalConceitos ?? 149).toLocaleString("pt-BR")} conceitos · {(data?.totalVariantes ?? 3443).toLocaleString("pt-BR")} variantes ·{" "}
+          <span className="text-indigo-400">AlgoritmoJP (Wasserstein + MDS)</span>
         </span>
         <div className="ml-auto flex gap-2">
           <Button size="sm" variant="ghost" onClick={() => setZoom((z) => Math.min(10, z * 1.3))}>
@@ -419,7 +423,10 @@ export default function NounAtlas() {
                 transform: tooltip.x > (containerRef.current?.clientWidth ?? 400) * 0.7 ? "translateX(-110%)" : "none",
               }}
             >
-              <div className="font-medium text-foreground truncate">{tooltip.picto.palavra}</div>
+              <div className="font-medium text-foreground truncate">{tooltip.picto.palavraPt || tooltip.picto.palavra}</div>
+              {tooltip.picto.palavraPt && tooltip.picto.palavraPt !== tooltip.picto.palavra && (
+                <div className="text-xs text-muted-foreground truncate">{tooltip.picto.palavra}</div>
+              )}
               <div className="flex items-center gap-1.5 mt-0.5">
                 <span
                   className="w-2 h-2 rounded-full shrink-0"
@@ -428,13 +435,16 @@ export default function NounAtlas() {
                 <span className="text-xs text-muted-foreground">
                   {CAT_LABEL[tooltip.picto.categoria] ?? tooltip.picto.categoria}
                 </span>
+                {tooltip.picto.varianteCount > 1 && (
+                  <span className="text-xs text-muted-foreground">· {tooltip.picto.varianteCount} variantes</span>
+                )}
               </div>
             </div>
           )}
 
           {/* Zoom indicator */}
           <div className="absolute bottom-3 left-3 text-xs text-muted-foreground font-mono bg-background/60 px-2 py-1 rounded">
-            {Math.round(zoom * 100)}% · {visible.length.toLocaleString("pt-BR")} ícones
+            {Math.round(zoom * 100)}% · {visible.length.toLocaleString("pt-BR")} conceitos
           </div>
 
           {/* Hint */}
@@ -487,13 +497,21 @@ export default function NounAtlas() {
               )}
 
               <div className="text-center">
-                <h3 className="font-bold font-mono text-lg text-foreground capitalize">
-                  {selectedPicto.palavra}
+                <h3 className="font-bold font-mono text-lg text-foreground">
+                  {selectedPicto.palavraPt || selectedPicto.palavra}
                 </h3>
-                <p className="text-xs text-muted-foreground mt-1 font-mono">
+                {selectedPicto.palavraPt && selectedPicto.palavraPt !== selectedPicto.palavra && (
+                  <p className="text-xs text-muted-foreground mt-0.5 capitalize">{selectedPicto.palavra}</p>
+                )}
+                {selectedPicto.varianteCount > 1 && (
+                  <span className="inline-block mt-1.5 text-xs px-2 py-0.5 rounded-full bg-indigo-500/15 text-indigo-400 border border-indigo-500/30">
+                    {selectedPicto.varianteCount} variantes de designers
+                  </span>
+                )}
+                <p className="text-xs text-muted-foreground mt-2 font-mono">
                   ID: {selectedPicto.id} · Noun Project
                 </p>
-                <div className="flex justify-center gap-3 mt-2 text-xs text-muted-foreground">
+                <div className="flex justify-center gap-3 mt-1 text-xs text-muted-foreground">
                   <span>X: {selectedPicto.coordX.toFixed(3)}</span>
                   <span>Y: {selectedPicto.coordY.toFixed(3)}</span>
                 </div>
@@ -528,7 +546,7 @@ export default function NounAtlas() {
 
               <div className="mt-auto pt-3 border-t border-border/40">
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                  Posição calculada pelo Algoritmo JP via distâncias de Wasserstein entre diagramas de persistência — mapa semântico IAP com {pictos.length.toLocaleString("pt-BR")} ícones.
+                  Posição calculada pelo AlgoritmoJP via distâncias de Wasserstein + MDS clássico · IAP/UFT (Passos, 2024). Atlas com {pictos.length} conceitos únicos e {(data?.totalVariantes ?? 3443).toLocaleString("pt-BR")} variantes de designers.
                 </p>
               </div>
             </motion.div>

@@ -645,19 +645,21 @@ router.get("/atlas/categorias", async (req, res) => {
   }
 });
 
-const NOUN_ATLAS_PATH = resolveDataPath("noun_atlas_data.json");
+const NOUN_ATLAS_PATH = resolveDataPath("noun_atlas_deduped.json");
 
 router.get("/noun-atlas", (req, res) => {
   try {
     if (existsSync(NOUN_ATLAS_PATH)) {
       const raw = readFileSync(NOUN_ATLAS_PATH, "utf-8");
-      const data = JSON.parse(raw) as { pictos: AtlasPictogram[]; keywords?: string[]; total?: number; categorias?: Record<string, number>; vizinhosMethod?: string; mdsInfo?: unknown; geradoEm?: string };
+      const data = JSON.parse(raw) as { pictos: AtlasPictogram[]; keywords?: string[]; total?: number; totalConceitos?: number; totalVariantes?: number; categorias?: Record<string, number>; vizinhosMethod?: string; mdsInfo?: unknown; geradoEm?: string };
       if (Array.isArray(data?.pictos) && data.pictos.length > 0) {
         res.json({
           pictos: data.pictos,
           keywords: data.keywords ?? [],
           source: "precomputed",
-          total: data.total ?? data.pictos.length,
+          total: data.totalConceitos ?? data.total ?? data.pictos.length,
+          totalConceitos: data.totalConceitos ?? data.pictos.length,
+          totalVariantes: data.totalVariantes ?? 3443,
           categorias: data.categorias ?? {},
           geradoEm: data.geradoEm ?? null,
           vizinhosMethod: data.vizinhosMethod ?? "precomputed",
@@ -666,7 +668,7 @@ router.get("/noun-atlas", (req, res) => {
         return;
       }
     }
-    res.status(503).json({ error: "Atlas Noun Project não disponível. Pipeline: 1) node scripts/noun_fetch.mjs  2) node scripts/noun_recompute_wasserstein.mjs", pictos: [] });
+    res.status(503).json({ error: "Atlas Noun Project não disponível. Execute: node scripts/dedupe_noun_atlas.mjs", pictos: [] });
   } catch (err) {
     handleRouteError(err, res, (msg) => req.log.error(msg), "fetch noun atlas");
   }

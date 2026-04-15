@@ -6,6 +6,8 @@ import type { Grafo, Aresta } from "@/algorithms/dijkstra";
 export interface PictoMinimo {
   id: string | number;
   palavra: string;
+  palavraPt?: string;
+  varianteCount?: number;
   categoria: string;
   coordX: number;
   coordY: number;
