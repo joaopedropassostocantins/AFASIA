@@ -1,0 +1,46 @@
+Você está trabalhando no projeto React + TypeScript + TailwindCSS que já tem o Visualizador de Fluxos de Pensamento implementado (arquivos: dijkstra.ts, buildGraph.ts, useFlowVisualization.ts, FlowVisualizer.tsx e FlowPage.tsx).
+Agora quero evoluir a geração de frases lógicas para usar integração com LLM (Gemma ou modelo equivalente).
+Nova funcionalidade: Geração de Frases Lógicas com LLM
+Em vez da função gerarFrasesLogicas simples, o sistema deve:
+	•	Pegar o caminho calculado por Dijkstra (array de palavras: ex: [“pensamento”, “ideia”, “ação”, “decisão”])
+	•	Enviar para um LLM com um prompt bem estruturado em Português do Brasil
+	•	Receber de volta exatamente 3 frases lógicas coerentes, naturais e criativas que representam o fluxo de pensamento
+Exemplo de prompt que o LLM deve receber:
+Você é um especialista em lógica e fluxo de pensamento.
+Crie exatamente 3 frases em Português do Brasil (pt-BR), claras, elegantes e naturais, que conectem o seguinte fluxo de pensamentos:
+
+1. pensamento → ideia → ação → decisão
+
+As frases devem:
+- Usar conectores fluidos (leva a, transforma-se em, impulsiona, culmina em, resulta em, evolui para, conecta, etc.)
+- Variar a estrutura entre as 3 frases
+- Ser curtas (máximo 25 palavras cada)
+- Começar com letra maiúscula e terminar com ponto
+- Representar um raciocínio lógico e inspirador
+
+Responda APENAS com as 3 frases numeradas (1., 2., 3.) sem nenhum texto adicional.
+O que preciso que você faça agora:
+	1	Atualize os seguintes arquivos (mostre o código completo de cada um modificado):
+	◦	artifacts/iap-app/src/hooks/useFlowVisualization.ts → Adicione função assíncrona gerarFrasesComLLM(caminho: string[]) → Use fetch para chamar o LLM (veja abaixo)
+	◦	artifacts/iap-app/src/components/FlowVisualizer.tsx → Substitua a seção de frases pela nova versão com LLM → Adicione botão “Gerar com LLM” + estado de loading específico → Mostre as frases em cards bonitos com ícone de citação
+	2	Configuração da chamada ao LLM:
+	◦	Use fetch para um endpoint /api/llm-generate (ou o endpoint que você já usa no projeto Gemma)
+	◦	Se ainda não tiver backend, crie um endpoint simples em artifacts/iap-app/src/api/llm.ts (ou use diretamente um endpoint externo)
+	◦	Envie o caminho como JSON
+	◦	Mostre loading enquanto espera a resposta do LLM
+	3	UI em pt-BR (exatamente como o resto do app):
+	◦	Seção nova abaixo das estatísticas: “Frases Lógicas Geradas por IA”
+	◦	Botão “Gerar com LLM” (com ícone de cérebro ou sparkles)
+	◦	Enquanto carrega: “Pensando no fluxo de pensamento…”
+	◦	Mostre as 3 frases em cards com framer-motion
+	◦	Botão “Regerar” para chamar o LLM novamente
+	4	Requisitos obrigatórios:
+	◦	Tudo em Português do Brasil
+	◦	Tratamento de erro amigável se o LLM falhar
+	◦	Cache simples das frases (não chamar LLM toda vez que abrir o resultado)
+	◦	Design consistente (dark mode, Tailwind, cores violet)
+Por favor, gere o código completo e atualizado dos arquivos modificados.
+Depois de gerar, me diga:
+	•	Quais arquivos foram alterados
+	•	Como configurar o endpoint do LLM (se precisar criar um)
+	•	Como testar (ex: pensamento → ideia → ação → decisão)
