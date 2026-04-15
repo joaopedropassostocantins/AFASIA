@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "wouter";
-import { BrainCircuit, Activity, Accessibility, Network, MapPin, BookOpen, HelpCircle, MessageSquare, Globe, MessageSquareMore, LayoutDashboard } from "lucide-react";
+import { BrainCircuit, Activity, Accessibility, Network, MapPin, BookOpen, HelpCircle, MessageSquare, Globe, MessageSquareMore, LayoutDashboard, GitBranch } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Navbar() {
@@ -14,6 +14,7 @@ export function Navbar() {
     { href: "/topology", label: "Topologia", icon: Network },
     { href: "/atlas", label: "Atlas", icon: MapPin },
     { href: "/noun-atlas", label: "Atlas 3k", icon: Globe },
+    { href: "/fluxo", label: "Fluxos", icon: GitBranch },
     { href: "/caa-atlas", label: "Atlas CAA", icon: MessageSquareMore },
     { href: "/compare-atlas", label: "Comparar", icon: LayoutDashboard },
     { href: "/appendice", label: "Apêndice", icon: BookOpen },

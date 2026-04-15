@@ -17,6 +17,7 @@ import DisfasiaAtlas from "@/pages/DisfasiaAtlas";
 import NounAtlas from "@/pages/NounAtlas";
 import CAAAtlas from "@/pages/CAAAtlas";
 import CompareAtlas from "@/pages/CompareAtlas";
+import FlowPage from "@/pages/FlowPage";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ function Router() {
       <Route path="/noun-atlas" component={NounAtlas} />
       <Route path="/caa-atlas" component={CAAAtlas} />
       <Route path="/compare-atlas" component={CompareAtlas} />
+      <Route path="/fluxo" component={FlowPage} />
       <Route component={NotFound} />
     </Switch>
   );
