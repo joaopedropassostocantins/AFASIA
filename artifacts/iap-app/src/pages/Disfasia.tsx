@@ -16,6 +16,7 @@ import {
   Network,
   ChevronDown,
   ChevronRight,
+  ChevronLeft,
   RefreshCw,
   LayoutGrid,
   Grid3x3,
@@ -251,6 +252,18 @@ export default function Disfasia() {
     });
   };
 
+  const handleMoveSymbol = (index: number, direction: "left" | "right") => {
+    setSelectedSymbols((prev) => {
+      if (direction === "left" && index === 0) return prev;
+      if (direction === "right" && index === prev.length - 1) return prev;
+      const next = [...prev];
+      const swapIdx = direction === "left" ? index - 1 : index + 1;
+      [next[index], next[swapIdx]] = [next[swapIdx], next[index]];
+      scheduleInference(next);
+      return next;
+    });
+  };
+
   const handleClear = () => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
     setSelectedSymbols([]);
@@ -380,7 +393,7 @@ export default function Disfasia() {
                 Selecione até 10 símbolos para comunicar…
               </motion.p>
             ) : (
-              selectedSymbols.map((id) => {
+              selectedSymbols.map((id, idx) => {
                 const sym = ALL_SYMBOLS.find((s) => s.id === id);
                 return (
                   <motion.div
@@ -390,13 +403,30 @@ export default function Disfasia() {
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0.7, opacity: 0 }}
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                    className="flex items-center gap-1 bg-primary/10 border border-primary/30 rounded-full px-2.5 py-1 text-sm font-medium"
+                    className="flex items-center gap-0.5 bg-primary/10 border border-primary/30 rounded-full px-1.5 py-1 text-sm font-medium"
                   >
-                    <span>{sym?.emoji ?? "?"}</span>
+                    <button
+                      onClick={() => handleMoveSymbol(idx, "left")}
+                      disabled={idx === 0}
+                      className="text-muted-foreground hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed"
+                      title="Mover para a esquerda"
+                    >
+                      <ChevronLeft className="h-3 w-3" />
+                    </button>
+                    <span className="px-0.5">{sym?.emoji ?? "?"}</span>
                     <span className="text-xs">{sym?.label ?? id}</span>
+                    <button
+                      onClick={() => handleMoveSymbol(idx, "right")}
+                      disabled={idx === selectedSymbols.length - 1}
+                      className="text-muted-foreground hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed"
+                      title="Mover para a direita"
+                    >
+                      <ChevronRight className="h-3 w-3" />
+                    </button>
                     <button
                       onClick={() => handleRemoveSymbol(id)}
                       className="text-muted-foreground hover:text-foreground ml-0.5"
+                      title="Remover"
                     >
                       <X className="h-3 w-3" />
                     </button>
