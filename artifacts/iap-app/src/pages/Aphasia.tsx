@@ -4,7 +4,7 @@ import { usePictorialChat } from "@workspace/api-client-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Reorder } from "framer-motion";
 import {
   AlertTriangle,
   X,
@@ -16,7 +16,7 @@ import {
   Check,
   ChevronDown,
   ChevronRight,
-  ChevronLeft,
+  GripHorizontal,
   RefreshCw,
   LayoutGrid,
   Grid3x3,
@@ -166,6 +166,7 @@ export default function Aphasia() {
   const vizinhosDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const synthRef = useRef<SpeechSynthesis | null>(null);
   const historyCounter = useRef(0);
+  const pendingReorderRef = useRef<string[]>([]);
 
   useEffect(() => {
     if (typeof window !== "undefined" && "speechSynthesis" in window) {
@@ -284,16 +285,15 @@ export default function Aphasia() {
     });
   };
 
-  const handleMoveSymbol = (index: number, direction: "left" | "right") => {
-    setSelectedSymbols((prev) => {
-      if (direction === "left" && index === 0) return prev;
-      if (direction === "right" && index === prev.length - 1) return prev;
-      const next = [...prev];
-      const swapIdx = direction === "left" ? index - 1 : index + 1;
-      [next[index], next[swapIdx]] = [next[swapIdx], next[index]];
-      scheduleInference(next);
-      return next;
-    });
+  const handleReorderSymbols = (newOrder: string[]) => {
+    pendingReorderRef.current = newOrder;
+    setSelectedSymbols(newOrder);
+  };
+
+  const handleReorderDragEnd = () => {
+    if (pendingReorderRef.current.length > 0) {
+      scheduleInference(pendingReorderRef.current);
+    }
   };
 
   const handleClear = () => {
@@ -600,51 +600,48 @@ export default function Aphasia() {
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-background/95 backdrop-blur border-t border-border shadow-lg">
         <div className="max-w-4xl mx-auto px-4 py-3 space-y-2">
           <div className="flex flex-wrap gap-1.5 min-h-[28px] items-center">
-            <AnimatePresence>
-              {selectedSymbols.length === 0 ? (
-                <span className="text-sm text-muted-foreground italic">Selecione até 10 símbolos para comunicar…</span>
-              ) : (
-                selectedSymbols.map((id, idx) => {
+            {selectedSymbols.length === 0 ? (
+              <span className="text-sm text-muted-foreground italic">Selecione até 10 símbolos para comunicar…</span>
+            ) : (
+              <Reorder.Group
+                axis="x"
+                values={selectedSymbols}
+                onReorder={handleReorderSymbols}
+                className="flex items-center gap-1.5 flex-wrap"
+                as="div"
+              >
+                {selectedSymbols.map((id) => {
                   const sym = ALL_SYMBOLS.find((s) => s.id === id);
                   if (!sym) return null;
                   return (
-                    <motion.div
+                    <Reorder.Item
                       key={id}
+                      value={id}
+                      as="div"
+                      onDragEnd={handleReorderDragEnd}
+                      className="flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-sm font-medium select-none touch-none"
+                      whileDrag={{ scale: 1.08, boxShadow: "0 4px 16px rgba(0,0,0,0.15)", zIndex: 50 }}
                       initial={{ scale: 0.8, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       exit={{ scale: 0.8, opacity: 0 }}
-                      className="flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-sm font-medium"
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     >
-                      <button
-                        onClick={() => handleMoveSymbol(idx, "left")}
-                        disabled={idx === 0}
-                        className="text-muted-foreground hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed"
-                        title="Mover para a esquerda"
-                      >
-                        <ChevronLeft className="h-3 w-3" />
-                      </button>
+                      <GripHorizontal className="h-3 w-3 text-muted-foreground/40 cursor-grab shrink-0" />
                       <span className="px-0.5">{sym.emoji}</span>
                       <span className="text-xs">{sym.label}</span>
                       <button
-                        onClick={() => handleMoveSymbol(idx, "right")}
-                        disabled={idx === selectedSymbols.length - 1}
-                        className="text-muted-foreground hover:text-foreground disabled:opacity-30 disabled:cursor-not-allowed"
-                        title="Mover para a direita"
-                      >
-                        <ChevronRight className="h-3 w-3" />
-                      </button>
-                      <button
+                        onPointerDown={(e) => e.stopPropagation()}
                         onClick={() => handleRemoveSymbol(id)}
                         className="text-muted-foreground hover:text-red-500 ml-0.5"
                         title="Remover"
                       >
                         <X className="h-3 w-3" />
                       </button>
-                    </motion.div>
+                    </Reorder.Item>
                   );
-                })
-              )}
-            </AnimatePresence>
+                })}
+              </Reorder.Group>
+            )}
             {selectedSymbols.length >= 10 && (
               <span className="text-xs text-amber-600 font-medium ml-1">máx. 10</span>
             )}
