@@ -40,6 +40,25 @@ interface Category {
 
 const CATEGORIES: Category[] = [
   {
+    name: "Necessidades",
+    emoji: "💧",
+    borderColor: "border-orange-400",
+    symbols: [
+      { id: "agua", emoji: "💧", label: "Água", color: "bg-blue-100 hover:bg-blue-200" },
+      { id: "fome", emoji: "🍽️", label: "Fome", color: "bg-green-100 hover:bg-green-200" },
+      { id: "sede", emoji: "🥤", label: "Sede", color: "bg-cyan-100 hover:bg-cyan-200" },
+      { id: "banheiro", emoji: "🚽", label: "Banheiro", color: "bg-teal-100 hover:bg-teal-200" },
+      { id: "remedio", emoji: "💊", label: "Remédio", color: "bg-pink-100 hover:bg-pink-200" },
+      { id: "com_dor", emoji: "😣", label: "Com dor", color: "bg-red-100 hover:bg-red-200" },
+      { id: "cansaco", emoji: "😴", label: "Cansaço", color: "bg-purple-100 hover:bg-purple-200" },
+      { id: "dormir", emoji: "🛏️", label: "Dormir", color: "bg-indigo-100 hover:bg-indigo-200" },
+      { id: "calor", emoji: "🥵", label: "Calor", color: "bg-orange-100 hover:bg-orange-200" },
+      { id: "frio", emoji: "🥶", label: "Frio", color: "bg-sky-100 hover:bg-sky-200" },
+      { id: "nausea", emoji: "🤢", label: "Náusea", color: "bg-lime-100 hover:bg-lime-200" },
+      { id: "tontura", emoji: "🌀", label: "Tontura", color: "bg-slate-100 hover:bg-slate-200" },
+    ],
+  },
+  {
     name: "Fluência",
     emoji: "🎙️",
     borderColor: "border-cyan-400",
