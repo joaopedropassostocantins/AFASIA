@@ -207,6 +207,16 @@ export default function Disfasia() {
   const [selectedSymbols, setSelectedSymbols] = useState<string[]>([]);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [speakEnabled, setSpeakEnabled] = useState(true);
+  const [symbolImages, setSymbolImages] = useState<Record<string, string>>({});
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    fetch(`${BASE_URL}/api/iap/disfasia-symbols-images`)
+      .then((r) => r.json())
+      .then((data: Record<string, string>) => setSymbolImages(data))
+      .catch(() => {});
+  }, []);
+
   const [emergencyOpen, setEmergencyOpen] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
   const [gridLarge, setGridLarge] = useState(true);
@@ -408,9 +418,19 @@ export default function Disfasia() {
                           : `${sym.color} border-transparent`
                     }`}
                   >
-                    <span className={gridLarge ? "text-3xl leading-none" : "text-xl leading-none"}>
-                      {sym.emoji}
-                    </span>
+                    {symbolImages[sym.id] && !failedImages.has(sym.id) ? (
+                      <img
+                        src={symbolImages[sym.id]}
+                        alt={sym.label}
+                        className={gridLarge ? "w-14 h-14 object-contain" : "w-10 h-10 object-contain"}
+                        onError={() => setFailedImages((prev) => new Set(prev).add(sym.id))}
+                        draggable={false}
+                      />
+                    ) : (
+                      <span className={gridLarge ? "text-3xl leading-none" : "text-xl leading-none"}>
+                        {sym.emoji}
+                      </span>
+                    )}
                     <span className="text-xs font-medium text-foreground leading-tight">{sym.label}</span>
                     {isSelected && <div className="w-1.5 h-1.5 rounded-full bg-primary" />}
                   </motion.button>
@@ -699,7 +719,17 @@ export default function Disfasia() {
                     }}
                     className={`${sym.color} rounded-xl p-4 flex flex-col items-center gap-2 border-2 border-transparent hover:border-primary transition-all`}
                   >
-                    <span className="text-4xl">{sym.emoji}</span>
+                    {symbolImages[sym.id] && !failedImages.has(sym.id) ? (
+                      <img
+                        src={symbolImages[sym.id]}
+                        alt={sym.label}
+                        className="w-12 h-12 object-contain"
+                        onError={() => setFailedImages((prev) => new Set(prev).add(sym.id))}
+                        draggable={false}
+                      />
+                    ) : (
+                      <span className="text-4xl">{sym.emoji}</span>
+                    )}
                     <span className="text-sm font-bold">{sym.label}</span>
                   </button>
                 ))}

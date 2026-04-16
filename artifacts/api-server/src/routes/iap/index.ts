@@ -876,6 +876,20 @@ router.get("/caa-atlas", (req, res) => {
 });
 
 const DISFASIA_ATLAS_PATH = resolveDataPath("disfasia_atlas_data.json");
+const DISFASIA_SYMBOLS_IMAGES_PATH = resolveDataPath("disfasia_symbols_images.json");
+
+router.get("/disfasia-symbols-images", (req, res) => {
+  try {
+    if (existsSync(DISFASIA_SYMBOLS_IMAGES_PATH)) {
+      const raw = readFileSync(DISFASIA_SYMBOLS_IMAGES_PATH, "utf-8");
+      res.json(JSON.parse(raw));
+    } else {
+      res.json({});
+    }
+  } catch {
+    res.json({});
+  }
+});
 
 router.get("/disfasia-atlas", (req, res) => {
   try {
