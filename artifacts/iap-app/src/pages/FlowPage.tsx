@@ -3,6 +3,7 @@
 
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useSearch } from "wouter";
 import { GitBranch, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FlowVisualizer } from "@/components/FlowVisualizer";
@@ -22,6 +23,11 @@ interface AtlasData {
 }
 
 export default function FlowPage() {
+  const search = useSearch();
+  const params = new URLSearchParams(search);
+  const initialDe = params.get("de") ?? undefined;
+  const initialAte = params.get("ate") ?? undefined;
+
   const { data, isLoading, isError, refetch } = useQuery<AtlasData>({
     queryKey: ["noun-atlas"],
     queryFn: async () => {
@@ -83,7 +89,11 @@ export default function FlowPage() {
       </div>
 
       {/* Componente principal */}
-      <FlowVisualizer pictos={data.pictos} />
+      <FlowVisualizer
+        pictos={data.pictos}
+        initialDe={initialDe}
+        initialAte={initialAte}
+      />
     </div>
   );
 }

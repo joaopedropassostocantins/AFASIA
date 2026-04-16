@@ -725,6 +725,91 @@ router.get("/atlas/categorias", async (req, res) => {
 
 const NOUN_ATLAS_PATH = resolveDataPath("noun_atlas_deduped.json");
 
+interface NounAtlasPicto {
+  id: string;
+  palavra: string;
+  palavraPt?: string;
+  imagemUrl: string;
+  categoria: string;
+  coordX: number;
+  coordY: number;
+  varianteCount?: number;
+  vizinhos: { id: string; palavra: string; distancia: number }[];
+}
+
+let _nounAtlasCache: { pictos: NounAtlasPicto[] } | null = null;
+
+function loadNounAtlas(): { pictos: NounAtlasPicto[] } | null {
+  if (_nounAtlasCache) return _nounAtlasCache;
+  if (!existsSync(NOUN_ATLAS_PATH)) return null;
+  try {
+    const raw = readFileSync(NOUN_ATLAS_PATH, "utf-8");
+    const data = JSON.parse(raw) as { pictos: NounAtlasPicto[] };
+    if (Array.isArray(data?.pictos) && data.pictos.length > 0) {
+      _nounAtlasCache = data;
+      return _nounAtlasCache;
+    }
+  } catch { /* swallow */ }
+  return null;
+}
+
+function normalizeForSearch(w: string): string {
+  return w.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+}
+
+router.get("/noun-atlas/neighbors", (req, res) => {
+  try {
+    const word = String(req.query.word ?? "").trim();
+    if (!word) {
+      res.status(400).json({ error: "Parâmetro 'word' obrigatório" });
+      return;
+    }
+
+    const atlas = loadNounAtlas();
+    if (!atlas) {
+      res.status(503).json({ error: "Atlas Noun Project não disponível" });
+      return;
+    }
+
+    const { pictos } = atlas;
+    const indexById = new Map<string, NounAtlasPicto>(pictos.map((p) => [String(p.id), p]));
+
+    const normWord = normalizeForSearch(word);
+    const found = pictos.find(
+      (p) =>
+        normalizeForSearch(p.palavraPt ?? "") === normWord ||
+        normalizeForSearch(p.palavra) === normWord,
+    );
+
+    if (!found) {
+      res.json({ encontrado: false, conceito: null, vizinhos: [] });
+      return;
+    }
+
+    const vizinhos = (found.vizinhos ?? []).slice(0, 5).map((v) => {
+      const neighbor = indexById.get(String(v.id));
+      return {
+        palavra: v.palavra,
+        palavraPt: neighbor?.palavraPt ?? v.palavra,
+        distancia: Math.round(v.distancia * 1000) / 1000,
+        categoria: neighbor?.categoria ?? "outros",
+      };
+    });
+
+    res.json({
+      encontrado: true,
+      conceito: {
+        palavra: found.palavra,
+        palavraPt: found.palavraPt,
+        categoria: found.categoria,
+      },
+      vizinhos,
+    });
+  } catch (err) {
+    handleRouteError(err, res, (msg) => req.log.error(msg), "noun-atlas neighbors");
+  }
+});
+
 router.get("/noun-atlas", (req, res) => {
   try {
     if (existsSync(NOUN_ATLAS_PATH)) {

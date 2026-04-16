@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
+import { useLocation } from "wouter";
 import { usePictorialChat } from "@workspace/api-client-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -19,7 +20,18 @@ import {
   RefreshCw,
   LayoutGrid,
   Grid3x3,
+  Network,
+  ArrowRightCircle,
 } from "lucide-react";
+
+const BASE_URL = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
+function getApiUrl(path: string) { return `${BASE_URL}${path}`; }
+
+interface AtlasVizinho {
+  palavraPt: string;
+  distancia: number;
+  categoria: string;
+}
 
 interface Symbol {
   id: string;
@@ -139,6 +151,7 @@ interface HistoryEntry {
 }
 
 export default function Aphasia() {
+  const [, navigate] = useLocation();
   const [selectedCategory, setSelectedCategory] = useState<number>(0);
   const [selectedSymbols, setSelectedSymbols] = useState<string[]>([]);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
@@ -148,7 +161,10 @@ export default function Aphasia() {
   const [historyOpen, setHistoryOpen] = useState(false);
   const [gridLarge, setGridLarge] = useState(true);
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [atlasVizinhos, setAtlasVizinhos] = useState<AtlasVizinho[]>([]);
+  const [buscandoVizinhos, setBuscandoVizinhos] = useState(false);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const vizinhosDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const synthRef = useRef<SpeechSynthesis | null>(null);
   const historyCounter = useRef(0);
 
@@ -157,6 +173,36 @@ export default function Aphasia() {
       synthRef.current = window.speechSynthesis;
     }
   }, []);
+
+  // Busca vizinhos semânticos do último símbolo selecionado no Atlas Noun Project
+  useEffect(() => {
+    if (vizinhosDebounceRef.current) clearTimeout(vizinhosDebounceRef.current);
+    if (selectedSymbols.length === 0) {
+      setAtlasVizinhos([]);
+      return;
+    }
+    const lastId = selectedSymbols[selectedSymbols.length - 1];
+    const lastSym = ALL_SYMBOLS.find((s) => s.id === lastId);
+    if (!lastSym) { setAtlasVizinhos([]); return; }
+    const label = lastSym.label;
+
+    vizinhosDebounceRef.current = setTimeout(async () => {
+      setBuscandoVizinhos(true);
+      try {
+        const resp = await fetch(
+          getApiUrl(`/api/iap/noun-atlas/neighbors?word=${encodeURIComponent(label)}`),
+        );
+        if (!resp.ok) { setAtlasVizinhos([]); return; }
+        const data = await resp.json() as { encontrado: boolean; vizinhos: AtlasVizinho[] };
+        setAtlasVizinhos(data.encontrado ? data.vizinhos : []);
+      } catch {
+        setAtlasVizinhos([]);
+      } finally {
+        setBuscandoVizinhos(false);
+      }
+    }, 800);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedSymbols]);
 
   const speak = useCallback(
     (text: string) => {
@@ -404,6 +450,38 @@ export default function Aphasia() {
           </div>
         )}
 
+        {/* Espaço Semântico IAP — vizinhos no grafo kNN do Noun Atlas */}
+        <AnimatePresence>
+          {(atlasVizinhos.length > 0 || buscandoVizinhos) && (
+            <motion.div
+              initial={{ opacity: 0, y: -4 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -4 }}
+              transition={{ duration: 0.2 }}
+              className="flex items-center gap-2 flex-wrap"
+            >
+              <div className="flex items-center gap-1.5 text-xs text-indigo-600 font-semibold uppercase tracking-wide">
+                <Network className="h-3.5 w-3.5" />
+                Espaço Semântico IAP:
+              </div>
+              {buscandoVizinhos && (
+                <RefreshCw className="h-3.5 w-3.5 animate-spin text-indigo-400" />
+              )}
+              {atlasVizinhos.map((v) => (
+                <span
+                  key={v.palavraPt}
+                  className="flex items-center gap-1 px-2 py-0.5 rounded-full border text-xs font-medium bg-indigo-50 border-indigo-200 text-indigo-700"
+                >
+                  {v.palavraPt}
+                  <span className="text-[10px] px-1 rounded-full bg-indigo-100 text-indigo-500 font-mono ml-0.5">
+                    {v.distancia.toFixed(3)}
+                  </span>
+                </span>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         {mutation.isError && (
           <Card className="border-red-200 bg-red-50">
             <CardContent className="p-3">
@@ -624,6 +702,26 @@ export default function Aphasia() {
               <Volume2 className="h-4 w-4 mr-2" />
               {isSpeaking ? "FALANDO…" : "FALAR"}
             </Button>
+            {selectedSymbols.length >= 2 && (
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  const firstSym = ALL_SYMBOLS.find((s) => s.id === selectedSymbols[0]);
+                  const lastSym = ALL_SYMBOLS.find((s) => s.id === selectedSymbols[selectedSymbols.length - 1]);
+                  if (firstSym && lastSym) {
+                    navigate(
+                      `/fluxo?de=${encodeURIComponent(firstSym.label)}&ate=${encodeURIComponent(lastSym.label)}`,
+                    );
+                  }
+                }}
+                className="px-3 text-indigo-600 border-indigo-200 hover:bg-indigo-50 shrink-0"
+                title="Ver caminho semântico entre o primeiro e último símbolo no grafo IAP"
+              >
+                <ArrowRightCircle className="h-4 w-4 mr-1" />
+                <span className="hidden sm:inline text-xs font-semibold">Caminho</span>
+              </Button>
+            )}
             <Button
               variant="outline"
               size="sm"

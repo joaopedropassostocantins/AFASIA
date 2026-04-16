@@ -314,14 +314,44 @@ function SetaDistancia({ dist, index }: { dist: number; index: number }) {
 // ── Componente principal ──────────────────────────────────────────────────────
 interface FlowVisualizerProps {
   pictos: PictoMinimo[];
+  initialDe?: string;
+  initialAte?: string;
 }
 
-export function FlowVisualizer({ pictos }: FlowVisualizerProps) {
+function normalizeWord(w: string): string {
+  return w.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+}
+
+export function FlowVisualizer({ pictos, initialDe, initialAte }: FlowVisualizerProps) {
   const {
     origem, destino, resultado, calculando, erro, naoEncontrado,
     frases, modeloFrases, gerandoFrases, erroFrases,
     setOrigem, setDestino, calcularCaminho, limpar, gerarFrases, regerarFrases,
   } = useFlowVisualization(pictos);
+
+  // Pre-fill from URL params once pictos are loaded
+  useEffect(() => {
+    if (!pictos.length) return;
+    if (initialDe) {
+      const normDe = normalizeWord(initialDe);
+      const found = pictos.find(
+        (p) =>
+          normalizeWord(p.palavraPt ?? "") === normDe ||
+          normalizeWord(p.palavra) === normDe,
+      );
+      if (found) setOrigem(found);
+    }
+    if (initialAte) {
+      const normAte = normalizeWord(initialAte);
+      const found = pictos.find(
+        (p) =>
+          normalizeWord(p.palavraPt ?? "") === normAte ||
+          normalizeWord(p.palavra) === normAte,
+      );
+      if (found) setDestino(found);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pictos.length, initialDe, initialAte]);
 
   const podeCalcular = origem !== null && destino !== null &&
     String(origem.id) !== String(destino.id) && !calculando;
