@@ -901,7 +901,7 @@ router.get("/disfasia-atlas", (req, res) => {
 });
 
 const DISFASIA_KNOWN_SYMBOL_IDS = [
-  "agua", "fome", "sede", "banheiro", "remedio", "com_dor", "cansaco", "dormir",
+  "agua", "fome", "sede", "banheiro", "comida", "remedio", "com_dor", "cansado", "dormir",
   "calor", "frio", "nausea", "tontura",
   "parar", "continuar", "devagar", "rapido", "esperar", "repetir", "vez", "vez_tu",
   "mais_devagar", "alto", "silencio", "pronto",
