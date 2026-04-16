@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { useLocation } from "wouter";
+import { Link } from "wouter";
 import { usePictorialChat } from "@workspace/api-client-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -151,7 +151,6 @@ interface HistoryEntry {
 }
 
 export default function Aphasia() {
-  const [, navigate] = useLocation();
   const [selectedCategory, setSelectedCategory] = useState<number>(0);
   const [selectedSymbols, setSelectedSymbols] = useState<string[]>([]);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
@@ -324,6 +323,13 @@ export default function Aphasia() {
   const urgencyLevel = mutation.data ? getUrgencyLevel(mutation.data.urgencia) : null;
   const currentCat = CATEGORIES[selectedCategory];
 
+  const caminhoFirstSym = selectedSymbols.length >= 2 ? ALL_SYMBOLS.find((s) => s.id === selectedSymbols[0]) : null;
+  const caminhoLastSym = selectedSymbols.length >= 2 ? ALL_SYMBOLS.find((s) => s.id === selectedSymbols[selectedSymbols.length - 1]) : null;
+  const caminhoHref =
+    caminhoFirstSym && caminhoLastSym
+      ? `/fluxo?de=${encodeURIComponent(caminhoFirstSym.label)}&ate=${encodeURIComponent(caminhoLastSym.label)}`
+      : null;
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50/30 to-white pb-48">
       <div className="max-w-4xl mx-auto px-4 py-5 space-y-4">
@@ -417,42 +423,10 @@ export default function Aphasia() {
           </CardContent>
         </Card>
 
-        {mutation.data && mutation.data.sugestoes.length > 0 && (
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-xs text-muted-foreground font-semibold uppercase tracking-wide">
-              Sugestões:
-            </span>
-            {mutation.data.sugestoes.map((sid) => {
-              const sym = ALL_SYMBOLS.find((s) => s.id === sid);
-              const disabled = selectedSymbols.length >= 10 || selectedSymbols.includes(sid);
-              return (
-                <button
-                  key={sid}
-                  onClick={() => handleSuggestionClick(sid)}
-                  disabled={disabled}
-                  className={`flex items-center gap-1 px-2 py-1 rounded-full border text-xs font-medium transition-all ${
-                    disabled
-                      ? "opacity-40 cursor-not-allowed bg-secondary border-border"
-                      : "bg-primary/5 border-primary/30 hover:bg-primary/15 text-foreground"
-                  }`}
-                >
-                  {sym ? (
-                    <>
-                      <span>{sym.emoji}</span>
-                      <span>{sym.label}</span>
-                    </>
-                  ) : (
-                    <span>{sid}</span>
-                  )}
-                </button>
-              );
-            })}
-          </div>
-        )}
-
-        {/* Espaço Semântico IAP — vizinhos no grafo kNN do Noun Atlas */}
+        {/* Sugestões: vizinhos semânticos do Atlas IAP (primário) ou sugestões do LLM (fallback) */}
         <AnimatePresence>
-          {(atlasVizinhos.length > 0 || buscandoVizinhos) && (
+          {(buscandoVizinhos || atlasVizinhos.length > 0 ||
+            (mutation.data && mutation.data.sugestoes.length > 0 && !buscandoVizinhos && atlasVizinhos.length === 0)) && (
             <motion.div
               initial={{ opacity: 0, y: -4 }}
               animate={{ opacity: 1, y: 0 }}
@@ -460,24 +434,71 @@ export default function Aphasia() {
               transition={{ duration: 0.2 }}
               className="flex items-center gap-2 flex-wrap"
             >
-              <div className="flex items-center gap-1.5 text-xs text-indigo-600 font-semibold uppercase tracking-wide">
-                <Network className="h-3.5 w-3.5" />
-                Espaço Semântico IAP:
-              </div>
+              {/* Estado de busca */}
               {buscandoVizinhos && (
-                <RefreshCw className="h-3.5 w-3.5 animate-spin text-indigo-400" />
+                <>
+                  <div className="flex items-center gap-1 text-xs text-indigo-500 font-semibold uppercase tracking-wide">
+                    <Network className="h-3.5 w-3.5" />
+                    Espaço Semântico IAP:
+                  </div>
+                  <RefreshCw className="h-3.5 w-3.5 animate-spin text-indigo-400" />
+                </>
               )}
-              {atlasVizinhos.map((v) => (
-                <span
-                  key={v.palavraPt}
-                  className="flex items-center gap-1 px-2 py-0.5 rounded-full border text-xs font-medium bg-indigo-50 border-indigo-200 text-indigo-700"
-                >
-                  {v.palavraPt}
-                  <span className="text-[10px] px-1 rounded-full bg-indigo-100 text-indigo-500 font-mono ml-0.5">
-                    {v.distancia.toFixed(3)}
+
+              {/* Vizinhos semânticos do atlas (top 3) */}
+              {!buscandoVizinhos && atlasVizinhos.length > 0 && (
+                <>
+                  <div className="flex items-center gap-1 text-xs text-indigo-600 font-semibold uppercase tracking-wide">
+                    <Network className="h-3.5 w-3.5" />
+                    Espaço Semântico IAP:
+                  </div>
+                  {atlasVizinhos.slice(0, 3).map((v) => (
+                    <span
+                      key={v.palavraPt}
+                      className="flex items-center gap-1 px-2 py-0.5 rounded-full border text-xs font-medium bg-indigo-50 border-indigo-200 text-indigo-700"
+                    >
+                      {v.palavraPt}
+                      <span className="text-[10px] px-1 rounded-full bg-indigo-100 text-indigo-500 font-mono ml-0.5">
+                        {v.distancia.toFixed(3)}
+                      </span>
+                    </span>
+                  ))}
+                </>
+              )}
+
+              {/* Fallback: sugestões do LLM quando atlas não encontrou correspondência */}
+              {!buscandoVizinhos && atlasVizinhos.length === 0 && mutation.data && mutation.data.sugestoes.length > 0 && (
+                <>
+                  <span className="text-xs text-muted-foreground font-semibold uppercase tracking-wide">
+                    Sugestões:
                   </span>
-                </span>
-              ))}
+                  {mutation.data.sugestoes.map((sid) => {
+                    const sym = ALL_SYMBOLS.find((s) => s.id === sid);
+                    const disabled = selectedSymbols.length >= 10 || selectedSymbols.includes(sid);
+                    return (
+                      <button
+                        key={sid}
+                        onClick={() => handleSuggestionClick(sid)}
+                        disabled={disabled}
+                        className={`flex items-center gap-1 px-2 py-1 rounded-full border text-xs font-medium transition-all ${
+                          disabled
+                            ? "opacity-40 cursor-not-allowed bg-secondary border-border"
+                            : "bg-primary/5 border-primary/30 hover:bg-primary/15 text-foreground"
+                        }`}
+                      >
+                        {sym ? (
+                          <>
+                            <span>{sym.emoji}</span>
+                            <span>{sym.label}</span>
+                          </>
+                        ) : (
+                          <span>{sid}</span>
+                        )}
+                      </button>
+                    );
+                  })}
+                </>
+              )}
             </motion.div>
           )}
         </AnimatePresence>
@@ -702,25 +723,15 @@ export default function Aphasia() {
               <Volume2 className="h-4 w-4 mr-2" />
               {isSpeaking ? "FALANDO…" : "FALAR"}
             </Button>
-            {selectedSymbols.length >= 2 && (
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => {
-                  const firstSym = ALL_SYMBOLS.find((s) => s.id === selectedSymbols[0]);
-                  const lastSym = ALL_SYMBOLS.find((s) => s.id === selectedSymbols[selectedSymbols.length - 1]);
-                  if (firstSym && lastSym) {
-                    navigate(
-                      `/fluxo?de=${encodeURIComponent(firstSym.label)}&ate=${encodeURIComponent(lastSym.label)}`,
-                    );
-                  }
-                }}
-                className="px-3 text-indigo-600 border-indigo-200 hover:bg-indigo-50 shrink-0"
+            {caminhoHref && (
+              <Link
+                href={caminhoHref}
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md border border-indigo-200 text-indigo-600 bg-background hover:bg-indigo-50 text-xs font-semibold transition-colors shrink-0 h-8"
                 title="Ver caminho semântico entre o primeiro e último símbolo no grafo IAP"
               >
-                <ArrowRightCircle className="h-4 w-4 mr-1" />
-                <span className="hidden sm:inline text-xs font-semibold">Caminho</span>
-              </Button>
+                <ArrowRightCircle className="h-4 w-4" />
+                <span className="hidden sm:inline">Ver Caminho Semântico →</span>
+              </Link>
             )}
             <Button
               variant="outline"
